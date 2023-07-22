@@ -1,11 +1,11 @@
 {
-    "name": "u",
-    "short_name": "u",
+    "name": "exfai",
+    "short_name": "exfai",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Exfai Ecommerce",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

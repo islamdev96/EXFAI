@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "u" "\0"
+            VALUE "CompanyName", "com.exfai" "\0"
+            VALUE "FileDescription", "Exfai" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "u" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "u.exe" "\0"
-            VALUE "ProductName", "u" "\0"
+            VALUE "InternalName", "Exfai" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2023 com.exfai. All rights reserved." "\0"
+            VALUE "OriginalFilename", "exfai.exe" "\0"
+            VALUE "ProductName", "Exfai" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
