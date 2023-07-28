@@ -15,6 +15,7 @@ List<OnBoardingModel> onBoardingList = [
       title: "trackYourOrder".tr,
       body: "theOrderCanBeTracked".tr,
       image: AppImageAsset.onBoardingImageThree),
+
   // OnBoardingModel(
   //     title: "Fast Delivery",
   //     body:
