@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
 
           title: 'Exfai',
           locale: controller.language,
+          //
 
           theme: controller.appTheme,
           initialBinding: InitialBindings(),
