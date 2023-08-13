@@ -41,8 +41,8 @@ class SignUpControllerImp extends SignUpController {
               arguments: {"email": emailController.text});
         } else {
           Get.defaultDialog(
-              title: "ُWarning",
-              middleText: "Phone Number Or Email Already Exists");
+              title: "ُwarning".tr,
+              middleText: "phoneNumberOrEmailAlreadyExists".tr);
           statusRequest = StatusRequest.failure;
         }
       }

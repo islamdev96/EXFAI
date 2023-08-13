@@ -23,7 +23,6 @@ export 'package:exfai/core/functions/fcmconfig.dart';
 export 'package:exfai/core/localization/lang/english_translation.dart';
 export 'package:exfai/core/localization/arabic_translation.dart';
 
-export 'test_view.dart';
 export 'package:exfai/routes.dart';
 export 'package:flutter/material.dart';
 export 'package:get/get.dart';

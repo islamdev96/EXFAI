@@ -24,7 +24,7 @@ class ResetPasswordControllerImp extends ResetPasswordController {
   goToSuccessResetPassword() async {
     if (password.text != repassword.text) {
       return Get.defaultDialog(
-          title: "warning", middleText: "Password Not Match");
+          title: "warning".tr, middleText: "passwordNotMatch".tr);
     }
 
     if (formstate.currentState!.validate()) {
@@ -37,7 +37,7 @@ class ResetPasswordControllerImp extends ResetPasswordController {
           // data.addAll(response['data']);
           Get.offNamed(AppRoute.successResetpassword);
         } else {
-          Get.defaultDialog(title: "ُWarning", middleText: "Try Again");
+          Get.defaultDialog(title: "ُwarning".tr, middleText: "tryAgain".tr);
           statusRequest = StatusRequest.failure;
         }
       }

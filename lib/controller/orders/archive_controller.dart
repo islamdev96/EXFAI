@@ -11,31 +11,31 @@ class OrdersArchiveController extends GetxController {
 
   String printOrderType(String val) {
     if (val == "0") {
-      return "delivery";
+      return "delivery".tr;
     } else {
-      return "Recive";
+      return "recive".tr;
     }
   }
 
   String printPaymentMethod(String val) {
     if (val == "0") {
-      return "Cash On Delivery";
+      return "cashOnDelivery".tr;
     } else {
-      return "Payment Card";
+      return "paymentCards".tr;
     }
   }
 
   String printOrderStatus(String val) {
     if (val == "0") {
-      return "Pending Approval";
+      return "pendingApproval".tr;
     } else if (val == "1") {
-      return "The Order is being Prepared ";
+      return "theOrderIsBeingPrepared".tr;
     } else if (val == "2") {
-      return "Ready To Picked up by Delivery man";
+      return "readyToPickedUpByDeliveryMan".tr;
     } else if (val == "3") {
-      return "On The Way";
+      return "onTheWay".tr;
     } else {
-      return "Archive";
+      return "archive".tr;
     }
   }
 
@@ -58,24 +58,24 @@ class OrdersArchiveController extends GetxController {
     }
     update();
   }
-  submitRating(String ordersid,double rating, String comment)async{
-        data.clear();
+
+  submitRating(String ordersid, double rating, String comment) async {
+    data.clear();
     statusRequest = StatusRequest.loading;
     update();
-    var response = await ordersArchiveData
-       . rating(ordersid,comment,rating.toString());
+    var response =
+        await ordersArchiveData.rating(ordersid, comment, rating.toString());
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       // Start backend
       if (response['status'] == "success") {
-     getOrders()
-;      } else {
+        getOrders();
+      } else {
         statusRequest = StatusRequest.success;
       }
       // End
     }
     update();
-
   }
 
   refrehOrder() {

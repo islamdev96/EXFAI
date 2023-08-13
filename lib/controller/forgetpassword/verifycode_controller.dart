@@ -28,7 +28,7 @@ class VerifyCodeControllerImp extends VerifyCodeController {
         Get.offNamed(AppRoute.resetPassword, arguments: {"email": email});
       } else {
         Get.defaultDialog(
-            title: "ُWarning", middleText: "Verify Code Not Correct");
+            title: "ُwarning".tr, middleText: "verifyCodeNotCorrect".tr);
         statusRequest = StatusRequest.failure;
       }
     }

@@ -25,7 +25,8 @@ class ForgetPasswordControllerImp extends ForgetPasswordController {
           // data.addAll(response['data']);
           Get.offNamed(AppRoute.verfiyCode, arguments: {"email": email.text});
         } else {
-          Get.defaultDialog(title: "ُWarning", middleText: "Email Not Found");
+          Get.defaultDialog(
+              title: "ُwarning".tr, middleText: "emailNotFound".tr);
           statusRequest = StatusRequest.failure;
         }
       }

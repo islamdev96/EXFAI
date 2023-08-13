@@ -46,7 +46,7 @@ class CheckoutController extends GetxController {
       if (response['status'] == "success") {
         List listdata = response['data'];
         dataaddress.addAll(listdata.map((e) => AddressModel.fromJson(e)));
-        addressid=dataaddress[0].addressId.toString();
+        addressid = dataaddress[0].addressId.toString();
       } else {
         statusRequest = StatusRequest.success;
       }
@@ -57,13 +57,13 @@ class CheckoutController extends GetxController {
 
   checkout() async {
     if (paymentMethod == null) {
-      return Get.snackbar("Error", "Please select a payment method");
+      return Get.snackbar("error".tr, "selectPaymentMethod".tr);
     }
     if (deliveryType == null) {
-      return Get.snackbar("Error", "Please select a order Type");
+      return Get.snackbar("error".tr, "selectOrderType".tr);
     }
-    if(dataaddress.isEmpty){
-       return Get.snackbar("Error", "Please select Shopping Address");
+    if (dataaddress.isEmpty) {
+      return Get.snackbar("error".tr, "selectShoppingAddress".tr);
     }
     Map data = {
       "usersid": myServices.sharedPreferences.getString("id"),
@@ -84,10 +84,10 @@ class CheckoutController extends GetxController {
       // Start backend
       if (response['status'] == "success") {
         Get.offAllNamed(AppRoute.homepage);
-        Get.snackbar("Success", "the order was successfully");
+        Get.snackbar("success".tr, "orderSuccessful".tr);
       } else {
         statusRequest = StatusRequest.none;
-        Get.snackbar("Error", "try again");
+        Get.snackbar("error".tr, "tryAgain".tr);
       }
       // End
     }

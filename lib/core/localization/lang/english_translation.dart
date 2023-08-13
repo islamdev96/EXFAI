@@ -32,7 +32,31 @@ class EnglishTranslation extends MyTranslation {
           "ordersTracking": "Orders Tracking",
           "one": "One",
           "payment": "Payment",
-          "one": "One",
+          "nowYouCanOrderToThisAddress": "Now You Can order to this address",
+          "emailOrPasswordNotCorrect": "Email Or Password Not Correct",
+          "verifyCodeNotCorrect": "Verify Code Not Correct",
+          "emailNotFound": "Email Not Found",
+          "passwordNotMatch": "Password Not Match",
+          "tryAgain": "Try Again",
+          "recive": "Recive",
+          "pendingApproval": "Pending Approval",
+          "theOrderIsBeingPrepared": "The Order is being Prepared",
+          "readyToPickedUpByDeliveryMan": "Ready To Picked up by Delivery man",
+          "onTheWay": "On The Way",
+          "theProductHasBeenAddedToTheCart":
+              "The product has been added to the cart",
+          "theCartIsEmpty": "The cart is empty",
+          "theProductHasBeenRemovedFromTheCart":
+              "The product has been removed from the cart",
+          "couponNotValid": "Coupon Not Valid",
+          "selectPaymentMethod": "Please select a payment method",
+          "selectOrderType": "Please select an order type",
+          "selectShoppingAddress": "Please select Shopping Address",
+          "orderSuccessful": "The order was successfully",
+          "productAddedToFavorites":
+              "The product has been added to your favourites",
+          "productRemovedFromWishlist":
+              "The product has been removed from your wishlist",
 
           //========================== Alert ============================//
           "warning": "Warning",

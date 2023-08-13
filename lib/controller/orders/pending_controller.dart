@@ -14,31 +14,31 @@ class OrdersPendingController extends GetxController {
 
   String printOrderType(String val) {
     if (val == "0") {
-      return "delivery";
+      return "delivery".tr;
     } else {
-      return "Recive";
+      return "recive".tr;
     }
   }
 
   String printPaymentMethod(String val) {
     if (val == "0") {
-      return "Cash On Delivery";
+      return "cashOnDelivery".tr;
     } else {
-      return "Payment Card";
+      return "paymentCards".tr;
     }
   }
 
   String printOrderStatus(String val) {
     if (val == "0") {
-      return "Pending Approval";
+      return "pendingApproval".tr;
     } else if (val == "1") {
-      return "The Order is being Prepared ";
+      return "theOrderIsBeingPrepared".tr;
     } else if (val == "2") {
-      return "Ready To Picked up by Delivery man";
+      return "readyToPickedUpByDeliveryMan".tr;
     } else if (val == "3") {
-      return "On The Way";
+      return "onTheWay".tr;
     } else {
-      return "Archive";
+      return "archive".tr;
     }
   }
 
