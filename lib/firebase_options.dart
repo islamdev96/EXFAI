@@ -44,41 +44,39 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAsH1ifUGtzsa8sAC6NnBwlWXDkLReuO_4',
-    appId: '1:746531469350:web:4ded6e2fc9b67e167c0ee7',
-    messagingSenderId: '746531469350',
-    projectId: 'exfai-6ad01',
-    authDomain: 'exfai-6ad01.firebaseapp.com',
-    storageBucket: 'exfai-6ad01.appspot.com',
+    apiKey: 'AIzaSyAbzq_-0cca09hzpIgSq4gyrvxk1BjcIK8',
+    appId: '1:676021266438:web:4d42b7ee1e1c9ed25abb87',
+    messagingSenderId: '676021266438',
+    projectId: 'exfai-7053c',
+    authDomain: 'exfai-7053c.firebaseapp.com',
+    storageBucket: 'exfai-7053c.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDNgWiDQKSr631H_HUaMAIGEthXlFNN3qo',
-    appId: '1:746531469350:android:27bf4c01741bd6517c0ee7',
-    messagingSenderId: '746531469350',
-    projectId: 'exfai-6ad01',
-    storageBucket: 'exfai-6ad01.appspot.com',
+    apiKey: 'AIzaSyAzuX2EDWt6SHdeMtNUTEC9W-8LZd7UDqI',
+    appId: '1:676021266438:android:36c3d73620ca46825abb87',
+    messagingSenderId: '676021266438',
+    projectId: 'exfai-7053c',
+    storageBucket: 'exfai-7053c.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDm3QGLsPmYMC7uYCqggOeajPiCaZUu0mw',
-    appId: '1:746531469350:ios:b911ba77ebce97a77c0ee7',
-    messagingSenderId: '746531469350',
-    projectId: 'exfai-6ad01',
-    storageBucket: 'exfai-6ad01.appspot.com',
-    androidClientId: '746531469350-j8qems1vk6ctsn5v4du4sb091v0tobtv.apps.googleusercontent.com',
-    iosClientId: '746531469350-lq6g610p4u6iqmr28lsd93lobb4qo64j.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBu0lxr0Q9H4dr3TxAKZFU6zYAUId_GIEw',
+    appId: '1:676021266438:ios:83e075bcdad733e85abb87',
+    messagingSenderId: '676021266438',
+    projectId: 'exfai-7053c',
+    storageBucket: 'exfai-7053c.appspot.com',
+    iosClientId: '676021266438-97smb2p2m8el3e9kcomnsu8v33m9pmrk.apps.googleusercontent.com',
     iosBundleId: 'com.exfai.exfai',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDm3QGLsPmYMC7uYCqggOeajPiCaZUu0mw',
-    appId: '1:746531469350:ios:b911ba77ebce97a77c0ee7',
-    messagingSenderId: '746531469350',
-    projectId: 'exfai-6ad01',
-    storageBucket: 'exfai-6ad01.appspot.com',
-    androidClientId: '746531469350-j8qems1vk6ctsn5v4du4sb091v0tobtv.apps.googleusercontent.com',
-    iosClientId: '746531469350-lq6g610p4u6iqmr28lsd93lobb4qo64j.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBu0lxr0Q9H4dr3TxAKZFU6zYAUId_GIEw',
+    appId: '1:676021266438:ios:83e075bcdad733e85abb87',
+    messagingSenderId: '676021266438',
+    projectId: 'exfai-7053c',
+    storageBucket: 'exfai-7053c.appspot.com',
+    iosClientId: '676021266438-97smb2p2m8el3e9kcomnsu8v33m9pmrk.apps.googleusercontent.com',
     iosBundleId: 'com.exfai.exfai',
   );
 }
