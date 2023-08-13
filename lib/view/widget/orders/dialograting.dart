@@ -11,19 +11,19 @@ void showDialogRating(BuildContext context, String ordersid) {
     builder: (context) => RatingDialog(
       initialRating: 1.0,
       // your app's name?
-      title: const Text(
-        'Rating Dialog',
+      title: Text(
+        'ratingDialog'.tr,
         textAlign: TextAlign.center,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 25,
           fontWeight: FontWeight.bold,
         ),
       ),
       // encourage your user to leave a high rating?
-      message: const Text(
-        'Tap a star to set your rating. Add more description here if you want.',
+      message: Text(
+        'tapAStar'.tr,
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 15),
+        style: const TextStyle(fontSize: 15),
       ),
       // your app's logo?
       image: Image.asset(
@@ -31,11 +31,11 @@ void showDialogRating(BuildContext context, String ordersid) {
         width: 200,
         height: 200,
       ),
-      submitButtonText: 'Submit',
+      submitButtonText: 'submit'.tr,
       submitButtonTextStyle: const TextStyle(
           color: AppColor.primaryColor, fontWeight: FontWeight.bold),
-      commentHint: 'Set your custom comment hint',
-      onCancelled: () => print('cancelled'),
+      commentHint: 'setYourCustomCommentHint'.tr,
+      onCancelled: () => print('cancelled'.tr),
       onSubmitted: (response) {
         OrdersArchiveController controller = Get.find();
         // print('rating: ${response.rating}, comment: ${response.comment}');

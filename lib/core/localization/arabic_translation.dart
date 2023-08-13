@@ -4,39 +4,50 @@ class ArabicTranslation extends MyTranslation {
   @override
   Map<String, Map<String, String>> get keys => {
         "ar": {
-          //---------------------------Application---------------------------------------//
+          //========================== Checkout ============================//
+
+          //========================== Alert ============================//
+          "warning": "تحذير",
+          "doYouWantToExitTheApp": "هل تريد الخروج من التطبيق؟",
+          "confirmation": "تأكيد",
+          "cancellation": "إلغاء",
+
+          //========================== Application ============================//
 
           "alert": "تنبيه",
-          "attentionPleaseTurnOnTheLocationService": "الرجاء تشغيل خدمة الموقع",
+          "attentionPleaseTurnOnTheLocationService": "يرجى تفعيل خدمة الموقع",
           "pleaseGiveTheSitePermissionForTheApplication":
-              "الرجاء إعطاء إذن الموقع للتطبيق",
+              "يرجى منح إذن الموقع للتطبيق",
           "theApplicationCannotBeUsedWithoutSpecifyingYourLocation":
-              "لا يمكن استخدام التطبيق دون تحديد موقعك",
+              "لا يمكن استخدام التطبيق دون تحديد الموقع الخاص بك",
 
           //========================== onBoardingList ============================//
 
           "chooseProduct": "اختر المنتج",
           "weHavea100kProduct":
-              "لدينا 100 ألف منتج، اختر منتجك من متجرنا الإلكتروني",
+              "لدينا 100 ألف منتج، اختر منتجك من متجر التجارة الإلكترونية لدينا",
           "easyAndSafe": "دفع سهل وآمن",
           "youCanPay": "يمكنك الدفع نقدًا أو من خلال بوابات الدفع",
           "trackYourOrder": "تتبع طلبك",
           "theOrderCanBeTracked": "يمكن تتبع الطلب في كل مرحلة حتى يصل إليك",
-          "welcomeBack": "مرحبًا بعودتك",
+          "welcomeBack": "مرحبًا مجددًا",
           "continue": "متابعة",
 
           //========================== auth ============================//
 
-          "skip": "تخطى",
+          "resendVerfiyCode": "إعادة إرسال رمز التحقق",
+          "ReciveAVerificationCode":
+              "الرجاء إدخال عنوان البريد الإلكتروني الخاص بك لاستقبال رمز التحقق",
+
+          "skip": "تخطي",
           "login": "تسجيل الدخول",
-          "signUp": "إنشاء حساب",
+          "signUp": "التسجيل",
           "signIn": "تسجيل الدخول",
           "notAValidEmail": "البريد الإلكتروني غير صالح",
           "notAValidPhoneNumber": "رقم الهاتف غير صالح",
           "notAValidPassword": "كلمة المرور غير صالحة",
           "passwordMustBeAtLeast8Characters":
-              "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل",
-          "warning": "تحذير",
+              "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل",
           "phoneNumberOrEmailAlreadyExists":
               "رقم الهاتف أو البريد الإلكتروني موجود بالفعل",
           "cannotBeEmpty": "لا يمكن أن يكون فارغًا",
@@ -50,10 +61,10 @@ class ArabicTranslation extends MyTranslation {
           "notAValidAddress": "عنوان غير صالح",
           "notAValidCity": "مدينة غير صالحة",
           "notAValidCountry": "بلد غير صالح",
-          "notAValidPostalCode": "الرمز البريدي غير صالح",
+          "notAValidPostalCode": "رمز بريدي غير صالح",
           "notAValidName": "اسم غير صالح",
-          "notAValidPhoneOrEmail": "رقم هاتف أو بريد إلكتروني غير صالح",
-          "notAValidPhoneOrPassword": "رقم الهاتف أو كلمة المرور غير صالحة",
+          "notAValidPhoneOrEmail": "رقم الهاتف أو البريد الإلكتروني غير صالح",
+          "notAValidPhoneOrPassword": "رقم الهاتف أو كلمة المرور غير صالح",
           "notAValidPhoneOrUsername": "رقم الهاتف أو اسم المستخدم غير صالح",
           "notAValidEmailOrPassword":
               "البريد الإلكتروني أو كلمة المرور غير صالحة",
@@ -65,15 +76,15 @@ class ArabicTranslation extends MyTranslation {
           "notAValidUsernameOrPhone": "اسم المستخدم أو رقم الهاتف غير صالح",
 
           "signInYourEmailAndPassword":
-              "قم بتسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور أو استمر بواسطة وسائل التواصل الاجتماعي",
-          "enterYourEmail": "أدخل بريدك الإلكتروني",
-          "enterYourPhone": "أدخل رقم هاتفك",
-          "enterYourPassword": "أدخل كلمة المرور الخاصة بك",
+              "تسجيل الدخول باستخدام البريد الإلكتروني وكلمة المرور أو متابعة باستخدام وسائل التواصل الاجتماعي",
+          "enterYourEmail": "أدخل البريد الإلكتروني",
+          "enterYourPhone": "أدخل رقم الهاتف",
+          "enterYourPassword": "أدخل كلمة المرور",
           "forgetPassword": "نسيت كلمة المرور",
           "dontHaveAnAccount": "ليس لديك حساب؟",
-          "haveAnAccount": "لديك حساب؟",
+          "haveAnAccount": "هل لديك حساب؟",
           "signUpWithYourEmailAndPassword":
-              "سجل الدخول باستخدام بريدك الإلكتروني وكلمة المرور أو استمر بواسطة وسائل التواصل الاجتماعي",
+              "التسجيل باستخدام البريد الإلكتروني وكلمة المرور أو متابعة باستخدام وسائل التواصل الاجتماعي",
           "email": "البريد الإلكتروني",
           "password": "كلمة المرور",
           "username": "اسم المستخدم",
@@ -81,11 +92,11 @@ class ArabicTranslation extends MyTranslation {
           "congratulations": "تهانينا",
           "enterYourUsername": "أدخل اسم المستخدم الخاص بك",
           "signUpEmailAndPassword":
-              "سجل الدخول باستخدام بريدك الإلكتروني وكلمة المرور أو استمر بواسطة وسائل التواصل الاجتماعي",
+              "التسجيل باستخدام البريد الإلكتروني وكلمة المرور أو متابعة باستخدام وسائل التواصل الاجتماعي",
           "checkEmail": "تحقق من البريد الإلكتروني",
           "verificationCode": "رمز التحقق",
-          "checkCode": "تحقق من الكود",
-          "pleaseEnterTheDigitCodeSentTo": "يرجى إدخال الرمز الرقمي المرسل إلى",
+          "checkCode": "تحقق من الرمز",
+          "pleaseEnterTheDigitCodeSentTo": "يرجى إدخال رمز الأرقام المرسل إلى",
           "resendVerifyCode": "إعادة إرسال رمز التحقق",
           "enterYourVerificationCode": "أدخل رمز التحقق الخاص بك",
           "enterYourNewPassword": "أدخل كلمة المرور الجديدة الخاصة بك",
@@ -96,7 +107,7 @@ class ArabicTranslation extends MyTranslation {
           "goToLogin": "الانتقال إلى تسجيل الدخول",
           "success": "نجاح",
           "save": "حفظ",
-          "pleaseEnterNewPassword": "يرجى إدخال كلمة مرور جديدة",
+          "pleaseEnterNewPassword": "يرجى إدخال كلمة المرور الجديدة",
           "newPassword": "كلمة المرور الجديدة",
           "passwordResetSuccess": "تم إعادة تعيين كلمة المرور بنجاح",
           "successfullyRegistered": "تم التسجيل بنجاح",
@@ -107,315 +118,119 @@ class ArabicTranslation extends MyTranslation {
           //========================== home ============================//
 
           "exit": "خروج",
+          "productForYou": "منتجات لك",
+          "categories": "الفئات",
           "areYouSureYouWantToExit": "هل أنت متأكد أنك تريد الخروج؟",
           "no": "لا",
           "yes": "نعم",
-          "welcome": "مرحبا",
+          "welcome": "مرحبًا",
           "findYourProduct": "ابحث عن منتجك",
 
-          "home": "الصفحة الرئيسية",
+          "home": "الرئيسية",
           "category": "الفئة",
           "cart": "العربة",
           "profile": "الملف الشخصي",
           "search": "بحث",
-          "searchForProduct": "البحث عن المنتج",
-          "searchForBrand": "البحث عن العلامة التجارية",
-          "searchForCategory": "البحث عن الفئة",
-          "searchForSubCategory": "البحث عن الفئة الفرعية",
-          "addToCart": "أضف إلى العربة",
-          "viewDetails": "عرض التفاصيل",
-          "relatedProducts": "منتجات ذات صلة",
-          "productDetails": "تفاصيل المنتج",
-          "available": "متاح",
-          "outOfStock": "غير متاح",
-          "reviews": "التقييمات",
-          "noReviews": "لا توجد تقييمات",
-          "addToFavorites": "أضف إلى المفضلة",
-          "removeFromFavorites": "إزالة من المفضلة",
-          "productAddedToCart": "تمت إضافة المنتج إلى العربة",
-          "productRemovedFromCart": "تمت إزالة المنتج من العربة",
-          "quantity": "الكمية",
-          "selectQuantity": "اختر الكمية",
-          "subtotal": "المجموع الفرعي",
-          "proceedToCheckout": "استكمال الشراء",
-          "total": "المجموع",
-          "orderSummary": "ملخص الطلب",
-          "shippingAddress": "عنوان الشحن",
-          "paymentMethod": "طريقة الدفع",
-          "confirmOrder": "تأكيد الطلب",
-          "orderPlacedSuccessfully": "تم إرسال الطلب بنجاح",
-          "orderFailed": "فشل في إرسال الطلب",
-          "orderDetails": "تفاصيل الطلب",
+          "searchForProduct": "البحث عن منتج",
+          "searchForBrand": "البحث عن علامة تجارية",
+          "searchForCategory": "البحث عن فئة",
+          "searchForSubCategory": "البحث عن فئة فرعية",
+          "searchForStore": "البحث عن متجر",
+          "searchForOffer": "البحث عن عرض",
+          "searchForBrandOrCategory": "البحث عن علامة تجارية أو فئة",
+
+          "offer": "عرض",
+
+          //========================== Notification ============================//
+
+          "notification": "الإشعارات",
+          "noNotification": "لا يوجد إشعارات",
+          "noNotificationDescription": "لا توجد إشعارات بعد",
+          "deleteNotification": "حذف الإشعار",
+
+          //========================== category ============================//
+
+          "noCategory": "لا توجد فئة",
+          "noCategoryDescription": "لا توجد فئات بعد",
+          "noSubCategory": "لا توجد فئة فرعية",
+
+          //========================== cart ============================//
+
+          "myCart": "سلتي",
+          "goToCart": "الانتقال إلى السلة",
+          "ordersDetails": "تفاصيل الطلب",
+          "coupon": "كوبون",
+          "choosePaymentMethod": "اختر طريقة الدفع",
+          "cashOnDelivery": "الدفع عند الاستلام",
+          "payWhenYouReceiveYourOrder": "ادفع عند استلام الطلب",
+          "totalPrice": "السعر الإجمالي",
+          "item": "منتج",
+          "qTY": "الكمية",
+          "price": "السعر",
+          "remove": "إزالة",
+          "noCart": "لا توجد سلة",
+
+          "payNow": "ادفع الآن",
+          "pay": "ادفع",
+          "paymentCards": "بطاقات الدفع",
+          "creditCardOrDebitCard": "بطاقة الائتمان أو الخصم",
+          "chooseDeliveryType": "اختر نوع التوصيل",
+
+          "creditCard": "بطاقة الائتمان",
+          "payPal": "باي بال",
+          "sadad": "سداد",
+          "mada": "مدى",
+          "apply": "تطبيق",
+          "couponCode": "رمز الكوبون",
+          "order": "طلب",
+          "youHave": "لديك",
+          "itemsInYourCart": "منتج في سلتك",
+          "receive": "استلام",
           "orderNumber": "رقم الطلب",
-          "date": "التاريخ",
-          "status": "الحالة",
-          "pending": "قيد الانتظار",
-          "inProcess": "قيد التنفيذ",
-          "shipped": "تم الشحن",
-          "delivered": "تم التوصيل",
-          "cancelled": "تم الإلغاء",
-          "orderCancelled": "تم إلغاء الطلب",
-          "cancelOrder": "إلغاء الطلب",
-          "orderCancellationReason": "سبب إلغاء الطلب",
-          "orderCancellationSuccess": "تم إلغاء الطلب بنجاح",
-          "orderCancellationFailed": "فشل إلغاء الطلب",
-          "cancel": "إلغاء",
-          "reason": "السبب",
-          "order": "الطلب",
-          "myOrders": "طلباتي",
-          "orderHistory": "سجل الطلبات",
-          "noOrdersFound": "لم يتم العثور على أي طلبات",
-          "trackOrder": "تتبع الطلب",
-          "currentLocation": "الموقع الحالي",
-          "destination": "الوجهة",
-          "directions": "الاتجاهات",
-          "orderTracking": "تتبع الطلب",
-          "orderStatus": "حالة الطلب",
-          "shippingDetails": "تفاصيل الشحن",
-          "paymentDetails": "تفاصيل الدفع",
-          "contactInformation": "معلومات الاتصال",
-          "shippingMethod": "طريقة الشحن",
-          "billingAddress": "عنوان الفواتير",
-          "paymentSummary": "ملخص الدفع",
-          "paymentStatus": "حالة الدفع",
-          "paymentFailed": "فشل في الدفع",
-          "paymentSuccessful": "تم الدفع بنجاح",
-          "paymentPending": "معلق على الدفع",
-          "subTotal": "المجموع الفرعي",
-          "shippingCost": "تكلفة الشحن",
+          "shippingAddress": "عنوان الشحن",
+          "cartIsEmpty": "السلة فارغة",
+          "total": "الإجمالي",
+          "delivery": "التوصيل",
           "tax": "الضريبة",
           "discount": "الخصم",
-          "orderTotal": "إجمالي الطلب",
-          "billingDetails": "تفاصيل الفواتير",
-          "firstName": "الاسم الأول",
-          "lastName": "الاسم الأخير",
+          "subTotal": "الإجمالي الفرعي",
+          "checkout": "إتمام الشراء",
+          "continueShopping": "متابعة التسوق",
+          "add": "إضافة",
+          "quantity": "الكمية",
+          "totalQuantity": "إجمالي الكمية",
+          "totalDiscount": "إجمالي الخصم",
+          "totalTax": "إجمالي الضريبة",
+
+          //---------------------------profile-----------------------------------------//
+
+          //---------------------------Address-----------------------------------------//
           "address": "العنوان",
+          "addAddress": "إضافة عنوان",
+          "editAddress": "تعديل العنوان",
+          "addressName": "اسم العنوان",
+          "completionOfTheAddress": "استكمال العنوان",
           "city": "المدينة",
-          "state": "المنطقة",
-          "zipCode": "الرمز البريدي",
-          "phoneNumber": "رقم الهاتف",
-          "emailAddress": "عنوان البريد الإلكتروني",
-          "creditCard": "بطاقة الائتمان",
-          "debitCard": "بطاقة الخصم",
-          "cashOnDelivery": "الدفع عند التسليم",
-          "paypal": "PayPal",
-          "stripe": "Stripe",
-          "paymentMethodSelected": "تم اختيار طريقة الدفع",
-          "placeOrder": "تأكيد الطلب",
-          "searchResults": "نتائج البحث",
-          "noSearchResults": "لم يتم العثور على نتائج بحث",
-          "goBack": "العودة",
-          "resetPassword": "إعادة تعيين كلمة المرور",
-          "enterYourEmailToReset":
-              "أدخل عنوان البريد الإلكتروني الخاص بك لإعادة تعيين كلمة المرور",
-          "submit": "إرسال",
-          "passwordResetEmailSent":
-              "تم إرسال بريد إلكتروني لإعادة تعيين كلمة المرور",
-          "emailNotFound": "لم يتم العثور على عنوان البريد الإلكتروني",
-          "backToLogin": "العودة إلى تسجيل الدخول",
-          "accountSettings": "إعدادات الحساب",
-          "changePassword": "تغيير كلمة المرور",
-          "currentPassword": "كلمة المرور الحالية",
-          "confirmPassword": "تأكيد كلمة المرور",
-          "passwordMismatch": "كلمة المرور غير متطابقة",
-          "passwordChanged": "تم تغيير كلمة المرور بنجاح",
-          "passwordChangeFailed": "فشل تغيير كلمة المرور",
-          "notifications": "الإشعارات",
-          "emailNotifications": "إشعارات البريد الإلكتروني",
-          "pushNotifications": "إشعارات الدفع",
-          "orderNotifications": "إشعارات الطلب",
-          "promotionalNotifications": "إشعارات ترويجية",
-          "privacySettings": "إعدادات الخصوصية",
-          "personalInformation": "المعلومات الشخصية",
-          "manageAddresses": "إدارة العناوين",
-          "language": "اللغة",
-          "english": "الإنجليزية",
-          "spanish": "الإسبانية",
-          "french": "الفرنسية",
-          "portuguese": "البرتغالية",
-          "arabic": "العربية",
-          "darkMode": "الوضع الداكن",
-          "termsAndConditions": "الشروط والأحكام",
-          "privacyPolicy": "سياسة الخصوصية",
-          "aboutUs": "معلومات عنا",
-          "contactUs": "اتصل بنا",
-          "faq": "الأسئلة الشائعة",
-          "logout": "تسجيل الخروج"
+          "area": "المنطقة",
+          "street": "الشارع",
+          "buildingNumber": "رقم المبنى",
+          "floorNumber": "رقم الطابق",
+          "apartmentNumber": "رقم الشقة",
+          "landmark": "العلامة المميزة",
+          "saveAddress": "حفظ العنوان",
+          "addDetailsAddress": "إضافة تفاصيل العنوان",
+          "name": "الاسم",
+          "edit": "تعديل",
+          "delete": "حذف",
+          "noAddress": "لا توجد عناوين",
+
+          "noOrder": "لا يوجد طلبات",
+          "completion": "الاستكمال",
+          "deleteAddress": "حذف العنوان",
+          "addNewAddress": "إضافة عنوان جديد",
+          "noAddressDescription": "لا توجد عناوين بعد",
+
+          //---------------------------order-----------------------------------------//
         }
       };
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import '../translate.dart';
-
-// class ArabicTranslation extends MyTranslation {
-//   @override
-//   Map<String, Map<String, String>> get keys => {
-//         "ar": {
-//           //---------------------------Application---------------------------------------//
-
-//           "alert": "تنبيه",
-//           "attentionPleaseTurnOnTheLocationService": "الرجاء تشغيل خدمة الموقع",
-//           "pleaseGiveTheSitePermissionForTheApplication":
-//               "الرجاء إعطاء إذن الموقع للتطبيق",
-//           "theApplicationCannotBeUsedWithoutSpecifyingYourLocation":
-//               "لا يمكن استخدام التطبيق دون تحديد موقعك",
-//           //---------------------------onBoardingList---------------------------------------//
-
-//           "chooseProduct": "اختر المنتج",
-//           "weHavea100kProduct":
-//               "لدينااكثر من 10 ألف منتج، اختر  منتجك من متجر التجارة الإلكترونية الخاص بنا",
-//           "easyAndSafe": "دفع سهل وآمن",
-//           "youCanPay": "يمكنك الدفع نقدًا أو من خلال بوابات الدفع",
-//           "trackYourOrder": "تتبع طلبك",
-//           "theOrderCanBeTracked": "يمكن تتبع الطلب في كل مرحلة حتى يصل إليك",
-//           "welcomeBack": "مرحبا بعودتك",
-//           "continue": "استمرار",
-
-//           //---------------------------auth-----------------------------------------//
-//           "skip": "تخطى",
-//           "login": "تسجيل الدخول",
-
-//           "signInYourEmailAndPassword":
-//               "تسجيل الدخول بالبريد الإلكتروني وكلمة المرور أو متابعة مع وسائل التواصل الاجتماعي",
-//           "enterYourEmail": "أدخل بريدك الإلكتروني",
-//           "enterYourPhone": "أدخل رقم هاتفك",
-//           "enterYourPassword": "أدخل كلمة المرور الخاصة بك",
-//           "forgetPassword": "نسيت كلمة المرور",
-//           "signIn": "تسجيل الدخول",
-//           "dontHaveAnAccount": "ليس لديك حساب ؟ ",
-//           "signUp": "سجل",
-//           "signUpWithYourEmailAndPassword":
-//               "الاشتراك مع البريد الإلكتروني وكلمة المرور الخاصة بك أو متابعة مع وسائل التواصل الاجتماعي",
-//           "email": "البريد الإلكتروني",
-//           "password": "كلمه السر",
-//           "username": "اسم المستخدم",
-//           "phone": "هاتف",
-//           "congratulations": "تهانينا",
-//           "haveanaccount": "هل لديك حساب ؟",
-
-//           "signUpEmailAndPassword":
-//               "الاشتراك مع البريد الإلكتروني وكلمة المرور الخاصة بك أو متابعة مع وسائل التواصل الاجتماعي",
-//           "haveAnAccount": " هل لديك حساب ؟ ",
-//           "checkEmail": "تحقق من البريد الإلكتروني",
-//           "verificationCode": "رمز التحقق",
-//           "checkCode": "تحقق من الرمز",
-//           "pleaseEnterTheDigitCodeSentTo": "الرجاء إدخال رمز الرقم المرسل إلى",
-//           "resendVerfiyCode": "إعادة إرسال رمز التحقق",
-//           "enterYourVerificationCode": "أدخل رمز التحقق الخاص بك",
-//           "enterYourNewPassword": "أدخل كلمة المرور الجديدة الخاصة بك",
-
-//           "accountSuccessfullyCreated": "تم إنشاء الحساب بنجاح",
-//           "ReciveAVerificationCode":
-//               "الرجاء إدخال عنوان البريد الإلكتروني الخاص بك لتلقي رمز التحقق",
-//           "check": "تحقق",
-//           "goToLogin": "الذهاب إلى تسجيل الدخول",
-//           "success": "نجاح",
-//           "save": "حفظ",
-//           "pleaseEnterNewPassword": "الرجاء إدخال كلمة مرور جديدة",
-//           "newPassword": "كلمة السر الجديدة",
-//           "passwordResetSuccess": "تم إعادة تعيين كلمة المرور بنجاح",
-//           "passwordResetFailed": "فشل إعادة تعيين كلمة المرور",
-//           "passwordReset": "إعادة تعيين كلمة المرور",
-//           "passwordResetLinkSent":
-//               "تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني",
-//           "passwordResetLinkFailedToSend":
-//               "فشل إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني",
-//           "passwordResetLink": "إعادة تعيين كلمة المرور",
-//           "passwordResetLinkSentTo":
-//               "تم إرسال رابط إعادة تعيين كلمة المرور إلى",
-
-//           "passwordResetLinkFailedToSendTo":
-//               "فشل إرسال رابط إعادة تعيين كلمة المرور إلى",
-//           "passwordResetLinkSentToEmail":
-//               "تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني",
-//           "passwordResetLinkFailedToSendToEmail":
-//               "فشل إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني",
-//           "passwordResetLinkSentToPhone":
-//               "تم إرسال رابط إعادة تعيين كلمة المرور إلى هاتفك",
-
-//           "enterYourUsername": "أدخل اسم المستخدم الخاص بك",
-
-//           "successfullyRegistered": "تم التسجيل بنجاح",
-//           "chooseCategory": "اختر الفئة",
-//           "chooseSubCategory": "اختر الفئة الفرعية",
-//           "chooseBrand": "اختر العلامة التجارية",
-
-//           //---------------------------home-----------------------------------------//
-//           "home": "الصفحة الرئيسية",
-//           "category": "الفئة",
-//           "cart": "عربة التسوق",
-//           "profile": "الملف الشخصي",
-//           "search": "بحث",
-//           "searchForProduct": "البحث عن المنتج",
-//           "searchForBrand": "Search For Brand",
-//           "searchForCategory": "Search For Category",
-//           "searchForSubCategory": "Search For Sub Category",
-
-// //////////////////////////////////////////////////////////////////////
-//           "7":
-//               "The order can be tracked at every stage \n until it reaches you",
-//           "8": "Continue",
-//           "9": "Sign In",
-//           "10": "Welcome Back",
-//           "11":
-//               "Sign In Your Email And Password Or  Continue With Social Media",
-// //           "12": "Enter Your Email",
-// //           "13": "Enter Your Password",
-// //           "14": "Forget Password",
-// //           "15": "Sign In",
-// //           "16": "Dont Have An Account ? ",
-// //           "17": "Sign Up",
-// //           "18": "Email",
-// //           "19": "Password",
-// //           "20": "Username",
-// //           "21": "Phone",
-// //           "22": "Enter Your Phone",
-// //           "23": "Enter Your Username",
-// //           "24":
-// //               "Sign Up With Your Email And Password OR Continue With Social Media",
-// //           "25": " have an account ? ",
-// //           "26": "SignIn",
-// //           "27": "Check Email",
-// //           "28": "Account successfully created",
-// //           "29": "please Enter Your Email Address To Recive A verification code",
-// //           "30": "check",
-// //           "31": "Go To Login",
-// //           "32": "Success",
-// //           "33": "save",
-// //           "34": "Please Enter new Password",
-// //           "35": "New Password",
-// //           "36": "Password has been reset successfully",
-// //           "37": "congratulations",
-// //           "38": "successfully registered"
-//         },
-//       };
-// }

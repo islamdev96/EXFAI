@@ -30,7 +30,7 @@ class ForgetPassword extends StatelessWidget {
                     SizedBox(height: 10.h),
                     CustomTextBodyAuth(
                         // please Enter Your Email Address To Recive A verification code
-                        text: "ReciveAVerificationCode".tr),
+                        text: "reciveAVerificationCode".tr),
                     SizedBox(height: 15.h),
                     CustomTextFormAuth(
                       isNumber: false,

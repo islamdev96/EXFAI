@@ -10,7 +10,7 @@ class AddressAdd extends StatelessWidget {
     AddAddressController controllerpage = Get.put(AddAddressController());
     return Scaffold(
       appBar: AppBar(
-        title: const Text('add new address'),
+        title: Text('addNewAddress'.tr),
       ),
       body: Container(
         child: GetBuilder<AddAddressController>(
@@ -44,8 +44,8 @@ class AddressAdd extends StatelessWidget {
                               },
                               color: AppColor.primaryColor,
                               textColor: Colors.white,
-                              child: const Text("اكمال",
-                                  style: TextStyle(fontSize: 18)),
+                              child: Text("completion".tr,
+                                  style: const TextStyle(fontSize: 18)),
                             ),
                           ),
                         )

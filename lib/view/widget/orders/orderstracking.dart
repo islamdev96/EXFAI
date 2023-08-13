@@ -12,7 +12,7 @@ class OrdersTracking extends StatelessWidget {
     TrackingController controller = Get.put(TrackingController());
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Orders Tracking'),
+        title: Text('ordersTracking'.tr),
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),

@@ -10,6 +10,14 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
 
   @override
   Widget build(BuildContext context) {
+    final orderNumber = "orderNumber".tr;
+    final String orderType = "orderType".tr;
+    final String deliveryPrice = "deliveryPrice".tr;
+    final String paymentMethod = "paymentMethod".tr;
+    final String orderPrice = "orderPrice".tr;
+    final String orderStatus = "orderStatus".tr;
+    final String totalPrice = "totalPrice".tr;
+
     return Card(
       child: Container(
           padding: const EdgeInsets.all(10),
@@ -18,7 +26,7 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
             children: [
               Row(
                 children: [
-                  Text("Order Number : #${listdata.ordersId}",
+                  Text("$orderNumber : #${listdata.ordersId}",
                       style: const TextStyle(
                           fontSize: 18, fontWeight: FontWeight.bold)),
                   const Spacer(),
@@ -42,17 +50,17 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
               ),
               const Divider(),
               Text(
-                  "Order Type : ${controller.printOrderType(listdata.ordersType!)}"),
-              Text("Order Price : ${listdata.ordersPrice} \$"),
-              Text("Delivery Price : ${listdata.ordersPricedelivery} \$ "),
+                  "$orderType : ${controller.printOrderType(listdata.ordersType!)}"),
+              Text("$orderPrice : ${listdata.ordersPrice} \$"),
+              Text("$deliveryPrice : ${listdata.ordersPricedelivery} \$ "),
               Text(
-                  "Payment Method : ${controller.printPaymentMethod(listdata.ordersPaymentmethod!)} "),
+                  "$paymentMethod : ${controller.printPaymentMethod(listdata.ordersPaymentmethod!)} "),
               Text(
-                  "Order Status : ${controller.printOrderStatus(listdata.ordersStatus!)} "),
+                  "$orderStatus : ${controller.printOrderStatus(listdata.ordersStatus!)} "),
               const Divider(),
               Row(
                 children: [
-                  Text("Total Price : ${listdata.ordersId} \$ ",
+                  Text("$totalPrice : ${listdata.ordersId} \$ ",
                       style: const TextStyle(
                           color: AppColor.primaryColor,
                           fontWeight: FontWeight.bold)),
@@ -64,7 +72,7 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
                     },
                     color: AppColor.thirdColor,
                     textColor: AppColor.secondColor,
-                    child: const Text("Details"),
+                    child: Text("details".tr),
                   ),
                   const SizedBox(
                     width: 10,
@@ -76,7 +84,7 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
                       },
                       color: AppColor.thirdColor,
                       textColor: AppColor.secondColor,
-                      child: const Text("Rating"),
+                      child: Text("rating".tr),
                     ),
                 ],
               ),

@@ -11,7 +11,7 @@ class AddressAddDetails extends StatelessWidget {
         Get.put(AddAddressDetailsController());
     return Scaffold(
       appBar: AppBar(
-        title: const Text('add details address'),
+        title: Text('addDetailsAddress'.tr),
       ),
       body: Container(
           padding: const EdgeInsets.all(15),
@@ -20,8 +20,8 @@ class AddressAddDetails extends StatelessWidget {
                 statusRequest: controller.statusRequest,
                 widget: ListView(children: [
                   CustomTextFormAuth(
-                      hinttext: "city",
-                      labeltext: "city",
+                      hinttext: "city".tr,
+                      labeltext: "city".tr,
                       iconData: Icons.location_city,
                       mycontroller: controller.city,
                       valid: (val) {
@@ -29,8 +29,8 @@ class AddressAddDetails extends StatelessWidget {
                       },
                       isNumber: false),
                   CustomTextFormAuth(
-                      hinttext: "street",
-                      labeltext: "street",
+                      hinttext: "street".tr,
+                      labeltext: "street".tr,
                       iconData: Icons.streetview,
                       mycontroller: controller.street,
                       valid: (val) {
@@ -38,8 +38,8 @@ class AddressAddDetails extends StatelessWidget {
                       },
                       isNumber: false),
                   CustomTextFormAuth(
-                      hinttext: "name",
-                      labeltext: "name",
+                      hinttext: "name".tr,
+                      labeltext: "name".tr,
                       iconData: Icons.near_me,
                       mycontroller: controller.name,
                       valid: (val) {
@@ -47,7 +47,7 @@ class AddressAddDetails extends StatelessWidget {
                       },
                       isNumber: false),
                   CustomButton(
-                    text: "Add",
+                    text: "add".tr,
                     onPressed: () {
                       controller.addAddress();
                     },

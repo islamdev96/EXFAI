@@ -38,44 +38,44 @@ class Settings extends StatelessWidget {
                 ListTile(
                   // onTap: () {},
                   trailing: Switch(onChanged: (val) {}, value: true),
-                  title: const Text("Disable Notificatios"),
+                  title: Text("disableNotificatios".tr),
                 ),
                 ListTile(
                   onTap: () {
                     Get.toNamed(AppRoute.orderspending);
                   },
                   trailing: const Icon(Icons.card_travel),
-                  title: const Text("Orders"),
+                  title: Text("orders".tr),
                 ),
                 ListTile(
                   onTap: () {
                     Get.toNamed(AppRoute.ordersarchive);
                   },
                   trailing: const Icon(Icons.card_travel),
-                  title: const Text("Archive"),
+                  title: Text("archive".tr),
                 ),
                 ListTile(
                   onTap: () {
                     Get.toNamed(AppRoute.addressview);
                   },
                   trailing: const Icon(Icons.location_on_outlined),
-                  title: const Text("Address"),
+                  title: Text("address".tr),
                 ),
                 ListTile(
                   onTap: () {},
                   trailing: const Icon(Icons.help_outline_rounded),
-                  title: const Text("About us"),
+                  title: Text("aboutUs".tr),
                 ),
                 ListTile(
                   onTap: () {},
                   trailing: const Icon(Icons.phone_callback_outlined),
-                  title: const Text("Contact us"),
+                  title: Text("contactUs".tr),
                 ),
                 ListTile(
                   onTap: () {
                     controller.logout();
                   },
-                  title: const Text("Logout"),
+                  title: Text("logout".tr),
                   trailing: const Icon(Icons.exit_to_app),
                 ),
               ]),

@@ -9,7 +9,7 @@ class AddressView extends StatelessWidget {
     AddressViewController controller = Get.put(AddressViewController());
     return Scaffold(
         appBar: AppBar(
-          title: const Text('address'),
+          title: Text('address'.tr),
         ),
         floatingActionButton: FloatingActionButton(
             onPressed: () {

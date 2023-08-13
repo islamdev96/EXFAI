@@ -7,6 +7,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
 
   @override
   Widget build(BuildContext context) {
+    final String minute = "minute".tr;
     return InkWell(
         onTap: () {
           controller.goToPageProductDetails(itemsModel);
@@ -38,18 +39,27 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                               fontSize: 16,
                               fontWeight: FontWeight.bold)),
                       Row(
-                       // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text("23 - 50 ",
-                              textAlign: TextAlign.center,style: TextStyle(fontFamily: "sans"),),
-                              Container(
-                                margin: const EdgeInsets.only(top:5),
-                                child: const Icon(Icons.timer_sharp,color: AppColor.grey,)),
-                                const SizedBox(width: 4,),
-                                 Text("${controller.deliverytime} Minute ",
-                              textAlign: TextAlign.center,style: const TextStyle(fontFamily: "sans"),),
-                          
-                         
+                          const Text(
+                            "23 - 50 ",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontFamily: "sans"),
+                          ),
+                          Container(
+                              margin: const EdgeInsets.only(top: 5),
+                              child: const Icon(
+                                Icons.timer_sharp,
+                                color: AppColor.grey,
+                              )),
+                          const SizedBox(
+                            width: 4,
+                          ),
+                          Text(
+                            "${controller.deliverytime} $minute ",
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(fontFamily: "sans"),
+                          ),
                         ],
                       ),
                       Row(

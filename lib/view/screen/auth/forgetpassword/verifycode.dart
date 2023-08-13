@@ -5,13 +5,16 @@ class VerfiyCode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String pleaseEnterTheDigitCodeSentTo =
+        "pleaseEnterTheDigitCodeSentTo".tr;
+
     VerifyCodeControllerImp controller = Get.put(VerifyCodeControllerImp());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: AppColor.backgroundcolor,
         elevation: 0.0,
-        title: Text('Verification Code',
+        title: Text('verificationCode'.tr,
             style: Theme.of(context)
                 .textTheme
                 .displayLarge!
@@ -21,10 +24,10 @@ class VerfiyCode extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
         child: ListView(children: [
           const SizedBox(height: 20),
-          const CustomTextTitleAuth(text: "Check code"),
+          CustomTextTitleAuth(text: "checkCode".tr),
           const SizedBox(height: 10),
-          const CustomTextBodyAuth(
-              text: "Please Enter The Digit Code Sent To wael@gmail.com"),
+          CustomTextBodyAuth(
+              text: "$pleaseEnterTheDigitCodeSentTo islamsayedglab@gmail.com"),
           const SizedBox(height: 15),
           OtpTextField(
             fieldWidth: 50.0,
