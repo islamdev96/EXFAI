@@ -52,8 +52,8 @@ class ProductDetailsControllerImp extends ProductDetailsController {
       // Start backend
       if (response['status'] == "success") {
         Get.rawSnackbar(
-            title: "اشعار",
-            messageText: const Text("تم اضافة المنتج الى السلة "));
+            title: "alert".tr,
+            messageText: Text("theProductHasBeenAddedToTheCart".tr));
         // data.addAll(response['data']);
       } else {
         statusRequest = StatusRequest.failure;
@@ -74,8 +74,8 @@ class ProductDetailsControllerImp extends ProductDetailsController {
       // Start backend
       if (response['status'] == "success") {
         Get.rawSnackbar(
-            title: "اشعار",
-            messageText: const Text("تم ازالة المنتج من السلة "));
+            title: "alert".tr,
+            messageText: Text("theProductHasBeenRemovedFromTheCart".tr));
         // data.addAll(response['data']);
       } else {
         statusRequest = StatusRequest.failure;
