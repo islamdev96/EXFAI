@@ -33,7 +33,7 @@ class Cart extends StatelessWidget {
                     SizedBox(height: 10.h),
                     TopCardCart(
                         message:
-                            "$youHave (    ${cartController.totalcountitems}    )  $itemsInYourList"),
+                            "$youHave (   ${cartController.totalcountitems}  )  $itemsInYourList"),
                     Container(
                       padding: EdgeInsets.all(10),
                       child: Column(

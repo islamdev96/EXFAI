@@ -258,6 +258,7 @@ class EnglishTranslation extends MyTranslation {
           "totalQuantity": "Total Quantity",
           "totalDiscount": "Total Discount",
           "totalTax": "Total Tax",
+          'itemsInYourList': "Items In Your List",
 
           //---------------------------profile-----------------------------------------//
 

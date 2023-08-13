@@ -6,31 +6,31 @@ class OnBoarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(OnBoardingControllerImp());
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: AppColor.backgroundcolor,
       body: SafeArea(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 280),
-              child: InkWell(
-                onTap: () {
-                  Get.toNamed('/login');
-                },
-                child: Text(
-                  'skip'.tr,
-                  style: Theme.of(context)
-                      .textTheme
-                      .displayLarge!
-                      .copyWith(color: Colors.blue),
-                ),
-              ),
-            ),
-            const Expanded(
+            // Padding(
+            //   padding: EdgeInsets.only(left: 280),
+            //   // child: InkWell(
+            //   //   onTap: () {
+            //   //     Get.toNamed('/login');
+            //   //   },
+            //   //   child: Text(
+            //   //     'skip'.tr,
+            //   //     style: Theme.of(context)
+            //   //         .textTheme
+            //   //         .displayLarge!
+            //   //         .copyWith(color: Colors.blue),
+            //   //   ),
+            //   // ),
+            // ),
+            Expanded(
               flex: 4,
               child: CustomSliderOnBoarding(),
             ),
-            const Expanded(
+            Expanded(
               flex: 1,
               child: Column(
                 children: [

@@ -12,9 +12,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     LocaleController controller = Get.put(LocaleController());
-    //
-    //
-    // return Text.text("Hello, world!");
 
     return ScreenUtilInit(
       useInheritedMediaQuery: true,
@@ -25,15 +22,13 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           translations: MyTranslation(),
           debugShowCheckedModeBanner: false,
-          fallbackLocale: const Locale('en', 'ar'),
+          // Set the locale to Arabic
+          locale: const Locale('ar', ''), // 'ar' for Arabic
+          fallbackLocale: const Locale('ar', ''),
 
           title: 'Exfai',
-          locale: controller.language,
-          //
-
           theme: controller.appTheme,
           initialBinding: InitialBindings(),
-          // routes: routes,
           getPages: routes,
         );
       },

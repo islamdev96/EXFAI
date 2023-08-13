@@ -21,19 +21,19 @@ class Login extends StatelessWidget {
                   .displayLarge!
                   .copyWith(color: AppColor.grey),
             ),
-            SizedBox(width: 75.w),
-            InkWell(
-              onTap: () {
-                Get.toNamed('/homepage');
-              },
-              child: Text(
-                'skip'.tr,
-                style: Theme.of(context)
-                    .textTheme
-                    .displayLarge!
-                    .copyWith(color: Colors.blue),
-              ),
-            ),
+            // SizedBox(width: 75.w),
+            // InkWell(
+            //   onTap: () {
+            //     Get.toNamed('/homepage');
+            //   },
+            //   child: Text(
+            //     'skip'.tr,
+            //     style: Theme.of(context)
+            //         .textTheme
+            //         .displayLarge!
+            //         .copyWith(color: Colors.blue),
+            //   ),
+            // ),
           ],
         ),
       ),

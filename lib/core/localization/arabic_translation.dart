@@ -5,130 +5,184 @@ class ArabicTranslation extends MyTranslation {
   Map<String, Map<String, String>> get keys => {
         "ar": {
           //========================== Checkout ============================//
+          //========================== عملية الدفع ============================//
 
-          //========================== Alert ============================//
+          "addNewAddress": "إضافة عنوان جديد",
+          "resetPassword": "إعادة تعيين كلمة المرور",
+          "password": "كلمة المرور",
+          "disableNotificatios": "تعطيل الإشعارات",
+          "archive": "أرشيف",
+          "aboutUs": "من نحن",
+          "contactUs": "اتصل بنا",
+          "logout": "تسجيل الخروج",
+          "shipping": "الشحن",
+          "minute": "دقيقة",
+          "ratingDialog": "مربع التقييم",
+          "tapAStar":
+              "اضغط على نجمة لتحديد تقييمك. أضف المزيد من الوصف هنا إذا كنت ترغب.",
+          "submit": "إرسال",
+          "setYourCustomCommentHint": "حدد تعليقك المخصص",
+          "cancelled": "تم الإلغاء",
+          "orderType": "نوع الطلب",
+          "deliveryPrice": "سعر التوصيل",
+          "paymentMethod": "طريقة الدفع",
+          "orderPrice": "سعر الطلب",
+          "orderStatus": "حالة الطلب",
+          "details": "تفاصيل",
+          "tracking": "تتبع",
+          "ordersTracking": "تتبع الطلبيات",
+          "one": "واحد",
+          "payment": "الدفع",
+          "nowYouCanOrderToThisAddress": "الآن يمكنك الطلب إلى هذا العنوان",
+          "emailOrPasswordNotCorrect":
+              "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+          "verifyCodeNotCorrect": "رمز التحقق غير صحيح",
+          "emailNotFound": "البريد الإلكتروني غير موجود",
+          "passwordNotMatch": "كلمة المرور غير متطابقة",
+          "tryAgain": "حاول مرة أخرى",
+          "recive": "استلام",
+          "pendingApproval": "بانتظار الموافقة",
+          "theOrderIsBeingPrepared": "جاري تجهيز الطلب",
+          "readyToPickedUpByDeliveryMan": "جاهز للاستلام من قبل سائق التوصيل",
+          "onTheWay": "في الطريق",
+          "theProductHasBeenAddedToTheCart": "تمت إضافة المنتج إلى السلة",
+          "theCartIsEmpty": "السلة فارغة",
+          "theProductHasBeenRemovedFromTheCart": "تمت إزالة المنتج من السلة",
+          "couponNotValid": "القسيمة غير صالحة",
+          "selectPaymentMethod": "يرجى اختيار طريقة الدفع",
+          "selectOrderType": "يرجى اختيار نوع الطلب",
+          "selectShoppingAddress": "يرجى اختيار عنوان التسوق",
+          "orderSuccessful": "تم الطلب بنجاح",
+          "productAddedToFavorites": "تمت إضافة المنتج إلى المفضلة الخاصة بك",
+          "productRemovedFromWishlist":
+              "تمت إزالة المنتج من قائمة الرغبات الخاصة بك",
+          "cash": "نقداً",
+          "paymentCard": "بطاقة الدفع",
+          "chooseTypeDelivery": "اختر نوع التوصيل",
+          "toReceive": "للاستلام",
+          'itemsInYourList': "من العناصر في قائمتك",
+
+          //========================== تنبيه ============================//
           "warning": "تحذير",
-          "doYouWantToExitTheApp": "هل تريد الخروج من التطبيق؟",
+          "doYouWantToExitTheApp": "هل ترغب في الخروج من التطبيق؟",
           "confirmation": "تأكيد",
           "cancellation": "إلغاء",
 
-          //========================== Application ============================//
-
+          //========================== التطبيق ============================//
           "alert": "تنبيه",
           "attentionPleaseTurnOnTheLocationService": "يرجى تفعيل خدمة الموقع",
           "pleaseGiveTheSitePermissionForTheApplication":
               "يرجى منح إذن الموقع للتطبيق",
           "theApplicationCannotBeUsedWithoutSpecifyingYourLocation":
-              "لا يمكن استخدام التطبيق دون تحديد الموقع الخاص بك",
+              "لا يمكن استخدام التطبيق بدون تحديد موقعك",
 
-          //========================== onBoardingList ============================//
-
+          //========================== قائمة التوجيه المباشر ============================//
           "chooseProduct": "اختر المنتج",
           "weHavea100kProduct":
-              "لدينا 100 ألف منتج، اختر منتجك من متجر التجارة الإلكترونية لدينا",
+              "لدينا 100 ألف منتج، اختر منتجك من متجرنا الإلكتروني",
           "easyAndSafe": "دفع سهل وآمن",
           "youCanPay": "يمكنك الدفع نقدًا أو من خلال بوابات الدفع",
           "trackYourOrder": "تتبع طلبك",
           "theOrderCanBeTracked": "يمكن تتبع الطلب في كل مرحلة حتى يصل إليك",
           "welcomeBack": "مرحبًا مجددًا",
-          "continue": "متابعة",
+          "continue": "استمرار",
 
-          //========================== auth ============================//
+//========================== المصادقة ============================//
 
           "resendVerfiyCode": "إعادة إرسال رمز التحقق",
-          "ReciveAVerificationCode":
-              "الرجاء إدخال عنوان البريد الإلكتروني الخاص بك لاستقبال رمز التحقق",
+          "reciveAVerificationCode":
+              "الرجاء إدخال عنوان البريد الإلكتروني الخاص بك لتلقي رمز التحقق",
 
           "skip": "تخطي",
           "login": "تسجيل الدخول",
           "signUp": "التسجيل",
           "signIn": "تسجيل الدخول",
-          "notAValidEmail": "البريد الإلكتروني غير صالح",
-          "notAValidPhoneNumber": "رقم الهاتف غير صالح",
-          "notAValidPassword": "كلمة المرور غير صالحة",
+          "notAValidEmail": "ليس بريدًا إلكترونيًا صالحًا",
+          "notAValidPhoneNumber": "ليس رقم هاتف صالح",
+          "notAValidPassword": "ليس كلمة مرور صالحة",
           "passwordMustBeAtLeast8Characters":
-              "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل",
+              "يجب أن تكون كلمة المرور على الأقل 8 أحرف",
           "phoneNumberOrEmailAlreadyExists":
-              "رقم الهاتف أو البريد الإلكتروني موجود بالفعل",
+              "رقم الهاتف أو البريد الإلكتروني مستخدم بالفعل",
           "cannotBeEmpty": "لا يمكن أن يكون فارغًا",
           "CannotBeLessThan": "لا يمكن أن يكون أقل من",
           "cannotBeLargerThan": "لا يمكن أن يكون أكبر من",
-          "notAValidUsername": "اسم المستخدم غير صالح",
-          "notAValidCode": "رمز غير صالح",
-          "notAValidNewPassword": "كلمة المرور الجديدة غير صالحة",
-          "notAValidConfirmPassword": "تأكيد كلمة المرور غير صالح",
-          "notAValidOldPassword": "كلمة المرور القديمة غير صالحة",
-          "notAValidAddress": "عنوان غير صالح",
-          "notAValidCity": "مدينة غير صالحة",
-          "notAValidCountry": "بلد غير صالح",
-          "notAValidPostalCode": "رمز بريدي غير صالح",
-          "notAValidName": "اسم غير صالح",
-          "notAValidPhoneOrEmail": "رقم الهاتف أو البريد الإلكتروني غير صالح",
-          "notAValidPhoneOrPassword": "رقم الهاتف أو كلمة المرور غير صالح",
-          "notAValidPhoneOrUsername": "رقم الهاتف أو اسم المستخدم غير صالح",
+          "notAValidUsername": "ليس اسم مستخدم صالح",
+          "notAValidCode": "ليس رمزًا صالحًا",
+          "notAValidNewPassword": "ليس كلمة مرور جديدة صالحة",
+          "notAValidConfirmPassword": "ليس تأكيد كلمة مرور صالح",
+          "notAValidOldPassword": "ليس كلمة مرور قديمة صالحة",
+          "notAValidAddress": "ليس عنوانًا صالحًا",
+          "notAValidCity": "ليس مدينة صالحة",
+          "notAValidCountry": "ليس بلدًا صالحًا",
+          "notAValidPostalCode": "ليس رمز بريدي صالح",
+          "notAValidName": "ليس اسمًا صالحًا",
+          "notAValidPhoneOrEmail": "ليس هاتفًا أو بريدًا إلكترونيًا صالحًا",
+          "notAValidPhoneOrPassword": "ليس هاتفًا أو كلمة مرور صالحة",
+          "notAValidPhoneOrUsername": "ليس هاتفًا أو اسم مستخدم صالحًا",
           "notAValidEmailOrPassword":
-              "البريد الإلكتروني أو كلمة المرور غير صالحة",
+              "ليس بريدًا إلكترونيًا أو كلمة مرور صالحة",
           "notAValidEmailOrUsername":
-              "البريد الإلكتروني أو اسم المستخدم غير صالح",
-          "notAValidEmailOrPhone": "البريد الإلكتروني أو رقم الهاتف غير صالح",
-          "notAValidUsernameOrPassword":
-              "اسم المستخدم أو كلمة المرور غير صالحة",
-          "notAValidUsernameOrPhone": "اسم المستخدم أو رقم الهاتف غير صالح",
+              "ليس بريدًا إلكترونيًا أو اسم مستخدم صالحًا",
+          "notAValidEmailOrPhone": "ليس بريدًا إلكترونيًا أو هاتفًا صالحًا",
+          "notAValidUsernameOrPassword": "ليس اسم مستخدم أو كلمة مرور صالحة",
+          "notAValidUsernameOrPhone": "ليس اسم مستخدم أو هاتفًا صالحًا",
 
           "signInYourEmailAndPassword":
-              "تسجيل الدخول باستخدام البريد الإلكتروني وكلمة المرور أو متابعة باستخدام وسائل التواصل الاجتماعي",
-          "enterYourEmail": "أدخل البريد الإلكتروني",
-          "enterYourPhone": "أدخل رقم الهاتف",
-          "enterYourPassword": "أدخل كلمة المرور",
+              "قم بتسجيل الدخول باستخدام عنوان بريدك الإلكتروني وكلمة المرور أو استمر باستخدام وسائل التواصل الاجتماعي",
+          "enterYourEmail": "أدخل عنوان بريدك الإلكتروني",
+          "enterYourPhone": "أدخل رقم هاتفك",
+          "enterYourPassword": "أدخل كلمة المرور الخاصة بك",
           "forgetPassword": "نسيت كلمة المرور",
           "dontHaveAnAccount": "ليس لديك حساب؟",
-          "haveAnAccount": "هل لديك حساب؟",
+          "haveAnAccount": "لديك حساب؟",
           "signUpWithYourEmailAndPassword":
-              "التسجيل باستخدام البريد الإلكتروني وكلمة المرور أو متابعة باستخدام وسائل التواصل الاجتماعي",
+              "قم بالتسجيل باستخدام عنوان بريدك الإلكتروني وكلمة المرور أو استمر باستخدام وسائل التواصل الاجتماعي",
           "email": "البريد الإلكتروني",
-          "password": "كلمة المرور",
           "username": "اسم المستخدم",
-          "phone": "رقم الهاتف",
+          "phone": "الهاتف",
           "congratulations": "تهانينا",
           "enterYourUsername": "أدخل اسم المستخدم الخاص بك",
           "signUpEmailAndPassword":
-              "التسجيل باستخدام البريد الإلكتروني وكلمة المرور أو متابعة باستخدام وسائل التواصل الاجتماعي",
+              "قم بالتسجيل باستخدام عنوان بريدك الإلكتروني وكلمة المرور أو استمر باستخدام وسائل التواصل الاجتماعي",
           "checkEmail": "تحقق من البريد الإلكتروني",
           "verificationCode": "رمز التحقق",
           "checkCode": "تحقق من الرمز",
-          "pleaseEnterTheDigitCodeSentTo": "يرجى إدخال رمز الأرقام المرسل إلى",
+          "pleaseEnterTheDigitCodeSentTo": "يرجى إدخال الرمز الرقمي المرسل إلى",
           "resendVerifyCode": "إعادة إرسال رمز التحقق",
           "enterYourVerificationCode": "أدخل رمز التحقق الخاص بك",
           "enterYourNewPassword": "أدخل كلمة المرور الجديدة الخاصة بك",
           "accountSuccessfullyCreated": "تم إنشاء الحساب بنجاح",
           "receiveAVerificationCode":
-              "الرجاء إدخال عنوان البريد الإلكتروني الخاص بك لتلقي رمز التحقق",
+              "يرجى إدخال عنوان البريد الإلكتروني الخاص بك لتلقي رمز التحقق",
           "check": "تحقق",
           "goToLogin": "الانتقال إلى تسجيل الدخول",
           "success": "نجاح",
           "save": "حفظ",
-          "pleaseEnterNewPassword": "يرجى إدخال كلمة المرور الجديدة",
+          "pleaseEnterNewPassword": "يرجى إدخال كلمة مرور جديدة",
           "newPassword": "كلمة المرور الجديدة",
           "passwordResetSuccess": "تم إعادة تعيين كلمة المرور بنجاح",
           "successfullyRegistered": "تم التسجيل بنجاح",
           "chooseCategory": "اختر الفئة",
           "chooseSubCategory": "اختر الفئة الفرعية",
           "chooseBrand": "اختر العلامة التجارية",
+          "damascusStreetOne": "شارع دمشق الأول",
+          "hamaStreetTwo": "شارع حماة الثاني",
 
-          //========================== home ============================//
+//========================== الصفحة الرئيسية ============================//
 
           "exit": "خروج",
-          "productForYou": "منتجات لك",
-          "categories": "الفئات",
+          "productForYou": "منتجات من اجلك",
+          "categories": "الاقسام",
           "areYouSureYouWantToExit": "هل أنت متأكد أنك تريد الخروج؟",
           "no": "لا",
           "yes": "نعم",
           "welcome": "مرحبًا",
           "findYourProduct": "ابحث عن منتجك",
 
-          "home": "الرئيسية",
+          "home": "الصفحة الرئيسية",
           "category": "الفئة",
-          "cart": "العربة",
+          "cart": "السلة",
           "profile": "الملف الشخصي",
           "search": "بحث",
           "searchForProduct": "البحث عن منتج",
@@ -141,39 +195,39 @@ class ArabicTranslation extends MyTranslation {
 
           "offer": "عرض",
 
-          //========================== Notification ============================//
+          //========================== الإشعارات ============================//
 
           "notification": "الإشعارات",
-          "noNotification": "لا يوجد إشعارات",
-          "noNotificationDescription": "لا توجد إشعارات بعد",
+          "noNotification": "لا توجد إشعارات",
+          "noNotificationDescription": "لا توجد إشعارات حتى الآن",
           "deleteNotification": "حذف الإشعار",
 
-          //========================== category ============================//
+          //========================== الفئات ============================//
 
           "noCategory": "لا توجد فئة",
-          "noCategoryDescription": "لا توجد فئات بعد",
+          "noCategoryDescription": "لا توجد فئات حتى الآن",
           "noSubCategory": "لا توجد فئة فرعية",
 
-          //========================== cart ============================//
+//========================== السلة ============================//
 
           "myCart": "سلتي",
-          "goToCart": "الانتقال إلى السلة",
+          "goToCart": "انتقل إلى السلة",
           "ordersDetails": "تفاصيل الطلب",
           "coupon": "كوبون",
           "choosePaymentMethod": "اختر طريقة الدفع",
           "cashOnDelivery": "الدفع عند الاستلام",
-          "payWhenYouReceiveYourOrder": "ادفع عند استلام الطلب",
+          "payWhenYouReceiveYourOrder": "الدفع عند استلام الطلب",
           "totalPrice": "السعر الإجمالي",
-          "item": "منتج",
+          "item": "العنصر",
           "qTY": "الكمية",
           "price": "السعر",
           "remove": "إزالة",
-          "noCart": "لا توجد سلة",
+          "noCart": "لا توجد عناصر في السلة",
 
           "payNow": "ادفع الآن",
           "pay": "ادفع",
           "paymentCards": "بطاقات الدفع",
-          "creditCardOrDebitCard": "بطاقة الائتمان أو الخصم",
+          "creditCardOrDebitCard": "بطاقة ائتمان أو بطاقة مدينة",
           "chooseDeliveryType": "اختر نوع التوصيل",
 
           "creditCard": "بطاقة الائتمان",
@@ -182,9 +236,9 @@ class ArabicTranslation extends MyTranslation {
           "mada": "مدى",
           "apply": "تطبيق",
           "couponCode": "رمز الكوبون",
-          "order": "طلب",
+          "order": "الطلب",
           "youHave": "لديك",
-          "itemsInYourCart": "منتج في سلتك",
+          "itemsInYourCart": "عناصر في سلتك",
           "receive": "استلام",
           "orderNumber": "رقم الطلب",
           "shippingAddress": "عنوان الشحن",
@@ -193,23 +247,23 @@ class ArabicTranslation extends MyTranslation {
           "delivery": "التوصيل",
           "tax": "الضريبة",
           "discount": "الخصم",
-          "subTotal": "الإجمالي الفرعي",
-          "checkout": "إتمام الشراء",
+          "subTotal": "المجموع الفرعي",
+          "checkout": "اتمام الشراء",
           "continueShopping": "متابعة التسوق",
           "add": "إضافة",
           "quantity": "الكمية",
-          "totalQuantity": "إجمالي الكمية",
-          "totalDiscount": "إجمالي الخصم",
-          "totalTax": "إجمالي الضريبة",
+          "totalQuantity": "مجموع الكميات",
+          "totalDiscount": "مجموع الخصومات",
+          "totalTax": "مجموع الضرائب",
 
-          //---------------------------profile-----------------------------------------//
+          //---------------------------الملف الشخصي-----------------------------------------//
 
-          //---------------------------Address-----------------------------------------//
-          "address": "العنوان",
+          //---------------------------العناوين-----------------------------------------//
+          "address": "العناوين",
           "addAddress": "إضافة عنوان",
           "editAddress": "تعديل العنوان",
           "addressName": "اسم العنوان",
-          "completionOfTheAddress": "استكمال العنوان",
+          "completionOfTheAddress": "اكتمال العنوان",
           "city": "المدينة",
           "area": "المنطقة",
           "street": "الشارع",
@@ -224,13 +278,12 @@ class ArabicTranslation extends MyTranslation {
           "delete": "حذف",
           "noAddress": "لا توجد عناوين",
 
-          "noOrder": "لا يوجد طلبات",
-          "completion": "الاستكمال",
+          "noOrder": "لا توجد طلبات",
+          "completion": "اكتمال",
           "deleteAddress": "حذف العنوان",
-          "addNewAddress": "إضافة عنوان جديد",
-          "noAddressDescription": "لا توجد عناوين بعد",
+          "noAddressDescription": "لا توجد عناوين حتى الآن",
 
-          //---------------------------order-----------------------------------------//
+          //---------------------------الطلبات-----------------------------------------//
         }
       };
 }
