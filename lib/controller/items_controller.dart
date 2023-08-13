@@ -31,7 +31,7 @@ class ItemsControllerImp extends SearchMixController {
   }
 
   intialData() {
-    deliverytime =myServices.sharedPreferences.getString("deliverytime")!;
+    deliverytime = myServices.sharedPreferences.getString("deliverytime")!;
     categories = Get.arguments['categories'];
     selectedCat = Get.arguments['selectedcat'];
     catid = Get.arguments['catid'];
