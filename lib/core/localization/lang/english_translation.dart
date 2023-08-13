@@ -57,6 +57,10 @@ class EnglishTranslation extends MyTranslation {
               "The product has been added to your favourites",
           "productRemovedFromWishlist":
               "The product has been removed from your wishlist",
+          "cash": "Cash",
+          "paymentCard": "Payment Card",
+          "chooseTypeDelivery": "Choose Type Delivery",
+          "toReceive": "to receive",
 
           //========================== Alert ============================//
           "warning": "Warning",
@@ -165,6 +169,8 @@ class EnglishTranslation extends MyTranslation {
           "chooseCategory": "Choose Category",
           "chooseSubCategory": "Choose Sub Category",
           "chooseBrand": "Choose Brand",
+          "damascusStreetOne": "Damascus Street One",
+          "hamaStreetTwo": "Hama Street Two",
 
           //========================== home ============================//
 
