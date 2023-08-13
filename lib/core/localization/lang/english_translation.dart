@@ -6,6 +6,34 @@ class EnglishTranslation extends MyTranslation {
         "en": {
           //========================== Checkout ============================//
 
+          "addNewAddress": "Add new address",
+          "resetPassword": "Reset password",
+          "password": "Password",
+          "disableNotificatios": "Disable Notificatios ",
+          "archive": "Archive",
+          "aboutUs": "About Us",
+          "contactUs": "Contact Us",
+          "logout": "Logout",
+          "shipping": "Shipping",
+          "minute": "Minute",
+          "ratingDialog": "Rating Dialog",
+          "tapAStar":
+              "Tap a star to set your rating. Add more description here if you want.",
+          "submit": "Submit",
+          "setYourCustomCommentHint": "Set your custom comment hint",
+          "cancelled": "Cancelled",
+          "orderType": "Order Type",
+          "deliveryPrice": "Delivery Price",
+          "paymentMethod": "Payment Method",
+          "orderPrice": "Order Price",
+          "orderStatus": "Order Status",
+          "details": "Details",
+          "tracking": "Tracking",
+          "ordersTracking": "Orders Tracking",
+          "one": "One",
+          "payment": "Payment",
+          "one": "One",
+
           //========================== Alert ============================//
           "warning": "Warning",
           "doYouWantToExitTheApp": "Do you want to exit the app?",
@@ -38,7 +66,7 @@ class EnglishTranslation extends MyTranslation {
           //========================== auth ============================//
 
           "resendVerfiyCode": "Resend verfiy code",
-          "ReciveAVerificationCode":
+          "reciveAVerificationCode":
               "please Enter Your Email Address To Recive A verification code",
 
           "skip": "Skip",

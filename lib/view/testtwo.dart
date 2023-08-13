@@ -160,7 +160,7 @@ class _ProcessTimelinePageState extends State<TestPackage> {
               scrollDirection: Axis.horizontal,
               itemCount: _processes.length,
               itemBuilder: (context, i) {
-                return const Text("one");
+                return Text("one".tr);
               }),
         )
       ]),
@@ -249,7 +249,7 @@ class _BezierPainter extends CustomPainter {
 }
 
 final _processes = [
-  'Payment',
-  'Order Type',
-  'Address',
+  'payment'.tr,
+  'orderType'.tr,
+  'address'.tr,
 ];
