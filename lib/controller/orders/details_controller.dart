@@ -18,17 +18,25 @@ class OrdersDetailsController extends GetxController {
 
   CameraPosition? cameraPosition;
 
+  // Provide default values for latitude and longitude
+  static const double defaultLatitude = 37.7749; // Example default latitude
+  static const double defaultLongitude = -122.4194; // Example default longitude
+
   intialData() {
+    // Use default coordinates if addressLat or addressLong is null
+    final targetLat =
+        double.parse(ordersModel.addressLat ?? defaultLatitude.toString());
+    final targetLong =
+        double.parse(ordersModel.addressLong ?? defaultLongitude.toString());
+
     if (ordersModel.ordersType == "0") {
       cameraPosition = CameraPosition(
-        target: LatLng(double.parse(ordersModel.addressLat!),
-            double.parse(ordersModel.addressLong!)),
+        target: LatLng(targetLat, targetLong),
         zoom: 12.4746,
       );
       markers.add(Marker(
           markerId: const MarkerId("1"),
-          position: LatLng(double.parse(ordersModel.addressLat!),
-              double.parse(ordersModel.addressLong!))));
+          position: LatLng(targetLat, targetLong)));
     }
   }
 

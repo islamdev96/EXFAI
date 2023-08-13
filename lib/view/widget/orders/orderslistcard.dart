@@ -49,20 +49,20 @@ class CardOrdersList extends GetView<OrdersPendingController> {
               const Divider(),
               Row(
                 children: [
-                  Text("$totalPrice : ${listdata.ordersId} \$ ",
+                  Text("$totalPrice : ${listdata.ordersTotalprice} \$ ",
                       style: const TextStyle(
                           color: AppColor.primaryColor,
                           fontWeight: FontWeight.bold)),
                   const Spacer(),
-                  MaterialButton(
-                    onPressed: () {
-                      Get.toNamed(AppRoute.ordersdetails,
-                          arguments: {"ordersmodel": listdata});
-                    },
-                    color: AppColor.thirdColor,
-                    textColor: AppColor.secondColor,
-                    child: Text("details".tr),
-                  ),
+                  // MaterialButton(
+                  //   onPressed: () {
+                  //     Get.toNamed(AppRoute.ordersdetails,
+                  //         arguments: {"ordersmodel": listdata});
+                  //   },
+                  //   color: AppColor.thirdColor,
+                  //   textColor: AppColor.secondColor,
+                  //   child: Text("details".tr),
+                  // ),
                   const SizedBox(width: 10),
                   if (listdata.ordersStatus! == "0")
                     MaterialButton(

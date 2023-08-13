@@ -18,6 +18,7 @@ class ArabicTranslation extends MyTranslation {
           "shipping": "الشحن",
           "minute": "دقيقة",
           "ratingDialog": "مربع التقييم",
+          "orders": "طلبات",
           "tapAStar":
               "اضغط على نجمة لتحديد تقييمك. أضف المزيد من الوصف هنا إذا كنت ترغب.",
           "submit": "إرسال",

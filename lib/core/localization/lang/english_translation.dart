@@ -28,6 +28,8 @@ class EnglishTranslation extends MyTranslation {
           "orderPrice": "Order Price",
           "orderStatus": "Order Status",
           "details": "Details",
+          "orders": "Orders",
+
           "tracking": "Tracking",
           "ordersTracking": "Orders Tracking",
           "one": "One",

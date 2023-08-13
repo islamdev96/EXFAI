@@ -1,5 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers
 
+import 'package:url_launcher/url_launcher.dart';
+
 import '../../all_export.dart';
 
 class Settings extends StatelessWidget {
@@ -35,11 +37,11 @@ class Settings extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Card(
               child: Column(mainAxisSize: MainAxisSize.min, children: [
-                ListTile(
-                  // onTap: () {},
-                  trailing: Switch(onChanged: (val) {}, value: true),
-                  title: Text("disableNotificatios".tr),
-                ),
+                // ListTile(
+                //   // onTap: () {},
+                //   trailing: Switch(onChanged: (val) {}, value: true),
+                //   title: Text("disableNotificatios".tr),
+                // ),
                 ListTile(
                   onTap: () {
                     Get.toNamed(AppRoute.orderspending);
@@ -47,13 +49,13 @@ class Settings extends StatelessWidget {
                   trailing: const Icon(Icons.card_travel),
                   title: Text("orders".tr),
                 ),
-                ListTile(
-                  onTap: () {
-                    Get.toNamed(AppRoute.ordersarchive);
-                  },
-                  trailing: const Icon(Icons.card_travel),
-                  title: Text("archive".tr),
-                ),
+                // ListTile(
+                //   onTap: () {
+                //     Get.toNamed(AppRoute.ordersarchive);
+                //   },
+                //   trailing: const Icon(Icons.card_travel),
+                //   title: Text("archive".tr),
+                // ),
                 ListTile(
                   onTap: () {
                     Get.toNamed(AppRoute.addressview);
@@ -61,13 +63,17 @@ class Settings extends StatelessWidget {
                   trailing: const Icon(Icons.location_on_outlined),
                   title: Text("address".tr),
                 ),
+                // ListTile(
+                //   onTap: () {},
+                //   trailing: const Icon(Icons.help_outline_rounded),
+                //   title: Text("aboutUs".tr),
+                // ),
                 ListTile(
-                  onTap: () {},
-                  trailing: const Icon(Icons.help_outline_rounded),
-                  title: Text("aboutUs".tr),
-                ),
-                ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    launch(
+                      'tel://01065807020',
+                    );
+                  },
                   trailing: const Icon(Icons.phone_callback_outlined),
                   title: Text("contactUs".tr),
                 ),
@@ -84,5 +90,19 @@ class Settings extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+launchURL(String url) async {
+  // ignore: deprecated_member_use
+  if (await launch(
+    // forceWebView: true,
+    // enableJavaScript: true,
+    url,
+  )) {
+    // // ignore: deprecated_member_use
+    // await canLaunch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
