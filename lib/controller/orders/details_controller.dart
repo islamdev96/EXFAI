@@ -23,13 +23,13 @@ class OrdersDetailsController extends GetxController {
   static const double defaultLongitude = -122.4194; // Example default longitude
 
   intialData() {
-    // Use default coordinates if addressLat or addressLong is null
-    final targetLat =
-        double.parse(ordersModel.addressLat ?? defaultLatitude.toString());
-    final targetLong =
-        double.parse(ordersModel.addressLong ?? defaultLongitude.toString());
-
     if (ordersModel.ordersType == "0") {
+      // Use default coordinates if addressLat or addressLong is null
+      final targetLat =
+          double.parse(ordersModel.addressLat ?? defaultLatitude.toString());
+      final targetLong =
+          double.parse(ordersModel.addressLong ?? defaultLongitude.toString());
+
       cameraPosition = CameraPosition(
         target: LatLng(targetLat, targetLong),
         zoom: 12.4746,

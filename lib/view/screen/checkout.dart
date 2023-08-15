@@ -49,16 +49,16 @@ class Checkout extends StatelessWidget {
                                 : false),
                       ),
                       const SizedBox(height: 10),
-                      InkWell(
-                        onTap: () {
-                          controller.choosePaymentMethod("1");
-                        },
-                        child: CardPaymentMethodCheckout(
-                            title: "paymentCards".tr,
-                            isActive: controller.paymentMethod == "1" // Card
-                                ? true
-                                : false),
-                      ),
+                      // InkWell(
+                      //   onTap: () {
+                      //     controller.choosePaymentMethod("1");
+                      //   },
+                      //   child: CardPaymentMethodCheckout(
+                      //       title: "paymentCards".tr,
+                      //       isActive: controller.paymentMethod == "1" // Card
+                      //           ? true
+                      //           : false),
+                      // ),
                       const SizedBox(height: 20),
                       Text(
                         "chooseDeliveryType".tr,
@@ -83,17 +83,17 @@ class Checkout extends StatelessWidget {
                                     : false),
                           ),
                           const SizedBox(width: 10),
-                          InkWell(
-                            onTap: () {
-                              controller.chooseDeliveryType("1"); // 1 => recive
-                            },
-                            child: CardDeliveryTypeCheckout(
-                                imagename: AppImageAsset.drivethruImage,
-                                title: "revice".tr,
-                                active: controller.deliveryType == "1"
-                                    ? true
-                                    : false),
-                          ),
+                          // InkWell(
+                          //   onTap: () {
+                          //     controller.chooseDeliveryType("1"); // 1 => recive
+                          //   },
+                          //   child: CardDeliveryTypeCheckout(
+                          //       imagename: AppImageAsset.drivethruImage,
+                          //       title: "revice".tr,
+                          //       active: controller.deliveryType == "1"
+                          //           ? true
+                          //           : false),
+                          // ),
                         ],
                       ),
                       const SizedBox(height: 20),
@@ -101,12 +101,17 @@ class Checkout extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              "shippingAddress".tr,
-                              style: const TextStyle(
-                                  color: AppColor.secondColor,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
+                            InkWell(
+                              onTap: () {
+                                Get.toNamed(AppRoute.addressadddetails);
+                              },
+                              child: Text(
+                                "shippingAddress".tr,
+                                style: const TextStyle(
+                                    color: AppColor.secondColor,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16),
+                              ),
                             ),
                             const SizedBox(height: 10),
                             ...List.generate(

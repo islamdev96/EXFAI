@@ -12,7 +12,7 @@ export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:exfai/core/constant/apptheme.dart';
 export 'package:exfai/core/functions/fcmconfig.dart';
 export 'package:exfai/core/localization/lang/english_translation.dart';
-export 'package:exfai/core/localization/arabic_translation.dart';
+export 'package:exfai/core/localization/lang/arabic_translation.dart';
 export 'package:exfai/data/model/itemsmodel.dart';
 export 'package:exfai/controller/home_controller.dart';
 export 'package:exfai/data/model/myfavorite.dart';

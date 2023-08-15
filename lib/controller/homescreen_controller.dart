@@ -1,5 +1,7 @@
 // ignore_for_file: avoid_renaming_method_parameters
 
+import 'package:exfai/test/3.dart';
+
 import '../../all_export.dart';
 
 abstract class HomeScreenController extends GetxController {
@@ -11,7 +13,7 @@ class HomeScreenControllerImp extends HomeScreenController {
 
   List<Widget> listPage = [
     const HomePage(),
-    const NotificationView(),
+    const SettingsPage1(),
     const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [Center(child: Text("Profile"))],

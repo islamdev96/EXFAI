@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
           translations: MyTranslation(),
           debugShowCheckedModeBanner: false,
           // Set the locale to Arabic
-          locale: const Locale('ar', ''), // 'ar' for Arabic
-          fallbackLocale: const Locale('ar', ''),
+          locale: const Locale('en', 'ar'), // 'ar' for Arabic
+          fallbackLocale: const Locale('en', 'ar'),
 
           title: 'Exfai',
           theme: controller.appTheme,

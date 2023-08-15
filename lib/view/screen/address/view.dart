@@ -13,7 +13,7 @@ class AddressView extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
-              Get.toNamed(AppRoute.addressadd);
+              Get.toNamed(AppRoute.addressadddetails);
             },
             child: const Icon(Icons.add)),
         body: GetBuilder<AddressViewController>(
