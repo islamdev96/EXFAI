@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_renaming_method_parameters
 
 import 'package:exfai/test/3.dart';
+import 'package:exfai/view/Settings/settings_page.dart';
 
 import '../../all_export.dart';
 
@@ -18,7 +19,7 @@ class HomeScreenControllerImp extends HomeScreenController {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [Center(child: Text("Profile"))],
     ),
-    const Settings()
+    const SettingsPage()
   ];
 
   List bottomappbar = [

@@ -142,7 +142,6 @@ export '../data/datasource/remote/test_data.dart';
 export '../data/datasource/remote/orders/notification_data.dart';
 
 export '../view/screen/notification.dart';
-export '../view/screen/settings.dart';
 
 export '../data/datasource/remote/favorite_data.dart';
 
