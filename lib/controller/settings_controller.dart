@@ -10,4 +10,6 @@ class SettingsController extends GetxController {
     myServices.sharedPreferences.clear();
     Get.offAllNamed(AppRoute.login);
   }
+
+  void changeLang(String s) {}
 }

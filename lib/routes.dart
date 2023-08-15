@@ -1,10 +1,12 @@
-import 'package:exfai/view/widget/orders/orderstracking.dart';
-
 import 'all_export.dart';
 
 List<GetPage<dynamic>>? routes = [
   GetPage(
-      name: "/", page: () => const OnBoarding(), middlewares: [MyMiddleWare()]),
+      name: "/", page: () => const Languages(), middlewares: [MyMiddleWare()]),
+  // name: "/", page: () => const OnBoarding(), middlewares: [MyMiddleWare()]),
+  GetPage(name: AppRoute.languages, page: () => const Languages()),
+  GetPage(name: AppRoute.onBoarding, page: () => const OnBoarding()),
+
   // GetPage(name: "/", page: () =>   TestView()),
   GetPage(name: AppRoute.cart, page: () => const Cart()),
 //  Auth

@@ -26,6 +26,8 @@ export 'package:exfai/view/widget/cart/custombuttoncoupon.dart';
 export 'package:exfai/view/widget/home/custombuttonappbar.dart';
 export 'package:exfai/data/model/categoriesmodel.dart';
 export 'package:flutter_svg/flutter_svg.dart';
+export 'package:exfai/core/localization/lang_wael/language.dart';
+export 'package:exfai/view/widget/orders/orderstracking.dart';
 
 export 'package:flutter/material.dart';
 export 'package:get/get.dart';

@@ -25,12 +25,12 @@ class CustomCardHome extends GetView<HomeControllerImp> {
           ),
         ),
         Positioned(
-          top: -18.h,
+          top: -5.h,
           right: controller.lang == "en" ? -5.h : null,
           left: controller.lang == "ar" ? -5.h : null,
           child: Container(
-            height: 60.h,
-            width: 60.w,
+            height: 140.h,
+            width: 140.w,
             decoration: BoxDecoration(
                 color: AppColor.secondColor,
                 borderRadius: BorderRadius.circular(160.spMax)),

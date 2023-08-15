@@ -22,14 +22,11 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           translations: MyTranslation(),
           debugShowCheckedModeBanner: false,
-          // Set the locale to Arabic
-          locale: const Locale('en', 'ar'), // 'ar' for Arabic
-          fallbackLocale: const Locale('en', 'ar'),
-
-          title: 'Exfai',
+          locale: controller.language,
           theme: controller.appTheme,
           initialBinding: InitialBindings(),
           getPages: routes,
+          title: 'Exfai',
         );
       },
     );
