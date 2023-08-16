@@ -5,14 +5,13 @@ import '../../../all_export.dart';
 class CustomListItemsOffer extends GetView<OffersController> {
   final ItemsModel itemsModel;
   // final bool active;
-  const CustomListItemsOffer({Key? key, required this.itemsModel}) : super(key: key);
+  const CustomListItemsOffer({Key? key, required this.itemsModel})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-        onTap: () {
-       
-        },
+        onTap: () {},
         child: Card(
           child: Stack(
             children: [
@@ -36,10 +35,9 @@ class CustomListItemsOffer extends GetView<OffersController> {
                           translateDatabase(
                               itemsModel.itemsNameAr, itemsModel.itemsName),
                           style: const TextStyle(
-                              color: AppColor.black,
+                              color: AppColor.fontsColors,
                               fontSize: 16,
                               fontWeight: FontWeight.bold)),
-                     
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [

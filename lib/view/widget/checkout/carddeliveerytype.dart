@@ -28,7 +28,7 @@ class CardDeliveryTypeCheckout extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-              color: active ? AppColor.fontsColors : AppColor.black,
+              color: active ? AppColor.fontsColors : AppColor.fontsColors,
               fontWeight: FontWeight.bold),
         )
       ]),

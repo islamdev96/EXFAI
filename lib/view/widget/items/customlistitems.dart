@@ -35,7 +35,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                           translateDatabase(
                               itemsModel.itemsNameAr, itemsModel.itemsName),
                           style: const TextStyle(
-                              color: AppColor.black,
+                              color: AppColor.fontsColors,
                               fontSize: 16,
                               fontWeight: FontWeight.bold)),
                       Row(
