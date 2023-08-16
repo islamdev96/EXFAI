@@ -13,7 +13,10 @@ class Cart extends StatelessWidget {
     CartController cartController = Get.put(CartController());
     return Scaffold(
         appBar: AppBar(
-          title: Text("myCart".tr),
+          title: Text(
+            "myCart".tr,
+            style: TextStyle(color: AppColor.fontsColors),
+          ),
         ),
         bottomNavigationBar: GetBuilder<CartController>(
             builder: (controller) => BottomNavgationBarCart(
