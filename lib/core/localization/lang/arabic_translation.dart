@@ -8,8 +8,12 @@ class ArabicTranslation extends MyTranslation {
           //========================== عملية الدفع ============================//
 
           "addNewAddress": "إضافة عنوان جديد",
+          "error": "خطأ",
           "resetPassword": "إعادة تعيين كلمة المرور",
           "changeLanguage": "تغيير اللغة",
+          "chooseTheLanguage": "اختر اللغة",
+          "english": "انجليزي",
+          "arabic": "عربي",
 
           "password": "كلمة المرور",
           "disableNotificatios": "تعطيل الإشعارات",

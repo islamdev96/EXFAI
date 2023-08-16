@@ -21,6 +21,9 @@ class SettingCard extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
+          // const CustomSnackBar(
+          //   content: Text('Your message here'),
+          // ),
           _buildSettingsTile(
             Icons.card_travel,
             "orders".tr,
@@ -96,37 +99,6 @@ void _showLanguageSelectionDialog(
   );
 }
 
-void _showSignOutConfirmationDialog(
-  BuildContext context,
-  SettingsController controller,
-  // = Get.put(SettingsController());
-) {
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      return AlertDialog(
-        title: const Text("Confirm Sign Out"),
-        content: const Text("Are you sure you want to sign out?"),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text("Cancel"),
-          ),
-          TextButton(
-            style: const ButtonStyle(),
-            onPressed: () {
-              controller.logout();
-              // Perform sign out logic here
-              // Navigator.pop(context);
-            },
-            child: const Text("Sign Out"),
-          ),
-        ],
-      );
-    },
-  );
-}
-
 Container _buildDivider() {
   return Container(
     margin: const EdgeInsets.symmetric(
@@ -134,7 +106,7 @@ Container _buildDivider() {
     ),
     width: double.infinity,
     height: 1.0,
-    color: Colors.grey.shade400,
+    color: AppColor.fontsColors,
   );
 }
 

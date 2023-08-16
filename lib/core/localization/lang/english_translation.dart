@@ -7,6 +7,8 @@ class EnglishTranslation extends MyTranslation {
           //========================== Checkout ============================//
 
           "addNewAddress": "Add new address",
+          "english": "English",
+          "arabic": "Arabic",
           "changeLanguage": "Change Language",
           "chooseTheLanguage": "choose the language",
           "resetPassword": "Reset password",

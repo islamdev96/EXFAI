@@ -50,7 +50,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                               margin: const EdgeInsets.only(top: 5),
                               child: const Icon(
                                 Icons.timer_sharp,
-                                color: AppColor.grey,
+                                color: AppColor.fontsColors,
                               )),
                           const SizedBox(
                             width: 4,

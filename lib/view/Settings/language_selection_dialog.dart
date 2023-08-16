@@ -1,22 +1,32 @@
-import 'package:exfai/all_export.dart';
+import '../../all_export.dart';
 
 class LanguageSelectionDialog extends StatelessWidget {
   final LocaleController controller;
 
   const LanguageSelectionDialog({
-    super.key,
+    Key? key,
     required this.controller,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text("Select a Language"),
-      content: Column(
+      contentPadding: EdgeInsets.zero, // Remove default content padding
+      title: Text("chooseTheLanguage".tr),
+      content: _buildLanguageOptions(context),
+    );
+  }
+
+  Widget _buildLanguageOptions(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      color: Colors.deepOrange,
+      child: Column(
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildLanguageOption(context, controller, "English", "en"),
-          _buildLanguageOption(context, controller, "Arabic", "ar"),
+          _buildLanguageOption(context, "english".tr, "en"),
+          _buildLanguageOption(context, "arabic".tr, "ar"),
           // Add more language options as needed
         ],
       ),
@@ -24,22 +34,17 @@ class LanguageSelectionDialog extends StatelessWidget {
   }
 
   Widget _buildLanguageOption(
-    BuildContext context,
-    LocaleController controller,
-    String languageName,
-    String languageCode,
-  ) {
+      BuildContext context, String languageName, String languageCode) {
     return InkWell(
       onTap: () {
         controller.changeLang(languageCode);
-        Get.updateLocale(Locale(languageCode)); // Update the locale
         Navigator.pop(context); // Close the dialog
       },
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0),
+        padding: const EdgeInsets.all(16.0),
         child: Text(
           languageName,
-          style: const TextStyle(fontSize: 16),
+          style: const TextStyle(color: Colors.white, fontSize: 16),
         ),
       ),
     );

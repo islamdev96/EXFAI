@@ -19,7 +19,7 @@ class Login extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .displayLarge!
-                  .copyWith(color: AppColor.grey),
+                  .copyWith(color: AppColor.fontsColors),
             ),
             // SizedBox(width: 75.w),
             // InkWell(

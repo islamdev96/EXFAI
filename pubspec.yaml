@@ -12,7 +12,7 @@ dependencies:
   bd_l10n: ^1.2.0
   cached_network_image: ^3.2.0
   cloud_firestore: ^4.8.3
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.5
   dartz: ^0.10.1
   device_preview: ^1.1.0
   dropdown_search: ^5.0.6
@@ -61,7 +61,7 @@ dev_dependencies:
     sdk: flutter
   rename: ^2.1.1
   timelines: ^0.1.0
- 
+
 flutter_launcher_icons:
   android: true
   ios: true

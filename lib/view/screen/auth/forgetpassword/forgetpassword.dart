@@ -15,7 +15,7 @@ class ForgetPassword extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .displayLarge!
-                .copyWith(color: AppColor.grey)),
+                .copyWith(color: AppColor.black)),
       ),
       body: GetBuilder<ForgetPasswordControllerImp>(
           builder: (controller) => HandlingDataRequest(

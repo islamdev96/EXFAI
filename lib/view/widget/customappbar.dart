@@ -35,12 +35,13 @@ class CustomAppBar extends StatelessWidget {
                   borderSide: BorderSide.none,
                   borderRadius: BorderRadius.circular(10)),
               filled: true,
-              fillColor: Colors.grey[200]),
+              fillColor: AppColor.secondColor),
         )),
         const SizedBox(width: 10),
         Container(
           decoration: BoxDecoration(
-              color: Colors.grey[200], borderRadius: BorderRadius.circular(10)),
+              color: AppColor.secondColor,
+              borderRadius: BorderRadius.circular(10)),
           width: 60,
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: IconButton(
@@ -48,7 +49,7 @@ class CustomAppBar extends StatelessWidget {
               icon: Icon(
                 iconData,
                 size: 30,
-                color: Colors.grey[600],
+                color: AppColor.black,
               )),
         )
       ]),

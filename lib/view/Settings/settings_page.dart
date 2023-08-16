@@ -1,10 +1,7 @@
-// ignore_for_file: avoid_unnecessary_containers, deprecated_member_use, unused_element
-
 import 'package:exfai/view/Settings/setting_card.dart';
 
 import '../../all_export.dart';
-
-// SettingsController controller = Get.put(SettingsController());
+import 'package:flutter/cupertino.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -12,8 +9,10 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final LocaleController localeController = Get.find();
+    Color mainSystemColor = CupertinoColors.systemBackground;
 
     return Container(
+      color: mainSystemColor,
       child: ListView(
         children: [
           Stack(
@@ -32,10 +31,10 @@ class SettingsPage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(100),
                   ),
-                  child: CircleAvatar(
+                  child: const CircleAvatar(
                     radius: 40,
-                    backgroundColor: Colors.grey[100],
-                    backgroundImage: const AssetImage(AppImageAsset.avatar),
+                    backgroundColor: AppColor.fontsColors,
+                    backgroundImage: AssetImage(AppImageAsset.avatar),
                   ),
                 ),
               ),

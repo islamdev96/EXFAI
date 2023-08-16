@@ -17,7 +17,7 @@ class VerfiyCodeSignUp extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .displayLarge!
-                .copyWith(color: AppColor.grey)),
+                .copyWith(color: AppColor.fontsColors)),
       ),
       body: GetBuilder<VerifyCodeSignUpControllerImp>(
           builder: (controller) => HandlingDataRequest(

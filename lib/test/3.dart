@@ -2,7 +2,7 @@
 /// profile: https://github.com/lohanidamodar
 // ignore_for_file: file_names, library_private_types_in_public_api
 
-import 'package:flutter/material.dart';
+import 'package:exfai/all_export.dart';
 
 class SettingsPage1 extends StatefulWidget {
   static const routeName = '/SettingsPage1';
@@ -24,7 +24,7 @@ class _SettingsPageState extends State<SettingsPage1> {
     /// Build main content with help of Scaffold widget
     /// ----------------------------------------------------------
     return Scaffold(
-      backgroundColor: Colors.grey.shade200,
+      backgroundColor: AppColor.fontsColors,
       appBar: AppBar(),
       body: Stack(
         fit: StackFit.expand,
@@ -198,7 +198,7 @@ class _SettingsPageState extends State<SettingsPage1> {
       ),
       width: double.infinity,
       height: 1.0,
-      color: Colors.grey.shade400,
+      color: AppColor.fontsColors,
     );
   }
 }

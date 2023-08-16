@@ -44,7 +44,7 @@ class ProductDetails extends StatelessWidget {
                                       .textTheme
                                       .displayLarge!
                                       .copyWith(
-                                        color: AppColor.fourthColor,
+                                        color: AppColor.fontsColors2,
                                       )),
                               const SizedBox(height: 10),
                               PriceAndCountItems(
@@ -65,7 +65,7 @@ class ProductDetails extends StatelessWidget {
                                       .copyWith(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w300,
-                                          color: AppColor.grey2)),
+                                          color: AppColor.fontsColors2)),
                               const SizedBox(height: 10),
                               // Text("Color",
                               //     style: Theme.of(context).textTheme.headline1!.copyWith(
