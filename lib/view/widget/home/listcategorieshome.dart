@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import '../../../all_export.dart';
 
 class ListCategoriesHome extends GetView<HomeControllerImp> {
@@ -6,27 +8,16 @@ class ListCategoriesHome extends GetView<HomeControllerImp> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 160,
-      child: ListView.builder(
+      height: 150,
+      child: ListView.separated(
+        separatorBuilder: (context, index) => const SizedBox(width: 10),
+        itemCount: controller.categories.length,
         scrollDirection: Axis.horizontal,
-        itemCount: (controller.categories.length / 4).ceil(),
         itemBuilder: (context, index) {
-          return Column(
-            children: [
-              Row(
-                children: [
-                  for (int i = index * 4;
-                      i < (index * 4 + 4) && i < controller.categories.length;
-                      i++)
-                    Categories(
-                      i: i,
-                      categoriesModel:
-                          CategoriesModel.fromJson(controller.categories[i]),
-                    ),
-                ],
-              ),
-              const SizedBox(height: 10), // Add spacing between rows
-            ],
+          return Categories(
+            i: index,
+            categoriesModel:
+                CategoriesModel.fromJson(controller.categories[index]),
           );
         },
       ),
@@ -52,17 +43,17 @@ class Categories extends GetView<HomeControllerImp> {
           Container(
             decoration: BoxDecoration(
                 color: AppColor.cardBackground,
-                borderRadius: BorderRadius.circular(500)),
+                borderRadius: BorderRadius.circular(120)),
             padding: const EdgeInsets.symmetric(horizontal: 10),
             height: 70,
             width: 70,
             child: SvgPicture.network(
                 "${AppLink.imagestCategories}/${categoriesModel.categoriesImage}",
-                color: AppColor.primaryText),
+                color: AppColor.info),
           ),
           Text(
             "${translateDatabase(categoriesModel.categoriesNamaAr, categoriesModel.categoriesName)}",
-            style: const TextStyle(fontSize: 20, color: AppColor.primaryText),
+            style: const TextStyle(fontSize: 13, color: AppColor.primaryText),
           )
         ],
       ),
