@@ -12,8 +12,8 @@ class CustomButtonCart extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       width: double.infinity,
       child: MaterialButton(
-        color: AppColor.primaryColor,
-        textColor: AppColor.fontsColors,
+        color: AppColor.primaryBackground,
+        textColor: AppColor.primaryText,
         onPressed: onPressed,
         child: Text(textbutton,
             style: const TextStyle(fontWeight: FontWeight.bold)),

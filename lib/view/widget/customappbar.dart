@@ -31,17 +31,17 @@ class CustomAppBar extends StatelessWidget {
                   icon: const Icon(Icons.search), onPressed: onPressedSearch),
               hintText: titleappbar,
               hintStyle:
-                  const TextStyle(fontSize: 18, color: AppColor.fontsColors),
+                  const TextStyle(fontSize: 18, color: AppColor.primaryText),
               border: OutlineInputBorder(
                   borderSide: BorderSide.none,
                   borderRadius: BorderRadius.circular(10)),
               filled: true,
-              fillColor: AppColor.primaryColor),
+              fillColor: AppColor.primaryBackground),
         )),
         const SizedBox(width: 10),
         Container(
           decoration: BoxDecoration(
-              color: AppColor.primaryColor,
+              color: AppColor.primaryBackground,
               borderRadius: BorderRadius.circular(10)),
           width: 60,
           padding: const EdgeInsets.symmetric(vertical: 8),
@@ -50,7 +50,7 @@ class CustomAppBar extends StatelessWidget {
               icon: Icon(
                 iconData,
                 size: 30,
-                color: AppColor.iconsColors,
+                color: AppColor.primaryButton,
               )),
         )
       ]),

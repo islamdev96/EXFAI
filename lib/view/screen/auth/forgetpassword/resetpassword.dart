@@ -9,13 +9,13 @@ class ResetPassword extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: AppColor.backgroundcolor,
+        backgroundColor: AppColor.primaryBackground,
         elevation: 0.0,
         title: Text('resetPassword'.tr,
             style: Theme.of(context)
                 .textTheme
                 .displayLarge!
-                .copyWith(color: AppColor.fontsColors)),
+                .copyWith(color: AppColor.primaryText)),
       ),
       body: GetBuilder<ResetPasswordControllerImp>(
           builder: (controller) => HandlingDataRequest(

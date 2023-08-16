@@ -1,15 +1,31 @@
 import 'package:flutter/material.dart';
 
 class AppColor {
-  static const Color black = Color(0xff000000);
-  // static const Color white = Color(0xffF8F9FD);
-  static const Color fontsColors = Color(0xFF0F1169);
-  static const Color iconsColors = Color(0xFF0F1169);
-  static const Color backgroundcolor = Color(0xffF8F9FD);
-  static const Color primaryColor = Color(0xffffff00);
+  // Grayscale Colors
+  static const Color test = Color(0xFFF60505);
+  static const Color black = Color(0xFF000000);
+  static const Color white = Color(0xFFFFFFFF);
+  static const Color gray = Color(0xFF808080);
 
-  // static const Color secondColor2 = Color(0xffc0392b);
-  // static const Color secondColor = Color(0xffFFFF33);
-  // static const Color primaryColor = Color(0xff000000);
-  // static const Color primaryColor2 = Color(0xffe74c3c);
+  static const Color primaryText = Color(0xFF000000);
+  static const Color secondaryText = Color(0xFF808080);
+  static const Color accentText = Color(0xFF0F1169);
+
+  static const Color primaryBackground = Color(0xFFFFFFFE);
+  static const Color secondaryBackground = Color(0xFF6566CB);
+  static const Color cardBackground = Color(0xFF181957);
+
+  // Button Colors
+  static const Color primaryButton = Color(0xFF808080);
+  static const Color secondaryButton = Color(0xFF0F1169);
+
+  // Border Colors
+  static const Color primaryBorder = Color(0xFF0F1169);
+  static const Color secondaryBorder = Color(0xFF808080);
+
+  // Alert Colors
+  static const Color success = Color(0xFF00C853);
+  static const Color error = Color(0xFFD32F2F);
+  static const Color warning = Color(0xFFFFAB00);
+  static const Color info = Color(0xFF2196F3);
 }

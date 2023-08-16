@@ -21,19 +21,19 @@ class SettingsPage extends StatelessWidget {
             children: [
               Container(
                 height: Get.width / 3,
-                color: AppColor.primaryColor,
+                color: AppColor.primaryBackground,
               ),
               Positioned(
                 top: Get.width / 3.9,
                 child: Container(
                   padding: const EdgeInsets.all(4),
                   decoration: BoxDecoration(
-                    color: AppColor.primaryColor,
+                    color: AppColor.primaryBackground,
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: const CircleAvatar(
                     radius: 40,
-                    backgroundColor: AppColor.backgroundcolor,
+                    backgroundColor: AppColor.primaryBackground,
                     backgroundImage: AssetImage(AppImageAsset.avatar),
                   ),
                 ),

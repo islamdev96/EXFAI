@@ -31,17 +31,17 @@ class OrdersDetails extends StatelessWidget {
                                 Text("item".tr,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                        color: AppColor.primaryColor,
+                                        color: AppColor.primaryBackground,
                                         fontWeight: FontWeight.bold)),
                                 Text("qTY".tr,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                        color: AppColor.primaryColor,
+                                        color: AppColor.primaryBackground,
                                         fontWeight: FontWeight.bold)),
                                 Text("price".tr,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                        color: AppColor.primaryColor,
+                                        color: AppColor.primaryBackground,
                                         fontWeight: FontWeight.bold)),
                               ]),
                               // TableRow(children: [
@@ -71,7 +71,7 @@ class OrdersDetails extends StatelessWidget {
                                 "$totalPrice : ${controller.ordersModel.ordersTotalprice}\$",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    color: AppColor.primaryColor,
+                                    color: AppColor.primaryBackground,
                                     fontWeight: FontWeight.bold)),
                           ),
                         ],
@@ -84,7 +84,7 @@ class OrdersDetails extends StatelessWidget {
                           child: ListTile(
                         title: Text("shippingAddress".tr,
                             style: TextStyle(
-                                color: AppColor.primaryColor,
+                                color: AppColor.primaryBackground,
                                 fontWeight: FontWeight.bold)),
                         subtitle: Text(
                             "${controller.ordersModel.addressCity} ${controller.ordersModel.addressStreet}"),

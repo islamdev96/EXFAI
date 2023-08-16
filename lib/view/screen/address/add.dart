@@ -42,7 +42,7 @@ class AddressAdd extends StatelessWidget {
                               onPressed: () {
                                 controllerpage.goToPageAddDetailsAddress();
                               },
-                              color: AppColor.primaryColor,
+                              color: AppColor.primaryBackground,
                               textColor: Colors.white,
                               child: Text("completion".tr,
                                   style: const TextStyle(fontSize: 18)),

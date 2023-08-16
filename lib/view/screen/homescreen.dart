@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
             // backgroundColor: const MyCustomWidget(),
             //
             floatingActionButton: FloatingActionButton(
-                backgroundColor: AppColor.primaryColor,
+                backgroundColor: AppColor.secondaryButton,
                 onPressed: () {
                   Get.toNamed(AppRoute.cart);
                 },

@@ -34,7 +34,7 @@ class BottomNavgationBarCart extends GetView<CartController> {
                       Expanded(
                           flex: 2,
                           child: TextFormField(
-                            cursorColor: AppColor.fontsColors,
+                            cursorColor: AppColor.primaryText,
                             controller: controllercoupon,
                             decoration: InputDecoration(
                                 isDense: true,
@@ -55,14 +55,14 @@ class BottomNavgationBarCart extends GetView<CartController> {
                     child: Text(
                     "$couponCode ${controller.couponname!}",
                     style: const TextStyle(
-                        color: AppColor.fontsColors,
+                        color: AppColor.primaryText,
                         fontWeight: FontWeight.bold),
                   ))),
         Container(
           margin: const EdgeInsets.all(10),
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-              border: Border.all(color: AppColor.primaryColor, width: 1),
+              border: Border.all(color: AppColor.primaryBackground, width: 1),
               borderRadius: BorderRadius.circular(10)),
           child: Column(children: [
             Row(
@@ -72,12 +72,12 @@ class BottomNavgationBarCart extends GetView<CartController> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("price".tr,
                         style: const TextStyle(
-                            fontSize: 16, color: AppColor.fontsColors))),
+                            fontSize: 16, color: AppColor.primaryText))),
                 Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("$price \$",
                         style: const TextStyle(
-                            fontSize: 16, color: AppColor.fontsColors)))
+                            fontSize: 16, color: AppColor.primaryText)))
               ],
             ),
             Row(
@@ -87,12 +87,12 @@ class BottomNavgationBarCart extends GetView<CartController> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("discount".tr,
                         style: const TextStyle(
-                            fontSize: 16, color: AppColor.fontsColors))),
+                            fontSize: 16, color: AppColor.primaryText))),
                 Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("$discount ",
                         style: const TextStyle(
-                            fontSize: 16, color: AppColor.fontsColors)))
+                            fontSize: 16, color: AppColor.primaryText)))
               ],
             ),
             Row(
@@ -102,12 +102,12 @@ class BottomNavgationBarCart extends GetView<CartController> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("shipping".tr,
                         style: const TextStyle(
-                            fontSize: 16, color: AppColor.fontsColors))),
+                            fontSize: 16, color: AppColor.primaryText))),
                 Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("$shipping ",
                         style: const TextStyle(
-                            fontSize: 16, color: AppColor.fontsColors)))
+                            fontSize: 16, color: AppColor.primaryText)))
               ],
             ),
             const Divider(),
@@ -120,14 +120,14 @@ class BottomNavgationBarCart extends GetView<CartController> {
                         style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
-                            color: AppColor.fontsColors))),
+                            color: AppColor.primaryText))),
                 Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("$totalprice \$",
                         style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
-                            color: AppColor.fontsColors)))
+                            color: AppColor.primaryText)))
               ],
             ),
           ]),

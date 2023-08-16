@@ -11,13 +11,13 @@ class VerfiyCodeSignUp extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: AppColor.backgroundcolor,
+        backgroundColor: AppColor.primaryBackground,
         elevation: 0.0,
         title: Text("verificationCode".tr,
             style: Theme.of(context)
                 .textTheme
                 .displayLarge!
-                .copyWith(color: AppColor.fontsColors)),
+                .copyWith(color: AppColor.primaryText)),
       ),
       body: GetBuilder<VerifyCodeSignUpControllerImp>(
           builder: (controller) => HandlingDataRequest(
@@ -37,7 +37,7 @@ class VerfiyCodeSignUp extends StatelessWidget {
                     fieldWidth: 50.0,
                     borderRadius: BorderRadius.circular(20),
                     numberOfFields: 5,
-                    borderColor: AppColor.primaryColor,
+                    borderColor: AppColor.primaryBackground,
                     //set to true to show as box or false to show as dash
                     showFieldAsBox: true,
                     //runs when a code is typed in
@@ -58,7 +58,7 @@ class VerfiyCodeSignUp extends StatelessWidget {
                         child: Text(
                       "resendVerfiyCode".tr,
                       style: const TextStyle(
-                          color: AppColor.primaryColor, fontSize: 20),
+                          color: AppColor.primaryBackground, fontSize: 20),
                     )),
                   )
                 ]),

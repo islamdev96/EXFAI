@@ -20,7 +20,7 @@ class NotificationView extends StatelessWidget {
                       "notification".tr,
                       style: const TextStyle(
                           fontSize: 18,
-                          color: AppColor.primaryColor,
+                          color: AppColor.primaryBackground,
                           fontWeight: FontWeight.bold),
                     )),
                     const SizedBox(height: 10),
@@ -45,7 +45,7 @@ class NotificationView extends StatelessWidget {
                                                 .toDate())
                                             .fromNow(),
                                         style: const TextStyle(
-                                            color: AppColor.primaryColor,
+                                            color: AppColor.primaryBackground,
                                             fontWeight: FontWeight.bold),
                                       ))
                                 ],

@@ -30,7 +30,7 @@ class PriceAndCountItems extends StatelessWidget {
                 child: Text(
                   count,
                   style: const TextStyle(
-                      fontSize: 20, height: 1.1, color: AppColor.fontsColors),
+                      fontSize: 20, height: 1.1, color: AppColor.primaryText),
                 )),
             IconButton(onPressed: onRemove, icon: const Icon(Icons.remove)),
           ],
@@ -39,7 +39,7 @@ class PriceAndCountItems extends StatelessWidget {
         Text(
           "$price \$",
           style: const TextStyle(
-              color: AppColor.fontsColors, fontSize: 30, height: 1.1),
+              color: AppColor.primaryText, fontSize: 30, height: 1.1),
         )
       ],
     );

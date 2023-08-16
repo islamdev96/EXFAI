@@ -15,15 +15,15 @@ class CustomCardHome extends GetView<HomeControllerImp> {
           alignment: Alignment.center,
           height: 150,
           decoration: BoxDecoration(
-              color: AppColor.primaryColor,
+              color: AppColor.secondaryBackground,
               borderRadius: BorderRadius.circular(20)),
           child: ListTile(
             title: Text(title,
-                style:
-                    const TextStyle(color: AppColor.fontsColors, fontSize: 20)),
+                style: const TextStyle(
+                    color: AppColor.secondaryText, fontSize: 20)),
             subtitle: Text(body,
                 style:
-                    const TextStyle(color: AppColor.fontsColors, fontSize: 30)),
+                    const TextStyle(color: AppColor.primaryText, fontSize: 30)),
           ),
         ),
         // Positioned(

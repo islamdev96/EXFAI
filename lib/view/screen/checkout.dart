@@ -15,13 +15,16 @@ class Checkout extends StatelessWidget {
       bottomNavigationBar: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: MaterialButton(
-            color: AppColor.primaryColor,
+            color: AppColor.primaryBackground,
             textColor: Colors.white,
             onPressed: () {
               controller.checkout();
             },
             child: Text("checkout".tr,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp)),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16.sp,
+                    color: AppColor.primaryText)),
           )),
       body: GetBuilder<CheckoutController>(
           builder: (controller) => HandlingDataView(
@@ -33,7 +36,7 @@ class Checkout extends StatelessWidget {
                       Text(
                         "choosePaymentMethod".tr,
                         style: const TextStyle(
-                            color: AppColor.primaryColor,
+                            color: AppColor.primaryBackground,
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
@@ -63,7 +66,7 @@ class Checkout extends StatelessWidget {
                       Text(
                         "chooseDeliveryType".tr,
                         style: const TextStyle(
-                            color: AppColor.primaryColor,
+                            color: AppColor.primaryBackground,
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
@@ -108,7 +111,7 @@ class Checkout extends StatelessWidget {
                               child: Text(
                                 "shippingAddress".tr,
                                 style: const TextStyle(
-                                    color: AppColor.fontsColors,
+                                    color: AppColor.primaryText,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16),
                               ),

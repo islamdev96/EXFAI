@@ -9,7 +9,7 @@ class Login extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: AppColor.backgroundcolor,
+        backgroundColor: AppColor.primaryBackground,
         elevation: 0.0,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -19,7 +19,7 @@ class Login extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .displayLarge!
-                  .copyWith(color: AppColor.fontsColors),
+                  .copyWith(color: AppColor.primaryText),
             ),
             // SizedBox(width: 75.w),
             // InkWell(

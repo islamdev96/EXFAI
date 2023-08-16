@@ -24,7 +24,7 @@ class _SettingsPageState extends State<SettingsPage1> {
     /// Build main content with help of Scaffold widget
     /// ----------------------------------------------------------
     return Scaffold(
-      backgroundColor: AppColor.fontsColors,
+      backgroundColor: AppColor.primaryText,
       appBar: AppBar(),
       body: Stack(
         fit: StackFit.expand,
@@ -198,7 +198,7 @@ class _SettingsPageState extends State<SettingsPage1> {
       ),
       width: double.infinity,
       height: 1.0,
-      color: AppColor.fontsColors,
+      color: AppColor.primaryText,
     );
   }
 }

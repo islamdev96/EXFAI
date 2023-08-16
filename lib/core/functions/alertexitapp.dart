@@ -6,13 +6,13 @@ Future<bool> alertExitApp() {
   Get.defaultDialog(
       title: "warning".tr,
       titleStyle: const TextStyle(
-          color: AppColor.primaryColor, fontWeight: FontWeight.bold),
+          color: AppColor.primaryBackground, fontWeight: FontWeight.bold),
       middleText: "doYouWantToExitTheApp".tr,
       actions: [
         ElevatedButton(
             style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all(AppColor.primaryColor)),
+                    MaterialStateProperty.all(AppColor.primaryBackground)),
             onPressed: () {
               exit(0);
             },
@@ -20,7 +20,7 @@ Future<bool> alertExitApp() {
         ElevatedButton(
             style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all(AppColor.primaryColor)),
+                    MaterialStateProperty.all(AppColor.primaryBackground)),
             onPressed: () {
               Get.back();
             },

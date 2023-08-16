@@ -7,7 +7,7 @@ class CustomBottomAppBarHome extends StatelessWidget {
     return GetBuilder<HomeScreenControllerImp>(
         builder: (controller) => BottomAppBar(
             shape: const CircularNotchedRectangle(),
-            notchMargin: 10,
+            notchMargin: 10.w,
             child: Row(
               children: [
                 ...List.generate(controller.listPage.length + 1, ((index) {

@@ -15,7 +15,7 @@ class Cart extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             "myCart".tr,
-            style: TextStyle(color: AppColor.fontsColors),
+            style: TextStyle(color: AppColor.primaryText),
           ),
         ),
         bottomNavigationBar: GetBuilder<CartController>(

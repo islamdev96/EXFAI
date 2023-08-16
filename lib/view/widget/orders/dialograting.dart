@@ -15,7 +15,7 @@ void showDialogRating(BuildContext context, String ordersid) {
         'ratingDialog'.tr,
         textAlign: TextAlign.center,
         style: const TextStyle(
-          color: AppColor.fontsColors,
+          color: AppColor.primaryText,
           fontSize: 25,
           fontWeight: FontWeight.bold,
         ),
@@ -34,7 +34,7 @@ void showDialogRating(BuildContext context, String ordersid) {
       ),
       submitButtonText: 'submit'.tr,
       submitButtonTextStyle: const TextStyle(
-          color: AppColor.fontsColors, fontWeight: FontWeight.bold),
+          color: AppColor.primaryText, fontWeight: FontWeight.bold),
       commentHint: 'setYourCustomCommentHint'.tr,
       onCancelled: () => print('cancelled'.tr),
       onSubmitted: (response) {

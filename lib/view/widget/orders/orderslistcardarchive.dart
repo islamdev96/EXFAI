@@ -28,7 +28,7 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
                 children: [
                   Text("$orderNumber : #${listdata.ordersId}",
                       style: const TextStyle(
-                          color: AppColor.fontsColors,
+                          color: AppColor.primaryText,
                           fontSize: 18,
                           fontWeight: FontWeight.bold)),
                   const Spacer(),
@@ -44,7 +44,7 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
                       listdata.ordersDatetime! as DateTime,
                     ).fromNow(),
                     style: const TextStyle(
-                      color: AppColor.fontsColors,
+                      color: AppColor.primaryText,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -64,7 +64,7 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
                 children: [
                   Text("$totalPrice : ${listdata.ordersId} \$ ",
                       style: const TextStyle(
-                          color: AppColor.fontsColors,
+                          color: AppColor.primaryText,
                           fontWeight: FontWeight.bold)),
                   const Spacer(),
                   MaterialButton(
@@ -72,8 +72,8 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
                       Get.toNamed(AppRoute.ordersdetails,
                           arguments: {"ordersmodel": listdata});
                     },
-                    color: AppColor.primaryColor,
-                    textColor: AppColor.fontsColors,
+                    color: AppColor.primaryBackground,
+                    textColor: AppColor.primaryText,
                     child: Text("details".tr),
                   ),
                   const SizedBox(
@@ -84,8 +84,8 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
                       onPressed: () {
                         showDialogRating(context, listdata.ordersId!);
                       },
-                      color: AppColor.primaryColor,
-                      textColor: AppColor.fontsColors,
+                      color: AppColor.primaryBackground,
+                      textColor: AppColor.primaryText,
                       child: Text("rating".tr),
                     ),
                 ],
