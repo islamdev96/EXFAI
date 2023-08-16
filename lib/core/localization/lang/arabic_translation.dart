@@ -9,6 +9,8 @@ class ArabicTranslation extends MyTranslation {
 
           "addNewAddress": "إضافة عنوان جديد",
           "resetPassword": "إعادة تعيين كلمة المرور",
+          "changeLanguage": "تغيير اللغة",
+
           "password": "كلمة المرور",
           "disableNotificatios": "تعطيل الإشعارات",
           "archive": "أرشيف",
