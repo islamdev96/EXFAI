@@ -70,8 +70,8 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
                       Get.toNamed(AppRoute.ordersdetails,
                           arguments: {"ordersmodel": listdata});
                     },
-                    color: AppColor.thirdColor,
-                    textColor: AppColor.secondColor,
+                    color: AppColor.primaryColor,
+                    textColor: AppColor.primaryColor,
                     child: Text("details".tr),
                   ),
                   const SizedBox(
@@ -82,8 +82,8 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
                       onPressed: () {
                         showDialogRating(context, listdata.ordersId!);
                       },
-                      color: AppColor.thirdColor,
-                      textColor: AppColor.secondColor,
+                      color: AppColor.primaryColor,
+                      textColor: AppColor.primaryColor,
                       child: Text("rating".tr),
                     ),
                 ],

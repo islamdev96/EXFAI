@@ -20,7 +20,7 @@ class LanguageSelectionDialog extends StatelessWidget {
   Widget _buildLanguageOptions(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.deepOrange,
+      color: AppColor.primaryColor,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,7 +44,7 @@ class LanguageSelectionDialog extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Text(
           languageName,
-          style: const TextStyle(color: Colors.white, fontSize: 16),
+          style: const TextStyle(color: AppColor.fontsColors, fontSize: 16),
         ),
       ),
     );

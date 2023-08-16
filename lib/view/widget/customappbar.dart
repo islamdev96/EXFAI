@@ -35,12 +35,12 @@ class CustomAppBar extends StatelessWidget {
                   borderSide: BorderSide.none,
                   borderRadius: BorderRadius.circular(10)),
               filled: true,
-              fillColor: AppColor.secondColor),
+              fillColor: AppColor.primaryColor),
         )),
         const SizedBox(width: 10),
         Container(
           decoration: BoxDecoration(
-              color: AppColor.secondColor,
+              color: AppColor.primaryColor,
               borderRadius: BorderRadius.circular(10)),
           width: 60,
           padding: const EdgeInsets.symmetric(vertical: 8),

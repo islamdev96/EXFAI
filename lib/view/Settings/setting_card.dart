@@ -115,7 +115,7 @@ Widget _buildSettingsTile(IconData icon, String title, VoidCallback onTap) {
     onTap: onTap,
     leading: Icon(
       icon,
-      color: AppColor.primaryColor,
+      color: AppColor.iconsColors,
     ),
     title: Text(
       title,

@@ -42,18 +42,18 @@ class Categories extends GetView<HomeControllerImp> {
         children: [
           Container(
             decoration: BoxDecoration(
-                color: AppColor.thirdColor,
+                color: AppColor.primaryColor,
                 borderRadius: BorderRadius.circular(20)),
             padding: const EdgeInsets.symmetric(horizontal: 10),
             height: 70,
             width: 70,
             child: SvgPicture.network(
                 "${AppLink.imagestCategories}/${categoriesModel.categoriesImage}",
-                color: AppColor.secondColor),
+                color: AppColor.fontsColors),
           ),
           Text(
             "${translateDatabase(categoriesModel.categoriesNamaAr, categoriesModel.categoriesName)}",
-            style: const TextStyle(fontSize: 13, color: AppColor.black),
+            style: const TextStyle(fontSize: 13, color: AppColor.fontsColors),
           )
         ],
       ),

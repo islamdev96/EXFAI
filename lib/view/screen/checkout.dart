@@ -15,7 +15,7 @@ class Checkout extends StatelessWidget {
       bottomNavigationBar: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: MaterialButton(
-            color: AppColor.secondColor,
+            color: AppColor.primaryColor,
             textColor: Colors.white,
             onPressed: () {
               controller.checkout();
@@ -33,7 +33,7 @@ class Checkout extends StatelessWidget {
                       Text(
                         "choosePaymentMethod".tr,
                         style: const TextStyle(
-                            color: AppColor.secondColor,
+                            color: AppColor.primaryColor,
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
@@ -63,7 +63,7 @@ class Checkout extends StatelessWidget {
                       Text(
                         "chooseDeliveryType".tr,
                         style: const TextStyle(
-                            color: AppColor.secondColor,
+                            color: AppColor.primaryColor,
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
@@ -108,7 +108,7 @@ class Checkout extends StatelessWidget {
                               child: Text(
                                 "shippingAddress".tr,
                                 style: const TextStyle(
-                                    color: AppColor.secondColor,
+                                    color: AppColor.primaryColor,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16),
                               ),

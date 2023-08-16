@@ -69,8 +69,8 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                       onPressed: () {
                         controller.deleteOrder(listdata.ordersId!);
                       },
-                      color: AppColor.thirdColor,
-                      textColor: AppColor.secondColor,
+                      color: AppColor.primaryColor,
+                      textColor: AppColor.primaryColor,
                       child: Text("delete".tr),
                     ),
                   if (listdata.ordersStatus! == "3")
@@ -80,8 +80,8 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                         // Get.toNamed(AppRoute.ordersTracking,arguments:("ordersmodel":listdata));
                         controller.goToPageTracking(listdata);
                       },
-                      color: AppColor.thirdColor,
-                      textColor: AppColor.secondColor,
+                      color: AppColor.primaryColor,
+                      textColor: AppColor.primaryColor,
                       child: Text("tracking".tr),
                     )
                 ],

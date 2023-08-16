@@ -17,7 +17,7 @@ class ProductDetails extends StatelessWidget {
             child: MaterialButton(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
-                color: AppColor.secondColor,
+                color: AppColor.primaryColor,
                 onPressed: () {
                   Get.toNamed(AppRoute.cart);
                 },
@@ -44,7 +44,7 @@ class ProductDetails extends StatelessWidget {
                                       .textTheme
                                       .displayLarge!
                                       .copyWith(
-                                        color: AppColor.fontsColors2,
+                                        color: AppColor.fontsColors,
                                       )),
                               const SizedBox(height: 10),
                               PriceAndCountItems(
@@ -65,7 +65,7 @@ class ProductDetails extends StatelessWidget {
                                       .copyWith(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w300,
-                                          color: AppColor.fontsColors2)),
+                                          color: AppColor.fontsColors)),
                               const SizedBox(height: 10),
                               // Text("Color",
                               //     style: Theme.of(context).textTheme.headline1!.copyWith(

@@ -51,7 +51,7 @@ class Categories extends GetView<ItemsControllerImp> {
                     child: Text(
                       "${translateDatabase(categoriesModel.categoriesNamaAr, categoriesModel.categoriesName)}",
                       style: const TextStyle(
-                          fontSize: 20, color: AppColor.fontsColors2),
+                          fontSize: 20, color: AppColor.fontsColors),
                     ),
                   ))
         ],

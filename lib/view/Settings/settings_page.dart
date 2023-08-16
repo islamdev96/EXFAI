@@ -28,12 +28,12 @@ class SettingsPage extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.all(4),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: AppColor.primaryColor,
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: const CircleAvatar(
                     radius: 40,
-                    backgroundColor: AppColor.fontsColors,
+                    backgroundColor: AppColor.backgroundcolor,
                     backgroundImage: AssetImage(AppImageAsset.avatar),
                   ),
                 ),

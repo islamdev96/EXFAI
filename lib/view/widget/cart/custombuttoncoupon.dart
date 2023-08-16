@@ -13,10 +13,11 @@ class CustomButtonCoupon extends StatelessWidget {
       width: double.infinity,
       child: MaterialButton(
         color: AppColor.primaryColor,
-        textColor: Colors.white,
+        textColor: AppColor.fontsColors,
         onPressed: onPressed,
         child: Text(textbutton,
-            style: const TextStyle(fontWeight: FontWeight.bold)),
+            style: const TextStyle(
+                fontWeight: FontWeight.bold, color: AppColor.fontsColors)),
       ),
     );
   }
