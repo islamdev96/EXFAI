@@ -23,12 +23,12 @@ class CardDeliveryTypeCheckout extends StatelessWidget {
         Image.asset(
           imagename,
           width: 60,
-          color: active ? Colors.white : null,
+          color: active ? AppColor.fontsColors : null,
         ),
         Text(
           title,
           style: TextStyle(
-              color: active ? Colors.white : AppColor.primaryColor,
+              color: active ? AppColor.fontsColors : AppColor.black,
               fontWeight: FontWeight.bold),
         )
       ]),

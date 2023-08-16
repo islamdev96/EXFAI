@@ -24,7 +24,7 @@ class SubitemsList extends GetView<ProductDetailsControllerImp> {
             child: Text(controller.subitems[index]['name'],
                 style: TextStyle(
                     color: controller.subitems[index]['active'] == "1"
-                        ? Colors.white
+                        ? AppColor.fontsColors
                         : AppColor.fontsColors,
                     fontWeight: FontWeight.bold)),
           ),

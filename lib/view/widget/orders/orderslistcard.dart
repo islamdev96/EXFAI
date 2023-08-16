@@ -70,7 +70,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                         controller.deleteOrder(listdata.ordersId!);
                       },
                       color: AppColor.primaryColor,
-                      textColor: AppColor.primaryColor,
+                      textColor: AppColor.fontsColors,
                       child: Text("delete".tr),
                     ),
                   if (listdata.ordersStatus! == "3")
@@ -81,7 +81,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                         controller.goToPageTracking(listdata);
                       },
                       color: AppColor.primaryColor,
-                      textColor: AppColor.primaryColor,
+                      textColor: AppColor.fontsColors,
                       child: Text("tracking".tr),
                     )
                 ],

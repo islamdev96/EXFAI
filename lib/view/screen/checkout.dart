@@ -108,7 +108,7 @@ class Checkout extends StatelessWidget {
                               child: Text(
                                 "shippingAddress".tr,
                                 style: const TextStyle(
-                                    color: AppColor.primaryColor,
+                                    color: AppColor.fontsColors,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16),
                               ),

@@ -19,9 +19,11 @@ class CustomCardHome extends GetView<HomeControllerImp> {
               borderRadius: BorderRadius.circular(20)),
           child: ListTile(
             title: Text(title,
-                style: const TextStyle(color: AppColor.black, fontSize: 20)),
+                style:
+                    const TextStyle(color: AppColor.fontsColors, fontSize: 20)),
             subtitle: Text(body,
-                style: const TextStyle(color: AppColor.black, fontSize: 30)),
+                style:
+                    const TextStyle(color: AppColor.fontsColors, fontSize: 30)),
           ),
         ),
         // Positioned(
