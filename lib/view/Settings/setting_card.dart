@@ -40,14 +40,14 @@ class SettingCard extends StatelessWidget {
             },
           ),
           const Divider(),
-          _buildSettingsTile(
-            Icons.location_on_outlined,
-            "address".tr,
-            () {
-              Get.toNamed(AppRoute.addressview);
-            },
-          ),
-          const Divider(),
+          // _buildSettingsTile(
+          //   Icons.location_on_outlined,
+          //   "address".tr,
+          //   () {
+          //     Get.toNamed(AppRoute.addressview);
+          //   },
+          // ),
+          // const Divider(),
           _buildSettingsTile(
             Icons.phone_callback_outlined,
             "contactUs".tr,

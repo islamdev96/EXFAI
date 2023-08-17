@@ -9,10 +9,10 @@ class AppColor {
 
   static const Color primaryText = Color(0xFF000000);
   static const Color secondaryText = Color(0xFF808080);
-  static const Color accentText = Color(0xFF0F1169);
+  static const Color accentText = Color(0xffff3048d8);
 
   static const Color primaryBackground = Color(0xFFFFFFFE);
-  static const Color secondaryBackground = Color(0xFF6566CB);
+  static const Color secondaryBackground = Color(0xFFDBDBED);
   static const Color cardBackground = Color(0xFF181957);
 
   // Button Colors

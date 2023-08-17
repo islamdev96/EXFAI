@@ -8,7 +8,6 @@ class CheckoutController extends GetxController {
 
   StatusRequest statusRequest = StatusRequest.none;
 
-  String? paymentMethod;
   String? deliveryType;
   String addressid = "0";
 
@@ -18,22 +17,22 @@ class CheckoutController extends GetxController {
 
   List<AddressModel> dataaddress = [];
 
-  choosePaymentMethod(String val) {
-    paymentMethod = val;
-    update();
-  }
-
-  chooseDeliveryType(String val) {
+  void chooseDeliveryType(String val) {
     deliveryType = val;
     update();
   }
 
-  chooseShippingAddress(String val) {
+  void chooseShippingAddress(String val) {
     addressid = val;
     update();
   }
 
-  getShippingAddress() async {
+  void cancelShippingAddress() {
+    addressid = "0";
+    update();
+  }
+
+  Future<void> getShippingAddress() async {
     statusRequest = StatusRequest.loading;
 
     var response = await addressData
@@ -55,25 +54,21 @@ class CheckoutController extends GetxController {
     update();
   }
 
-  checkout() async {
-    if (paymentMethod == null) {
-      return Get.snackbar("error".tr, "selectPaymentMethod".tr);
-    }
-    if (deliveryType == null) {
-      return Get.snackbar("error".tr, "selectOrderType".tr);
-    }
-    if (dataaddress.isEmpty) {
-      return Get.snackbar("error".tr, "selectShoppingAddress".tr);
-    }
+  Future<void> checkout() async {
+    // Assuming default values for address, payment method, and order type
+    String defaultAddressId = "default_address";
+    String defaultPaymentMethod = "default_payment";
+    String defaultOrderType = "default_order";
+
     Map data = {
       "usersid": myServices.sharedPreferences.getString("id"),
-      "addressid": addressid.toString(),
-      "orderstype": deliveryType.toString(),
+      "addressid": defaultAddressId,
+      "orderstype": defaultOrderType,
       "pricedelivery": "10",
       "ordersprice": priceorders,
       "couponid": couponid,
       "coupondiscount": coupondiscount.toString(),
-      "paymentmethod": paymentMethod.toString()
+      "paymentmethod": defaultPaymentMethod,
     };
 
     var response = await checkoutData.checkout(data);
