@@ -1,4 +1,4 @@
-import 'package:exfai/view/widget/home/listcategorieshome.dart';
+import 'package:exfai/view/widget/home/list_categories_home.dart';
 
 import '../../all_export.dart';
 

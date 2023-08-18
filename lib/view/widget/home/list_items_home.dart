@@ -54,9 +54,9 @@ class ItemsHome extends StatelessWidget {
             width: 200,
           ),
           Positioned(
-            left: 10,
+            left: 25.sp,
             child: Text(
-              "${itemsModel.itemsName}",
+              "${translateDatabase(itemsModel.itemsNameAr, itemsModel.itemsName)}",
               style: const TextStyle(
                   color: Colors.white,
                   // fontWeight: FontWeight.bold,

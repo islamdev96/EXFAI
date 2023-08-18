@@ -5,8 +5,7 @@ class ProductDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ProductDetailsControllerImp controller =
-        Get.put(ProductDetailsControllerImp());
+    final controller = Get.put(ProductDetailsControllerImp());
 
     return Scaffold(
       bottomNavigationBar: _buildBottomNavigationBar(),
@@ -36,7 +35,7 @@ class ProductDetails extends StatelessWidget {
           Get.toNamed(AppRoute.cart);
         },
         child: Text(
-          ("goToCart".tr),
+          "goToCart".tr,
           style: const TextStyle(
             color: AppColor.primaryText,
             fontWeight: FontWeight.bold,
@@ -54,25 +53,21 @@ class ProductDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "${controller.itemsModel.itemsName}",
+            "${translateDatabase(controller.itemsModel.itemsNameAr, controller.itemsModel.itemsName)}",
             style: Theme.of(context).textTheme.displayLarge!.copyWith(
                   color: AppColor.primaryText,
                 ),
           ),
           const SizedBox(height: 10),
           PriceAndCountItems(
-            onAdd: () {
-              controller.add();
-            },
-            onRemove: () {
-              controller.remove();
-            },
-            price: "${controller.itemsModel.itemsPriceDiscount}",
+            onAdd: controller.add,
+            onRemove: controller.remove,
+            price: "${controller.itemsModel.itemsPrice}",
             count: "${controller.countitems}",
           ),
           const SizedBox(height: 10),
           Text(
-            "${controller.itemsModel.itemsDesc}",
+            "${translateDatabase(controller.itemsModel.itemsDescAr, controller.itemsModel.itemsDesc)}",
             style: Theme.of(context).textTheme.displayLarge!.copyWith(
                   fontSize: 16,
                   fontWeight: FontWeight.w300,
