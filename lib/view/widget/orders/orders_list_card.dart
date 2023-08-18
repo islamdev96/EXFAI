@@ -21,9 +21,11 @@ class CardOrdersList extends GetView<OrdersPendingController> {
             children: [
               Row(
                 children: [
-                  Text("$orderNumber : #${listdata.ordersId}",
+                  Text("$orderNumber :  ${listdata.ordersId}",
                       style: const TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.bold)),
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.accentText)),
                   const Spacer(),
                   // Text(listdata.ordersDatetime!)
                   // Text(
@@ -51,7 +53,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                 children: [
                   Text("$totalPrice : ${listdata.ordersTotalprice} \$ ",
                       style: const TextStyle(
-                          color: AppColor.primaryBackground,
+                          color: AppColor.accentText,
                           fontWeight: FontWeight.bold)),
                   const Spacer(),
                   // MaterialButton(
@@ -69,7 +71,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                       onPressed: () {
                         controller.deleteOrder(listdata.ordersId!);
                       },
-                      color: AppColor.primaryBackground,
+                      color: AppColor.primaryButton,
                       textColor: AppColor.primaryText,
                       child: Text("delete".tr),
                     ),

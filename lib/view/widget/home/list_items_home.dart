@@ -54,13 +54,13 @@ class ItemsHome extends StatelessWidget {
             width: 200,
           ),
           Positioned(
-            left: 25.sp,
+            left: 25.w,
             child: Text(
               "${translateDatabase(itemsModel.itemsNameAr, itemsModel.itemsName)}",
-              style: const TextStyle(
+              style: TextStyle(
                   color: Colors.white,
                   // fontWeight: FontWeight.bold,
-                  fontSize: 14),
+                  fontSize: 14.sp),
             ),
           )
         ],
