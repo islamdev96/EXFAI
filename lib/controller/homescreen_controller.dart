@@ -1,6 +1,6 @@
 import 'package:exfai/view/Settings/settings_page.dart';
 
-import '../../all_export.dart';
+import '../all_export.dart';
 
 abstract class HomeScreenController extends GetxController {
   changePage(int currentpage);
@@ -9,18 +9,19 @@ abstract class HomeScreenController extends GetxController {
 class HomeScreenControllerImp extends HomeScreenController {
   int currentpage = 0;
 
-  List<Widget> listPage = [const HomePage(), const SettingsPage()];
+  final List<Widget> listPage = [
+    const HomePage(),
+    const SettingsPage(),
+  ];
 
-  List bottomappbar = [
-    {"title": "home", "icon": Icons.home},
-    {"title": "settings", "icon": Icons.settings}
+  final List<Map<String, dynamic>> bottomappbar = [
+    {"title": "Home", "icon": Icons.home},
+    {"title": "Settings", "icon": Icons.settings},
   ];
 
   @override
   changePage(int i) {
-    if (i >= 0 && i < listPage.length) {
-      currentpage = i;
-      update();
-    }
+    currentpage = i;
+    update();
   }
 }

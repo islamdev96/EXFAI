@@ -8,7 +8,7 @@ class ListCategoriesHome extends GetView<HomeControllerImp> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 150,
+      height: 120.h,
       child: ListView.separated(
         separatorBuilder: (context, index) => const SizedBox(width: 10),
         itemCount: controller.categories.length,
@@ -40,21 +40,31 @@ class Categories extends GetView<HomeControllerImp> {
       },
       child: Column(
         children: [
-          Container(
-            decoration: BoxDecoration(
-                color: AppColor.cardBackground,
-                borderRadius: BorderRadius.circular(120)),
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+          SizedBox(
             height: 70,
             width: 70,
-            child: SvgPicture.network(
-                "${AppLink.imagestCategories}/${categoriesModel.categoriesImage}",
-                color: AppColor.info),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Container(
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColor.cardBackground,
+                  ),
+                ),
+                SvgPicture.network(
+                  "${AppLink.imagestCategories}/${categoriesModel.categoriesImage}",
+                  color: AppColor.info,
+                  height: 60, // Adjust image height as needed
+                ),
+              ],
+            ),
           ),
+          const SizedBox(height: 8), // Adjust spacing as needed
           Text(
             "${translateDatabase(categoriesModel.categoriesNamaAr, categoriesModel.categoriesName)}",
             style: const TextStyle(fontSize: 13, color: AppColor.primaryText),
-          )
+          ),
         ],
       ),
     );

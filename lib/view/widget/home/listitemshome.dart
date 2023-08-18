@@ -26,9 +26,13 @@ class ItemsHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: () {
         // Navigate to the ProductDetails page with the selected item's model
+        Get.toNamed("productdetails", arguments: {
+          "itemsmodel": itemsModel,
+          "price": itemsModel.itemsPriceDiscount
+        });
       },
       child: Stack(
         children: [

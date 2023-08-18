@@ -9,15 +9,15 @@ class AppColor {
 
   static const Color primaryText = Color(0xFF000000);
   static const Color secondaryText = Color(0xFF808080);
-  static const Color accentText = Color(0xffff3048d8);
+  static const Color accentText = Color(0xFF0F1169);
 
   static const Color primaryBackground = Color(0xFFFFFFFE);
   static const Color secondaryBackground = Color(0xFFDBDBED);
-  static const Color cardBackground = Color(0xFF181957);
+  static const Color cardBackground = Color(0xFFFFFFFF);
 
   // Button Colors
   static const Color primaryButton = Color(0xFF808080);
-  static const Color secondaryButton = Color(0xFF0F1169);
+  static const Color secondaryButton = Color(0xFF2196F3);
 
   // Border Colors
   static const Color primaryBorder = Color(0xFF0F1169);

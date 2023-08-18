@@ -33,7 +33,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoute.checkout, page: () => const Checkout()),
   GetPage(name: AppRoute.orderspending, page: () => const OrdersPending()),
   GetPage(name: AppRoute.ordersarchive, page: () => const OrdersArchiveView()),
-  GetPage(name: AppRoute.ordersdetails, page: () => const OrdersDetails()),
+  // GetPage(name: AppRoute.ordersdetails, page: () => const OrdersDetails()),
   // GetPage(
   //     name: AppRoute.addressadddetails, page: () => const AddressAddDetails()),
   GetPage(name: AppRoute.ordersTracking, page: () => const OrdersTracking()),

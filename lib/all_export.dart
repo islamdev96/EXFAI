@@ -62,7 +62,6 @@ export 'package:exfai/controller/auth/successresetpassword_controller.dart';
 export 'package:exfai/controller/forgetpassword/verifycode_controller.dart';
 export 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 export 'package:exfai/controller/auth/login_controller.dart';
-export 'package:exfai/core/functions/alertexitapp.dart';
 export 'package:exfai/view/widget/auth/logoauth.dart';
 export 'package:exfai/view/widget/auth/textsignup.dart';
 export 'package:exfai/controller/auth/signup_controller.dart';

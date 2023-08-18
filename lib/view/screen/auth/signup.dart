@@ -1,3 +1,5 @@
+import 'package:exfai/core/functions/alertexitapp.dart';
+
 import '../../../../../all_export.dart';
 
 class SignUp extends StatelessWidget {
@@ -18,7 +20,7 @@ class SignUp extends StatelessWidget {
                 .copyWith(color: AppColor.primaryText)),
       ),
       body: WillPopScope(
-          onWillPop: alertExitApp,
+          onWillPop: () => Get.alertExitApp(),
           child: GetBuilder<SignUpControllerImp>(
             builder: (controller) => HandlingDataRequest(
                 statusRequest: controller.statusRequest,
