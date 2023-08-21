@@ -10,7 +10,7 @@ class EnglishTranslation extends MyTranslation {
           "english": "English",
           "arabic": "Arabic",
           "changeLanguage": "Change Language",
-          "chooseTheLanguage": "choose the language",
+          "chooseTheLanguage": "Choose the language",
           "resetPassword": "Reset password",
           "password": "Password",
           "disableNotificatios": "Disable Notificatios ",

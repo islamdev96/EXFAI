@@ -21,7 +21,7 @@ class CustomTextSignUpOrSignIn extends StatelessWidget {
           onTap: onTap,
           child: Text(texttwo,
               style: const TextStyle(
-                  color: AppColor.primaryText, fontWeight: FontWeight.bold)),
+                  color: AppColor.accentText, fontWeight: FontWeight.bold)),
         )
       ],
     );

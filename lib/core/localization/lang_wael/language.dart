@@ -16,7 +16,10 @@ class Languages extends GetView<LocaleController> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("chooseTheLanguage".tr,
-                style: Theme.of(context).textTheme.displayLarge),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: AppColor.accentText,
+                    fontSize: 18.sp)),
             const SizedBox(height: 20),
             CustomButtonLang(
               textbutton: "Ar",
