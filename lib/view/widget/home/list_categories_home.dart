@@ -3,7 +3,7 @@
 import '../../../all_export.dart';
 
 class ListCategoriesHome extends GetView<HomeControllerImp> {
-  const ListCategoriesHome({Key? key}) : super(key: key);
+  const ListCategoriesHome({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +28,7 @@ class ListCategoriesHome extends GetView<HomeControllerImp> {
 class Categories extends GetView<HomeControllerImp> {
   final CategoriesModel categoriesModel;
   final int? i;
-  const Categories({Key? key, required this.categoriesModel, required this.i})
-      : super(key: key);
+  const Categories({super.key, required this.categoriesModel, required this.i});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +48,7 @@ class Categories extends GetView<HomeControllerImp> {
                 Container(
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: AppColor.cardBackground,
+                    color: AppColor.secondaryBorder,
                   ),
                 ),
                 SvgPicture.network(
