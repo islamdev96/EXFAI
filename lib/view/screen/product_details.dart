@@ -1,7 +1,7 @@
 import '../../all_export.dart';
 
 class ProductDetails extends StatelessWidget {
-  const ProductDetails({Key? key}) : super(key: key);
+  const ProductDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class ProductDetails extends StatelessWidget {
       height: 40,
       child: MaterialButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        color: AppColor.primaryBackground,
+        color: AppColor.secondaryButton,
         onPressed: () {
           Get.toNamed(AppRoute.cart);
         },

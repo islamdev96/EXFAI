@@ -2,7 +2,7 @@ import '../../../all_export.dart';
 
 class CustomTitleHome extends StatelessWidget {
   final String title;
-  const CustomTitleHome({Key? key, required this.title}) : super(key: key);
+  const CustomTitleHome({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 import '../../../all_export.dart';
 
 class CustomBottomAppBarHome extends StatelessWidget {
-  const CustomBottomAppBarHome({Key? key}) : super(key: key);
+  const CustomBottomAppBarHome({super.key});
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeScreenControllerImp>(

@@ -3,8 +3,7 @@ import '../../../all_export.dart';
 class CustomCardHome extends GetView<HomeControllerImp> {
   final String title;
   final String body;
-  const CustomCardHome({Key? key, required this.title, required this.body})
-      : super(key: key);
+  const CustomCardHome({super.key, required this.title, required this.body});
 
   @override
   Widget build(BuildContext context) {

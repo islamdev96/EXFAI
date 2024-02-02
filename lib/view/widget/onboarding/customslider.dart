@@ -1,7 +1,7 @@
 import '../../../../all_export.dart';
 
 class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
-  const CustomSliderOnBoarding({Key? key}) : super(key: key);
+  const CustomSliderOnBoarding({super.key});
 
   @override
   Widget build(BuildContext context) {

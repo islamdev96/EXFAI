@@ -3,8 +3,18 @@ import '../../../all_export.dart';
 class CustomButtonCart extends StatelessWidget {
   final String textbutton;
   final void Function()? onPressed;
-  const CustomButtonCart({Key? key, required this.textbutton, this.onPressed})
-      : super(key: key);
+
+  // Use Facebook-inspired colors
+  final Color buttonColor;
+  final Color textColor;
+
+  const CustomButtonCart({
+    super.key,
+    required this.textbutton,
+    this.onPressed,
+    this.buttonColor = AppColor.primaryButton,
+    this.textColor = AppColor.primaryText,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +22,13 @@ class CustomButtonCart extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       width: double.infinity,
       child: MaterialButton(
-        color: AppColor.primaryBackground,
-        textColor: AppColor.primaryText,
+        color: buttonColor,
+        textColor: textColor,
         onPressed: onPressed,
-        child: Text(textbutton,
-            style: const TextStyle(fontWeight: FontWeight.bold)),
+        child: Text(
+          textbutton,
+          style: const TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }

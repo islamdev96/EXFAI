@@ -3,7 +3,7 @@ import '../../../all_export.dart';
 class CustomListItems extends GetView<ItemsControllerImp> {
   final ItemsModel itemsModel;
   // final bool active;
-  const CustomListItems({Key? key, required this.itemsModel}) : super(key: key);
+  const CustomListItems({super.key, required this.itemsModel});
 
   @override
   Widget build(BuildContext context) {
