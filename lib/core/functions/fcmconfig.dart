@@ -1,6 +1,6 @@
-// ignore_for_file: unused_local_variable
-
 import '../../all_export.dart';
+
+final FlutterRingtonePlayer _ringtonePlayer = FlutterRingtonePlayer();
 
 requestPermissionNotification() async {
   NotificationSettings settings =
@@ -15,10 +15,13 @@ requestPermissionNotification() async {
   );
 }
 
-fcmconfig() {
+fcmConfig() {
   FirebaseMessaging.onMessage.listen((message) {
-    FlutterRingtonePlayer.playNotification();
-    Get.snackbar(message.notification!.title!, message.notification!.body!);
+    _ringtonePlayer.playNotification();
+    Get.snackbar(
+      message.notification!.title!,
+      message.notification!.body!,
+    );
     refreshPageNotification(message.data);
   });
 }
@@ -31,7 +34,6 @@ refreshPageNotification(data) {
   }
 }
 
-
 // Firebase + stream 
 // Socket io 
-// Notification refresh 
+// Notification refresh

@@ -1,3 +1,9 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
+import 'package:get/get.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+
 import '../../../../all_export.dart';
 
 class LocaleController extends GetxController {
@@ -7,43 +13,55 @@ class LocaleController extends GetxController {
 
   ThemeData appTheme = themeEnglish;
 
-  changeLang(String langcode) {
-    Locale locale = Locale(langcode);
-    myServices.sharedPreferences.setString("lang", langcode);
-    appTheme = langcode == "ar" ? themeArabic : themeEnglish;
+  void changeLang(String langCode) {
+    Locale locale = Locale(langCode);
+    myServices.sharedPreferences.setString("lang", langCode);
+    appTheme = langCode == "ar" ? themeArabic : themeEnglish;
     Get.changeTheme(appTheme);
     Get.updateLocale(locale);
   }
 
-  requestPerLocation() async {
+  Future<void> requestPerLocation() async {
     bool serviceEnabled;
     LocationPermission permission;
+
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      return Get.snackbar(
-          "alert".tr, "attentionPleaseTurnOnTheLocationService".tr);
+      Get.snackbar("Alert", "Please turn on the location service");
+      return;
     }
+
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-        return Get.snackbar(
-            "alert".tr, "pleaseGiveTheSitePermissionForTheApplication".tr);
+        Get.snackbar(
+            "Alert", "Please give the location permission for the application");
+        return;
       }
     }
 
     if (permission == LocationPermission.deniedForever) {
-      // Permissions are denied forever, handle appropriately.
-      return Get.snackbar("alert".tr,
-          "theApplicationCannotBeUsedWithoutSpecifyingYourLocation".tr);
+      Get.snackbar("Alert",
+          "The application cannot be used without specifying your location");
+      return;
     }
+  }
+
+  void fcmConfig() {
+    FirebaseMessaging.onMessage.listen((message) {
+      FlutterRingtonePlayer().playNotification();
+      Get.snackbar(message.notification!.title!, message.notification!.body!);
+      refreshPageNotification(message.data);
+    });
   }
 
   @override
   void onInit() {
     requestPermissionNotification();
-    fcmconfig();
+    fcmConfig();
     requestPerLocation();
+
     String? sharedPrefLang = myServices.sharedPreferences.getString("lang");
     if (sharedPrefLang == "ar") {
       language = const Locale("ar");
@@ -55,6 +73,7 @@ class LocaleController extends GetxController {
       language = Locale(Get.deviceLocale!.languageCode);
       appTheme = themeEnglish;
     }
+
     super.onInit();
   }
 }
