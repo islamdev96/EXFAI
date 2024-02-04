@@ -7,7 +7,9 @@ import '../../all_export.dart';
 SettingsController controller = Get.put(SettingsController());
 
 class SettingCard extends StatelessWidget {
-  const SettingCard({super.key});
+  const SettingCard({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +23,6 @@ class SettingCard extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
-          // const CustomSnackBar(
-          //   content: Text('Your message here'),
-          // ),
           _buildSettingsTile(
             Icons.card_travel,
             "orders".tr,
@@ -31,15 +30,15 @@ class SettingCard extends StatelessWidget {
               Get.toNamed(AppRoute.orderspending);
             },
           ),
-          const Divider(),
-          _buildSettingsTile(
-            Icons.abc_sharp,
-            "3D Page",
-            () {
-              Get.to(const Show3DPageWidget());
-            },
-          ),
-          const Divider(),
+          // const Divider(),
+          // _buildSettingsTile(
+          //   Icons.audiotrack,
+          //   "3D Page",
+          //   () {
+          //     Get.to(const Show3DPageWidget());
+          //   },
+          // ),
+          // const Divider(),
           // _buildSettingsTile(
           //   Icons.location_on_outlined,
           //   "address".tr,
@@ -47,7 +46,7 @@ class SettingCard extends StatelessWidget {
           //     Get.toNamed(AppRoute.addressview);
           //   },
           // ),
-          // const Divider(),
+          const Divider(),
           _buildSettingsTile(
             Icons.phone_callback_outlined,
             "contactUs".tr,
@@ -59,32 +58,32 @@ class SettingCard extends StatelessWidget {
           ListTile(
             leading: const Icon(
               Icons.safety_check,
-              color: AppColor.primaryText,
+              color: AppColor.primaryButton,
             ),
-            title: Text("changeLanguage".tr),
+            title: Text(
+              "changeLanguage".tr,
+              style: const TextStyle(
+                color: AppColor.secondaryText,
+              ),
+            ),
             trailing: const Icon(Icons.keyboard_arrow_right),
             onTap: () {
               _showLanguageSelectionDialog(context, localeController);
             },
           ),
           const Divider(),
-          const Divider(),
           ListTile(
-            // leading: const Icon(
-            //   Icons.exit_to_app,
-            //   color: AppColor.primaryColor,
-            // ),
             title: Text(
               "logout".tr,
-              style: const TextStyle(color: AppColor.primaryText),
+              style: const TextStyle(color: AppColor.secondaryText),
             ),
             trailing:
-                const Icon(Icons.exit_to_app, color: AppColor.primaryText),
+                const Icon(Icons.exit_to_app, color: AppColor.primaryButton),
             onTap: () {
               controller.logout();
             },
           ),
-          const Divider(),
+          // const Divider(),
         ],
       ),
     );
@@ -110,7 +109,7 @@ Container _buildDivider() {
     ),
     width: double.infinity,
     height: 1.0,
-    color: AppColor.primaryText,
+    color: AppColor.secondaryText,
   );
 }
 
@@ -120,11 +119,12 @@ Widget _buildSettingsTile(IconData icon, String title, VoidCallback onTap) {
     leading: Icon(
       icon,
       color: AppColor.primaryButton,
+      size: 24,
     ),
     title: Text(
       title,
       style: const TextStyle(
-        color: AppColor.primaryText,
+        color: AppColor.secondaryText,
         fontSize: 16,
         fontWeight: FontWeight.w500,
       ),

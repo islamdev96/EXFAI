@@ -1,7 +1,7 @@
 import '../../all_export.dart';
 
 class Items extends StatelessWidget {
-  const Items({Key? key}) : super(key: key);
+  const Items({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,20 +12,20 @@ class Items extends StatelessWidget {
       body: Container(
         padding: const EdgeInsets.all(15),
         child: ListView(children: [
-          CustomAppBar(
-            mycontroller: controller.search!,
-            titleappbar: "findYourProduct".tr,
-            // onPressedIcon: () {},
-            onPressedSearch: () {
-              controller.onSearchItems();
-            },
-            onChanged: (val) {
-              controller.checkSearch(val);
-            },
-            onPressedIconFavorite: () {
-              Get.toNamed(AppRoute.myFavroite);
-            },
-          ),
+          // CustomAppBar(
+          //   mycontroller: controller.search!,
+          //   titleappbar: "findYourProduct".tr,
+          //   // onPressedIcon: () {},
+          //   onPressedSearch: () {
+          //     controller.onSearchItems();
+          //   },
+          //   onChanged: (val) {
+          //     controller.checkSearch(val);
+          //   },
+          //   onPressedIconFavorite: () {
+          //     Get.toNamed(AppRoute.myFavroite);
+          //   },
+          // ),
           const SizedBox(height: 20),
           const ListCategoriesItems(),
           GetBuilder<ItemsControllerImp>(

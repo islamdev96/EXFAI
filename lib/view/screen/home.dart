@@ -3,7 +3,7 @@ import 'package:exfai/view/widget/home/list_categories_home.dart';
 import '../../all_export.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +62,7 @@ class HomePage extends StatelessWidget {
 
 class ListItemsSearch extends GetView<HomeControllerImp> {
   final List<ItemsModel> listdatamodel;
-  const ListItemsSearch({Key? key, required this.listdatamodel})
-      : super(key: key);
+  const ListItemsSearch({super.key, required this.listdatamodel});
 
   @override
   Widget build(BuildContext context) {

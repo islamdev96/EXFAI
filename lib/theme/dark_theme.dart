@@ -9,8 +9,8 @@ ThemeData dark = ThemeData(
   hintColor: const Color(0xFFE7F6F8),
   focusColor: const Color(0xFFADC4C8),
   pageTransitionsTheme: const PageTransitionsTheme(builders: {
-    TargetPlatform.android: const ZoomPageTransitionsBuilder(),
-    TargetPlatform.iOS: const ZoomPageTransitionsBuilder(),
-    TargetPlatform.fuchsia: const ZoomPageTransitionsBuilder(),
+    TargetPlatform.android: ZoomPageTransitionsBuilder(),
+    TargetPlatform.iOS: ZoomPageTransitionsBuilder(),
+    TargetPlatform.fuchsia: ZoomPageTransitionsBuilder(),
   }),
 );

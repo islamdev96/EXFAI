@@ -1,5 +1,6 @@
 /// Author: Damodar Lohani
 /// profile: https://github.com/lohanidamodar
+library;
 // ignore_for_file: file_names, library_private_types_in_public_api
 
 import 'package:exfai/all_export.dart';

@@ -6,8 +6,7 @@ class HandlingDataView extends StatelessWidget {
   final StatusRequest statusRequest;
   final Widget widget;
   const HandlingDataView(
-      {Key? key, required this.statusRequest, required this.widget})
-      : super(key: key);
+      {super.key, required this.statusRequest, required this.widget});
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +33,7 @@ class HandlingDataRequest extends StatelessWidget {
   final StatusRequest statusRequest;
   final Widget widget;
   const HandlingDataRequest(
-      {Key? key, required this.statusRequest, required this.widget})
-      : super(key: key);
+      {super.key, required this.statusRequest, required this.widget});
 
   @override
   Widget build(BuildContext context) {

@@ -53,7 +53,7 @@ class Categories extends GetView<HomeControllerImp> {
                 ),
                 SvgPicture.network(
                   "${AppLink.imagestCategories}/${categoriesModel.categoriesImage}",
-                  color: AppColor.info,
+                  color: AppColor.primary,
                   height: 60, // Adjust image height as needed
                 ),
               ],
@@ -62,7 +62,7 @@ class Categories extends GetView<HomeControllerImp> {
           const SizedBox(height: 8), // Adjust spacing as needed
           Text(
             "${translateDatabase(categoriesModel.categoriesNamaAr, categoriesModel.categoriesName)}",
-            style: const TextStyle(fontSize: 13, color: AppColor.primaryText),
+            style: const TextStyle(fontSize: 13, color: AppColor.secondaryText),
           ),
         ],
       ),

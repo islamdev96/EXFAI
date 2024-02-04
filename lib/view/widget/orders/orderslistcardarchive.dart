@@ -5,8 +5,7 @@ import '../../../all_export.dart';
 class CardOrdersListArchive extends GetView<OrdersArchiveController> {
   final OrdersModel listdata;
 
-  const CardOrdersListArchive({Key? key, required this.listdata})
-      : super(key: key);
+  const CardOrdersListArchive({super.key, required this.listdata});
 
   @override
   Widget build(BuildContext context) {

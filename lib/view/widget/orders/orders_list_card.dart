@@ -2,7 +2,7 @@ import '../../../all_export.dart';
 
 class CardOrdersList extends GetView<OrdersPendingController> {
   final OrdersModel listdata;
-  const CardOrdersList({Key? key, required this.listdata}) : super(key: key);
+  const CardOrdersList({super.key, required this.listdata});
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +22,10 @@ class CardOrdersList extends GetView<OrdersPendingController> {
               Row(
                 children: [
                   Text("$orderNumber :  ${listdata.ordersId}",
-                      style: const TextStyle(
-                          fontSize: 18,
+                      style: TextStyle(
+                          fontSize: 18.sp,
                           fontWeight: FontWeight.bold,
-                          color: AppColor.accentText)),
+                          color: AppColor.secondaryText)),
                   const Spacer(),
                   // Text(listdata.ordersDatetime!)
                   // Text(
@@ -53,7 +53,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                 children: [
                   Text("$totalPrice : ${listdata.ordersTotalprice} \$ ",
                       style: const TextStyle(
-                          color: AppColor.accentText,
+                          color: AppColor.secondaryText,
                           fontWeight: FontWeight.bold)),
                   const Spacer(),
                   // MaterialButton(
@@ -72,7 +72,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                         controller.deleteOrder(listdata.ordersId!);
                       },
                       color: AppColor.primaryButton,
-                      textColor: AppColor.primaryText,
+                      textColor: AppColor.white,
                       child: Text("delete".tr),
                     ),
                   if (listdata.ordersStatus! == "3")
@@ -82,9 +82,9 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                         // Get.toNamed(AppRoute.ordersTracking,arguments:("ordersmodel":listdata));
                         controller.goToPageTracking(listdata);
                       },
-                      color: AppColor.primaryBackground,
-                      textColor: AppColor.primaryText,
-                      child: Text("tracking".tr),
+                      // color: AppColor.secondaryBackground,
+                      // textColor: AppColor.secondaryText,
+                      // child: Text("tracking".tr),
                     )
                 ],
               ),

@@ -11,7 +11,7 @@ class CustomTitleHome extends StatelessWidget {
       child: Text(title,
           style: const TextStyle(
               fontSize: 20,
-              color: AppColor.secondaryText,
+              color: AppColor.black,
               fontWeight: FontWeight.bold)),
     );
   }

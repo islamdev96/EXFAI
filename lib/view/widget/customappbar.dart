@@ -8,14 +8,13 @@ class CustomAppBar extends StatelessWidget {
   final TextEditingController mycontroller;
   final IconData iconData;
   const CustomAppBar(
-      {Key? key,
+      {super.key,
       required this.titleappbar,
       this.onPressedSearch,
       required this.onPressedIconFavorite,
       this.onChanged,
       required this.mycontroller,
-      this.iconData = Icons.favorite_border_outlined})
-      : super(key: key);
+      this.iconData = Icons.favorite_border_outlined});
 
   @override
   Widget build(BuildContext context) {
@@ -30,13 +29,12 @@ class CustomAppBar extends StatelessWidget {
               prefixIcon: IconButton(
                   icon: const Icon(Icons.search), onPressed: onPressedSearch),
               hintText: titleappbar,
-              hintStyle:
-                  const TextStyle(fontSize: 18, color: AppColor.primaryText),
+              hintStyle: const TextStyle(fontSize: 18, color: AppColor.black),
               border: OutlineInputBorder(
                   borderSide: BorderSide.none,
                   borderRadius: BorderRadius.circular(10)),
               filled: true,
-              fillColor: AppColor.primaryBackground),
+              fillColor: AppColor.secondaryBackground),
         )),
         const SizedBox(width: 10),
         Container(
@@ -50,7 +48,7 @@ class CustomAppBar extends StatelessWidget {
               icon: Icon(
                 iconData,
                 size: 30,
-                color: AppColor.primaryButton,
+                color: AppColor.white,
               )),
         )
       ]),

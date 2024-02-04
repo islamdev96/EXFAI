@@ -4,29 +4,41 @@ class LanguageSelectionDialog extends StatelessWidget {
   final LocaleController controller;
 
   const LanguageSelectionDialog({
-    Key? key,
+    super.key,
     required this.controller,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
-      contentPadding: EdgeInsets.zero, // Remove default content padding
-      title: Text("chooseTheLanguage".tr),
-      content: _buildLanguageOptions(context),
+    return Dialog(
+      backgroundColor: AppColor.secondaryBackground,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      child: _buildDialogContent(context),
     );
   }
 
-  Widget _buildLanguageOptions(BuildContext context) {
+  Widget _buildDialogContent(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(20),
       width: double.infinity,
-      color: AppColor.primaryBackground,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Text(
+            "chooseTheLanguage".tr,
+            style: const TextStyle(
+              color: AppColor.primaryText,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 20),
           _buildLanguageOption(context, "english".tr, "en"),
           _buildLanguageOption(context, "arabic".tr, "ar"),
+          // Add more language options as needed
           // Add more language options as needed
         ],
       ),
@@ -40,11 +52,18 @@ class LanguageSelectionDialog extends StatelessWidget {
         controller.changeLang(languageCode);
         Navigator.pop(context); // Close the dialog
       },
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        decoration: BoxDecoration(
+          color: AppColor.primaryBackground,
+          borderRadius: BorderRadius.circular(8.0),
+        ),
         child: Text(
           languageName,
-          style: const TextStyle(color: AppColor.primaryText, fontSize: 16),
+          style: const TextStyle(
+            color: AppColor.white,
+            fontSize: 16,
+          ),
         ),
       ),
     );

@@ -4,7 +4,7 @@ import '../../all_export.dart';
 import 'package:flutter/cupertino.dart';
 
 class SettingsPage extends StatelessWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+  const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,12 +28,12 @@ class SettingsPage extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.all(4),
                   decoration: BoxDecoration(
-                    color: AppColor.primaryBackground,
+                    color: AppColor.primaryBorder,
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: const CircleAvatar(
                     radius: 40,
-                    backgroundColor: AppColor.primaryBackground,
+                    backgroundColor: AppColor.secondaryBackground,
                     backgroundImage: AssetImage(AppImageAsset.avatar),
                   ),
                 ),

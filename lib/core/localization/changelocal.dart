@@ -1,9 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
-import 'package:get/get.dart';
-import 'package:geolocator/geolocator.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
-
 import '../../../../all_export.dart';
 
 class LocaleController extends GetxController {

@@ -1,12 +1,16 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import '../../../all_export.dart';
 
 class ListItemsHome extends GetView<HomeControllerImp> {
-  const ListItemsHome({super.key});
+  const ListItemsHome({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 140,
+      height: 300,
       child: ListView.builder(
         itemCount: controller.items.length,
         scrollDirection: Axis.horizontal,
@@ -20,9 +24,16 @@ class ListItemsHome extends GetView<HomeControllerImp> {
   }
 }
 
-class ItemsHome extends StatelessWidget {
+class ItemsHome extends StatefulWidget {
   final ItemsModel itemsModel;
   const ItemsHome({super.key, required this.itemsModel});
+
+  @override
+  _ItemsHomeState createState() => _ItemsHomeState();
+}
+
+class _ItemsHomeState extends State<ItemsHome> {
+  int quantity = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -30,40 +41,41 @@ class ItemsHome extends StatelessWidget {
       onTap: () {
         // Navigate to the ProductDetails page with the selected item's model
         Get.toNamed("productdetails", arguments: {
-          "itemsmodel": itemsModel,
-          "price": itemsModel.itemsPriceDiscount
+          "itemsmodel": widget.itemsModel,
+          // "price": widget.itemsModel.itemsPriceDiscount! * quantity,
         });
       },
-      child: Stack(
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            margin: const EdgeInsets.symmetric(horizontal: 10),
-            child: Image.network(
-              "${AppLink.imagestItems}/${itemsModel.itemsImage}",
-              height: 100,
-              width: 150,
-              fit: BoxFit.fill,
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        margin: const EdgeInsets.symmetric(horizontal: 10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.network(
+                "${AppLink.imagestItems}/${widget.itemsModel.itemsImage}",
+                height: 150,
+                width: 250,
+                fit: BoxFit.fill,
+              ),
             ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-                color: AppColor.primaryText.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(20)),
-            height: 120,
-            width: 200,
-          ),
-          Positioned(
-            left: 25.w,
-            child: Text(
-              "${translateDatabase(itemsModel.itemsNameAr, itemsModel.itemsName)}",
-              style: TextStyle(
-                  color: Colors.white,
-                  // fontWeight: FontWeight.bold,
-                  fontSize: 14.sp),
+            const SizedBox(height: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "${translateDatabase(widget.itemsModel.itemsNameAr, widget.itemsModel.itemsName)}",
+                  style: TextStyle(
+                    color: AppColor.secondaryText,
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
-          )
-        ],
+          ],
+        ),
       ),
     );
   }

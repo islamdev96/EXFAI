@@ -7,6 +7,7 @@ class EnglishTranslation extends MyTranslation {
           //========================== Checkout ============================//
 
           "addNewAddress": "Add new address",
+          "logout": "Logout",
           "english": "English",
           "arabic": "Arabic",
           "changeLanguage": "Change Language",
@@ -73,6 +74,7 @@ class EnglishTranslation extends MyTranslation {
           "doYouWantToExitTheApp": "Do you want to exit the app?",
           "confirmation": "Confirmation",
           "cancellation": "Cancellation",
+          "chooseTheLanguage": "Choose the Language",
 
           //========================== Application ============================//
 

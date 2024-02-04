@@ -3,8 +3,7 @@ import '../../../all_export.dart';
 class CustomButtonLang extends StatelessWidget {
   final String textbutton;
   final void Function()? onPressed;
-  const CustomButtonLang({Key? key, required this.textbutton, this.onPressed})
-      : super(key: key);
+  const CustomButtonLang({super.key, required this.textbutton, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
