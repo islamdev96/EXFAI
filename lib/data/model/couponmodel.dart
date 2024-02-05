@@ -3,21 +3,21 @@ class CouponModel {
   String? couponName;
   String? couponCount;
   String? couponDiscount;
-  String? couponExpiredate;
+  String? couponExpierrorate;
 
   CouponModel(
       {this.couponId,
       this.couponName,
       this.couponCount,
       this.couponDiscount,
-      this.couponExpiredate});
+      this.couponExpierrorate});
 
   CouponModel.fromJson(Map<String, dynamic> json) {
     couponId = json['coupon_id'];
     couponName = json['coupon_name'];
     couponCount = json['coupon_count'];
     couponDiscount = json['coupon_discount'];
-    couponExpiredate = json['coupon_expiredate'];
+    couponExpierrorate = json['coupon_expierrorate'];
   }
 
   Map<String, dynamic> toJson() {
@@ -26,7 +26,7 @@ class CouponModel {
     data['coupon_name'] = couponName;
     data['coupon_count'] = couponCount;
     data['coupon_discount'] = couponDiscount;
-    data['coupon_expiredate'] = couponExpiredate;
+    data['coupon_expierrorate'] = couponExpierrorate;
     return data;
   }
 }

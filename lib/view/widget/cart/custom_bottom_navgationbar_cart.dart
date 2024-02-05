@@ -10,14 +10,13 @@ class BottomNavgationBarCart extends GetView<CartController> {
   final TextEditingController controllercoupon;
   final void Function()? onApplyCoupon;
   const BottomNavgationBarCart(
-      {Key? key,
+      {super.key,
       required this.price,
       required this.discount,
       required this.shipping,
       required this.totalprice,
       required this.controllercoupon,
-      this.onApplyCoupon})
-      : super(key: key);
+      this.onApplyCoupon});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +33,7 @@ class BottomNavgationBarCart extends GetView<CartController> {
                       Expanded(
                           flex: 2,
                           child: TextFormField(
-                            cursorColor: AppColor.primaryText,
+                            cursorColor: AppColor.secondaryText,
                             controller: controllercoupon,
                             decoration: InputDecoration(
                                 isDense: true,
@@ -55,14 +54,14 @@ class BottomNavgationBarCart extends GetView<CartController> {
                     child: Text(
                     "$couponCode ${controller.couponname!}",
                     style: const TextStyle(
-                        color: AppColor.primaryText,
+                        color: AppColor.secondaryText,
                         fontWeight: FontWeight.bold),
                   ))),
         Container(
           margin: const EdgeInsets.all(10),
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-              border: Border.all(color: AppColor.primaryBackground, width: 1),
+              border: Border.all(color: AppColor.secondaryBackground, width: 1),
               borderRadius: BorderRadius.circular(10)),
           child: Column(children: [
             Row(
@@ -72,12 +71,12 @@ class BottomNavgationBarCart extends GetView<CartController> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("price".tr,
                         style: const TextStyle(
-                            fontSize: 16, color: AppColor.primaryText))),
+                            fontSize: 16, color: AppColor.secondaryText))),
                 Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("$price \$",
                         style: const TextStyle(
-                            fontSize: 16, color: AppColor.primaryText)))
+                            fontSize: 16, color: AppColor.secondaryText)))
               ],
             ),
             Row(
@@ -87,12 +86,12 @@ class BottomNavgationBarCart extends GetView<CartController> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("discount".tr,
                         style: const TextStyle(
-                            fontSize: 16, color: AppColor.primaryText))),
+                            fontSize: 16, color: AppColor.secondaryText))),
                 Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("$discount ",
                         style: const TextStyle(
-                            fontSize: 16, color: AppColor.primaryText)))
+                            fontSize: 16, color: AppColor.secondaryText)))
               ],
             ),
             Row(
@@ -102,12 +101,12 @@ class BottomNavgationBarCart extends GetView<CartController> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("shipping".tr,
                         style: const TextStyle(
-                            fontSize: 16, color: AppColor.primaryText))),
+                            fontSize: 16, color: AppColor.secondaryText))),
                 Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("$shipping ",
                         style: const TextStyle(
-                            fontSize: 16, color: AppColor.primaryText)))
+                            fontSize: 16, color: AppColor.secondaryText)))
               ],
             ),
             const Divider(),
@@ -120,14 +119,14 @@ class BottomNavgationBarCart extends GetView<CartController> {
                         style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
-                            color: AppColor.primaryText))),
+                            color: AppColor.black))),
                 Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text("$totalprice \$",
                         style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
-                            color: AppColor.primaryText)))
+                            color: AppColor.primary)))
               ],
             ),
           ]),

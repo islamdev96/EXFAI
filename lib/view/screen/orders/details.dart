@@ -31,17 +31,17 @@
 //                                 Text("item".tr,
 //                                     textAlign: TextAlign.center,
 //                                     style: TextStyle(
-//                                         color: AppColor.primaryBackground,
+//                                         color: AppColor.secondaryBackground,
 //                                         fontWeight: FontWeight.bold)),
 //                                 Text("qTY".tr,
 //                                     textAlign: TextAlign.center,
 //                                     style: TextStyle(
-//                                         color: AppColor.primaryBackground,
+//                                         color: AppColor.secondaryBackground,
 //                                         fontWeight: FontWeight.bold)),
 //                                 Text("price".tr,
 //                                     textAlign: TextAlign.center,
 //                                     style: TextStyle(
-//                                         color: AppColor.primaryBackground,
+//                                         color: AppColor.secondaryBackground,
 //                                         fontWeight: FontWeight.bold)),
 //                               ]),
 //                               // TableRow(children: [
@@ -71,7 +71,7 @@
 //                                 "$totalPrice : ${controller.ordersModel.ordersTotalprice}\$",
 //                                 textAlign: TextAlign.center,
 //                                 style: TextStyle(
-//                                     color: AppColor.primaryBackground,
+//                                     color: AppColor.secondaryBackground,
 //                                     fontWeight: FontWeight.bold)),
 //                           ),
 //                         ],
@@ -84,7 +84,7 @@
 //                           child: ListTile(
 //                         title: Text("shippingAddress".tr,
 //                             style: TextStyle(
-//                                 color: AppColor.primaryBackground,
+//                                 color: AppColor.secondaryBackground,
 //                                 fontWeight: FontWeight.bold)),
 //                         subtitle: Text(
 //                             "${controller.ordersModel.addressCity} ${controller.ordersModel.addressStreet}"),

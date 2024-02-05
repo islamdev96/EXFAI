@@ -17,20 +17,20 @@ class CardShppingAddressCheckout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: isactive ? AppColor.primaryText : AppColor.primaryText,
+      color: isactive ? AppColor.primary : AppColor.primary,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: ListTile(
         title: Text(
           title,
           style: TextStyle(
-            color: isactive ? AppColor.primaryText : null,
+            color: isactive ? AppColor.primary : null,
             fontWeight: FontWeight.bold,
           ),
         ),
         subtitle: Text(
           body,
           style: TextStyle(
-            color: isactive ? AppColor.primaryText : null,
+            color: isactive ? AppColor.primary : null,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -39,7 +39,7 @@ class CardShppingAddressCheckout extends StatelessWidget {
                 ? IconButton(
                     onPressed: onCancel,
                     icon: const Icon(Icons.cancel),
-                    color: AppColor.primaryText,
+                    color: AppColor.primary,
                   )
                 : null,
       ),

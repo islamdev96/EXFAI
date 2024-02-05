@@ -3,8 +3,8 @@ import '../../../all_export.dart';
 class CustomButtonCoupon extends StatelessWidget {
   final String textbutton;
   final void Function()? onPressed;
-  const CustomButtonCoupon({Key? key, required this.textbutton, this.onPressed})
-      : super(key: key);
+  const CustomButtonCoupon(
+      {super.key, required this.textbutton, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -12,12 +12,12 @@ class CustomButtonCoupon extends StatelessWidget {
       // padding: const EdgeInsets.symmetric(horizontal: 20),
       width: double.infinity,
       child: MaterialButton(
-        color: AppColor.primaryBackground,
-        textColor: AppColor.primaryText,
+        color: AppColor.secondaryBackground,
+        textColor: AppColor.secondaryText,
         onPressed: onPressed,
         child: Text(textbutton,
             style: const TextStyle(
-                fontWeight: FontWeight.bold, color: AppColor.primaryText)),
+                fontWeight: FontWeight.bold, color: AppColor.black)),
       ),
     );
   }

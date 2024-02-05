@@ -15,7 +15,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
     final String totalPrice = "totalPrice".tr;
     return Card(
       child: Container(
-          padding: const EdgeInsets.all(10),
+          padding: EdgeInsets.all(55.spMax),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -41,13 +41,33 @@ class CardOrdersList extends GetView<OrdersPendingController> {
               ),
               const Divider(),
               Text(
-                  "$orderType : ${controller.printOrderType(listdata.ordersType!)}"),
-              Text("$orderPrice : ${listdata.ordersPrice} \$"),
-              Text("$deliveryPrice : ${listdata.ordersPricedelivery} \$ "),
+                  "$orderType : ${controller.printOrderType(listdata.ordersType!)}",
+                  style: TextStyle(
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.bold,
+                      color: AppColor.secondaryText)),
+              Text("$orderPrice : ${listdata.ordersPrice} \$",
+                  style: TextStyle(
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.bold,
+                      color: AppColor.secondaryText)),
+              Text("$deliveryPrice : ${listdata.ordersPricedelivery} \$ ",
+                  style: TextStyle(
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.bold,
+                      color: AppColor.secondaryText)),
               Text(
-                  "$paymentMethod : ${controller.printPaymentMethod(listdata.ordersPaymentmethod!)} "),
+                  "$paymentMethod : ${controller.printPaymentMethod(listdata.ordersPaymentmethod!)} ",
+                  style: TextStyle(
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.bold,
+                      color: AppColor.secondaryText)),
               Text(
-                  "$orderStatus : ${controller.printOrderStatus(listdata.ordersStatus!)} "),
+                  "$orderStatus : ${controller.printOrderStatus(listdata.ordersStatus!)} ",
+                  style: TextStyle(
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.bold,
+                      color: AppColor.secondaryText)),
               const Divider(),
               Row(
                 children: [
@@ -71,7 +91,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                       onPressed: () {
                         controller.deleteOrder(listdata.ordersId!);
                       },
-                      color: AppColor.primaryButton,
+                      color: AppColor.primary,
                       textColor: AppColor.white,
                       child: Text("delete".tr),
                     ),

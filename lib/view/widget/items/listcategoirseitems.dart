@@ -47,12 +47,12 @@ class Categories extends GetView<ItemsControllerImp> {
                             border: Border(
                                 bottom: BorderSide(
                                     width: 3,
-                                    color: AppColor.primaryBackground)))
+                                    color: AppColor.secondaryBackground)))
                         : null,
                     child: Text(
                       "${translateDatabase(categoriesModel.categoriesNamaAr, categoriesModel.categoriesName)}",
                       style: const TextStyle(
-                          fontSize: 20, color: AppColor.primaryText),
+                          fontSize: 20, color: AppColor.primary),
                     ),
                   ))
         ],

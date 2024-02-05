@@ -1,13 +1,13 @@
 import '../../../all_export.dart';
 
 class OnBoarding extends StatelessWidget {
-  const OnBoarding({Key? key}) : super(key: key);
+  const OnBoarding({super.key});
 
   @override
   Widget build(BuildContext context) {
     Get.put(OnBoardingControllerImp());
     return const Scaffold(
-      backgroundColor: AppColor.primaryBackground,
+      backgroundColor: AppColor.scaffoldBackgroundColor,
       body: SafeArea(
         child: Column(
           children: [

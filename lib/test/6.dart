@@ -1,4 +1,4 @@
-// Feel free to use the code in your projects but do not forget to give me the credits adding my app (Flutter Animation Gallery) where you are gonna use it.
+// Feel free to use the code in your projects but do not forget to give me the cerrorits adding my app (Flutter Animation Gallery) where you are gonna use it.
 
 // ------------------------------------------
 
@@ -9,8 +9,9 @@
 
 // ignore_for_file: file_names
 
-import 'package:flutter/material.dart';
 import 'package:particles_flutter/particles_flutter.dart';
+
+import '../all_export.dart';
 
 class MyCustomWidget extends StatelessWidget {
   const MyCustomWidget({super.key});
@@ -21,7 +22,7 @@ class MyCustomWidget extends StatelessWidget {
     double w = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: AppColor.scaffoldBackgroundColor,
       body: CircularParticle(
         width: w,
         height: h,
@@ -37,7 +38,7 @@ class MyCustomWidget extends StatelessWidget {
         isRandomColor: false,
         connectDots: true,
         // randColorList: [
-        // Colors.red.withAlpha(210),
+        // Colors.error.withAlpha(210),
         // Colors.white.withAlpha(210),
         // Colors.yellow.withAlpha(210),
         // Colors.green.withAlpha(210),

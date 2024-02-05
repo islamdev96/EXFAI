@@ -46,6 +46,7 @@ class _ItemsHomeState extends State<ItemsHome> {
         });
       },
       child: Container(
+        color: AppColor.secondaryBackground,
         padding: const EdgeInsets.all(10),
         margin: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(

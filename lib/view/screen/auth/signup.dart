@@ -3,21 +3,22 @@ import 'package:exfai/core/functions/alertexitapp.dart';
 import '../../../../../all_export.dart';
 
 class SignUp extends StatelessWidget {
-  const SignUp({Key? key}) : super(key: key);
+  const SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
     Get.put(SignUpControllerImp());
     return Scaffold(
+      backgroundColor: AppColor.scaffoldBackgroundColor,
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: AppColor.primaryBackground,
+        backgroundColor: AppColor.secondaryBackground,
         elevation: 0.0,
         title: Text('signUp'.tr,
             style: Theme.of(context)
                 .textTheme
                 .displayLarge!
-                .copyWith(color: AppColor.primaryText)),
+                .copyWith(color: AppColor.primary)),
       ),
       body: WillPopScope(
           onWillPop: () => Get.alertExitApp(),

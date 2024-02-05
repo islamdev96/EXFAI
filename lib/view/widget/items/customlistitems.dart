@@ -35,7 +35,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                           translateDatabase(
                               itemsModel.itemsNameAr, itemsModel.itemsName),
                           style: const TextStyle(
-                              color: AppColor.primaryText,
+                              color: AppColor.primary,
                               fontSize: 16,
                               fontWeight: FontWeight.bold)),
                       Row(
@@ -50,7 +50,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                               margin: const EdgeInsets.only(top: 5),
                               child: const Icon(
                                 Icons.timer_sharp,
-                                color: AppColor.primaryText,
+                                color: AppColor.primary,
                               )),
                           const SizedBox(
                             width: 4,
@@ -67,7 +67,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                         children: [
                           Text("${itemsModel.itemsPriceDiscount} \$",
                               style: const TextStyle(
-                                  color: AppColor.primaryBackground,
+                                  color: AppColor.secondaryBackground,
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: "sans")),
@@ -93,7 +93,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                                             "1"
                                         ? Icons.favorite
                                         : Icons.favorite_border_outlined,
-                                    color: AppColor.primaryBackground,
+                                    color: AppColor.secondaryBackground,
                                   )))
                         ],
                       )

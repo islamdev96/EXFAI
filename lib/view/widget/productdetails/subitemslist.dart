@@ -1,7 +1,7 @@
 import '../../../all_export.dart';
 
 class SubitemsList extends GetView<ProductDetailsControllerImp> {
-  const SubitemsList({Key? key}) : super(key: key);
+  const SubitemsList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +17,15 @@ class SubitemsList extends GetView<ProductDetailsControllerImp> {
             width: 90,
             decoration: BoxDecoration(
                 color: controller.subitems[index]['active'] == "1"
-                    ? AppColor.primaryText
+                    ? AppColor.primary
                     : Colors.white,
-                border: Border.all(color: AppColor.primaryText),
+                border: Border.all(color: AppColor.primary),
                 borderRadius: BorderRadius.circular(10)),
             child: Text(controller.subitems[index]['name'],
                 style: TextStyle(
                     color: controller.subitems[index]['active'] == "1"
-                        ? AppColor.primaryText
-                        : AppColor.primaryText,
+                        ? AppColor.primary
+                        : AppColor.primary,
                     fontWeight: FontWeight.bold)),
           ),
         )

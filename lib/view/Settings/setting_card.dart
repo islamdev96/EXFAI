@@ -58,7 +58,7 @@ class SettingCard extends StatelessWidget {
           ListTile(
             leading: const Icon(
               Icons.safety_check,
-              color: AppColor.primaryButton,
+              color: AppColor.primary,
             ),
             title: Text(
               "changeLanguage".tr,
@@ -77,8 +77,7 @@ class SettingCard extends StatelessWidget {
               "logout".tr,
               style: const TextStyle(color: AppColor.secondaryText),
             ),
-            trailing:
-                const Icon(Icons.exit_to_app, color: AppColor.primaryButton),
+            trailing: const Icon(Icons.exit_to_app, color: AppColor.primary),
             onTap: () {
               controller.logout();
             },
@@ -118,7 +117,7 @@ Widget _buildSettingsTile(IconData icon, String title, VoidCallback onTap) {
     onTap: onTap,
     leading: Icon(
       icon,
-      color: AppColor.primaryButton,
+      color: AppColor.primary,
       size: 24,
     ),
     title: Text(

@@ -3,8 +3,7 @@ import '../../../all_export.dart';
 class CustomListFavoriteItems extends GetView<MyFavoriteController> {
   final MyFavoriteModel itemsModel;
   // final bool active;
-  const CustomListFavoriteItems({Key? key, required this.itemsModel})
-      : super(key: key);
+  const CustomListFavoriteItems({super.key, required this.itemsModel});
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +12,7 @@ class CustomListFavoriteItems extends GetView<MyFavoriteController> {
           // controller.goToPageProductDetails(itemsModel);
         },
         child: Card(
+          color: AppColor.white,
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Column(
@@ -33,7 +33,7 @@ class CustomListFavoriteItems extends GetView<MyFavoriteController> {
                       translateDatabase(
                           itemsModel.itemsNameAr, itemsModel.itemsName),
                       style: const TextStyle(
-                          color: AppColor.primaryText,
+                          color: AppColor.black,
                           fontSize: 16,
                           fontWeight: FontWeight.bold)),
                   Row(
@@ -61,7 +61,7 @@ class CustomListFavoriteItems extends GetView<MyFavoriteController> {
                     children: [
                       Text("${itemsModel.itemsPrice} \$",
                           style: const TextStyle(
-                              color: AppColor.primaryBackground,
+                              color: AppColor.primary,
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                               fontFamily: "sans")),
@@ -72,7 +72,7 @@ class CustomListFavoriteItems extends GetView<MyFavoriteController> {
                           },
                           icon: const Icon(
                             Icons.delete_outline_outlined,
-                            color: AppColor.primaryBackground,
+                            color: AppColor.red,
                           ))
                     ],
                   )

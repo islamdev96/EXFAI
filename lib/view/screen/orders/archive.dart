@@ -1,11 +1,12 @@
 import '../../../all_export.dart';
 
 class OrdersArchiveView extends StatelessWidget {
-  const OrdersArchiveView({Key? key}) : super(key: key);
+  const OrdersArchiveView({super.key});
   @override
   Widget build(BuildContext context) {
     Get.put(OrdersArchiveController());
     return Scaffold(
+        backgroundColor: AppColor.secondaryBackground,
         appBar: AppBar(
           title: Text('orders'.tr),
         ),

@@ -115,7 +115,7 @@ class MyTranslation extends Translations {
 //           "35": "New Password",
 //           "36": "Password has been reset successfully",
 //           "37": "congratulations",
-//           "38": "successfully registered"
+//           "38": "successfully registeerror"
 //         }
 //       };
 // }

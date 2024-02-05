@@ -1,7 +1,7 @@
 import '../../../all_export.dart';
 
 class TopProductPageDetails extends GetView<ProductDetailsControllerImp> {
-  const TopProductPageDetails({Key? key}) : super(key: key);
+  const TopProductPageDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class TopProductPageDetails extends GetView<ProductDetailsControllerImp> {
       children: [
         Container(
           height: 180,
-          decoration: const BoxDecoration(color: AppColor.primaryBackground),
+          decoration: const BoxDecoration(color: AppColor.secondaryBackground),
         ),
         Positioned(
             top: 30.0,

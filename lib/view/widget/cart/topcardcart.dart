@@ -2,7 +2,7 @@ import '../../../all_export.dart';
 
 class TopCardCart extends StatelessWidget {
   final String message;
-  const TopCardCart({Key? key, required this.message}) : super(key: key);
+  const TopCardCart({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -11,12 +11,12 @@ class TopCardCart extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 20),
       // height: 20,
       decoration: BoxDecoration(
-        color: AppColor.primaryBackground,
+        color: AppColor.secondaryBackground,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Text(message,
           textAlign: TextAlign.center,
-          style: const TextStyle(color: AppColor.primaryText)),
+          style: TextStyle(color: AppColor.black, fontSize: 16.sp)),
     );
   }
 }

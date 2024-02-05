@@ -35,7 +35,7 @@ class CustomListItemsOffer extends GetView<OffersController> {
                           translateDatabase(
                               itemsModel.itemsNameAr, itemsModel.itemsName),
                           style: const TextStyle(
-                              color: AppColor.primaryText,
+                              color: AppColor.primary,
                               fontSize: 16,
                               fontWeight: FontWeight.bold)),
                       Row(
@@ -43,7 +43,7 @@ class CustomListItemsOffer extends GetView<OffersController> {
                         children: [
                           Text("${itemsModel.itemsPriceDiscount} \$",
                               style: const TextStyle(
-                                  color: AppColor.primaryBackground,
+                                  color: AppColor.secondaryBackground,
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: "sans")),
@@ -69,7 +69,7 @@ class CustomListItemsOffer extends GetView<OffersController> {
                                             "1"
                                         ? Icons.favorite
                                         : Icons.favorite_border_outlined,
-                                    color: AppColor.primaryBackground,
+                                    color: AppColor.secondaryBackground,
                                   )))
                         ],
                       )

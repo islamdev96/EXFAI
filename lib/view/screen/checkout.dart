@@ -1,19 +1,20 @@
 import '../../all_export.dart';
 
 class Checkout extends StatelessWidget {
-  const Checkout({Key? key}) : super(key: key);
+  const Checkout({super.key});
 
   @override
   Widget build(BuildContext context) {
     CheckoutController controller = Get.put(CheckoutController());
     return Scaffold(
+      backgroundColor: AppColor.scaffoldBackgroundColor,
       appBar: AppBar(
         title: Text("checkout".tr),
       ),
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: MaterialButton(
-          color: AppColor.primaryBackground,
+          color: AppColor.primary,
           textColor: Colors.white,
           onPressed: () {
             controller.checkout();
@@ -23,7 +24,7 @@ class Checkout extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 16.sp,
-              color: AppColor.primaryText,
+              color: AppColor.white,
             ),
           ),
         ),

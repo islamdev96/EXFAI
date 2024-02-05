@@ -1,7 +1,7 @@
 import '../../../../all_export.dart';
 
 class LogoAuth extends StatelessWidget {
-  const LogoAuth({Key? key}) : super(key: key);
+  const LogoAuth({super.key});
 
   @override
   Widget build(BuildContext context) {

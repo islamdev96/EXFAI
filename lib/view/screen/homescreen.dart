@@ -10,10 +10,12 @@ class HomeScreen extends StatelessWidget {
     Get.put(HomeScreenControllerImp());
     return GetBuilder<HomeScreenControllerImp>(
       builder: (controller) => Scaffold(
+        backgroundColor: AppColor.scaffoldBackgroundColor,
+
         // backgroundColor: const MyCustomWidget(),
         //
         floatingActionButton: FloatingActionButton(
-            backgroundColor: AppColor.secondaryButton,
+            backgroundColor: AppColor.scaffoldBackgroundColor,
             onPressed: () {
               Get.toNamed(AppRoute.cart);
             },

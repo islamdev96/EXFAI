@@ -66,7 +66,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '676021266438',
     projectId: 'exfai-7053c',
     storageBucket: 'exfai-7053c.appspot.com',
-    iosClientId: '676021266438-97smb2p2m8el3e9kcomnsu8v33m9pmrk.apps.googleusercontent.com',
+    iosClientId:
+        '676021266438-97smb2p2m8el3e9kcomnsu8v33m9pmrk.apps.googleusercontent.com',
     iosBundleId: 'com.exfai.exfai',
   );
 
@@ -76,7 +77,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '676021266438',
     projectId: 'exfai-7053c',
     storageBucket: 'exfai-7053c.appspot.com',
-    iosClientId: '676021266438-97smb2p2m8el3e9kcomnsu8v33m9pmrk.apps.googleusercontent.com',
+    iosClientId:
+        '676021266438-97smb2p2m8el3e9kcomnsu8v33m9pmrk.apps.googleusercontent.com',
     iosBundleId: 'com.exfai.exfai',
   );
 }

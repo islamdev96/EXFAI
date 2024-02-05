@@ -11,6 +11,7 @@ class OrdersTracking extends StatelessWidget {
   Widget build(BuildContext context) {
     TrackingController controller = Get.put(TrackingController());
     return Scaffold(
+      backgroundColor: AppColor.scaffoldBackgroundColor,
       appBar: AppBar(
         title: Text('ordersTracking'.tr),
       ),

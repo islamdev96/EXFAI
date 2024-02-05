@@ -3,7 +3,7 @@
 import '../../all_export.dart';
 
 class Cart extends StatelessWidget {
-  const Cart({Key? key}) : super(key: key);
+  const Cart({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +12,11 @@ class Cart extends StatelessWidget {
 
     CartController cartController = Get.put(CartController());
     return Scaffold(
+        backgroundColor: AppColor.scaffoldBackgroundColor,
         appBar: AppBar(
           title: Text(
             "myCart".tr,
-            style: TextStyle(color: AppColor.primaryText),
+            style: TextStyle(color: AppColor.black),
           ),
         ),
         bottomNavigationBar: GetBuilder<CartController>(

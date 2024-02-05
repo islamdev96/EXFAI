@@ -1,21 +1,22 @@
 import '../../../../../all_export.dart';
 
 class ResetPassword extends StatelessWidget {
-  const ResetPassword({Key? key}) : super(key: key);
+  const ResetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
     Get.put(ResetPasswordControllerImp());
     return Scaffold(
+      backgroundColor: AppColor.scaffoldBackgroundColor,
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: AppColor.primaryBackground,
+        backgroundColor: AppColor.secondaryBackground,
         elevation: 0.0,
         title: Text('resetPassword'.tr,
             style: Theme.of(context)
                 .textTheme
                 .displayLarge!
-                .copyWith(color: AppColor.primaryText)),
+                .copyWith(color: AppColor.primary)),
       ),
       body: GetBuilder<ResetPasswordControllerImp>(
           builder: (controller) => HandlingDataRequest(

@@ -1,6 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api, file_names
 
-import 'package:flutter/material.dart';
+import '../all_export.dart';
 
 class Show3DPageWidget extends StatefulWidget {
   const Show3DPageWidget({super.key});
@@ -34,10 +34,10 @@ class _Show3DPageWidgetState extends State<Show3DPageWidget> {
                   setState(() => _offset += details.delta),
               onDoubleTap: () => setState(() => _offset = Offset.zero),
               child: Scaffold(
+                backgroundColor: AppColor.scaffoldBackgroundColor,
                 appBar: AppBar(
                   title: const Text('Title'),
                 ),
-                backgroundColor: Colors.red,
               ),
             ),
           ),

@@ -1,11 +1,12 @@
 import '../../../all_export.dart';
 
 class OrdersPending extends StatelessWidget {
-  const OrdersPending({Key? key}) : super(key: key);
+  const OrdersPending({super.key});
   @override
   Widget build(BuildContext context) {
     Get.put(OrdersPendingController());
     return Scaffold(
+        backgroundColor: AppColor.scaffoldBackgroundColor,
         appBar: AppBar(
           title: Text('orders'.tr),
         ),

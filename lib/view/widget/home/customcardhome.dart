@@ -14,8 +14,7 @@ class CustomCardHome extends GetView<HomeControllerImp> {
           alignment: Alignment.center,
           height: 150,
           decoration: BoxDecoration(
-              color: AppColor.primaryBackground,
-              borderRadius: BorderRadius.circular(20)),
+              color: AppColor.primary, borderRadius: BorderRadius.circular(20)),
           child: ListTile(
             title: Text(title,
                 style: const TextStyle(color: AppColor.white, fontSize: 20)),

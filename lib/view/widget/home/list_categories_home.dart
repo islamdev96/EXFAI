@@ -8,9 +8,9 @@ class ListCategoriesHome extends GetView<HomeControllerImp> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 120.h,
+      height: 180.h,
       child: ListView.separated(
-        separatorBuilder: (context, index) => const SizedBox(width: 10),
+        separatorBuilder: (context, index) => SizedBox(width: 5.w),
         itemCount: controller.categories.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
@@ -40,29 +40,32 @@ class Categories extends GetView<HomeControllerImp> {
       child: Column(
         children: [
           SizedBox(
-            height: 70,
-            width: 70,
+            height: 100.h,
+            width: 100.w,
             child: Stack(
               alignment: Alignment.center,
               children: [
                 Container(
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: AppColor.secondaryBorder,
+                    color: AppColor.secondaryBackground,
                   ),
                 ),
                 SvgPicture.network(
                   "${AppLink.imagestCategories}/${categoriesModel.categoriesImage}",
-                  color: AppColor.primary,
-                  height: 60, // Adjust image height as needed
+                  color: AppColor.black,
+                  height: 70, // Adjust image height as needed
                 ),
               ],
             ),
           ),
-          const SizedBox(height: 8), // Adjust spacing as needed
+          SizedBox(height: 6.h), // Adjust spacing as needed
           Text(
             "${translateDatabase(categoriesModel.categoriesNamaAr, categoriesModel.categoriesName)}",
-            style: const TextStyle(fontSize: 13, color: AppColor.secondaryText),
+            style: TextStyle(
+                fontSize: 14.sp,
+                color: AppColor.secondaryText,
+                fontWeight: FontWeight.bold),
           ),
         ],
       ),

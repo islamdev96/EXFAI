@@ -30,7 +30,7 @@ class LanguageSelectionDialog extends StatelessWidget {
           Text(
             "chooseTheLanguage".tr,
             style: const TextStyle(
-              color: AppColor.primaryText,
+              color: AppColor.primary,
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -55,7 +55,7 @@ class LanguageSelectionDialog extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         decoration: BoxDecoration(
-          color: AppColor.primaryBackground,
+          color: AppColor.secondaryBackground,
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Text(

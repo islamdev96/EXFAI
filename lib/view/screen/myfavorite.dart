@@ -1,13 +1,14 @@
 import '../../all_export.dart';
 
 class MyFavorite extends StatelessWidget {
-  const MyFavorite({Key? key}) : super(key: key);
+  const MyFavorite({super.key});
 
   @override
   Widget build(BuildContext context) {
     Get.put(MyFavoriteController());
 
     return Scaffold(
+      backgroundColor: AppColor.scaffoldBackgroundColor,
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: GetBuilder<MyFavoriteController>(

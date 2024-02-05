@@ -82,7 +82,7 @@ class CheckoutController extends GetxController {
         Get.snackbar("success".tr, "orderSuccessful".tr);
       } else {
         statusRequest = StatusRequest.none;
-        Get.snackbar("error".tr, "tryAgain".tr);
+        Get.snackbar("red".tr, "tryAgain".tr);
       }
       // End
     }

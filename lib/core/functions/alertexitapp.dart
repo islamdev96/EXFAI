@@ -10,7 +10,7 @@ extension ExtensionSnackbar on GetInterface {
   Future<bool> alertExitApp() async {
     bool? result = await Get.dialog<bool>(
       AlertDialog(
-        backgroundColor: AppColor.primaryBackground,
+        backgroundColor: AppColor.secondaryBackground,
         title: Text(
           "warning".tr,
           style: const TextStyle(
@@ -27,7 +27,7 @@ extension ExtensionSnackbar on GetInterface {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColor.black,
+                  backgroundColor: AppColor.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
@@ -38,7 +38,7 @@ extension ExtensionSnackbar on GetInterface {
                 child: Text(
                   "confirmation".tr,
                   style: const TextStyle(
-                    color: AppColor.white,
+                    color: AppColor.black,
                   ),
                 ),
               ),

@@ -42,7 +42,7 @@
 //                               onPressed: () {
 //                                 controllerpage.goToPageAddDetailsAddress();
 //                               },
-//                               color: AppColor.primaryBackground,
+//                               color: AppColor.secondaryBackground,
 //                               textColor: Colors.white,
 //                               child: Text("completion".tr,
 //                                   style: const TextStyle(fontSize: 18)),

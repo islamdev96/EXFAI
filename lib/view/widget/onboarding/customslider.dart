@@ -24,7 +24,7 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
                     style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 22,
-                        color: AppColor.primaryText)),
+                        color: AppColor.primary)),
                 const SizedBox(height: 20),
                 Container(
                     width: double.infinity,
@@ -34,7 +34,7 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                           height: 2,
-                          color: AppColor.primaryText,
+                          color: AppColor.primary,
                           fontWeight: FontWeight.bold,
                           fontSize: 14),
                     )),

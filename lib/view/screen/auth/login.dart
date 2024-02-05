@@ -9,9 +9,10 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(LoginControllerImp());
     return Scaffold(
+      backgroundColor: AppColor.scaffoldBackgroundColor,
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: AppColor.primaryBackground,
+        backgroundColor: AppColor.secondaryBackground,
         elevation: 0.0,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -21,7 +22,7 @@ class Login extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .displayLarge!
-                  .copyWith(color: AppColor.primaryText),
+                  .copyWith(color: AppColor.primary),
             ),
             // SizedBox(width: 75.w),
             // InkWell(

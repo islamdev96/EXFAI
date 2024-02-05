@@ -1,21 +1,22 @@
 import '../../../../../all_export.dart';
 
 class ForgetPassword extends StatelessWidget {
-  const ForgetPassword({Key? key}) : super(key: key);
+  const ForgetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
     Get.put(ForgetPasswordControllerImp());
     return Scaffold(
+      backgroundColor: AppColor.scaffoldBackgroundColor,
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: AppColor.primaryBackground,
+        backgroundColor: AppColor.secondaryBackground,
         elevation: 0.0,
         title: Text('forgetPassword'.tr,
             style: Theme.of(context)
                 .textTheme
                 .displayLarge!
-                .copyWith(color: AppColor.primaryText)),
+                .copyWith(color: AppColor.primary)),
       ),
       body: GetBuilder<ForgetPasswordControllerImp>(
           builder: (controller) => HandlingDataRequest(
