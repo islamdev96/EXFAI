@@ -92,7 +92,6 @@ export 'package:exfai/view/widget/productdetails/toppageproductdetails.dart';
 export 'package:exfai/controller/settings_controller.dart';
 export 'package:exfai/view/widget/orders/orderslistcardarchive.dart';
 export 'package:exfai/controller/orders/details_controller.dart';
-export 'package:exfai/view/widget/orders/orders_list_card.dart';
 
 export '../../controller/homescreen_controller.dart';
 export '../../core/constant/color.dart';

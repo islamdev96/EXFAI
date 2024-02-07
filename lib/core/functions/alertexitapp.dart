@@ -1,16 +1,15 @@
 import 'dart:io';
-import 'dart:async';
 
 import 'package:exfai/all_export.dart';
-import 'package:exfai/core/constant/color.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 extension ExtensionSnackbar on GetInterface {
   Future<bool> alertExitApp() async {
     bool? result = await Get.dialog<bool>(
       AlertDialog(
-        backgroundColor: AppColor.secondaryBackground,
+        backgroundColor: AppColor.primary,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.0),
+        ),
         title: Text(
           "warning".tr,
           style: const TextStyle(
@@ -24,10 +23,12 @@ extension ExtensionSnackbar on GetInterface {
         ),
         actions: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColor.white,
+                  backgroundColor: AppColor
+                      .primary, // Use backgroundColor instead of primary
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
@@ -38,14 +39,15 @@ extension ExtensionSnackbar on GetInterface {
                 child: Text(
                   "confirmation".tr,
                   style: const TextStyle(
-                    color: AppColor.black,
+                    color: AppColor.white,
                   ),
                 ),
               ),
-              const SizedBox(width: 2.0),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColor.black,
+                  backgroundColor:
+                      AppColor.white, // Use backgroundColor instead of primary
+                  side: const BorderSide(),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
@@ -56,7 +58,7 @@ extension ExtensionSnackbar on GetInterface {
                 child: Text(
                   "cancellation".tr,
                   style: const TextStyle(
-                    color: AppColor.white,
+                    color: AppColor.black,
                   ),
                 ),
               ),

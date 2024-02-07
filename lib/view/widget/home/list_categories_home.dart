@@ -47,9 +47,9 @@ class Categories extends GetView<HomeControllerImp> {
               children: [
                 Container(
                   decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppColor.secondaryBackground,
-                  ),
+                      shape: BoxShape.circle, color: AppColor.green
+                      // color: Color.fromARGB(255, 189, 239, 162),
+                      ),
                 ),
                 SvgPicture.network(
                   "${AppLink.imagestCategories}/${categoriesModel.categoriesImage}",

@@ -55,7 +55,7 @@ class Cart extends StatelessWidget {
                                       cartController.data[index].itemsId!);
                                   cartController.refreshPage();
                                 },
-                                imagename:
+                                imageName:
                                     "${cartController.data[index].itemsImage}",
                                 name: "${cartController.data[index].itemsName}",
                                 price:

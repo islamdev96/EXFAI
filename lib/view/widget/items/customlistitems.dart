@@ -8,7 +8,9 @@ class CustomListItems extends GetView<ItemsControllerImp> {
   @override
   Widget build(BuildContext context) {
     final String minute = "minute".tr;
-    return InkWell(
+    return Scaffold(
+      backgroundColor: AppColor.scaffoldBackgroundColor,
+      body: InkWell(
         onTap: () {
           controller.goToPageProductDetails(itemsModel);
         },
@@ -35,7 +37,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                           translateDatabase(
                               itemsModel.itemsNameAr, itemsModel.itemsName),
                           style: const TextStyle(
-                              color: AppColor.primary,
+                              color: AppColor.secondaryText,
                               fontSize: 16,
                               fontWeight: FontWeight.bold)),
                       Row(
@@ -44,13 +46,16 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                           const Text(
                             "23 - 50 ",
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontFamily: "sans"),
+                            style: TextStyle(
+                              fontFamily: "sans",
+                              color: AppColor.secondaryText,
+                            ),
                           ),
                           Container(
                               margin: const EdgeInsets.only(top: 5),
                               child: const Icon(
                                 Icons.timer_sharp,
-                                color: AppColor.primary,
+                                color: AppColor.secondaryText,
                               )),
                           const SizedBox(
                             width: 4,
@@ -58,7 +63,10 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                           Text(
                             "${controller.deliverytime} $minute ",
                             textAlign: TextAlign.center,
-                            style: const TextStyle(fontFamily: "sans"),
+                            style: const TextStyle(
+                              fontFamily: "sans",
+                              color: AppColor.secondaryText,
+                            ),
                           ),
                         ],
                       ),
@@ -67,7 +75,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                         children: [
                           Text("${itemsModel.itemsPriceDiscount} \$",
                               style: const TextStyle(
-                                  color: AppColor.secondaryBackground,
+                                  color: AppColor.secondaryText,
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: "sans")),
@@ -93,7 +101,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                                             "1"
                                         ? Icons.favorite
                                         : Icons.favorite_border_outlined,
-                                    color: AppColor.secondaryBackground,
+                                    color: AppColor.red,
                                   )))
                         ],
                       )
@@ -109,7 +117,9 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                     ))
             ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
 

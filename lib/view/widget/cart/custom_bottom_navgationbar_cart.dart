@@ -44,11 +44,12 @@ class BottomNavgationBarCart extends GetView<CartController> {
                           )),
                       const SizedBox(width: 5),
                       Expanded(
-                          flex: 1,
-                          child: CustomButtonCoupon(
-                            textbutton: "apply".tr,
-                            onPressed: onApplyCoupon,
-                          ))
+                        flex: 1,
+                        child: CustomButtonCoupon(
+                          textbutton: "apply".tr,
+                          onPressed: onApplyCoupon,
+                        ),
+                      )
                     ]))
                 : Container(
                     child: Text(
@@ -126,13 +127,14 @@ class BottomNavgationBarCart extends GetView<CartController> {
                         style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
-                            color: AppColor.primary)))
+                            color: AppColor.red)))
               ],
             ),
           ]),
         ),
         const SizedBox(height: 10),
         CustomButtonCart(
+          buttonColor: AppColor.primary,
           textbutton: "order".tr,
           onPressed: () {
             controller.goToPageCheckout();

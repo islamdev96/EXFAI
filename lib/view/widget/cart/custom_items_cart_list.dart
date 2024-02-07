@@ -6,15 +6,16 @@ class CustomItemsCartList extends StatelessWidget {
   final String name;
   final String price;
   final String count;
-  final String imagename;
-  final void Function()? onAdd;
-  final void Function()? onRemove;
+  final String imageName;
+  final VoidCallback? onAdd;
+  final VoidCallback? onRemove;
+
   const CustomItemsCartList({
     super.key,
     required this.name,
     required this.price,
     required this.count,
-    required this.imagename,
+    required this.imageName,
     required this.onAdd,
     required this.onRemove,
   });
@@ -22,43 +23,61 @@ class CustomItemsCartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Container(
-        child: Row(children: [
-          Expanded(
+      color: AppColor.secondaryBackground,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            Expanded(
               flex: 2,
               child: CachedNetworkImage(
-                imageUrl: "${AppLink.imagestItems}/$imagename",
+                imageUrl: "${AppLink.imagestItems}/$imageName",
                 height: 80,
-              )),
-          Expanded(
+              ),
+            ),
+            Expanded(
               flex: 3,
               child: ListTile(
                 title: Text(name, style: const TextStyle(fontSize: 15)),
-                subtitle: Text(price,
-                    style: const TextStyle(
-                        color: AppColor.secondaryText, fontSize: 17)),
-              )),
-          Expanded(
+                subtitle: Text(
+                  price,
+                  style: const TextStyle(
+                    color: AppColor.secondaryText,
+                    fontSize: 17,
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
               child: Column(
-            children: [
-              SizedBox(
-                  height: 35,
-                  child: IconButton(
-                      onPressed: onAdd, icon: const Icon(Icons.add))),
-              SizedBox(
-                  height: 30,
-                  child: Text(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    iconSize: 32,
+                    color: AppColor.primary,
+                    onPressed: onAdd,
+                    icon: const Icon(Icons.add_box_rounded),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
                     count,
                     style: const TextStyle(
-                        fontFamily: "sans", color: AppColor.secondaryText),
-                  )),
-              SizedBox(
-                  height: 25,
-                  child: IconButton(
-                      onPressed: onRemove, icon: const Icon(Icons.remove)))
-            ],
-          ))
-        ]),
+                      fontFamily: "sans",
+                      color: AppColor.black,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 25,
+                    child: IconButton(
+                      onPressed: onRemove,
+                      icon: const Icon(Icons.remove),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
