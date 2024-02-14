@@ -24,11 +24,21 @@ class MyFavorite extends StatelessWidget {
                     onChanged: (val) {
                       controller.checkSearch(val);
                     },
-                    onPressedIconFavorite: () {
-                      Get.offAllNamed(AppRoute.homepage);
-                    },
+                    // onPressedIconFavorite: () {
+                    //   Get.offAllNamed(AppRoute.homepage);
+                    // },
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 30.h),
+                  Center(
+                    child: Text(
+                      'ابحث عن كتاب مستعمل او اعرض كتابك',
+                      style: Theme.of(context)
+                          .textTheme
+                          .displayLarge!
+                          .copyWith(color: AppColor.primary),
+                    ),
+                  ),
+                  SizedBox(height: 30.h),
                   HandlingDataView(
                       statusRequest: controller.statusRequest,
                       widget: GridView.builder(

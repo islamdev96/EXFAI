@@ -9,7 +9,7 @@ void main() async {
 }
 
 class MyApp extends GetWidget<LocaleController> {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     LocaleController controller = Get.put(LocaleController());
@@ -21,10 +21,17 @@ class MyApp extends GetWidget<LocaleController> {
       splitScreenMode: true,
       builder: (context, child) {
         return GetMaterialApp(
+          theme: ThemeData(
+            listTileTheme: const ListTileThemeData(
+              textColor: Colors.white,
+            ),
+            useMaterial3: true,
+          ),
+
           translations: MyTranslation(),
           debugShowCheckedModeBanner: false,
           locale: controller.language,
-          theme: controller.appTheme,
+          // theme: controller.appTheme,
           initialBinding: InitialBindings(),
           getPages: routes,
           title: 'Exfai',

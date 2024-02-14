@@ -28,6 +28,7 @@ export 'package:exfai/data/model/categoriesmodel.dart';
 export 'package:flutter_svg/flutter_svg.dart';
 export 'package:exfai/core/localization/lang_wael/language.dart';
 export 'package:exfai/view/widget/orders/orderstracking.dart';
+export 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 export 'package:flutter/material.dart';
 export 'package:get/get.dart';

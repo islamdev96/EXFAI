@@ -1,40 +1,44 @@
-import '../../../all_export.dart';
+import 'package:flutter/material.dart';
 
-class CustomCardHome extends GetView<HomeControllerImp> {
+class CustomCardHome extends StatelessWidget {
   final String title;
-  final String body;
-  const CustomCardHome({super.key, required this.title, required this.body});
+  final String imageUrl;
+
+  const CustomCardHome({
+    super.key,
+    required this.title,
+    required this.imageUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 15),
-      child: Stack(children: [
-        Container(
-          alignment: Alignment.center,
-          height: 150,
-          decoration: BoxDecoration(
-              color: AppColor.primary, borderRadius: BorderRadius.circular(20)),
-          child: ListTile(
-            title: Text(title,
-                style: const TextStyle(color: AppColor.white, fontSize: 20)),
-            subtitle: Text(body,
-                style: const TextStyle(color: AppColor.white, fontSize: 30)),
+      child: Column(
+        children: [
+          Center(
+            child: imageUrl.isNotEmpty
+                ? Image.asset(
+                    imageUrl,
+                    width: 35,
+                    height: 35,
+                  )
+                : const Placeholder(
+                    fallbackHeight: 35,
+                    fallbackWidth: 35,
+                  ),
           ),
-        ),
-        // Positioned(
-        //   top: -5.h,
-        //   right: controller.lang == "en" ? -5.h : null,
-        //   left: controller.lang == "ar" ? -5.h : null,
-        //   child: Container(
-        //     height: 140.h,
-        //     width: 140.w,
-        //     decoration: BoxDecoration(
-        //         color: AppColor.secondColor,
-        //         borderRadius: BorderRadius.circular(160.spMax)),
-        //   ),
-        // )
-      ]),
+          const SizedBox(height: 10),
+          Text(
+            title,
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

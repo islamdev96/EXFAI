@@ -2,7 +2,7 @@ import '../../../all_export.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String titleappbar;
-  final void Function()? onPressedIconFavorite;
+  // final void Function()? onPressedIconFavorite;
   final void Function()? onPressedSearch;
   final void Function(String)? onChanged;
   final TextEditingController mycontroller;
@@ -11,7 +11,7 @@ class CustomAppBar extends StatelessWidget {
       {super.key,
       required this.titleappbar,
       this.onPressedSearch,
-      required this.onPressedIconFavorite,
+      // required this.onPressedIconFavorite,
       this.onChanged,
       required this.mycontroller,
       this.iconData = Icons.favorite_border_outlined});
@@ -33,24 +33,25 @@ class CustomAppBar extends StatelessWidget {
                   const TextStyle(fontSize: 18, color: AppColor.secondaryText),
               border: OutlineInputBorder(
                   borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.circular(10)),
+                  borderRadius: BorderRadius.circular(50)),
               filled: true,
               fillColor: AppColor.secondaryBackground),
         )),
-        const SizedBox(width: 10),
-        Container(
-          decoration: BoxDecoration(
-              color: AppColor.primary, borderRadius: BorderRadius.circular(10)),
-          width: 60,
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          child: IconButton(
-              onPressed: onPressedIconFavorite,
-              icon: Icon(
-                iconData,
-                size: 30,
-                color: AppColor.white,
-              )),
-        )
+        // const SizedBox(width: 10),
+        // Container(
+        //   decoration: BoxDecoration(
+        //       color: AppColor.primary, borderRadius: BorderRadius.circular(10)),
+        //   width: 60,
+        //   // padding: const EdgeInsets.symmetric(vertical: 8),
+        //   // child: IconButton(
+        //   //   onPressed: onPressedIconFavorite,
+        //   //   icon: Icon(
+        //   //     iconData,
+        //   //     size: 30,
+        //   //     color: AppColor.white,
+        //   //   ),
+        //   // ),
+        // )
       ]),
     );
   }

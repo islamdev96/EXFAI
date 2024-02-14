@@ -25,9 +25,9 @@ class OffersView extends StatelessWidget {
                   onChanged: (val) {
                     controller.checkSearch(val);
                   },
-                  onPressedIconFavorite: () {
-                    Get.toNamed(AppRoute.myFavroite);
-                  },
+                  // onPressedIconFavorite: () {
+                  //   Get.toNamed(AppRoute.myFavroite);
+                  // },
                 ),
                 const SizedBox(height: 20),
                 controller.isSearch

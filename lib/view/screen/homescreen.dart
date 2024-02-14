@@ -10,6 +10,69 @@ class HomeScreen extends StatelessWidget {
     Get.put(HomeScreenControllerImp());
     return GetBuilder<HomeScreenControllerImp>(
       builder: (controller) => Scaffold(
+        // extendBodyBehindAppBar: true,
+        // primary: true,
+        // appBar: AppBar(
+        //   actions: [
+        //     IconButton(
+        //       onPressed: () {
+        //         Get.toNamed(AppRoute.successResetpassword);
+        //       },
+        //       icon: const Icon(
+        //         Icons.search,
+        //         color: AppColor.red,
+        //       ),
+        //     ),
+        //   ],
+        //   iconTheme: const IconThemeData(
+        //     color: AppColor.red,
+        //   ),
+        //   backgroundColor: Colors.transparent,
+        //   elevation: 0,
+        // ),
+        // drawer: const CustomDrawer(),
+        // Drawer(
+        //   backgroundColor: Colors.transparent,
+        //   child: ListView(
+        //     padding: EdgeInsets.zero,
+        //     children: <Widget>[
+        //       const DrawerHeader(
+        //         decoration: BoxDecoration(
+        //           color: Colors.transparent,
+        //         ),
+        //         child: Text(
+        //           'Drawer Header',
+        //           style: TextStyle(
+        //             color: Colors.white,
+        //             fontSize: 24,
+        //           ),
+        //         ),
+        //       ),
+        //       ListTile(
+        //         leading: const Icon(Icons.message),
+        //         title: const Text('Messages'),
+        //         onTap: () {
+        //           // Update the UI based on the drawer selection
+        //         },
+        //       ),
+        //       ListTile(
+        //         leading: const Icon(Icons.account_circle),
+        //         title: const Text('Profile'),
+        //         onTap: () {
+        //           // Update the UI based on the drawer selection
+        //         },
+        //       ),
+        //       ListTile(
+        //         leading: const Icon(Icons.settings),
+        //         title: const Text('Settings'),
+        //         onTap: () {
+        //           // Update the UI based on the drawer selection
+        //         },
+        //       ),
+        //     ],
+        //   ),
+        // ),
+
         backgroundColor: AppColor.scaffoldBackgroundColor,
 
         // backgroundColor: const MyCustomWidget(),

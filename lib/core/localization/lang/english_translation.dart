@@ -1,3 +1,5 @@
+// ignore_for_file: equal_keys_in_map
+
 import '../../../all_export.dart';
 
 class EnglishTranslation extends MyTranslation {
@@ -74,7 +76,7 @@ class EnglishTranslation extends MyTranslation {
           "doYouWantToExitTheApp": "Do you want to exit the app?",
           "confirmation": "Confirmation",
           "cancellation": "Cancellation",
-          "chooseTheLanguage": "Choose the Language",
+            "chooseTheLanguage": "Choose the Language",
 
           //========================== Application ============================//
 
