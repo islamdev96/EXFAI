@@ -1,3 +1,4 @@
+import 'package:exfai/view/widget/home/list_addbook_home%20copy.dart';
 import 'package:exfai/view/widget/home/page_app_bar.dart';
 import 'package:exfai/view/widget/home/list_categories_home.dart';
 
@@ -30,16 +31,12 @@ class HomePage extends StatelessWidget {
                           CustomAppBar(
                             mycontroller: controller.search!,
                             titleappbar: "ابحث عن الكتاب",
-                            // onPressedIcon: () {},
                             onPressedSearch: () {
                               controller.onSearchItems();
                             },
                             onChanged: (val) {
                               controller.checkSearch(val);
                             },
-                            // onPressedIconFavorite: () {
-                            //   Get.toNamed(AppRoute.myFavroite);
-                            // },
                           ),
                           SizedBox(height: 30.h),
                           Center(
@@ -64,15 +61,13 @@ class HomePage extends StatelessWidget {
                           SizedBox(height: 30.h),
 
                           const ListCategoriesHome(),
-                          // CustomTitleHome(title: "productForYou".tr),
                           const ListItemsHome(),
-                          const ListItemsHome(),
+                          const ListAddBookHome(), // تم استبدال ListItemsHome بـ ListAddBookHome
+
+                          // const ListAddBookHome(), // تم استبدال ListItemsHome بـ ListAddBookHome
                         ],
                       )
-                    : ListItemsSearch(listdatamodel: controller.listdata))
-
-            // const CustomTitleHome(title: "Offer"),
-            // const ListItemsHome()
+                    : ListItemsSearch(listdatamodel: controller.listdata)),
           ],
         ),
       ),

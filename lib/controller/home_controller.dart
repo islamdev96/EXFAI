@@ -1,5 +1,7 @@
 // ignore_for_file: overridden_fields
 
+import 'package:exfai/data/model/add_book_model.dart';
+
 import '../../all_export.dart';
 
 abstract class HomeController extends SearchMixController {
@@ -24,6 +26,8 @@ class HomeControllerImp extends HomeController {
   // List data = [];
   List categories = [];
   List items = [];
+  List addbook = [];
+
   List settingsdata = [];
   // List items = [];
 
@@ -52,6 +56,9 @@ class HomeControllerImp extends HomeController {
       if (response['status'] == "success") {
         categories.addAll(response['categories']['data']);
         items.addAll(response['items']['data']);
+        addbook.addAll(response['addbook']['data']); //////////////////////////
+
+        print("addbook");
         settingsdata.addAll(response['settings']['data']);
         if (settingsdata.isNotEmpty) {
           if (settingsdata[0]['settings_titleome'] != null) {
@@ -93,6 +100,7 @@ class HomeControllerImp extends HomeController {
 
 class SearchMixController extends GetxController {
   List<ItemsModel> listdata = [];
+  List<AddBookModel> listdata2 = [];
 
   late StatusRequest statusRequest;
   HomeData homedata = HomeData(Get.find());

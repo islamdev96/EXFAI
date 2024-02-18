@@ -1,120 +1,81 @@
+import 'package:exfai/data/model/add_book_model.dart';
+
 import '../../../all_export.dart';
 
-class CustomListItems extends GetView<ItemsControllerImp> {
-  final ItemsModel itemsModel;
-  // final bool active;
-  const CustomListItems({super.key, required this.itemsModel});
+class CustomListAddBooks extends GetView<ItemsControllerImp> {
+  final AddBookModel addBookModel;
+
+  const CustomListAddBooks({super.key, required this.addBookModel});
 
   @override
   Widget build(BuildContext context) {
-    final String minute = "minute".tr;
-    return Scaffold(
-      backgroundColor: AppColor.scaffoldBackgroundColor,
-      body: InkWell(
+    return Card(
+      elevation: 4,
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      child: InkWell(
         onTap: () {
-          controller.goToPageProductDetails(itemsModel);
+          controller.goToPageProductDetails(addBookModel);
         },
-        child: Card(
-          child: Stack(
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(10),
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Hero(
-                        tag: "${itemsModel.itemsId}",
-                        child: CachedNetworkImage(
-                          imageUrl:
-                              "${AppLink.imagestItems}/${itemsModel.itemsImage!}",
-                          height: 100,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      Text(
-                          translateDatabase(
-                              itemsModel.itemsNameAr, itemsModel.itemsName),
-                          style: const TextStyle(
-                              color: AppColor.secondaryText,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold)),
-                      Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            "23 - 50 ",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: "sans",
-                              color: AppColor.secondaryText,
-                            ),
-                          ),
-                          Container(
-                              margin: const EdgeInsets.only(top: 5),
-                              child: const Icon(
-                                Icons.timer_sharp,
-                                color: AppColor.secondaryText,
-                              )),
-                          const SizedBox(
-                            width: 4,
-                          ),
-                          Text(
-                            "${controller.deliverytime} $minute ",
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                              fontFamily: "sans",
-                              color: AppColor.secondaryText,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text("${itemsModel.itemsPriceDiscount} \$",
-                              style: const TextStyle(
-                                  color: AppColor.secondaryText,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: "sans")),
-                          GetBuilder<FavoriteController>(
-                              builder: (controller) => IconButton(
-                                  onPressed: () {
-                                    if (controller
-                                            .isFavorite[itemsModel.itemsId] ==
-                                        "1") {
-                                      controller.setFavorite(
-                                          itemsModel.itemsId, "0");
-                                      controller
-                                          .removeFavorite(itemsModel.itemsId!);
-                                    } else {
-                                      controller.setFavorite(
-                                          itemsModel.itemsId, "1");
-                                      controller
-                                          .addFavorite(itemsModel.itemsId!);
-                                    }
-                                  },
-                                  icon: Icon(
-                                    controller.isFavorite[itemsModel.itemsId] ==
-                                            "1"
-                                        ? Icons.favorite
-                                        : Icons.favorite_border_outlined,
-                                    color: AppColor.red,
-                                  )))
-                        ],
-                      )
-                    ]),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: CachedNetworkImage(
+                  imageUrl:
+                      "${AppLink.imagesAddBook}/${addBookModel.addbookImage}",
+                  height: 100,
+                  width: 100,
+                  fit: BoxFit.cover,
+                ),
               ),
-              if (itemsModel.itemsDiscount != "0")
-                Positioned(
-                    top: 4,
-                    left: 4,
-                    child: Image.asset(
-                      AppImageAsset.saleOne,
-                      width: 40,
-                    ))
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "${addBookModel.addbookTitle}",
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      "${addBookModel.addbookDescription}",
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontSize: 14,
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      "Author: ${addBookModel.addbookAuthor}",
+                      style: const TextStyle(
+                        fontSize: 14,
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      "City: ${addBookModel.addbookCity}",
+                      style: const TextStyle(
+                        fontSize: 14,
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      "Price: ${addBookModel.addbookPrice}",
+                      style: const TextStyle(
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
@@ -122,52 +83,3 @@ class CustomListItems extends GetView<ItemsControllerImp> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// logical thinking
-
-  // GetBuilder<FavoriteController>(
-  //                         builder: (controller) => IconButton(
-  //                             onPressed: () {
-  //                                 if (controller.isFavorite[itemsModel.itemsId] == "1" ) {
-  //                                   controller.setFavorite(
-  //                                       itemsModel.itemsId, "0");
-  //                                 } else {
-  //                                   controller.setFavorite(
-  //                                       itemsModel.itemsId, "1");
-  //                                 }
-  //                             },
-  //                             icon: Icon(
-  //                               controller.isFavorite[itemsModel.itemsId] == "1"
-  //                                   ? Icons.favorite
-  //                                   : Icons.favorite_border_outlined,
-  //                               color: AppColor.primaryColor,
-  //                             )))

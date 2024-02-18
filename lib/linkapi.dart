@@ -10,6 +10,7 @@ class AppLink {
 
   static const String imagestCategories = "$server/upload/categories";
   static const String imagestItems = "$server/upload/items";
+  static const String imagesAddBook = "$server/upload/book";
 // =============================================================
 
 // ================================= Auth ========================== //

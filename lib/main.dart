@@ -6,6 +6,7 @@ void main() async {
   await initialServices();
 
   runApp(const MyApp());
+  // createBookTable(); // تشغيل الدالة الخاصة بقاعدة البيانات
 }
 
 class MyApp extends GetWidget<LocaleController> {

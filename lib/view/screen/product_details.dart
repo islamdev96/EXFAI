@@ -30,7 +30,7 @@ class ProductDetails extends StatelessWidget {
       height: 40,
       child: MaterialButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        color: AppColor.scaffoldBackgroundColor,
+        color: AppColor.primary,
         onPressed: () {
           Get.toNamed(AppRoute.cart);
         },
