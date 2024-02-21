@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 
-import '../../../../all_export.dart';
+import '../../../all_export.dart';
 
 class AddBookData {
   Crud crud;

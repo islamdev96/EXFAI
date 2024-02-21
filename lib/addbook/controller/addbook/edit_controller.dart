@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:drop_down_list/model/selected_list_item.dart';
 import 'package:exfai/addbook/addbook_model.dart';
-import 'package:exfai/addbook/controller/addbook/addbook_data.dart';
+import 'package:exfai/addbook/controller/addbook_data.dart';
 import 'package:exfai/addbook/controller/addbook/view_controller.dart';
 import 'package:exfai/addbook/function/uploadfile.dart';
 
@@ -24,7 +24,7 @@ class AddBookEditController extends GetxController {
   TextEditingController? discount;
 
   TextEditingController? categorieName;
-  TextEditingController? categorieID;
+  TextEditingController? categoriesid;
   StatusRequest? statusRequest = StatusRequest.none;
 
   File? file;
@@ -58,7 +58,7 @@ class AddBookEditController extends GetxController {
         "communication": communication.text,
         "count": count!.text,
         "discount": discount!.text,
-        "categorieID": categorieID!.text,
+        "categoriesid": categoriesid!.text,
         "datenow": DateTime.now().toString()
       };
 
@@ -94,7 +94,7 @@ class AddBookEditController extends GetxController {
     count = TextEditingController();
     discount = TextEditingController();
     categorieName = TextEditingController();
-    categorieID = TextEditingController();
+    categoriesid = TextEditingController();
     dropdownname = TextEditingController();
     dropdownid = TextEditingController();
     title.text = addBookModel!.addbookTitle!;
@@ -105,7 +105,7 @@ class AddBookEditController extends GetxController {
     communication.text = addBookModel!.addbookCommunication!;
     count!.text = addBookModel!.addbookCount!;
     discount!.text = addBookModel!.addbookDiscount!;
-    categorieID!.text = addBookModel!.categoriesId!;
+    categoriesid!.text = addBookModel!.categoriesId!;
     categorieName!.text = addBookModel!.categoriesName!;
     active = addBookModel!.addbookActive;
     super.onInit();

@@ -40,8 +40,9 @@ class CategoriesView extends StatelessWidget {
                         },
                         leading: Container(
                           padding: const EdgeInsets.all(4),
-                          child: SvgPicture.network(
-                            "${AppLink.imagestCategories}/${category.categoriesImage}",
+                          child: CachedNetworkImage(
+                            imageUrl:
+                                "${AppLink.imagestCategories}/${category.categoriesImage}",
                             height: 80,
                           ),
                         ),

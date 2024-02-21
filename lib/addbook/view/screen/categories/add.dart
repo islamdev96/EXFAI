@@ -45,17 +45,21 @@ class CategoriesAdd extends StatelessWidget {
                     isNumber: false,
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: MaterialButton(
-                      color: AppColor.primary,
-                      textColor: AppColor.white,
-                      onPressed: () {
-                        controller.chooseImage();
-                      },
-                      child: const Text("Choose Category Image"),
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: MaterialButton(
+                        color: AppColor.primary,
+                        textColor: AppColor.white,
+                        onPressed: () {
+                          controller.showOptionImage();
+                        },
+                        child: const Text("choose item image "),
+                      )),
+                  if (controller.file != null)
+                    Image.file(
+                      controller.file!,
+                      width: 100,
+                      height: 100,
                     ),
-                  ),
-                  if (controller.file != null) Image.file(controller.file!),
                   CustomButton(
                     text: "Add",
                     onPressed: () {

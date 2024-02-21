@@ -1,24 +1,4 @@
 class CartModel {
-  String? addbookprice;
-  String? countaddbook;
-  String? cartId;
-  String? cartUsersid;
-  String? cartAddbookid;
-  String? cartOrders;
-  String? addbookId;
-  String? addbookTitle;
-  String? addbookDescription;
-  String? addbookAuthor;
-  String? addbookCity;
-  String? addbookPrice;
-  String? addbookImage;
-  String? addbookCommunication;
-  String? addbookCount;
-  String? addbookActive;
-  String? addbookDiscount;
-  String? addbookDate;
-  String? addbookCategoriesid;
-
   CartModel(
       {this.addbookprice,
       this.countaddbook,
@@ -61,6 +41,26 @@ class CartModel {
     addbookDate = json['addbook_date'];
     addbookCategoriesid = json['addbook_categoriesid'];
   }
+
+  String? addbookActive;
+  String? addbookAuthor;
+  String? addbookCategoriesid;
+  String? addbookCity;
+  String? addbookCommunication;
+  String? addbookCount;
+  String? addbookDate;
+  String? addbookDescription;
+  String? addbookDiscount;
+  String? addbookId;
+  String? addbookImage;
+  String? addbookPrice;
+  String? addbookTitle;
+  String? addbookprice;
+  String? cartAddbookid;
+  String? cartId;
+  String? cartOrders;
+  String? cartUsersid;
+  String? countaddbook;
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};

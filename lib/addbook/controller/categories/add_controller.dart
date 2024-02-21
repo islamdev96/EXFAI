@@ -12,7 +12,20 @@ class CategoriesAddController extends GetxController {
   StatusRequest? statusRequest = StatusRequest.none;
 
   File? file;
-  chooseImage() async {
+
+  showOptionImage() async {
+    print("Showing option image menu");
+    showbottonmenu(chooseImageCamera, chooseImageGallery);
+  }
+
+  chooseImageCamera() async {
+    print("Choosing image from camera");
+    file = await imageUploadCamera();
+    update();
+  }
+
+  chooseImageGallery() async {
+    print("Choosing image from gallery");
     file = await fileUploadGallery();
     update();
   }
@@ -36,9 +49,9 @@ class CategoriesAddController extends GetxController {
           c.getData();
         } else {
           statusRequest = StatusRequest.failure;
-          print(response / 'status');
+          print(response['status']); // Corrected line
         }
-        print(response / 'status');
+        print(response['status']); // Corrected line
       }
       update();
     }

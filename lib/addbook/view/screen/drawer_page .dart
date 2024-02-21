@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:exfai/addbook/test/test.dart';
 import 'package:exfai/addbook/view/screen/home.dart';
 import 'package:exfai/view/widget/home/test.dart';
 
@@ -35,7 +36,7 @@ class CustomDrawer extends StatelessWidget {
               title:
                   const Text('الرئيسية', style: TextStyle(color: Colors.white)),
               onTap: () {
-                // Get.to(const HomePageAdmin());
+                Get.to(const HomePageAdmin());
                 // أضف العمليات اللازمة عند النقر على "الرئيسية"
 
                 // Add your navigation logic here
@@ -66,6 +67,7 @@ class CustomDrawer extends StatelessWidget {
               title: const Text('الكتب العامة',
                   style: TextStyle(color: Colors.white)),
               onTap: () {
+                Get.to(() => const AddBookPage());
                 // Add your navigation logic here
               },
             ),

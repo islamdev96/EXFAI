@@ -3,7 +3,7 @@
 import 'dart:io';
 
 import 'package:drop_down_list/drop_down_list.dart';
-import 'package:exfai/addbook/controller/addbook/addbook_data.dart';
+import 'package:exfai/addbook/controller/addbook_data.dart';
 import 'package:exfai/addbook/controller/addbook/view_controller.dart';
 import 'package:exfai/addbook/function/uploadfile.dart';
 import 'package:exfai/data/datasource/remote/categories_data.dart';
@@ -28,7 +28,7 @@ class AddBookAddController extends GetxController {
   TextEditingController? discount;
 
   TextEditingController? categorieName;
-  TextEditingController? categorieID;
+  TextEditingController? categoriesid;
   StatusRequest? statusRequest = StatusRequest.none;
 
   File? file;
@@ -121,7 +121,7 @@ class AddBookAddController extends GetxController {
         "communication": communication.text,
         "count": count!.text,
         "discount": discount!.text,
-        "categorieID": categorieID!.text,
+        "categoriesid": categoriesid!.text,
         "datenow": DateTime.now().toString()
       };
 
@@ -184,7 +184,7 @@ class AddBookAddController extends GetxController {
     count = TextEditingController();
     discount = TextEditingController();
     categorieName = TextEditingController();
-    categorieID = TextEditingController();
+    categoriesid = TextEditingController();
     dropdownname = TextEditingController();
     dropdownid = TextEditingController();
     super.onInit();

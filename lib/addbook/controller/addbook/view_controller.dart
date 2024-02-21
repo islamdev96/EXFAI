@@ -1,5 +1,5 @@
 import 'package:exfai/addbook/addbook_model.dart';
-import 'package:exfai/addbook/controller/addbook/addbook_data.dart';
+import 'package:exfai/addbook/controller/addbook_data.dart';
 
 import '../../../all_export.dart';
 
