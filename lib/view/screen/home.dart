@@ -1,4 +1,5 @@
-import 'package:exfai/view/widget/home/list_addbook_home%20copy.dart';
+import 'package:exfai/addbook/addbook_model.dart';
+import 'package:exfai/addbook/list_addbook_home%20copy.dart';
 import 'package:exfai/view/widget/home/page_app_bar.dart';
 import 'package:exfai/view/widget/home/list_categories_home.dart';
 
@@ -61,7 +62,7 @@ class HomePage extends StatelessWidget {
                           SizedBox(height: 30.h),
 
                           const ListCategoriesHome(),
-                          const ListItemsHome(),
+                          // const ListItemsHome(),
                           const ListAddBookHome(), // تم استبدال ListItemsHome بـ ListAddBookHome
 
                           // const ListAddBookHome(), // تم استبدال ListItemsHome بـ ListAddBookHome
@@ -76,7 +77,7 @@ class HomePage extends StatelessWidget {
 }
 
 class ListItemsSearch extends GetView<HomeControllerImp> {
-  final List<ItemsModel> listdatamodel;
+  final List<AddBookModel> listdatamodel;
   const ListItemsSearch({super.key, required this.listdatamodel});
 
   @override
@@ -99,13 +100,15 @@ class ListItemsSearch extends GetView<HomeControllerImp> {
                   children: [
                     Expanded(
                         child: CachedNetworkImage(
-                            imageUrl:
-                                "${AppLink.imagestItems}/${listdatamodel[index].itemsImage}")),
+                      imageUrl:
+                          "${AppLink.imagesAddBook}/${listdatamodel[index].addbookImage!}",
+                    )),
                     Expanded(
                       flex: 2,
                       child: ListTile(
-                        title: Text(listdatamodel[index].itemsName!),
-                        subtitle: Text(listdatamodel[index].categoriesName!),
+                        title: Text(listdatamodel[index].addbookTitle!),
+                        subtitle:
+                            Text(listdatamodel[index].addbookDescription!),
                       ),
                     ),
                   ],

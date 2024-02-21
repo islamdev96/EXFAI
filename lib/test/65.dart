@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, library_private_types_in_public_api, file_names
+
 import 'package:exfai/view/Settings/settings_page.dart';
 import 'package:titled_navigation_bar/titled_navigation_bar.dart';
 

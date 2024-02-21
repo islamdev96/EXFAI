@@ -7,12 +7,12 @@ class CardShppingAddressCheckout extends StatelessWidget {
   final VoidCallback? onCancel; // Define the onCancel callback
 
   const CardShppingAddressCheckout({
-    Key? key,
+    super.key,
     required this.title,
     required this.body,
     required this.isactive,
     this.onCancel, // Add onCancel as a named parameter
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

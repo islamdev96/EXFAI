@@ -1,9 +1,9 @@
 import '../../../all_export.dart';
 
 class CustomListFavoriteItems extends GetView<MyFavoriteController> {
-  final MyFavoriteModel itemsModel;
+  final MyFavoriteModel favoriteModel;
   // final bool active;
-  const CustomListFavoriteItems({super.key, required this.itemsModel});
+  const CustomListFavoriteItems({super.key, required this.favoriteModel});
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +20,18 @@ class CustomListFavoriteItems extends GetView<MyFavoriteController> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Hero(
-                    tag: "${itemsModel.itemsId}",
+                    tag: "${favoriteModel.addbookId}",
                     child: CachedNetworkImage(
                       imageUrl:
-                          "${AppLink.imagestItems}/${itemsModel.itemsImage!}",
+                          "${AppLink.imagesAddBook}/${favoriteModel.addbookImage!}",
                       height: 100,
                       fit: BoxFit.fill,
                     ),
                   ),
                   const SizedBox(height: 10),
                   Text(
-                      translateDatabase(
-                          itemsModel.itemsNameAr, itemsModel.itemsName),
+                      translateDatabase(favoriteModel.addbookTitle,
+                          favoriteModel.addbookTitle),
                       style: const TextStyle(
                           color: AppColor.black,
                           fontSize: 16,
@@ -59,7 +59,7 @@ class CustomListFavoriteItems extends GetView<MyFavoriteController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("${itemsModel.itemsPrice} \$",
+                      Text("${favoriteModel.addbookPrice} \$",
                           style: const TextStyle(
                               color: AppColor.primary,
                               fontSize: 16,
@@ -68,7 +68,7 @@ class CustomListFavoriteItems extends GetView<MyFavoriteController> {
                       IconButton(
                           onPressed: () {
                             controller
-                                .deleteFromFavorite(itemsModel.favoriteId!);
+                                .deleteFromFavorite(favoriteModel.favoriteId!);
                           },
                           icon: const Icon(
                             Icons.delete_outline_outlined,

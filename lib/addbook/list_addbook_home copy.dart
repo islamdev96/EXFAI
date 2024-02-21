@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:exfai/data/model/add_book_model.dart';
+import 'package:exfai/addbook/addbook_model.dart';
 
-import '../../../all_export.dart';
+import '../all_export.dart';
 
 class ListAddBookHome extends GetView<HomeControllerImp> {
   const ListAddBookHome({

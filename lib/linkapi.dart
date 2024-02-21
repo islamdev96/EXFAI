@@ -1,16 +1,16 @@
 class AppLink {
 //
   static const String server = "https://exfai.com/Hamza";
-  static const String test = "$server/test.php";
+  // static const String test = "$server/test.php";
 
   static const String notification = "$server/notification.php";
-  // static const String imageststatic = "$server/upload";
+  static const String imageststatic = "$server/upload";
 
   //========================== Image ============================//
 
   static const String imagestCategories = "$server/upload/categories";
-  static const String imagestItems = "$server/upload/items";
-  static const String imagesAddBook = "$server/upload/book";
+  // static const String imagestItems = "$imageststatic/items";
+  static const String imagesAddBook = "$imageststatic/book";
 // =============================================================
 
 // ================================= Auth ========================== //
@@ -31,9 +31,26 @@ class AppLink {
 // Home
 
   static const String homepage = "$server/home.php";
-// items
-  static const String items = "$server/items/items.php";
-  static const String searchitems = "$server/items/search.php";
+
+// Categories
+
+  static const String categories = "$server/admin/categories.php";
+  static const String categoriesAdd = "$server/admin/categories/add.php";
+  static const String categoriesView = "$server/admin/categories/view.php";
+  static const String categoriesEdit = "$server/admin/categories/edit.php";
+  static const String categoriesDelete = "$server/admin/categories/delete.php";
+
+// addbook
+  static const String addbook = "$server/addbook/addbook.php";
+  static const String searchAddbook = "$server/addbook/search.php";
+  static const String addbookAdd = "$server/addbook/add.php";
+  static const String addbookView = "$server/addbook/view.php";
+  static const String addbookDelete = "$server/addbook/delete.php";
+  static const String addbookEdit = "$server/addbook/edit.php";
+  static const String addbookDetails = "$server/addbook/details.php";
+  static const String addbookRating = "$server/addbook/rating.php";
+  static const String addbookRatingView = "$server/addbook/ratingview.php";
+  static const String addbookRatingDelete = "$server/addbook/ratingdelete.php";
 
 // Favorite
 
@@ -47,7 +64,7 @@ class AppLink {
   static const String cartview = "$server/cart/view.php";
   static const String cartadd = "$server/cart/add.php";
   static const String cartdelete = "$server/cart/delete.php";
-  static const String cartgetcountitems = "$server/cart/getcountitems.php";
+  static const String cartgetcountaddbook = "$server/cart/getcountaddbook.php";
 
   // Address
 

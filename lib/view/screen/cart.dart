@@ -37,32 +37,35 @@ class Cart extends StatelessWidget {
                     SizedBox(height: 10.h),
                     TopCardCart(
                         message:
-                            "$youHave (   ${cartController.totalcountitems}  )  $itemsInYourList"),
+                            "$youHave (   ${cartController.totalcountaddbook}  )  $itemsInYourList"),
                     Container(
                       padding: EdgeInsets.all(10),
                       child: Column(
-                        children: [
-                          ...List.generate(
-                            cartController.data.length,
-                            (index) => CustomItemsCartList(
-                                onAdd: () async {
-                                  await cartController
-                                      .add(cartController.data[index].itemsId!);
-                                  cartController.refreshPage();
-                                },
-                                onRemove: () async {
-                                  await cartController.delete(
-                                      cartController.data[index].itemsId!);
-                                  cartController.refreshPage();
-                                },
-                                imageName:
-                                    "${cartController.data[index].itemsImage}",
-                                name: "${cartController.data[index].itemsName}",
-                                price:
-                                    "${cartController.data[index].itemsprice} \$",
-                                count:
-                                    "${cartController.data[index].countitems}"),
-                          )
+                        children: const [
+                          // ...List.generate(
+                          //   cartController.data.length,
+                          //   (index) => CustomItemsCartList(
+                          //     onAdd: () async {
+                          //       await cartController
+                          //           .add(cartController.data[index].addbookId!);
+                          //       cartController.refreshPage();
+                          //     },
+                          //     onRemove: () async {
+                          //       await cartController.delete(
+                          //           cartController.data[index].addbookId!);
+                          //       cartController.refreshPage();
+                          //     },
+                          //     imageName:
+                          //         "${cartController.data[index].addbookImage}",
+                          //     name:
+                          //         "${cartController.data[index].addbookTitle}",
+                          //     price:
+                          //         "${cartController.data[index].addbookprice} \$",
+                          //     count:
+                          //         "${cartController.data[index].countaddbook}",
+
+                          //   ),
+                          // )
                         ],
                       ),
                     )

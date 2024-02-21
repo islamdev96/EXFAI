@@ -1,11 +1,12 @@
-import 'package:exfai/data/model/add_book_model.dart';
+import 'package:exfai/addbook/addbook_controllaer.dart';
+import 'package:exfai/addbook/addbook_model.dart';
 
-import '../../../all_export.dart';
+import '../../all_export.dart';
 
-class CustomListAddBooks extends GetView<ItemsControllerImp> {
+class CustomListAddBook extends GetView<AddBookControllerImp> {
   final AddBookModel addBookModel;
 
-  const CustomListAddBooks({super.key, required this.addBookModel});
+  const CustomListAddBook({super.key, required this.addBookModel});
 
   @override
   Widget build(BuildContext context) {
@@ -21,16 +22,16 @@ class CustomListAddBooks extends GetView<ItemsControllerImp> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: CachedNetworkImage(
-                  imageUrl:
-                      "${AppLink.imagesAddBook}/${addBookModel.addbookImage}",
-                  height: 100,
-                  width: 100,
-                  fit: BoxFit.cover,
-                ),
-              ),
+              // ClipRRect(
+              //   borderRadius: BorderRadius.circular(8),
+              //   child: CachedNetworkImage(
+              //     imageUrl:
+              //         "${AppLink.imagesAddBook}/${addBookModel.addbookImage}",
+              //     height: 100,
+              //     width: 100,
+              //     fit: BoxFit.cover,
+              //   ),
+              // ),
               const SizedBox(width: 10),
               Expanded(
                 child: Column(

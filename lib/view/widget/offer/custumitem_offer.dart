@@ -1,12 +1,12 @@
+import 'package:exfai/addbook/addbook_model.dart';
 import 'package:exfai/controller/offer_controller.dart';
 
 import '../../../all_export.dart';
 
 class CustomListItemsOffer extends GetView<OffersController> {
-  final ItemsModel itemsModel;
+  final AddBookModel addBookModel;
   // final bool active;
-  const CustomListItemsOffer({Key? key, required this.itemsModel})
-      : super(key: key);
+  const CustomListItemsOffer({super.key, required this.addBookModel});
 
   @override
   Widget build(BuildContext context) {
@@ -22,18 +22,18 @@ class CustomListItemsOffer extends GetView<OffersController> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Hero(
-                        tag: "${itemsModel.itemsId}",
+                        tag: "${addBookModel.addbookId}",
                         child: CachedNetworkImage(
                           imageUrl:
-                              "${AppLink.imagestItems}/${itemsModel.itemsImage!}",
+                              "${AppLink.imagesAddBook}/${addBookModel.addbookImage!}",
                           height: 100,
                           fit: BoxFit.fill,
                         ),
                       ),
                       const SizedBox(height: 10),
                       Text(
-                          translateDatabase(
-                              itemsModel.itemsNameAr, itemsModel.itemsName),
+                          translateDatabase(addBookModel.addbookTitle,
+                              addBookModel.addbookTitle),
                           style: const TextStyle(
                               color: AppColor.primary,
                               fontSize: 16,
@@ -41,7 +41,7 @@ class CustomListItemsOffer extends GetView<OffersController> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("${itemsModel.itemsPriceDiscount} \$",
+                          Text("${addBookModel.addbookPrice} \$",
                               style: const TextStyle(
                                   color: AppColor.secondaryBackground,
                                   fontSize: 16,
@@ -50,22 +50,23 @@ class CustomListItemsOffer extends GetView<OffersController> {
                           GetBuilder<FavoriteController>(
                               builder: (controller) => IconButton(
                                   onPressed: () {
-                                    if (controller
-                                            .isFavorite[itemsModel.itemsId] ==
+                                    if (controller.isFavorite[
+                                            addBookModel.addbookId] ==
                                         "1") {
                                       controller.setFavorite(
-                                          itemsModel.itemsId, "0");
-                                      controller
-                                          .removeFavorite(itemsModel.itemsId!);
+                                          addBookModel.addbookId, "0");
+                                      controller.removeFavorite(
+                                          addBookModel.addbookId!);
                                     } else {
                                       controller.setFavorite(
-                                          itemsModel.itemsId, "1");
+                                          addBookModel.addbookId, "1");
                                       controller
-                                          .addFavorite(itemsModel.itemsId!);
+                                          .addFavorite(addBookModel.addbookId!);
                                     }
                                   },
                                   icon: Icon(
-                                    controller.isFavorite[itemsModel.itemsId] ==
+                                    controller.isFavorite[
+                                                addBookModel.addbookId] ==
                                             "1"
                                         ? Icons.favorite
                                         : Icons.favorite_border_outlined,
@@ -75,65 +76,16 @@ class CustomListItemsOffer extends GetView<OffersController> {
                       )
                     ]),
               ),
-              if (itemsModel.itemsDiscount != "0")
-                Positioned(
-                    top: 4,
-                    left: 4,
-                    child: Image.asset(
-                      AppImageAsset.saleOne,
-                      width: 40,
-                    ))
+              // if (addBookModel.addbookPriceDiscount != "0")
+              Positioned(
+                  top: 4,
+                  left: 4,
+                  child: Image.asset(
+                    AppImageAsset.saleOne,
+                    width: 40,
+                  ))
             ],
           ),
         ));
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// logical thinking
-
-  // GetBuilder<FavoriteController>(
-  //                         builder: (controller) => IconButton(
-  //                             onPressed: () {
-  //                                 if (controller.isFavorite[itemsModel.itemsId] == "1" ) {
-  //                                   controller.setFavorite(
-  //                                       itemsModel.itemsId, "0");
-  //                                 } else {
-  //                                   controller.setFavorite(
-  //                                       itemsModel.itemsId, "1");
-  //                                 }
-  //                             },
-  //                             icon: Icon(
-  //                               controller.isFavorite[itemsModel.itemsId] == "1"
-  //                                   ? Icons.favorite
-  //                                   : Icons.favorite_border_outlined,
-  //                               color: AppColor.primaryColor,
-  //                             )))

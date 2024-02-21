@@ -1,15 +1,18 @@
-import 'package:exfai/data/model/add_book_model.dart';
+// ignore_for_file: unused_local_variable
 
-import '../../all_export.dart';
+import 'package:exfai/addbook/addbook_controllaer.dart';
+import 'package:exfai/addbook/addbook_model.dart';
+import '../all_export.dart';
 
-class Items extends StatelessWidget {
-  const Items({
+class AddBook extends StatelessWidget {
+  const AddBook({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    final ItemsControllerImp controller = Get.put(ItemsControllerImp());
+    final AddBookControllerImp controller = Get.put(
+        AddBookControllerImp()); // تغيير الاسم من AddBookControllerImp إلى AddBookControllerImp
     final FavoriteController controllerFav = Get.put(FavoriteController());
 
     return Scaffold(
@@ -18,8 +21,9 @@ class Items extends StatelessWidget {
         child: ListView(
           children: [
             const SizedBox(height: 20),
-            const ListCategoriesItems(),
-            GetBuilder<ItemsControllerImp>(
+            const ListCategoriesAddBook(),
+            GetBuilder<AddBookControllerImp>(
+              // تغيير النوع إلى AddBookControllerImp
               builder: (controller) => HandlingDataView(
                 statusRequest: controller.statusRequest,
                 widget: !controller.isSearch
@@ -33,12 +37,12 @@ class Items extends StatelessWidget {
                           childAspectRatio: 0.7,
                         ),
                         itemBuilder: (BuildContext context, index) {
-                          controllerFav.isFavorite[controller.data[index]
-                                  ['addbook_id']] =
+                          final AddBookModel addBookModel =
+                              AddBookModel.fromJson(controller.data[index]);
+                          controllerFav.isFavorite[addBookModel.addbookId] =
                               controller.data[index]['favorite'];
-                          return CustomListAddBooks(
-                            addBookModel:
-                                AddBookModel.fromJson(controller.data[index]),
+                          return CustomListAddBook(
+                            addBookModel: addBookModel,
                           );
                         },
                       )

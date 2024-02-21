@@ -1,11 +1,9 @@
-// ignore_for_file: avoid_unnecessary_containers
-
 import '../../../all_export.dart';
 
 class CustomItemsCartList extends StatelessWidget {
   final String name;
   final String price;
-  final String count;
+  final int count; // تم تغيير النوع من String إلى int
   final String imageName;
   final VoidCallback? onAdd;
   final VoidCallback? onRemove;
@@ -31,7 +29,7 @@ class CustomItemsCartList extends StatelessWidget {
             Expanded(
               flex: 2,
               child: CachedNetworkImage(
-                imageUrl: "${AppLink.imagestItems}/$imageName",
+                imageUrl: "${AppLink.imagesAddBook}/$imageName",
                 height: 80,
               ),
             ),
@@ -60,7 +58,8 @@ class CustomItemsCartList extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    count,
+                    count
+                        .toString(), // تحويل القيمة إلى String باستخدام toString()
                     style: const TextStyle(
                       fontFamily: "sans",
                       color: AppColor.black,

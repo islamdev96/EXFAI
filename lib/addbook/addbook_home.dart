@@ -1,14 +1,17 @@
+// ignore_for_file: unused_field
+
 import 'dart:io';
 
 import 'package:exfai/view/widget/home/page_app_bar.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../../all_export.dart';
+import '../all_export.dart';
 
 class BookDetailsPage extends StatefulWidget {
   const BookDetailsPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _BookDetailsPageState createState() => _BookDetailsPageState();
 }
 

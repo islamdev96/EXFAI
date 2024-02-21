@@ -1,7 +1,9 @@
-import '../../../all_export.dart';
+import 'package:exfai/addbook/addbook_controllaer.dart';
 
-class ListCategoriesItems extends GetView<ItemsControllerImp> {
-  const ListCategoriesItems({super.key});
+import '../all_export.dart';
+
+class ListCategoriesAddBook extends GetView<AddBookControllerImp> {
+  const ListCategoriesAddBook({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class ListCategoriesItems extends GetView<ItemsControllerImp> {
   }
 }
 
-class Categories extends GetView<ItemsControllerImp> {
+class Categories extends GetView<AddBookControllerImp> {
   final CategoriesModel categoriesModel;
   final int? i;
   const Categories({super.key, required this.categoriesModel, required this.i});
@@ -37,15 +39,15 @@ class Categories extends GetView<ItemsControllerImp> {
       },
       child: Column(
         children: [
-          GetBuilder<ItemsControllerImp>(
+          GetBuilder<AddBookControllerImp>(
               builder: (controller) => Container(
                     padding:
                         EdgeInsets.only(right: 10.r, left: 10.h, bottom: 5),
                     decoration: controller.selectedCat == i
                         ? const BoxDecoration(
                             border: Border(
-                                bottom: BorderSide(
-                                    width: 3, color: AppColor.primary)))
+                                bottom:
+                                    BorderSide(width: 3, color: AppColor.red)))
                         : null,
                     child: Text(
                       "${translateDatabase(categoriesModel.categoriesNamaAr, categoriesModel.categoriesName)}",

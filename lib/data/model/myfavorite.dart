@@ -1,55 +1,49 @@
 class MyFavoriteModel {
   String? favoriteId;
   String? favoriteUsersid;
-  String? favoriteItemsid;
-  String? itemsId;
-  String? itemsName;
-  String? itemsNameAr;
-  String? itemsDesc;
-  String? itemsDescAr;
-  String? itemsImage;
-  String? itemsCount;
-  String? itemsActive;
-  String? itemsPrice;
-  String? itemsDiscount;
-  String? itemsDate;
-  String? itemsCat;
+  String? favoriteAddbookid;
+  String? addbookId;
+  String? addbookTitle;
+  String? addbookDescription;
+  String? addbookAuthor;
+  String? addbookCity;
+  String? addbookPrice;
+  String? addbookImage;
+  String? addbookCommunication;
+  String? addbookDate;
+  String? addbookCategoriesid;
   String? usersId;
 
   MyFavoriteModel(
       {this.favoriteId,
       this.favoriteUsersid,
-      this.favoriteItemsid,
-      this.itemsId,
-      this.itemsName,
-      this.itemsNameAr,
-      this.itemsDesc,
-      this.itemsDescAr,
-      this.itemsImage,
-      this.itemsCount,
-      this.itemsActive,
-      this.itemsPrice,
-      this.itemsDiscount,
-      this.itemsDate,
-      this.itemsCat,
+      this.favoriteAddbookid,
+      this.addbookId,
+      this.addbookTitle,
+      this.addbookDescription,
+      this.addbookAuthor,
+      this.addbookCity,
+      this.addbookPrice,
+      this.addbookImage,
+      this.addbookCommunication,
+      this.addbookDate,
+      this.addbookCategoriesid,
       this.usersId});
 
   MyFavoriteModel.fromJson(Map<String, dynamic> json) {
     favoriteId = json['favorite_id'];
     favoriteUsersid = json['favorite_usersid'];
-    favoriteItemsid = json['favorite_itemsid'];
-    itemsId = json['items_id'];
-    itemsName = json['items_name'];
-    itemsNameAr = json['items_name_ar'];
-    itemsDesc = json['items_desc'];
-    itemsDescAr = json['items_desc_ar'];
-    itemsImage = json['items_image'];
-    itemsCount = json['items_count'];
-    itemsActive = json['items_active'];
-    itemsPrice = json['items_price'];
-    itemsDiscount = json['items_discount'];
-    itemsDate = json['items_date'];
-    itemsCat = json['items_cat'];
+    favoriteAddbookid = json['favorite_addbookid'];
+    addbookId = json['addbook_id'];
+    addbookTitle = json['addbook_title'];
+    addbookDescription = json['addbook_description'];
+    addbookAuthor = json['addbook_author'];
+    addbookCity = json['addbook_city'];
+    addbookPrice = json['addbook_price'];
+    addbookImage = json['addbook_image'];
+    addbookCommunication = json['addbook_communication'];
+    addbookDate = json['addbook_date'];
+    addbookCategoriesid = json['addbook_categoriesid'];
     usersId = json['users_id'];
   }
 
@@ -57,19 +51,17 @@ class MyFavoriteModel {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['favorite_id'] = favoriteId;
     data['favorite_usersid'] = favoriteUsersid;
-    data['favorite_itemsid'] = favoriteItemsid;
-    data['items_id'] = itemsId;
-    data['items_name'] = itemsName;
-    data['items_name_ar'] = itemsNameAr;
-    data['items_desc'] = itemsDesc;
-    data['items_desc_ar'] = itemsDescAr;
-    data['items_image'] = itemsImage;
-    data['items_count'] = itemsCount;
-    data['items_active'] = itemsActive;
-    data['items_price'] = itemsPrice;
-    data['items_discount'] = itemsDiscount;
-    data['items_date'] = itemsDate;
-    data['items_cat'] = itemsCat;
+    data['favorite_addbookid'] = favoriteAddbookid;
+    data['addbook_id'] = addbookId;
+    data['addbook_title'] = addbookTitle;
+    data['addbook_description'] = addbookDescription;
+    data['addbook_author'] = addbookAuthor;
+    data['addbook_city'] = addbookCity;
+    data['addbook_price'] = addbookPrice;
+    data['addbook_image'] = addbookImage;
+    data['addbook_communication'] = addbookCommunication;
+    data['addbook_date'] = addbookDate;
+    data['addbook_categoriesid'] = addbookCategoriesid;
     data['users_id'] = usersId;
     return data;
   }

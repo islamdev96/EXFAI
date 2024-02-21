@@ -12,10 +12,25 @@ class AppRoute {
   static const String verfiyCodeSignUp = "/verfiycodesignup";
   // Home
   static const String homepage = "/homepage";
-  static const String items = "/items";
+  static const String addbook = "/addbook";
   static const String productdetails = "/productdetails";
   static const String myFavroite = "/myfavroite";
   static const String cart = "/cart";
+
+  // Categories
+
+  static const String categoriesView = "/categoriesview";
+  static const String categoriesAdd = "/categoriesadd";
+  static const String categoriesEdit = "/categoriesedit";
+  static const String categoriesDetails = "/categoriesdetails";
+
+//AddBook
+  static const String addbookView = "/addbookview";
+  static const String addbookAdd = "/addbookadd";
+  static const String addbookEdit = "/addbookedit";
+  static const String addbookDelete = "/addbookdelete";
+  static const String addbookDetails = "/addbookdetails";
+
   // Address
 
   static const String addressview = "/addressview";

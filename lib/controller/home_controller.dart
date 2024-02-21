@@ -1,6 +1,6 @@
 // ignore_for_file: overridden_fields
 
-import 'package:exfai/data/model/add_book_model.dart';
+import 'package:exfai/addbook/addbook_model.dart';
 
 import '../../all_export.dart';
 
@@ -23,17 +23,13 @@ class HomeControllerImp extends HomeController {
   @override
   HomeData homedata = HomeData(Get.find());
 
-  // List data = [];
   List categories = [];
-  List items = [];
-  List addbook = [];
-
-  List settingsdata = [];
   // List items = [];
+  List addbook = [];
+  List settingsdata = [];
 
   @override
   initialData() {
-    // myServices.sharedPreferences.clear() ;
     lang = myServices.sharedPreferences.getString("lang");
     username = myServices.sharedPreferences.getString("username");
     id = myServices.sharedPreferences.getString("id");
@@ -55,28 +51,15 @@ class HomeControllerImp extends HomeController {
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
         categories.addAll(response['categories']['data']);
-        items.addAll(response['items']['data']);
-        addbook.addAll(response['addbook']['data']); //////////////////////////
-
-        print("addbook");
+        // items.addAll(response['items']['data']);
+        addbook.addAll(response['addbook']['data']);
         settingsdata.addAll(response['settings']['data']);
         if (settingsdata.isNotEmpty) {
-          if (settingsdata[0]['settings_titleome'] != null) {
-            titleHomeCard = settingsdata[0]['settings_titleome'] ?? "";
-          }
-          if (settingsdata[0]['settings_bodyHome'] != null) {
-            bodyHomeCard = settingsdata[0]['settings_bodyHome'] ?? "";
-          }
-          if (settingsdata[0]['settings_deliverytime'] != null) {
-            deliveryTime = settingsdata[0]['settings_deliverytime'] ?? "";
-            myServices.sharedPreferences
-                .setString("deliverytime", deliveryTime);
-          }
+          titleHomeCard = settingsdata[0]['settings_titleome'] ?? "";
+          bodyHomeCard = settingsdata[0]['settings_bodyHome'] ?? "";
+          deliveryTime = settingsdata[0]['settings_deliverytime'] ?? "";
+          myServices.sharedPreferences.setString("deliverytime", deliveryTime);
         }
-        // titleHomeCard = settingsdata[0]['settings_titleome'];
-        // bodyHomeCard = settingsdata[0]['settings_bodyHome'] ?? "";
-        // deliveryTime = settingsdata[0]['settings_deliverytime'];
-        // myServices.sharedPreferences.setString("deliverytime", deliveryTime);
       } else {
         statusRequest = StatusRequest.failure;
       }
@@ -86,21 +69,21 @@ class HomeControllerImp extends HomeController {
 
   @override
   goToItems(categories, selectedCat, categoryid) {
-    Get.toNamed(AppRoute.items, arguments: {
+    Get.toNamed(AppRoute.addbook, arguments: {
       "categories": categories,
       "selectedcat": selectedCat,
       "catid": categoryid
     });
   }
 
-  goToPageProductDetails(itemsModel) {
-    Get.toNamed("productdetails", arguments: {"itemsmodel": itemsModel});
+  goToPageProductDetails(addBookModel) {
+    Get.toNamed("productdetails", arguments: {"addBookModel": addBookModel});
   }
 }
 
 class SearchMixController extends GetxController {
-  List<ItemsModel> listdata = [];
-  List<AddBookModel> listdata2 = [];
+  List<AddBookModel> listdata = [];
+  // List<AddBookModel> listdata2 = [];
 
   late StatusRequest statusRequest;
   HomeData homedata = HomeData(Get.find());
@@ -113,7 +96,7 @@ class SearchMixController extends GetxController {
       if (response['status'] == "success") {
         listdata.clear();
         List responsedata = response['data'];
-        listdata.addAll(responsedata.map((e) => ItemsModel.fromJson(e)));
+        listdata.addAll(responsedata.map((e) => AddBookModel.fromJson(e)));
       } else {
         statusRequest = StatusRequest.failure;
       }

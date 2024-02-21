@@ -1,11 +1,37 @@
+import 'dart:io';
+
+import 'package:dartz/dartz.dart';
+
 import '../../../../all_export.dart';
 
-class ItemsData {
+class AddbookData {
   Crud crud;
-  ItemsData(this.crud);
-  getData(String id, String userid) async {
+  AddbookData(this.crud);
+  Future<dynamic> getData(String id, String userid) async {
     var response = await crud
-        .postData(AppLink.items, {"id": id.toString(), "usersid": userid});
+        .postData(AppLink.addbook, {"id": id.toString(), "usersid": userid});
+    return response.fold((l) => l, (r) => r);
+  }
+
+  add(Map data, File file) async {
+    var response =
+        await crud.addRequestWithImageOne(AppLink.addbookAdd, data, file);
+    return response.fold((l) => l, (r) => r);
+  }
+
+  delete(Map data) async {
+    var response = await crud.postData(AppLink.addbookDelete, data);
+    return response.fold((l) => l, (r) => r);
+  }
+
+  edit(Map data, [File? file]) async {
+    Either<StatusRequest, Map> response;
+    if (file == null) {
+      response = await crud.postData(AppLink.addbookEdit, data);
+    } else {
+      response =
+          await crud.addRequestWithImageOne(AppLink.categoriesEdit, data, file);
+    }
     return response.fold((l) => l, (r) => r);
   }
 }

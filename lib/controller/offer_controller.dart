@@ -1,5 +1,6 @@
 // ignore_for_file: overridden_fields
 
+import 'package:exfai/addbook/addbook_model.dart';
 import 'package:exfai/data/datasource/remote/offer_data.dart';
 
 import '../all_export.dart';
@@ -7,7 +8,7 @@ import '../all_export.dart';
 class OffersController extends SearchMixController {
   OfferData offerData = OfferData(Get.find());
 
-  List<ItemsModel> data = [];
+  List<AddBookModel> data = [];
 
   @override
   late StatusRequest statusRequest;
@@ -23,7 +24,7 @@ class OffersController extends SearchMixController {
       // Start backend
       if (response['status'] == "success") {
         List listdata2 = response['data'];
-        data.addAll(listdata2.map((e) => ItemsModel.fromJson(e)));
+        data.addAll(listdata2.map((e) => AddBookModel.fromJson(e)));
       } else {
         statusRequest = StatusRequest.failure;
       }

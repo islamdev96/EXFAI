@@ -21,13 +21,13 @@ class CartController extends GetxController {
 
   double priceorders = 0.0;
 
-  int totalcountitems = 0;
+  int totalcountaddbook = 0;
 
-  add(String itemsid) async {
+  add(String addbookid) async {
     statusRequest = StatusRequest.loading;
     update();
     var response = await cartData.addCart(
-        myServices.sharedPreferences.getString("id")!, itemsid);
+        myServices.sharedPreferences.getString("id")!, addbookid);
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       // Start backend
@@ -57,12 +57,12 @@ class CartController extends GetxController {
     return (priceorders - priceorders * discountcoupon! / 100);
   }
 
-  delete(String itemsid) async {
+  delete(String addbookid) async {
     statusRequest = StatusRequest.loading;
     update();
 
     var response = await cartData.deleteCart(
-        myServices.sharedPreferences.getString("id")!, itemsid);
+        myServices.sharedPreferences.getString("id")!, addbookid);
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       // Start backend
@@ -106,7 +106,7 @@ class CartController extends GetxController {
   }
 
   resetVarCart() {
-    totalcountitems = 0;
+    totalcountaddbook = 0;
     priceorders = 0.0;
     data.clear();
   }
@@ -130,7 +130,7 @@ class CartController extends GetxController {
           Map dataresponsecountprice = response['countprice'];
           data.clear();
           data.addAll(dataresponse.map((e) => CartModel.fromJson(e)));
-          totalcountitems = int.parse(dataresponsecountprice['totalcount']);
+          totalcountaddbook = int.parse(dataresponsecountprice['totalcount']);
           priceorders = double.parse(dataresponsecountprice['totalprice']);
         }
       } else {

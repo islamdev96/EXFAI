@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import '../../all_export.dart';
 
 class ProductDetails extends StatelessWidget {
@@ -53,7 +55,7 @@ class ProductDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "${translateDatabase(controller.itemsModel.itemsNameAr, controller.itemsModel.itemsName)}",
+            "${translateDatabase(controller.addBookModel.addbookTitle, controller.addBookModel.addbookTitle)}",
             style: Theme.of(context).textTheme.displayLarge!.copyWith(
                   color: AppColor.black,
                 ),
@@ -62,12 +64,12 @@ class ProductDetails extends StatelessWidget {
           PriceAndCountItems(
             onAdd: controller.add,
             onRemove: controller.remove,
-            price: "${controller.itemsModel.itemsPrice}",
+            price: "${controller.addBookModel.addbookPrice}",
             count: "${controller.countitems}",
           ),
           const SizedBox(height: 10),
           Text(
-            "${translateDatabase(controller.itemsModel.itemsDescAr, controller.itemsModel.itemsDesc)}",
+            "${translateDatabase(controller.addBookModel.addbookDescription, controller.addBookModel.addbookDescription)}",
             style: Theme.of(context).textTheme.displayLarge!.copyWith(
                   fontSize: 16,
                   fontWeight: FontWeight.w300,

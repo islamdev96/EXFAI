@@ -39,7 +39,7 @@ class OffersView extends StatelessWidget {
                           itemCount: controller.data.length,
                           itemBuilder: ((context, index) {
                             return CustomListItemsOffer(
-                                itemsModel: controller.data[index]);
+                                addBookModel: controller.data[index]);
                           }),
                         ),
                       )
@@ -51,7 +51,7 @@ class OffersView extends StatelessWidget {
                             itemCount: controller.data.length,
                             itemBuilder: ((context, index) {
                               return CustomListItemsOffer(
-                                  itemsModel: controller.data[index]);
+                                  addBookModel: controller.data[index]);
                             }))),
               ]),
             ));

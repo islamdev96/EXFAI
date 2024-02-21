@@ -7,14 +7,16 @@ environment:
   sdk: ">=3.0.1 <4.0.0"
 
 dependencies:
-  auto_animated: ^3.0.1
-  badges: ^3.1.1
+  auto_animated: ^3.2.0
+  badges: ^3.1.2
   bd_l10n: ^1.2.0
   cached_network_image: ^3.2.0
   cloud_firestore: ^4.8.3
   cupertino_icons: ^1.0.5
   dartz: ^0.10.1
+  drop_down_list: ^0.0.6
   dropdown_search: ^5.0.6
+  file_picker: ^6.1.1
   firebase_core: ^2.15.0
   firebase_messaging: ^14.5.0
   flutter:
@@ -37,8 +39,10 @@ dependencies:
   google_sign_in: ^6.1.0
   grouped_list: ^5.1.2
   http: ^1.1.0
-  image_picker: ^1.0.2
-  image_pickers: ^2.0.0+2
+  image_picker: ^1.0.7
+  image_pickers: ^2.0.4+8
+  images_picker: ^1.2.11
+  intl: ^0.18.1
   jiffy: ^6.1.0
   lottie: ^3.0.0
   mysql1: ^0.20.0

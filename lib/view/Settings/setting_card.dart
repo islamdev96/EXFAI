@@ -1,4 +1,6 @@
- import 'package:exfai/view/Settings/language_selection_dialog.dart';
+// ignore_for_file: deprecated_member_use, unused_element
+
+import 'package:exfai/view/Settings/language_selection_dialog.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../all_export.dart';

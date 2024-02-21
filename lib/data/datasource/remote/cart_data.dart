@@ -3,21 +3,21 @@ import '../../../../all_export.dart';
 class CartData {
   Crud crud;
   CartData(this.crud);
-  addCart(String usersid, String itemsid) async {
-    var response = await crud
-        .postData(AppLink.cartadd, {"usersid": usersid, "itemsid": itemsid});
-    return response.fold((l) => l, (r) => r);
-  }
-
-  deleteCart(String usersid, String itemsid) async {
-    var response = await crud
-        .postData(AppLink.cartdelete, {"usersid": usersid, "itemsid": itemsid});
-    return response.fold((l) => l, (r) => r);
-  }
-
-  getCountCart(String usersid, String itemsid) async {
+  addCart(String usersid, String addbookid) async {
     var response = await crud.postData(
-        AppLink.cartgetcountitems, {"usersid": usersid, "itemsid": itemsid});
+        AppLink.cartadd, {"usersid": usersid, "addbookid": addbookid});
+    return response.fold((l) => l, (r) => r);
+  }
+
+  deleteCart(String usersid, String addbookid) async {
+    var response = await crud.postData(
+        AppLink.cartdelete, {"usersid": usersid, "addbookid": addbookid});
+    return response.fold((l) => l, (r) => r);
+  }
+
+  getCountCart(String usersid, String addbookid) async {
+    var response = await crud.postData(AppLink.cartgetcountaddbook,
+        {"usersid": usersid, "addbookid": addbookid});
     return response.fold((l) => l, (r) => r);
   }
 
