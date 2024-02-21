@@ -18,6 +18,7 @@ class MyApp extends GetWidget<LocaleController> {
     return ScreenUtilInit(
       useInheritedMediaQuery: true,
       designSize: const Size(360, 690),
+      //
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
