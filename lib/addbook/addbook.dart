@@ -1,5 +1,3 @@
-// ignore_for_file: unused_local_variable
-
 import 'package:exfai/addbook/addbook_controllaer.dart';
 import 'package:exfai/addbook/addbook_model.dart';
 import '../all_export.dart';

@@ -1,6 +1,9 @@
 import 'package:exfai/addbook/view/screen/addbook/add.dart';
 import 'package:exfai/addbook/view/screen/addbook/edit.dart';
 import 'package:exfai/addbook/view/screen/addbook/view.dart';
+import 'package:exfai/addbook/view/screen/categories/add.dart';
+import 'package:exfai/addbook/view/screen/categories/edit.dart';
+import 'package:exfai/addbook/view/screen/categories/view.dart';
 
 import 'all_export.dart';
 
@@ -15,11 +18,12 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoute.cart, page: () => const Cart()),
 
   //categories
-
+  GetPage(name: AppRoute.categoriesAdd, page: () => const CategoriesAdd()),
+  GetPage(name: AppRoute.categoriesView, page: () => const CategoriesView()),
+  GetPage(name: AppRoute.categoriesEdit, page: () => const CategoriesEdit()),
+  // GetPage(
+  //     name: AppRoute.categoriesDetails, page: () => const CategoriesDetails()),
   // GetPage(name: AppRoute.categories, page: () => const Categories()),
-  // GetPage(name: AppRoute.categoriesAdd, page: () => const CategoriesAdd()),
-  // GetPage(name: AppRoute.categoriesView, page: () => const CategoriesView()),
-  // GetPage(name: AppRoute.categoriesDetails, page: () => const CategoriesDetails()),
 
   //AddBook
   GetPage(name: AppRoute.addbookView, page: () => const AddBookView()),

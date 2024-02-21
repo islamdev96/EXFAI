@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_unnecessary_containers
-
 import 'dart:io';
 import 'package:exfai/all_export.dart';
 import 'package:file_picker/file_picker.dart';

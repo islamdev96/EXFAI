@@ -1,5 +1,3 @@
-// ignore_for_file: unused_field
-
 import 'dart:io';
 
 import 'package:exfai/view/widget/home/page_app_bar.dart';

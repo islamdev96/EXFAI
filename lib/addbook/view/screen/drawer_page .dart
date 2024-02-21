@@ -35,7 +35,7 @@ class CustomDrawer extends StatelessWidget {
               title:
                   const Text('الرئيسية', style: TextStyle(color: Colors.white)),
               onTap: () {
-                Get.to(const HomePageAdmin());
+                // Get.to(const HomePageAdmin());
                 // أضف العمليات اللازمة عند النقر على "الرئيسية"
 
                 // Add your navigation logic here
