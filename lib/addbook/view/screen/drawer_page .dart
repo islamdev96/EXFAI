@@ -1,15 +1,19 @@
 // ignore_for_file: file_names
 
-import 'package:exfai/addbook/test/test.dart';
 import 'package:exfai/addbook/view/screen/home.dart';
 import 'package:exfai/view/widget/home/test.dart';
 
-import '../../addbook_home.dart';
+import 'addbook_home.dart';
 import '../../../all_export.dart';
 
-class CustomDrawer extends StatelessWidget {
+class CustomDrawer extends StatefulWidget {
   const CustomDrawer({super.key});
 
+  @override
+  State<CustomDrawer> createState() => _CustomDrawerState();
+}
+
+class _CustomDrawerState extends State<CustomDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -67,7 +71,7 @@ class CustomDrawer extends StatelessWidget {
               title: const Text('الكتب العامة',
                   style: TextStyle(color: Colors.white)),
               onTap: () {
-                Get.to(() => const AddBookPage());
+                // Get.to(() => const AddBookPage());
                 // Add your navigation logic here
               },
             ),

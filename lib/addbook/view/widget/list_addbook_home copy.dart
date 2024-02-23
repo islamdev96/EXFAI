@@ -1,6 +1,6 @@
-import 'package:exfai/addbook/addbook_model.dart';
+import 'package:exfai/addbook/data/model/addbook_model.dart';
 
-import '../all_export.dart';
+import '../../../all_export.dart';
 
 class ListAddBookHome extends GetView<HomeControllerImp> {
   const ListAddBookHome({
@@ -55,13 +55,13 @@ class _AddBookHomeState extends State<AddBookHome> {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: CachedNetworkImage(
-                imageUrl:
-                    "${AppLink.imagesAddBook}/${widget.addBookModel.addbookImage}",
-                height: 150,
-                width: 250,
-                fit: BoxFit.fill,
-              ),
+              // child: CachedNetworkImage(
+              //   imageUrl:
+              //       "${AppLink.imagesAddBook}/${widget.addBookModel.addbookImage}",
+              //   height: 150,
+              //   width: 250,
+              //   fit: BoxFit.fill,
+              // ),
             ),
             const SizedBox(height: 10),
             Column(

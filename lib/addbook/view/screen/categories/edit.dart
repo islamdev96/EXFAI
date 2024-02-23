@@ -1,13 +1,18 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:exfai/addbook/controller/categories/edit_controller.dart';
-import 'package:exfai/addbook/validinput.dart';
+import 'package:exfai/addbook/function/validinput.dart';
 import 'package:exfai/all_export.dart';
 import 'package:exfai/core/shared/customtextformglobal.dart';
 
-class CategoriesEdit extends StatelessWidget {
+class CategoriesEdit extends StatefulWidget {
   const CategoriesEdit({super.key});
 
+  @override
+  State<CategoriesEdit> createState() => _CategoriesEditState();
+}
+
+class _CategoriesEditState extends State<CategoriesEdit> {
   @override
   Widget build(BuildContext context) {
     CategoriesEditController controller = Get.put(CategoriesEditController());

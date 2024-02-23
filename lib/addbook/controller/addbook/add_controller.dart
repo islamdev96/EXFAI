@@ -3,8 +3,9 @@
 import 'dart:io';
 
 import 'package:drop_down_list/drop_down_list.dart';
-import 'package:exfai/addbook/controller/addbook_data.dart';
+import 'package:exfai/addbook/data/addbook_data.dart';
 import 'package:exfai/addbook/controller/addbook/view_controller.dart';
+import 'package:exfai/addbook/data/model/addbook_model.dart';
 import 'package:exfai/addbook/function/uploadfile.dart';
 import 'package:exfai/data/datasource/remote/categories_data.dart';
 
@@ -23,6 +24,7 @@ class AddBookAddController extends GetxController {
   late TextEditingController author;
   late TextEditingController city;
   late TextEditingController price;
+
   late TextEditingController communication;
   TextEditingController? count;
   TextEditingController? discount;
@@ -34,81 +36,27 @@ class AddBookAddController extends GetxController {
   File? file;
 
   showOptionImage() async {
-    print("Showing option image menu");
     showbottonmenu(chooseImageCamera, chooseImageGallery);
   }
 
   chooseImageCamera() async {
-    print("Choosing image from camera");
     file = await imageUploadCamera();
     update();
   }
 
   chooseImageGallery() async {
-    print("Choosing image from gallery");
     file = await fileUploadGallery();
     update();
   }
 
-  // addData() async {
-  //   print("Adding data...");
-  //   if (formState.currentState!.validate()) {
-  //     if (file == null) {
-  //       Get.snackbar("Warning", "Please Choose Image ");
-  //       return; // توقف عن إرسال البيانات إذا لم يتم اختيار الصورة
-  //     }
-
-  //     // طباعة البيانات قبل إرسالها
-  //     print("Data before sending to server:");
-  //     print("Title: ${title.text}");
-  //     print("Description: ${description.text}");
-  //     print("Author: ${author.text}");
-  //     print("City: ${city.text}");
-  //     print("Price: ${price.text}");
-  //     print("Communication: ${communication.text}");
-  //     print("Count: ${count!.text}");
-  //     print("Discount: ${discount!.text}");
-  //     print("Category ID: ${categorieID!.text}");
-  //     print("Date now: ${DateTime.now()}");
-
-  //     statusRequest = StatusRequest.loading;
-  //     update();
-  //     Map data = {
-  //       "title": title.text,
-  //       "description": description.text,
-  //       "author": author.text,
-  //       "city": city.text,
-  //       "price": price.text,
-  //       "communication": communication.text,
-  //       "count": count!.text,
-  //       "discount": discount!.text,
-  //       "categorieID": categorieID!.text,
-  //       "datenow": DateTime.now().toString()
-  //     };
-
-  //     var response = await addBookData.add(data, file!);
-
-  //     statusRequest = handlingData(response);
-
-  //     if (StatusRequest.success == statusRequest) {
-  //       // Start backend
-  //       if (response['status'] == "success") {
-  //         Get.offNamed(AppRoute.addbookView);
-  //         AddBookViewController c = Get.find();
-  //         c.getData();
-  //       } else {
-  //         statusRequest = StatusRequest.failure;
-  //       }
-  //       // End
-  //     }
-  //     update();
-  //   }
-  // }
-
   addData() async {
-    print("Adding data...");
     if (formState.currentState!.validate()) {
-      if (file == null) Get.snackbar("Warning", "Please Choose Image ");
+      if (file == null) {
+        Get.snackbar("Warning", "Please Choose Image ");
+        return; // توقف عن إرسال البيانات إذا لم يتم اختيار الصورة
+      }
+
+      // طباعة البيانات قبل إرسالها
 
       statusRequest = StatusRequest.loading;
       update();
@@ -144,8 +92,52 @@ class AddBookAddController extends GetxController {
     }
   }
 
+  // addData() async {
+  //   print(
+  //       "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+  //   print("Adding data...");
+  //   print(
+  //       "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+  //   if (formState.currentState!.validate()) {
+  //     if (file == null) Get.snackbar("Warning", "Please Choose Image ");
+
+  //     statusRequest = StatusRequest.loading;
+  //     update();
+  //     Map data = {
+  //       "title": title.text,
+  //       "description": description.text,
+  //       "author": author.text,
+  //       "city": city.text,
+  //       "price": price.text,
+  //       "communication": communication.text,
+  //       "count": count!.text,
+  //       "discount": discount!.text,
+  //       "categoriesid": categoriesid!.text,
+  //       "datenow": DateTime.now().toString()
+  //     };
+
+  //     var response = await addBookData.add(data, file!);
+
+  //     statusRequest = handlingData(response);
+
+  //     if (StatusRequest.success == statusRequest) {
+  //       // Start backend
+  //       if (response['status'] == "success") {
+  //         Get.offNamed(AppRoute.addbookView);
+  //         AddBookViewController c = Get.find();
+  //         c.getData();
+  //       } else {
+  //         statusRequest = StatusRequest.failure;
+  //       }
+  //       // End
+  //     }
+  //     update();
+  //   }
+  // }
+
   getCategories() async {
-    print("Getting categories...");
     CategoriesData categoriesData = CategoriesData(Get.find());
     statusRequest = StatusRequest.loading;
     update();

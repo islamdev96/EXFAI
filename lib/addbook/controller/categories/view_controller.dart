@@ -49,7 +49,7 @@ class CategoriesController extends GetxController {
   }
 
   myback() {
-    Get.offAllNamed(AppRoute.homepage);
+    Get.back();
     return Future.value(false);
   }
 }

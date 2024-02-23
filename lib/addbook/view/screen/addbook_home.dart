@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:exfai/view/widget/home/page_app_bar.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../all_export.dart';
+import '../../../all_export.dart';
 
 class BookDetailsPage extends StatefulWidget {
   const BookDetailsPage({super.key});
@@ -14,15 +14,13 @@ class BookDetailsPage extends StatefulWidget {
 }
 
 class _BookDetailsPageState extends State<BookDetailsPage> {
-  final TextEditingController _titleController = TextEditingController();
   final TextEditingController _authorController = TextEditingController();
   final TextEditingController _categoryController = TextEditingController();
-  final TextEditingController _priceController = TextEditingController();
   final TextEditingController _contactMethodController =
       TextEditingController();
-  XFile? _image; // الصورة المحددة
-  String? _selectedCity; // المدينة المحددة
 
+  XFile? _image; // الصورة المحددة
+  final TextEditingController _priceController = TextEditingController();
   final List<String> _saudiMajorCities = [
     'الرياض',
     'جدة',
@@ -44,6 +42,9 @@ class _BookDetailsPageState extends State<BookDetailsPage> {
     'سكاكا',
     'الجبيل'
   ];
+
+  String? _selectedCity; // المدينة المحددة
+  final TextEditingController _titleController = TextEditingController();
 
   Future<void> _openGallery() async {
     final image = await ImagePicker().pickImage(source: ImageSource.gallery);

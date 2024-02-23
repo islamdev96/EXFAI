@@ -28,7 +28,7 @@ List<GetPage<dynamic>>? routes = [
   //AddBook
   GetPage(name: AppRoute.addbookView, page: () => const AddBookView()),
   GetPage(name: AppRoute.addbookAdd, page: () => const AddBookAdd()),
-  // GetPage(name: AppRoute.addbookEdit, page: () => const AddBookEdit()),
+  GetPage(name: AppRoute.addbookEdit, page: () => const AddBookEdit()),
   // GetPage(name: AppRoute.addbookDetails, page: () => const AddBookDetails()),
   // GetPage(name: AppRoute.addbookDelete, page: () => const AddBookDelete()),
 

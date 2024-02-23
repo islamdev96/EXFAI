@@ -1,6 +1,6 @@
-import 'package:exfai/addbook/addbook_controllaer.dart';
+import 'package:exfai/addbook/controller/addbook_controllaer.dart';
 
-import '../all_export.dart';
+import '../../../all_export.dart';
 
 class ListCategoriesAddBook extends GetView<AddBookControllerImp> {
   const ListCategoriesAddBook({super.key});

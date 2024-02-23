@@ -1,7 +1,7 @@
-import 'package:exfai/addbook/addbook_controllaer.dart';
-import 'package:exfai/addbook/addbook_model.dart';
+import 'package:exfai/addbook/controller/addbook_controllaer.dart';
+import 'package:exfai/addbook/data/model/addbook_model.dart';
 
-import '../../all_export.dart';
+import '../../../../all_export.dart';
 
 class CustomListAddBook extends GetView<AddBookControllerImp> {
   final AddBookModel addBookModel;

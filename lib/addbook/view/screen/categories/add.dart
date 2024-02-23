@@ -1,14 +1,21 @@
+import 'package:flutter/material.dart';
 import 'package:exfai/addbook/controller/categories/add_controller.dart';
-import 'package:exfai/addbook/validinput.dart';
+import 'package:exfai/addbook/function/validinput.dart';
 import 'package:exfai/core/shared/customtextformglobal.dart';
 import 'package:exfai/all_export.dart';
 
-class CategoriesAdd extends StatelessWidget {
+class CategoriesAdd extends StatefulWidget {
   const CategoriesAdd({super.key});
 
   @override
+  State<CategoriesAdd> createState() => _CategoriesAddState();
+}
+
+class _CategoriesAddState extends State<CategoriesAdd> {
+  final CategoriesAddController controller = Get.put(CategoriesAddController());
+
+  @override
   Widget build(BuildContext context) {
-    CategoriesAddController controller = Get.put(CategoriesAddController());
     return Scaffold(
       appBar: AppBar(
         title: const Text('Add Category'),
@@ -16,7 +23,7 @@ class CategoriesAdd extends StatelessWidget {
       body: GetBuilder<CategoriesAddController>(
         builder: (controller) => HandlingDataView(
           statusRequest: controller.statusRequest!,
-          widget: Container(
+          widget: Padding(
             padding: const EdgeInsets.all(10),
             child: Form(
               key: controller.formState,
@@ -45,15 +52,18 @@ class CategoriesAdd extends StatelessWidget {
                     isNumber: false,
                   ),
                   Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: MaterialButton(
-                        color: AppColor.primary,
-                        textColor: AppColor.white,
-                        onPressed: () {
-                          controller.showOptionImage();
-                        },
-                        child: const Text("choose item image "),
-                      )),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: MaterialButton(
+                      minWidth: double
+                          .infinity, // Ensuring the button takes up the full width
+                      color: AppColor.primary,
+                      textColor: AppColor.white,
+                      onPressed: () {
+                        controller.showOptionImage();
+                      },
+                      child: const Text("Choose Item Image"),
+                    ),
+                  ),
                   if (controller.file != null)
                     Image.file(
                       controller.file!,

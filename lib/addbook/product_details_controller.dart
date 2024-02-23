@@ -1,4 +1,4 @@
-import 'package:exfai/addbook/addbook_model.dart';
+import 'package:exfai/addbook/data/model/addbook_model.dart';
 
 import '../../../all_export.dart';
 

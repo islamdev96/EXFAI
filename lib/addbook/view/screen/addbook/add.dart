@@ -3,15 +3,20 @@
 // ignore_for_file: unused_local_variable, avoid_print
 
 import 'package:exfai/addbook/controller/addbook/add_controller.dart';
-import 'package:exfai/addbook/validinput.dart';
+import 'package:exfai/addbook/function/validinput.dart';
 import 'package:exfai/core/shared/customdropdownsearch.dart';
 import 'package:exfai/core/shared/customtextformglobal.dart';
 
 import '../../../../all_export.dart';
 
-class AddBookAdd extends StatelessWidget {
+class AddBookAdd extends StatefulWidget {
   const AddBookAdd({super.key});
 
+  @override
+  State<AddBookAdd> createState() => _AddBookAddState();
+}
+
+class _AddBookAddState extends State<AddBookAdd> {
   @override
   Widget build(BuildContext context) {
     print("Building AddBookAdd view");

@@ -1,12 +1,17 @@
-import 'package:exfai/addbook/addbook_controllaer.dart';
-import 'package:exfai/addbook/addbook_model.dart';
-import '../all_export.dart';
+import 'package:exfai/addbook/controller/addbook_controllaer.dart';
+import 'package:exfai/addbook/data/model/addbook_model.dart';
+import '../../../all_export.dart';
 
-class AddBook extends StatelessWidget {
+class AddBook extends StatefulWidget {
   const AddBook({
     super.key,
   });
 
+  @override
+  State<AddBook> createState() => _AddBookState();
+}
+
+class _AddBookState extends State<AddBook> {
   @override
   Widget build(BuildContext context) {
     final AddBookControllerImp controller = Get.put(

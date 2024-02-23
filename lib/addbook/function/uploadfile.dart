@@ -49,8 +49,8 @@ void showbottonmenu(
             ),
             ListTile(
               onTap: () async {
-                File? file = await imageUploadCamera();
-                if (file != null) {
+                File? files = await imageUploadCamera();
+                if (files != null) {
                   Get.back();
                   // Do something with the selected camera image.
                 }
@@ -66,8 +66,8 @@ void showbottonmenu(
             ),
             ListTile(
               onTap: () async {
-                File? file = await fileUploadGallery();
-                if (file != null) {
+                File? files = await fileUploadGallery();
+                if (files != null) {
                   Get.back();
                   // Do something with the selected gallery image.
                 }

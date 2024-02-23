@@ -1,10 +1,12 @@
 import 'dart:io';
 
+import 'package:drop_down_list/drop_down_list.dart';
 import 'package:drop_down_list/model/selected_list_item.dart';
-import 'package:exfai/addbook/addbook_model.dart';
-import 'package:exfai/addbook/controller/addbook_data.dart';
+import 'package:exfai/addbook/data/model/addbook_model.dart';
+import 'package:exfai/addbook/data/addbook_data.dart';
 import 'package:exfai/addbook/controller/addbook/view_controller.dart';
 import 'package:exfai/addbook/function/uploadfile.dart';
+import 'package:exfai/data/datasource/remote/categories_data.dart';
 
 import '../../../all_export.dart';
 
@@ -35,7 +37,16 @@ class AddBookEditController extends GetxController {
     update();
   }
 
-  chooseImage() async {
+  showOptionImage() async {
+    showbottonmenu(chooseImageCamera, chooseImageGallery);
+  }
+
+  chooseImageCamera() async {
+    file = await imageUploadCamera();
+    update();
+  }
+
+  chooseImageGallery() async {
     file = await fileUploadGallery();
     update();
   }
@@ -81,8 +92,37 @@ class AddBookEditController extends GetxController {
     }
   }
 
+  getCategories() async {
+    CategoriesData categoriesData = CategoriesData(Get.find());
+    statusRequest = StatusRequest.loading;
+    update();
+
+    var response = await categoriesData.get();
+
+    statusRequest = handlingData(response);
+
+    if (StatusRequest.success == statusRequest) {
+      // Start backend
+      if (response['status'] == "success") {
+        List<CategoriesModel> data = [];
+        List datalist = response['data'];
+        data.addAll(datalist.map((e) => CategoriesModel.fromJson(e)));
+        for (int i = 0; i < data.length; i++) {
+          dropdownlist.add(SelectedListItem(
+              name: data[i].categoriesName!, value: data[i].categoriesId));
+        }
+      } else {
+        statusRequest = StatusRequest.failure;
+      }
+      // End
+    }
+    update();
+  }
+
   @override
   void onInit() {
+    getCategories();
+
     Get.offNamed(AppRoute.addbookEdit,
         arguments: {'AddBookModel': addBookModel});
     title = TextEditingController();
@@ -97,17 +137,44 @@ class AddBookEditController extends GetxController {
     categoriesid = TextEditingController();
     dropdownname = TextEditingController();
     dropdownid = TextEditingController();
-    title.text = addBookModel!.addbookTitle!;
-    description.text = addBookModel!.addbookDescription!;
-    author.text = addBookModel!.addbookAuthor!;
-    city.text = addBookModel!.addbookCity!;
-    price.text = addBookModel!.addbookPrice!;
-    communication.text = addBookModel!.addbookCommunication!;
-    count!.text = addBookModel!.addbookCount!;
-    discount!.text = addBookModel!.addbookDiscount!;
-    categoriesid!.text = addBookModel!.categoriesId!;
-    categorieName!.text = addBookModel!.categoriesName!;
-    active = addBookModel!.addbookActive;
+    // title.text = addBookModel!.addbookTitle!;
+    // description.text = addBookModel!.addbookDescription!;
+    // author.text = addBookModel!.addbookAuthor!;
+    // city.text = addBookModel!.addbookCity!;
+    // price.text = addBookModel!.addbookPrice!;
+    // communication.text = addBookModel!.addbookCommunication!;
+    // count!.text = addBookModel!.addbookCount!;
+    // discount!.text = addBookModel!.addbookDiscount!;
+    // categoriesid!.text = addBookModel!.categoriesId!;
+    // categorieName!.text = addBookModel!.categoriesName!;
+    // active = addBookModel!.addbookActive;
     super.onInit();
+  }
+
+  showDropdown(context) {
+    DropDownState(
+      DropDown(
+        bottomSheetTitle: const Text(
+          "title",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20.0,
+          ),
+        ),
+        submitButtonChild: const Text(
+          'Done',
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        data: [SelectedListItem(name: "a"), SelectedListItem(name: "b")],
+        selectedItems: (List<dynamic> selectedList) {
+          SelectedListItem selectedListItem = selectedList[0];
+          dropdownname.text = selectedListItem.name;
+        },
+        // showSnackBar(list.toString());
+      ),
+    ).showModal(context);
   }
 }

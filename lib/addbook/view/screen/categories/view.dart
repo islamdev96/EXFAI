@@ -16,7 +16,13 @@ class CategoriesView extends StatelessWidget {
         onPressed: () {
           Get.toNamed(AppRoute.categoriesAdd);
         },
-        child: const Icon(Icons.add),
+        child: const Icon(
+          size: 35,
+          // shadows: [BoxShadow(color: Colors.red, blurRadius: 100)],
+          textDirection: TextDirection.ltr,
+          Icons.add,
+          color: Colors.blue,
+        ),
       ),
       body: GetBuilder<CategoriesController>(
         builder: (controller) => HandlingDataView(
@@ -46,10 +52,19 @@ class CategoriesView extends StatelessWidget {
                             height: 80,
                           ),
                         ),
-                        title: Text(category.categoriesName!),
+                        title: Text(
+                          category.categoriesName!,
+                          style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                        ),
                         subtitle: Text(category.categoriesDatetime!),
                         trailing: IconButton(
-                          icon: const Icon(Icons.delete_outline),
+                          icon: const Icon(
+                            Icons.delete_outline,
+                            color: Colors.red,
+                          ),
                           onPressed: () {
                             _showDeleteConfirmationDialog(
                               controller,

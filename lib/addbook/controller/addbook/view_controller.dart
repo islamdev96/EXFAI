@@ -1,5 +1,5 @@
-import 'package:exfai/addbook/addbook_model.dart';
-import 'package:exfai/addbook/controller/addbook_data.dart';
+import 'package:exfai/addbook/data/model/addbook_model.dart';
+import 'package:exfai/addbook/data/addbook_data.dart';
 
 import '../../../all_export.dart';
 
@@ -49,7 +49,7 @@ class AddBookViewController extends GetxController {
   }
 
   myback() {
-    Get.offAllNamed(AppRoute.homepage);
+    Get.back();
     return Future.value(false);
   }
 }

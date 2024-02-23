@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:exfai/addbook/controller/categories/view_controller.dart';
 import 'package:exfai/addbook/function/uploadfile.dart';
 import 'package:exfai/all_export.dart';
@@ -14,25 +15,25 @@ class CategoriesAddController extends GetxController {
   File? file;
 
   showOptionImage() async {
-    print("Showing option image menu");
     showbottonmenu(chooseImageCamera, chooseImageGallery);
   }
 
   chooseImageCamera() async {
-    print("Choosing image from camera");
     file = await imageUploadCamera();
     update();
   }
 
   chooseImageGallery() async {
-    print("Choosing image from gallery");
     file = await fileUploadGallery();
     update();
   }
 
   addData() async {
     if (formState.currentState!.validate()) {
-      if (file == null) Get.snackbar("Warning", "Please Choose an Image");
+      if (file == null) {
+        Get.snackbar("Warning", "Please Choose an Image");
+        return;
+      }
 
       statusRequest = StatusRequest.loading;
       update();
@@ -49,9 +50,7 @@ class CategoriesAddController extends GetxController {
           c.getData();
         } else {
           statusRequest = StatusRequest.failure;
-          print(response['status']); // Corrected line
         }
-        print(response['status']); // Corrected line
       }
       update();
     }
@@ -61,7 +60,6 @@ class CategoriesAddController extends GetxController {
   void onInit() {
     name = TextEditingController();
     namear = TextEditingController();
-
     super.onInit();
   }
 }
