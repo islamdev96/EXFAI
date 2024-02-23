@@ -1,10 +1,3 @@
-import 'package:exfai/addbook/view/screen/addbook/add.dart';
-import 'package:exfai/addbook/view/screen/addbook/edit.dart';
-import 'package:exfai/addbook/view/screen/addbook/view.dart';
-import 'package:exfai/addbook/view/screen/categories/add.dart';
-import 'package:exfai/addbook/view/screen/categories/edit.dart';
-import 'package:exfai/addbook/view/screen/categories/view.dart';
-
 import 'all_export.dart';
 
 List<GetPage<dynamic>>? routes = [

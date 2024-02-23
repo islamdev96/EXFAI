@@ -1,6 +1,3 @@
-import 'package:exfai/addbook/data/model/addbook_model.dart';
-import 'package:exfai/addbook/view/widget/list_addbook_home%20copy.dart';
-import 'package:exfai/view/widget/home/page_app_bar.dart';
 import 'package:exfai/view/widget/home/list_categories_home.dart';
 
 import '../../all_export.dart';

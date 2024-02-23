@@ -1,5 +1,3 @@
-import 'package:exfai/view/Settings/settings_page.dart';
-
 import '../all_export.dart';
 
 abstract class HomeScreenController extends GetxController {

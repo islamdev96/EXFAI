@@ -1,5 +1,3 @@
-import 'package:exfai/core/functions/validinput.dart';
-
 import '../../../../../all_export.dart';
 
 class ResetPassword extends StatelessWidget {

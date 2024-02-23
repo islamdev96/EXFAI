@@ -1,7 +1,5 @@
 // ignore_for_file: overridden_fields
 
-import 'package:exfai/addbook/data/model/addbook_model.dart';
-
 import '../../all_export.dart';
 
 abstract class HomeController extends SearchMixController {
