@@ -2,8 +2,8 @@ import 'package:exfai/view/widget/home/list_categories_home.dart';
 
 import '../../all_export.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HamzaHome extends StatelessWidget {
+  const HamzaHome({super.key});
 
   @override
   Widget build(BuildContext context) {

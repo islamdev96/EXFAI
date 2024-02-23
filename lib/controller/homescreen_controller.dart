@@ -8,7 +8,7 @@ class HomeScreenControllerImp extends HomeScreenController {
   int currentpage = 0;
 
   final List<Widget> listPage = [
-    const HomePage(),
+    const HamzaHome(),
     const SettingsPage(),
   ];
 

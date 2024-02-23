@@ -66,7 +66,7 @@ class Categories extends GetView<HomeControllerImp> {
           ),
         ),
         title: Text(
-          "${translateDatabase(categoriesModel.categoriesNamaAr, categoriesModel.categoriesName)}",
+          "${translateDatabase(categoriesModel.categoriesName, categoriesModel.categoriesName)}",
           style: TextStyle(
             fontSize: 16.sp,
             color: AppColor.black,

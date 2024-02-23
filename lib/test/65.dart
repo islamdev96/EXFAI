@@ -42,7 +42,7 @@ class _TitledNavigationBottomPageState
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            HomePage(),
+            HamzaHome(),
             // TitledNavigationBottomPage(),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,

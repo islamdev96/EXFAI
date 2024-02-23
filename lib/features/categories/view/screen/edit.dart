@@ -36,10 +36,10 @@ class _CategoriesEditState extends State<CategoriesEdit> {
                               },
                               isNumber: false),
                           CustomTextFormGlobal(
-                              hinttext: " category name ( Arabic)",
-                              labeltext: "category name (Arabic)",
+                              hinttext: "description",
+                              labeltext: "description",
                               iconData: Icons.category,
-                              mycontroller: controller.namear,
+                              mycontroller: controller.description,
                               valid: (val) {
                                 return validateInput(val!, 1, 30, "");
                               },

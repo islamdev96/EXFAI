@@ -48,7 +48,7 @@ class Categories extends GetView<AddBookControllerImp> {
                                     BorderSide(width: 3, color: AppColor.red)))
                         : null,
                     child: Text(
-                      "${translateDatabase(categoriesModel.categoriesNamaAr, categoriesModel.categoriesName)}",
+                      "${translateDatabase(categoriesModel.categoriesName, categoriesModel.categoriesName)}",
                       style:
                           const TextStyle(fontSize: 20, color: AppColor.black),
                     ),

@@ -6,7 +6,7 @@ class CategoriesAddController extends GetxController {
   CategoriesData categoriesData = CategoriesData(Get.find());
   GlobalKey<FormState> formState = GlobalKey<FormState>();
   late TextEditingController name;
-  late TextEditingController namear;
+  late TextEditingController description;
   StatusRequest? statusRequest = StatusRequest.none;
 
   File? file;
@@ -34,7 +34,7 @@ class CategoriesAddController extends GetxController {
 
       statusRequest = StatusRequest.loading;
       update();
-      Map data = {"name": name.text, "namear": namear.text};
+      Map data = {"name": name.text, "description": description.text};
 
       var response = await categoriesData.add(data, file!);
 
@@ -43,7 +43,7 @@ class CategoriesAddController extends GetxController {
       if (StatusRequest.success == statusRequest) {
         if (response['status'] == "success") {
           Get.offNamed(AppRoute.categoriesView);
-          CategoriesController c = Get.find();
+          CategoriesViewController c = Get.find();
           c.getData();
         } else {
           statusRequest = StatusRequest.failure;
@@ -56,7 +56,7 @@ class CategoriesAddController extends GetxController {
   @override
   void onInit() {
     name = TextEditingController();
-    namear = TextEditingController();
+    description = TextEditingController();
     super.onInit();
   }
 }

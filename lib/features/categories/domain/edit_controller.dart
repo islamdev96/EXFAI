@@ -6,7 +6,7 @@ class CategoriesEditController extends GetxController {
   CategoriesData categoriesData = CategoriesData(Get.find());
   GlobalKey<FormState> formState = GlobalKey<FormState>();
   late TextEditingController name;
-  late TextEditingController namear;
+  late TextEditingController description;
   CategoriesModel? categoriesModel;
   StatusRequest? statusRequest = StatusRequest.none;
 
@@ -24,7 +24,7 @@ class CategoriesEditController extends GetxController {
       update();
       Map data = {
         "name": name.text,
-        "namear": namear.text,
+        "description": description.text,
         "imageold": categoriesModel!.categoriesImage!,
         "id": categoriesModel!.categoriesId.toString()
       };
@@ -37,7 +37,7 @@ class CategoriesEditController extends GetxController {
         // Start backend
         if (response['status'] == "success") {
           Get.offNamed(AppRoute.categoriesView);
-          CategoriesController c = Get.find();
+          CategoriesViewController c = Get.find();
           c.getData();
         } else {
           statusRequest = StatusRequest.failure;
@@ -52,9 +52,9 @@ class CategoriesEditController extends GetxController {
   void onInit() {
     categoriesModel = Get.arguments['CategoriesModel'];
     name = TextEditingController();
-    namear = TextEditingController();
+    description = TextEditingController();
     name.text = categoriesModel!.categoriesName!;
-    namear.text = categoriesModel!.categoriesNamaAr!;
+    description.text = categoriesModel!.categoriesDescription!;
 
     super.onInit();
   }

@@ -17,7 +17,7 @@ class AddBookModel {
   String? categoriesImage;
   String? categoriesDatetime;
   String? categoriesName;
-  String? categoriesNamaAr;
+  String? categoriesDescription;
 
   AddBookModel({
     this.addbookId,
@@ -38,7 +38,7 @@ class AddBookModel {
     this.categoriesImage,
     this.categoriesDatetime,
     this.categoriesName,
-    this.categoriesNamaAr,
+    this.categoriesDescription,
   });
 
   AddBookModel.fromJson(Map<String, dynamic> json)
@@ -60,7 +60,7 @@ class AddBookModel {
         categoriesImage = json['categories_image'],
         categoriesDatetime = json['categories_datetime'],
         categoriesName = json['categories_name'],
-        categoriesNamaAr = json['categories_nama_ar'];
+        categoriesDescription = json['categories_description'];
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
@@ -81,7 +81,7 @@ class AddBookModel {
     data['categories_image'] = categoriesImage;
     data['categories_datetime'] = categoriesDatetime;
     data['categories_name'] = categoriesName;
-    data['categories_nama_ar'] = categoriesNamaAr;
+    data['categories_description'] = categoriesDescription;
     return data;
   }
 }

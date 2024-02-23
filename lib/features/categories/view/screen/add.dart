@@ -40,7 +40,7 @@ class _CategoriesAddState extends State<CategoriesAdd> {
                     hinttext: "Enter Category Name (Arabic)",
                     labeltext: "Category Name (Arabic)",
                     iconData: Icons.category,
-                    mycontroller: controller.namear,
+                    mycontroller: controller.description,
                     valid: (val) {
                       return validateInput(
                           val!, 1, 30, "Category Name (Arabic) is required");

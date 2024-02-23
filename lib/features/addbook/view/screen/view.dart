@@ -29,6 +29,7 @@ class AddBookView extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: ListView.builder(
+                  padding: EdgeInsetsDirectional.only(bottom: 150.h),
                   itemCount: controller.data.length,
                   itemBuilder: (context, index) {
                     return InkWell(
@@ -107,6 +108,9 @@ class AddBookView extends StatelessWidget {
                                 ),
                               ),
                             ),
+                            SizedBox(
+                              height: 120.h,
+                            )
                           ],
                         ),
                       ),

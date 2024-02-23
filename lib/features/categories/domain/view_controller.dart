@@ -1,13 +1,11 @@
 import '../../../all_export.dart';
 
-class CategoriesController extends GetxController {
+class CategoriesViewController extends GetxController {
   CategoriesData categoriesData = CategoriesData(Get.find());
 
   List<CategoriesModel> data = [];
 
   late StatusRequest statusRequest;
-
-  get status => null;
 
   getData() async {
     data.clear();

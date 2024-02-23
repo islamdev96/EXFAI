@@ -44,22 +44,20 @@ class _AddBookHomeState extends State<AddBookHome> {
           // "price": addBookModel.addbookPriceDiscount! * quantity,
         });
       },
-      child: Container(
-        color: AppColor.secondaryBackground,
-        padding: const EdgeInsets.all(10),
-        margin: const EdgeInsets.symmetric(horizontal: 10),
+      child: Card(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              // child: CachedNetworkImage(
-              //   imageUrl:
-              //       "${AppLink.imagesAddBook}/${widget.addBookModel.addbookImage}",
-              //   height: 150,
-              //   width: 250,
-              //   fit: BoxFit.fill,
-              // ),
+              child: CachedNetworkImage(
+                imageUrl:
+                    "${AppLink.imagesAddBook}/${widget.addBookModel.addbookImage}",
+                height: 150,
+                width: 250,
+                fit: BoxFit.fill,
+              ),
             ),
             const SizedBox(height: 10),
             Column(

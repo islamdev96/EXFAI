@@ -1,3 +1,5 @@
+import 'package:exfai/features/addbook/view/screen/addbook.dart';
+
 import 'all_export.dart';
 
 List<GetPage<dynamic>>? routes = [
@@ -14,7 +16,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoute.categoriesAdd, page: () => const CategoriesAdd()),
   GetPage(name: AppRoute.categoriesView, page: () => const CategoriesView()),
   GetPage(name: AppRoute.categoriesEdit, page: () => const CategoriesEdit()),
-  // GetPage(
+  // GetPage(homepage
   //     name: AppRoute.categoriesDetails, page: () => const CategoriesDetails()),
   // GetPage(name: AppRoute.categories, page: () => const Categories()),
 

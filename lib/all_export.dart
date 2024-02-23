@@ -24,12 +24,11 @@ export 'package:exfai/features/addbook/view/screen/add.dart';
 export 'package:exfai/features/addbook/view/screen/edit.dart';
 export 'package:exfai/features/addbook/view/screen/view.dart';
 export 'package:exfai/features/categories/view/screen/add.dart';
-export 'package:exfai/features/categories/view/screen/addbook.dart';
 export 'package:exfai/features/categories/view/screen/edit.dart';
 export 'package:exfai/features/categories/view/screen/view.dart';
 export 'package:exfai/features/addbook/controller/view_controller.dart';
 
-export 'package:exfai/features/addbook/data/model/addbook_data.dart';
+export 'package:exfai/features/addbook/data/datasource/addbook_data.dart';
 export 'package:exfai/features/categories/view/widget/cardadmin.dart';
 export 'package:exfai/core/functions/validinput.dart';
 export 'package:exfai/core/shared/customtextformglobal.dart';
