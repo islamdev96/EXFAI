@@ -2,7 +2,7 @@ import 'package:exfai/core/localization/lang_wael/custombuttomlang.dart';
 
 import '../../../all_export.dart';
 
-// MyServices myServices = Get.find();
+MyServices myServices = Get.find();
 
 class Languages extends GetView<LocaleController> {
   const Languages({super.key});
@@ -44,18 +44,18 @@ class Languages extends GetView<LocaleController> {
 
   void navigateToNextPage() async {
     // Check if the app is opened for the first time
-    // bool isFirstLaunch =
-    // myServices.sharedPreferences.getBool('firstLaunch') ?? true;
+    bool isFirstLaunch =
+        myServices.sharedPreferences.getBool('firstLaunch') ?? true;
 
-    // if (isFirstLaunch) {
-    //   // Set the first launch flag to false
-    //   await myServices.sharedPreferences.setBool('firstLaunch', false);
+    if (isFirstLaunch) {
+      // Set the first launch flag to false
+      await myServices.sharedPreferences.setBool('firstLaunch', false);
 
-    //   // Navigate to the onboarding page
-    //   Get.offAllNamed(AppRoute.onBoarding);
-    // } else {
-    //   // Navigate to the login page
-    //   Get.offAllNamed(AppRoute.login);
-    // }
+      // Navigate to the onboarding page
+      Get.offAllNamed(AppRoute.onBoarding);
+    } else {
+      // Navigate to the login page
+      Get.offAllNamed(AppRoute.login);
+    }
   }
 }
