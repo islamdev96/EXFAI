@@ -13,6 +13,8 @@ class ListAddBookHome extends GetView<HomeControllerImp> {
       children: List.generate(
         (controller.addbook.length / 2).ceil(),
         (index) => Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
               child: WidgetListAddBookHome(
