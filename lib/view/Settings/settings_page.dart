@@ -33,10 +33,10 @@ class SettingsPage extends StatelessWidget {
                     color: AppColor.primary,
                     borderRadius: BorderRadius.circular(100),
                   ),
-                  child: const CircleAvatar(
+                  child: CircleAvatar(
                     radius: 40,
                     backgroundColor: AppColor.secondaryBackground,
-                    backgroundImage: AssetImage(AppImageAsset.avatar),
+                    backgroundImage: const AssetImage(AppImageAsset.avatar),
                   ),
                 ),
               ),

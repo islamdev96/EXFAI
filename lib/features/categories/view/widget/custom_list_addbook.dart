@@ -7,73 +7,94 @@ class CustomListAddBook extends GetView<AddBookControllerImp> {
 
   @override
   Widget build(BuildContext context) {
+    final title = addBookModel.addbookTitle!;
+    final firstFiveWords = title.split(' ').take(5).join(' ');
     return Card(
-      elevation: 4,
+      elevation: 5,
       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       child: InkWell(
-        onTap: () {
-          controller.goToPageProductDetails(addBookModel);
-        },
-        child: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+        onTap: () => controller.goToPageProductDetails(addBookModel),
+        child: Card(
+          clipBehavior: Clip.none,
+          child: Stack(
             children: [
-              // ClipRRect(
-              //   borderRadius: BorderRadius.circular(8),
-              //   child: CachedNetworkImage(
-              //     imageUrl:
-              //         "${AppLink.imagesAddBook}/${addBookModel.addbookImage}",
-              //     height: 100,
-              //     width: 100,
-              //     fit: BoxFit.cover,
-              //   ),
-              // ),
-              const SizedBox(width: 10),
-              Expanded(
+              Padding(
+                padding: const EdgeInsets.all(7),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "${addBookModel.addbookTitle}",
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Hero(
+                        tag: "${addBookModel.addbookId}",
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              "${AppLink.imagesAddBook}/${addBookModel.addbookImage!}",
+                          height: 110.h,
+                          width: double.infinity,
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      "${addBookModel.addbookDescription}",
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        fontSize: 14,
+                      SizedBox(height: 10.h),
+                      Text(
+                        firstFiveWords,
+                        style: TextStyle(
+                          color: AppColor.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12.sp,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      "Author: ${addBookModel.addbookAuthor}",
-                      style: const TextStyle(
-                        fontSize: 14,
-                      ),
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      "City: ${addBookModel.addbookCity}",
-                      style: const TextStyle(
-                        fontSize: 14,
-                      ),
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      "Price: ${addBookModel.addbookPrice}",
-                      style: const TextStyle(
-                        fontSize: 14,
-                      ),
-                    ),
-                  ],
-                ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "${addBookModel.addbookPrice}\$",
+                            style: TextStyle(
+                              color: AppColor.primary,
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          GetBuilder<FavoriteController>(
+                            builder: (controller) => IconButton(
+                              onPressed: () {
+                                if (controller
+                                        .isFavorite[addBookModel.addbookId] ==
+                                    "1") {
+                                  controller.setFavorite(
+                                      addBookModel.addbookId, "0");
+                                  // controller
+                                  // .removeFavorite(addBookModel.addbookId!);
+                                } else {
+                                  controller.setFavorite(
+                                      addBookModel.addbookId, "1");
+                                  controller
+                                      .addFavorite(addBookModel.addbookId!);
+                                }
+                              },
+                              icon: Icon(
+                                controller.isFavorite[addBookModel.addbookId] ==
+                                        "1"
+                                    ? Icons.favorite
+                                    : Icons.favorite_border_outlined,
+                                color: AppColor.red,
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    ]),
               ),
+              if (addBookModel.addbookDiscount != null &&
+                  int.parse(addBookModel.addbookDiscount!) >= 2)
+                Positioned(
+                  top: 0.01,
+                  left: 0.01,
+                  child: Image.asset(
+                    AppImageAsset.saleOne,
+                    width: 40.w,
+                  ),
+                ),
             ],
           ),
         ),

@@ -1,3 +1,5 @@
+import 'package:exfai/features/search/view/screen/list_search.dart';
+
 import '../../../../all_export.dart';
 
 class AddBook extends StatefulWidget {
@@ -17,6 +19,7 @@ class _AddBookState extends State<AddBook> {
     final FavoriteController controllerFav = Get.put(FavoriteController());
 
     return Scaffold(
+      backgroundColor: AppColor.scaffoldBackgroundColor,
       body: Container(
         padding: const EdgeInsets.all(15),
         child: ListView(
@@ -47,7 +50,7 @@ class _AddBookState extends State<AddBook> {
                           );
                         },
                       )
-                    : ListItemsSearch(
+                    : ListSearch(
                         listdatamodel: controller.listdata,
                       ),
               ),

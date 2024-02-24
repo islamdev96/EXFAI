@@ -9,7 +9,7 @@ class AppColor {
 
   // Secondary Colors
   static const Color secondaryText = Color(0xFF34495E); // Dark Gray
-  static const Color secondaryBackground = Color(0xFFfbfbf1);
+  static const Color secondaryBackground1 = Color(0xFFfbfbf1);
 
   /// Light Blue-Gray
 
@@ -18,8 +18,12 @@ class AppColor {
   // Status Colors
 
   // Harmonious Colors
+  static const Color snackbarBackgroundColor = Color(0xFF323232);
+
   static const Color black = Color(0xFF000000); // Light Blue-Gray
   static const Color white = Color(0xFFFFFFFF); // Orange
   static const Color red = Color(0xFFE74C3C); // Light Blue-Gray
   static const Color green = Color(0xFFfbfbf1); // Light Blue-Gray
+
+  static Color secondaryBackground = Colors.grey.withOpacity(0.1);
 }

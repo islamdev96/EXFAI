@@ -22,7 +22,7 @@ class SuccessResetPassword extends StatelessWidget {
       body: Container(
         padding: const EdgeInsets.all(15),
         child: Column(children: [
-          const Center(
+          Center(
               child: Icon(
             Icons.check_circle_outline,
             size: 200,

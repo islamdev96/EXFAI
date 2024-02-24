@@ -39,15 +39,37 @@ class ProductDetailsControllerImp extends ProductDetailsController {
 
   addItems(String addbookId) async {
     statusRequest = StatusRequest.loading;
+
+    ///
     update();
     var response = await cartData.addCart(
         myServices.sharedPreferences.getString("id")!, addbookId);
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
-        Get.rawSnackbar(
-            title: "alert".tr,
-            messageText: Text("theProductHasBeenAddedToTheCart".tr));
+        Get.snackbar(
+          "alert".tr,
+          "theProductHasBeenAddedToTheCart".tr,
+          animationDuration: const Duration(seconds: 2),
+          snackPosition: SnackPosition.TOP,
+          duration: const Duration(seconds: 15),
+          icon: const Icon(
+            Icons.shopping_cart,
+            color: AppColor.white,
+          ),
+          mainButton: TextButton(
+            onPressed: () {
+              Get.toNamed(AppRoute.cart);
+            },
+            child: Text(
+              "goToCart".tr,
+              style: const TextStyle(
+                color: AppColor.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        );
       } else {
         statusRequest = StatusRequest.failure;
       }
@@ -64,9 +86,29 @@ class ProductDetailsControllerImp extends ProductDetailsController {
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
-        Get.rawSnackbar(
-            title: "alert".tr,
-            messageText: Text("theProductHasBeenRemovedFromTheCart".tr));
+        Get.snackbar("alert".tr, "theProductHasBeenRemovedFromTheCart".tr,
+            animationDuration: const Duration(seconds: 2),
+            snackPosition: SnackPosition.TOP,
+            duration: const Duration(seconds: 15),
+            icon: const Icon(
+              Icons.shopping_cart,
+              color: AppColor.white,
+            ),
+            mainButton: TextButton(
+              onPressed: () {
+                Get.toNamed(AppRoute.cart);
+              },
+              child: Text(
+                "goToCart".tr,
+                style: const TextStyle(
+                  color: AppColor.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ));
+        // Get.defaultDialog(
+        //     title: "alert".tr,
+        //     middleText: "theProductHasBeenRemovedFromTheCart".tr);
       } else {
         statusRequest = StatusRequest.failure;
       }

@@ -41,7 +41,7 @@ class CustomListItemsOffer extends GetView<OffersController> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text("${addBookModel.addbookPrice} \$",
-                              style: const TextStyle(
+                              style: TextStyle(
                                   color: AppColor.secondaryBackground,
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,

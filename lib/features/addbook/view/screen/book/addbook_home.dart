@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import '../../../../all_export.dart';
+import '../../../../../all_export.dart';
 
 class BookDetailsPage extends StatefulWidget {
   const BookDetailsPage({super.key});

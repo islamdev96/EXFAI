@@ -20,7 +20,7 @@ class CategoriesModel {
     categoriesDatetime = json['categories_datetime'];
   }
 
-  get categoriesDescAr => null;
+  // get categoriesDescAr => null;
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};

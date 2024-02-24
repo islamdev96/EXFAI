@@ -18,7 +18,7 @@ class NotificationView extends StatelessWidget {
                     Center(
                         child: Text(
                       "notification".tr,
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: 18,
                           color: AppColor.secondaryBackground,
                           fontWeight: FontWeight.bold),
@@ -44,7 +44,7 @@ class NotificationView extends StatelessWidget {
                                                     ['notification_datetime']
                                                 .toDate())
                                             .fromNow(),
-                                        style: const TextStyle(
+                                        style: TextStyle(
                                             color: AppColor.secondaryBackground,
                                             fontWeight: FontWeight.bold),
                                       ))

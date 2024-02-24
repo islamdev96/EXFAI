@@ -58,7 +58,7 @@ class VerfiyCodeSignUp extends StatelessWidget {
                     child: Center(
                         child: Text(
                       "resendVerfiyCode".tr,
-                      style: const TextStyle(
+                      style: TextStyle(
                           color: AppColor.secondaryBackground, fontSize: 20),
                     )),
                   )

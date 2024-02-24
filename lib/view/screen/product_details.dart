@@ -1,9 +1,9 @@
-// ignore_for_file: unused_local_variable
-
 import '../../all_export.dart';
 
 class ProductDetails extends StatelessWidget {
-  const ProductDetails({super.key});
+  const ProductDetails({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class ProductDetails extends StatelessWidget {
             const SizedBox(height: 100),
             HandlingDataView(
               statusRequest: controller.statusRequest,
-              widget: _buildProductDetails(context, controller),
+              widget: _buildProductDetails(controller.addBookModel, controller),
             ),
           ],
         ),
@@ -30,14 +30,17 @@ class ProductDetails extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       height: 40,
-      child: MaterialButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        color: AppColor.primary,
+      child: ElevatedButton(
         onPressed: () {
           Get.toNamed(AppRoute.cart);
         },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.grey.withOpacity(0.2),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        ),
         child: Text(
-          "goToCart".tr,
+          "انتقل إلى السلة".tr,
           style: const TextStyle(
             color: AppColor.black,
             fontWeight: FontWeight.bold,
@@ -48,36 +51,41 @@ class ProductDetails extends StatelessWidget {
   }
 
   Widget _buildProductDetails(
-      BuildContext context, ProductDetailsControllerImp controller) {
-    return Container(
-      padding: const EdgeInsets.all(20),
+      AddBookModel addBookModel, ProductDetailsControllerImp controller) {
+    return Padding(
+      padding: const EdgeInsets.all(25),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "${translateDatabase(controller.addBookModel.addbookTitle, controller.addBookModel.addbookTitle)}",
-            style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                  color: AppColor.black,
-                ),
-          ),
-          const SizedBox(height: 10),
           PriceAndCountItems(
-            onAdd: controller.add,
-            onRemove: controller.remove,
-            price: "${controller.addBookModel.addbookPrice}",
+            onAdd: () => controller.add(),
+            onRemove: () => controller.remove(),
+            price: "${addBookModel.addbookPrice}",
             count: "${controller.countitems}",
           ),
           const SizedBox(height: 10),
-          Text(
-            "${translateDatabase(controller.addBookModel.addbookDescription, controller.addBookModel.addbookDescription)}",
-            style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w300,
-                  color: AppColor.black,
-                ),
-          ),
+          _buildDetail("العنوان", addBookModel.addbookTitle),
+          _buildDetail("المؤلف", addBookModel.addbookAuthor),
+          _buildDetail("الفئة", addBookModel.categoriesName),
+          _buildDetail("الخصم", addBookModel.addbookDiscount),
+          _buildDetail("العدد المتاح", addBookModel.addbookCount),
+          _buildDetail("وسيلة التواصل", addBookModel.addbookCommunication),
+          _buildDetail("المدينة", addBookModel.addbookCity),
+          _buildDetail("الوصف", addBookModel.addbookDescription),
+          _buildDetail("التاريخ", addBookModel.addbookDate),
           const SizedBox(height: 10),
         ],
+      ),
+    );
+  }
+
+  Widget _buildDetail(String title, String? value) {
+    return Text(
+      "$title: ${value ?? 'غير متاح'}",
+      style: const TextStyle(
+        color: AppColor.black,
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
       ),
     );
   }

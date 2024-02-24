@@ -6,7 +6,7 @@ extension ExtensionSnackbar on GetInterface {
   Future<bool> alertExitApp() async {
     bool? result = await Get.dialog<bool>(
       AlertDialog(
-        backgroundColor: AppColor.primary,
+        backgroundColor: AppColor.secondaryBackground,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
@@ -27,8 +27,7 @@ extension ExtensionSnackbar on GetInterface {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColor
-                      .primary, // Use backgroundColor instead of primary
+                  backgroundColor: Colors.transparent,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),

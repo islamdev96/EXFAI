@@ -2,10 +2,10 @@ import '../../all_export.dart';
 
 ThemeData themeEnglish = ThemeData(
   fontFamily: "PlayfairDisplay",
-  floatingActionButtonTheme: const FloatingActionButtonThemeData(
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
     backgroundColor: AppColor.secondaryBackground,
   ),
-  appBarTheme: const AppBarTheme(
+  appBarTheme: AppBarTheme(
     centerTitle: true,
     elevation: 0,
     iconTheme: IconThemeData(color: AppColor.secondaryBackground),
@@ -17,29 +17,29 @@ ThemeData themeEnglish = ThemeData(
     ),
     backgroundColor: AppColor.secondaryBackground,
   ),
-  textTheme: const TextTheme(
+  textTheme: TextTheme(
     displayLarge: TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: 26,
       color: AppColor.secondaryBackground,
     ),
-    displayMedium: TextStyle(
+    displayMedium: const TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: 22,
       color: AppColor.primary,
     ),
-    displaySmall: TextStyle(
+    displaySmall: const TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: 18,
       color: AppColor.primary,
     ),
-    bodyLarge: TextStyle(
+    bodyLarge: const TextStyle(
       height: 2,
       color: AppColor.primary,
       fontWeight: FontWeight.bold,
       fontSize: 14,
     ),
-    bodyMedium: TextStyle(
+    bodyMedium: const TextStyle(
       height: 2,
       color: AppColor.primary,
       fontSize: 14,
@@ -50,10 +50,10 @@ ThemeData themeEnglish = ThemeData(
 
 ThemeData themeArabic = ThemeData(
   fontFamily: "Cairo",
-  floatingActionButtonTheme: const FloatingActionButtonThemeData(
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
     backgroundColor: AppColor.secondaryBackground,
   ),
-  appBarTheme: const AppBarTheme(
+  appBarTheme: AppBarTheme(
     centerTitle: true,
     elevation: 0,
     iconTheme: IconThemeData(color: AppColor.secondaryBackground),

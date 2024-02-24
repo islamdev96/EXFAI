@@ -1,7 +1,6 @@
 // ignore_for_file: file_names
 
-import 'package:exfai/features/addbook/view/screen/addbook_home.dart';
-import 'package:exfai/view/widget/home/test.dart';
+import 'package:exfai/features/addbook/view/screen/book/addbook_home.dart';
 
 import '../../../../all_export.dart';
 
@@ -51,8 +50,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   style: TextStyle(color: Colors.white)),
               onTap: () {
                 // أضف العمليات اللازمة عند النقر على "تسجيل الدخول"
-                Get.to(() =>
-                    const ListTileApp()); // Add your navigation logic here
+
+                // Add your navigation logic here
               },
             ),
             // انسخ الأكواد التالية وقم بتكرارها للعناصر الأخرى بنفس الطريقة

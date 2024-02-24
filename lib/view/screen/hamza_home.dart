@@ -1,3 +1,4 @@
+import 'package:exfai/features/search/view/screen/list_search.dart';
 import 'package:exfai/view/widget/home/list_categories_home.dart';
 
 import '../../all_export.dart';
@@ -65,7 +66,8 @@ class HamzaHome extends StatelessWidget {
                           // const ListAddBookHome(), // تم استبدال ListItemsHome بـ ListAddBookHome
                         ],
                       )
-                    : ListItemsSearch(listdatamodel: controller.listdata)),
+                    : ListSearch(listdatamodel: controller.listdata)),
+            SizedBox(height: 100.h),
           ],
         ),
       ),
@@ -73,48 +75,48 @@ class HamzaHome extends StatelessWidget {
   }
 }
 
-class ListItemsSearch extends GetView<HomeControllerImp> {
-  final List<AddBookModel> listdatamodel;
-  const ListItemsSearch({super.key, required this.listdatamodel});
+// class ListItemsSearch extends GetView<HomeControllerImp> {
+//   final List<AddBookModel> listdatamodel;
+//   const ListItemsSearch({super.key, required this.listdatamodel});
 
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: listdatamodel.length,
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemBuilder: (context, index) {
-        return InkWell(
-          onTap: () {
-            controller.goToPageProductDetails(listdatamodel[index]);
-          },
-          child: Container(
-            margin: const EdgeInsets.symmetric(vertical: 20),
-            child: Card(
-              child: Container(
-                padding: const EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Expanded(
-                        child: CachedNetworkImage(
-                      imageUrl:
-                          "${AppLink.imagesAddBook}/${listdatamodel[index].addbookImage!}",
-                    )),
-                    Expanded(
-                      flex: 2,
-                      child: ListTile(
-                        title: Text(listdatamodel[index].addbookTitle!),
-                        subtitle:
-                            Text(listdatamodel[index].addbookDescription!),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        );
-      },
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return ListView.builder(
+//       itemCount: listdatamodel.length,
+//       shrinkWrap: true,
+//       physics: const NeverScrollableScrollPhysics(),
+//       itemBuilder: (context, index) {
+//         return InkWell(
+//           onTap: () {
+//             controller.goToPageProductDetails(listdatamodel[index]);
+//           },
+//           child: Container(
+//             margin: const EdgeInsets.symmetric(vertical: 20),
+//             child: Card(
+//               child: Container(
+//                 padding: const EdgeInsets.all(10),
+//                 child: Row(
+//                   children: [
+//                     Expanded(
+//                         child: CachedNetworkImage(
+//                       imageUrl:
+//                           "${AppLink.imagesAddBook}/${listdatamodel[index].addbookImage!}",
+//                     )),
+//                     Expanded(
+//                       flex: 2,
+//                       child: ListTile(
+//                         title: Text(listdatamodel[index].addbookTitle!),
+//                         subtitle:
+//                             Text(listdatamodel[index].addbookDescription!),
+//                       ),
+//                     ),
+//                   ],
+//                 ),
+//               ),
+//             ),
+//           ),
+//         );
+//       },
+//     );
+//   }
+// }
