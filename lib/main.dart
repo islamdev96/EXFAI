@@ -1,3 +1,4 @@
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'all_export.dart';
 
 void main() async {
@@ -6,34 +7,39 @@ void main() async {
   await initialServices();
 
   runApp(const MyApp());
-  // createBookTable(); // تشغيل الدالة الخاصة بقاعدة البيانات
 }
 
-class MyApp extends GetWidget<LocaleController> {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    LocaleController controller = Get.put(LocaleController());
-
     return ScreenUtilInit(
       useInheritedMediaQuery: true,
       designSize: const Size(360, 690),
-      //
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
         return GetMaterialApp(
+          locale: const Locale('ar', 'AR'), // تحديد اللغة العربية
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+
           theme: ThemeData(
             listTileTheme: const ListTileThemeData(
               textColor: Colors.white,
             ),
             useMaterial3: true,
           ),
-
-          translations: MyTranslation(),
           debugShowCheckedModeBanner: false,
-          locale: controller.language,
-          // theme: controller.appTheme,
           initialBinding: InitialBindings(),
           getPages: routes,
           title: 'Exfai',

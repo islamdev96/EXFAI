@@ -7,6 +7,8 @@ class CategoriesViewController extends GetxController {
 
   late StatusRequest statusRequest;
 
+  get categoriesModel => CategoriesModel;
+
   getData() async {
     data.clear();
     statusRequest = StatusRequest.loading;

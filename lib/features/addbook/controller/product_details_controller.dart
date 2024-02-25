@@ -1,4 +1,4 @@
-import '../../../../all_export.dart';
+import '../../../all_export.dart';
 
 abstract class ProductDetailsController extends GetxController {}
 
@@ -48,11 +48,11 @@ class ProductDetailsControllerImp extends ProductDetailsController {
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
         Get.snackbar(
-          "alert".tr,
-          "theProductHasBeenAddedToTheCart".tr,
+          "تنبيه",
+          "تمت إضافة المنتج إلى السلة",
           animationDuration: const Duration(seconds: 2),
           snackPosition: SnackPosition.TOP,
-          duration: const Duration(seconds: 15),
+          duration: const Duration(seconds: 2),
           icon: const Icon(
             Icons.shopping_cart,
             color: AppColor.white,
@@ -61,9 +61,9 @@ class ProductDetailsControllerImp extends ProductDetailsController {
             onPressed: () {
               Get.toNamed(AppRoute.cart);
             },
-            child: Text(
-              "goToCart".tr,
-              style: const TextStyle(
+            child: const Text(
+              "انتقل إلى السلة",
+              style: TextStyle(
                 color: AppColor.white,
                 fontWeight: FontWeight.bold,
               ),
@@ -86,10 +86,10 @@ class ProductDetailsControllerImp extends ProductDetailsController {
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
-        Get.snackbar("alert".tr, "theProductHasBeenRemovedFromTheCart".tr,
+        Get.snackbar("تنبيه", "تمت إزالة المنتج من السلة",
             animationDuration: const Duration(seconds: 2),
             snackPosition: SnackPosition.TOP,
-            duration: const Duration(seconds: 15),
+            duration: const Duration(seconds: 2),
             icon: const Icon(
               Icons.shopping_cart,
               color: AppColor.white,
@@ -98,9 +98,9 @@ class ProductDetailsControllerImp extends ProductDetailsController {
               onPressed: () {
                 Get.toNamed(AppRoute.cart);
               },
-              child: Text(
-                "goToCart".tr,
-                style: const TextStyle(
+              child: const Text(
+                "انتقل إلى السلة",
+                style: TextStyle(
                   color: AppColor.white,
                   fontWeight: FontWeight.bold,
                 ),

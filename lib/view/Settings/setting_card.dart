@@ -1,6 +1,5 @@
 // ignore_for_file: deprecated_member_use, unused_element
 
-import 'package:exfai/view/Settings/language_selection_dialog.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../all_export.dart';
@@ -14,8 +13,6 @@ class SettingCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final LocaleController localeController = Get.find();
-
     return Card(
       elevation: 4.0,
       margin: const EdgeInsets.fromLTRB(32.0, 8.0, 32.0, 16.0),
@@ -68,9 +65,7 @@ class SettingCard extends StatelessWidget {
               ),
             ),
             trailing: const Icon(Icons.keyboard_arrow_right),
-            onTap: () {
-              _showLanguageSelectionDialog(context, localeController);
-            },
+            onTap: () {},
           ),
           const Divider(),
           ListTile(
@@ -92,14 +87,12 @@ class SettingCard extends StatelessWidget {
 
 void _showLanguageSelectionDialog(
   BuildContext context,
-  LocaleController controller,
 ) {
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      return LanguageSelectionDialog(controller: controller);
-    },
-  );
+  // showDialog(
+  //   context: context,
+  //   builder: (BuildContext context) {
+  //    },
+  // );
 }
 
 Container _buildDivider() {

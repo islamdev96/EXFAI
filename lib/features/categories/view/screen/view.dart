@@ -8,6 +8,8 @@ class CategoriesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(CategoriesViewController());
+    final controller = Get.find<CategoriesViewController>();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Categories'),
@@ -32,6 +34,11 @@ class CategoriesView extends StatelessWidget {
                 itemCount: controller.data.length,
                 padding: EdgeInsetsDirectional.only(bottom: 150.h),
                 itemBuilder: (context, index) {
+                  final description =
+                      controller.data[index].categoriesDescription!;
+                  final firstFiveWords =
+                      description.split(' ').take(5).join(' ');
+
                   return InkWell(
                     onTap: () {
                       controller.goToPageEdit(controller.data[index]);
@@ -42,23 +49,23 @@ class CategoriesView extends StatelessWidget {
                           Expanded(
                             flex: 2,
                             child: CachedNetworkImage(
-                              height: 80,
+                              height: 55,
                               imageUrl:
                                   "${AppLink.imagestCategories}/${controller.data[index].categoriesImage}",
                               placeholder: (context, url) => Image.asset(
-                                'assets/images/avatar.png', // Placeholder image asset
-                                height: 80,
+                                'assets/images/avatar.png',
+                                height: 55,
                                 fit: BoxFit.cover,
                               ),
                               errorWidget: (context, url, error) => Image.asset(
-                                'assets/images/logoapp.png', // Error image asset
-                                height: 80,
+                                'assets/images/logoapp.png',
+                                height: 55,
                                 fit: BoxFit.cover,
                               ),
                             ),
                           ),
                           Expanded(
-                            flex: 3,
+                            flex: 6,
                             child: ListTile(
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
@@ -84,30 +91,28 @@ class CategoriesView extends StatelessWidget {
                                       );
                                     },
                                   ),
-                                  // IconButton(
-                                  //   icon: const Icon(Icons.edit),
-                                  //   onPressed: () {
-                                  //     controller.goToPageEdit(
-                                  //         controller.data[index]);
-                                  //   },
-                                  // ),
                                 ],
                               ),
-                              subtitle: Text(
-                                controller.data[index].categoriesName!,
-                                style: const TextStyle(color: Colors.blue),
-                              ),
                               title: Text(
-                                controller.data[index].categoriesDescription!,
-                                style: const TextStyle(
-                                  color: Colors.black,
+                                controller.data[index].categoriesName!,
+                                style: TextStyle(
+                                  color: AppColor.black,
+                                  fontSize: 18.sp,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              subtitle: Text(
+                                firstFiveWords,
+                                style: TextStyle(
+                                  color: AppColor.secondaryText,
+                                  fontSize: 12.sp,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),
                           ),
                           SizedBox(
-                            height: 120.h,
+                            height: 100.h,
                           )
                         ],
                       ),

@@ -3,9 +3,14 @@ import 'package:exfai/view/widget/home/list_categories_home.dart';
 
 import '../../all_export.dart';
 
-class HamzaHome extends StatelessWidget {
+class HamzaHome extends StatefulWidget {
   const HamzaHome({super.key});
 
+  @override
+  State<HamzaHome> createState() => _HamzaHomeState();
+}
+
+class _HamzaHomeState extends State<HamzaHome> {
   @override
   Widget build(BuildContext context) {
     Get.put(HomeControllerImp());

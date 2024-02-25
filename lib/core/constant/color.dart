@@ -23,6 +23,7 @@ class AppColor {
   static const Color black = Color(0xFF000000); // Light Blue-Gray
   static const Color white = Color(0xFFFFFFFF); // Orange
   static const Color red = Color(0xFFE74C3C); // Light Blue-Gray
+  static const Color red2 = Color(0xFFD3204B); // Light Blue-Gray
   static const Color green = Color(0xFFfbfbf1); // Light Blue-Gray
 
   static Color secondaryBackground = Colors.grey.withOpacity(0.1);

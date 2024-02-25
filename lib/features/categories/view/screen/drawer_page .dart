@@ -1,6 +1,6 @@
 // ignore_for_file: file_names
 
-import 'package:exfai/features/addbook/view/screen/book/addbook_home.dart';
+import 'package:exfai/features/addbook/view/screen/addbook_home.dart';
 
 import '../../../../all_export.dart';
 

@@ -1,11 +1,8 @@
 import '../../all_export.dart';
 
 class LanguageSelectionDialog extends StatelessWidget {
-  final LocaleController controller;
-
   const LanguageSelectionDialog({
     super.key,
-    required this.controller,
   });
 
   @override
@@ -54,7 +51,6 @@ class LanguageSelectionDialog extends StatelessWidget {
       BuildContext context, String languageName, String languageCode) {
     return InkWell(
       onTap: () {
-        controller.changeLang(languageCode);
         Navigator.pop(context); // Close the dialog
       },
       child: Container(

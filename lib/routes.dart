@@ -1,12 +1,12 @@
-import 'package:exfai/features/addbook/view/screen/addbook.dart';
+import 'package:exfai/features/addbook/view/screen/addbook_in_categories.dart';
 
 import 'all_export.dart';
 
 List<GetPage<dynamic>>? routes = [
   GetPage(
-      name: "/", page: () => const Languages(), middlewares: [MyMiddleWare()]),
+      name: "/", page: () => const OnBoarding(), middlewares: [MyMiddleWare()]),
   // name: "/", page: () => const OnBoarding(), middlewares: [MyMiddleWare()]),
-  GetPage(name: AppRoute.languages, page: () => const Languages()),
+  // GetPage(name: AppRoute.languages, page: () => const Languages()),
   GetPage(name: AppRoute.onBoarding, page: () => const OnBoarding()),
 
   // GetPage(name: "/", page: () =>   TestView()),
@@ -42,7 +42,7 @@ List<GetPage<dynamic>>? routes = [
       name: AppRoute.verfiyCodeSignUp, page: () => const VerfiyCodeSignUp()),
   //
   GetPage(name: AppRoute.homepage, page: () => const HomeScreen()),
-  GetPage(name: AppRoute.addbook, page: () => const AddBook()),
+  GetPage(name: AppRoute.addbook, page: () => const AddBookInCategories()),
   GetPage(name: AppRoute.productdetails, page: () => const ProductDetails()),
   GetPage(name: AppRoute.myFavroite, page: () => const MyFavorite()),
   //

@@ -10,7 +10,6 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final LocaleController localeController = Get.find();
     Color mainSystemColor = CupertinoColors.systemBackground;
 
     return Container(

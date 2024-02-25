@@ -1,61 +1,55 @@
 import '../../../../all_export.dart';
 
-class WidgetListAddBookHome extends StatelessWidget {
+class WidgetAddBookInCategories extends GetView<AddBookControllerImp> {
   final AddBookModel addBookModel;
-  WidgetListAddBookHome({super.key, required this.addBookModel});
-  final FavoriteController controller = Get.put(FavoriteController());
+  const WidgetAddBookInCategories({super.key, required this.addBookModel});
 
   @override
   Widget build(BuildContext context) {
     final title = addBookModel.addbookTitle!;
     final firstFiveWords = title.split(' ').take(5).join(' ');
-
     return InkWell(
-      onTap: () {
-        // Navigate to the ProductDetails page with the selected item's model
-        Get.toNamed("productdetails", arguments: {
-          "addBookModel": addBookModel,
-          // "price": addBookModel.addbookPriceDiscount! * quantity,
-        });
-      },
+      onTap: () => controller.goToPageProductDetails(addBookModel),
       child: Card(
-        elevation: 5,
+        clipBehavior: Clip.none,
         child: Stack(
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Hero(
-                  tag: "${addBookModel.addbookId}",
-                  child: CachedNetworkImage(
-                    imageUrl:
-                        "${AppLink.imagesAddBook}/${addBookModel.addbookImage}",
-                    width: 150.w,
-                    height: 132.h,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                SizedBox(height: 20.h),
-                Column(
+            Padding(
+              padding: const EdgeInsets.all(7),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Hero(
+                      tag: "${addBookModel.addbookId}",
+                      child: CachedNetworkImage(
+                        imageUrl:
+                            "${AppLink.imagesAddBook}/${addBookModel.addbookImage!}",
+                        height: 110.h,
+                        width: double.infinity,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    SizedBox(height: 10.h),
                     Text(
                       firstFiveWords,
                       style: TextStyle(
                         color: AppColor.black,
-                        fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
+                        fontSize: 14.sp,
                       ),
                     ),
+                    SizedBox(height: 10.h),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           "\$${addBookModel.addbookPrice}",
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: AppColor.primary,
-                            fontSize: 16,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         GetBuilder<FavoriteController>(
@@ -84,22 +78,9 @@ class WidgetListAddBookHome extends StatelessWidget {
                           ),
                         ),
                       ],
-                    ),
-                    SizedBox(height: 10.h),
-                  ],
-                ),
-              ],
+                    )
+                  ]),
             ),
-            if (addBookModel.addbookDiscount != null &&
-                int.parse(addBookModel.addbookDiscount!) >= 10)
-              Positioned(
-                top: 0.01,
-                left: 0.01,
-                child: Image.asset(
-                  AppImageAsset.saleOne,
-                  width: 40.w,
-                ),
-              ),
             if (addBookModel.addbookDiscount != null &&
                 int.parse(addBookModel.addbookDiscount!) >= 10)
               Positioned(
