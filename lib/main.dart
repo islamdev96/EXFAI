@@ -6,11 +6,11 @@ void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await initialServices();
 
-  runApp(const MyApp());
+  runApp( const MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+   const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();

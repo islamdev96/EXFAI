@@ -30,6 +30,8 @@ class AppRoute {
   static const String addbookEdit = "/addbookedit";
   static const String addbookDelete = "/addbookdelete";
   static const String addbookDetails = "/addbookdetails";
+  static const String secondPage = "/secondpage";
+
 
   // Address
 

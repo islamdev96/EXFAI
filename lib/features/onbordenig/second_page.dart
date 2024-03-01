@@ -1,5 +1,4 @@
-import 'package:hamza/view/screen/auth/test/login_test.dart';
-
+ 
 import '../../all_export.dart';
 
 class SecondPage extends StatelessWidget {
@@ -127,7 +126,7 @@ class SecondPage extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        Get.to(const HomePage());
+                        Get.to(const HamzaHome());
                       },
                       child: Text(
                         "سجل دخول",
@@ -181,5 +180,9 @@ class SecondPage extends StatelessWidget {
         ],
       ),
     );
+  }
+  
+  buildLoginButton(IconData apple, String s, Null Function() param2) {
+
   }
 }

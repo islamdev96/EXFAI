@@ -1,4 +1,5 @@
 import 'package:exfai/features/addbook/view/screen/addbook_in_categories.dart';
+import 'package:exfai/features/onbordenig/second_page.dart';
 
 import 'all_export.dart';
 
@@ -24,6 +25,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoute.addbookView, page: () => const AddBookView()),
   GetPage(name: AppRoute.addbookAdd, page: () => const AddBookAdd()),
   GetPage(name: AppRoute.addbookEdit, page: () => const AddBookEdit()),
+  GetPage(name: AppRoute.secondPage, page: () => const SecondPage()),
   // GetPage(name: AppRoute.addbookDetails, page: () => const AddBookDetails()),
   // GetPage(name: AppRoute.addbookDelete, page: () => const AddBookDelete()),
 
