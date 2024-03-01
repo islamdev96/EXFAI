@@ -1,4 +1,3 @@
- 
 import '../../all_export.dart';
 
 class SecondPage extends StatelessWidget {
@@ -124,9 +123,17 @@ class SecondPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Text(
+                      "لديك حساب؟",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     InkWell(
                       onTap: () {
-                        Get.to(const HamzaHome());
+                        Get.to(const Login());
                       },
                       child: Text(
                         "سجل دخول",
@@ -137,19 +144,19 @@ class SecondPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Text(
-                      "لديك حساب؟",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20.sp,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Text(
+                      "   هل تواجه مشكله في تسجيل الدخول ؟",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     InkWell(
                       onTap: () {
                         // Get.to(LoginFormPage());
@@ -163,14 +170,6 @@ class SecondPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Text(
-                      "   هل تواجه مشكله في تسجيل الدخول ؟",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
                   ],
                 ),
                 SizedBox(height: 20.h),
@@ -181,8 +180,43 @@ class SecondPage extends StatelessWidget {
       ),
     );
   }
-  
-  buildLoginButton(IconData apple, String s, Null Function() param2) {
 
+  Widget buildLoginButton(IconData icon, String label, VoidCallback onPressed) {
+    return InkWell(
+      onTap: onPressed,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10),
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 13),
+          decoration: BoxDecoration(
+            color: AppColor.red,
+            border: Border.all(color: Colors.white),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Container(
+                color: AppColor.white,
+                child: Icon(
+                  icon,
+                  // color: Colors.white,
+                  size: 24,
+                ),
+              ),
+              // const SizedBox(width: 10),
+              Text(
+                label,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

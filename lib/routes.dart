@@ -1,14 +1,15 @@
 import 'package:exfai/features/addbook/view/screen/addbook_in_categories.dart';
+import 'package:exfai/features/onbordenig/first_page.dart';
 import 'package:exfai/features/onbordenig/second_page.dart';
 
 import 'all_export.dart';
 
 List<GetPage<dynamic>>? routes = [
   GetPage(
-      name: "/", page: () => const OnBoarding(), middlewares: [MyMiddleWare()]),
+      name: "/", page: () => const FirstPage(), middlewares: [MyMiddleWare()]),
   // name: "/", page: () => const OnBoarding(), middlewares: [MyMiddleWare()]),
   // GetPage(name: AppRoute.languages, page: () => const Languages()),
-  GetPage(name: AppRoute.onBoarding, page: () => const OnBoarding()),
+  GetPage(name: AppRoute.onBoarding, page: () => const FirstPage()),
 
   // GetPage(name: "/", page: () =>   TestView()),
   GetPage(name: AppRoute.cart, page: () => const Cart()),
@@ -39,7 +40,7 @@ List<GetPage<dynamic>>? routes = [
       name: AppRoute.successResetpassword,
       page: () => const SuccessResetPassword()),
   GetPage(name: AppRoute.successSignUp, page: () => const SuccessSignUp()),
-  GetPage(name: AppRoute.onBoarding, page: () => const OnBoarding()),
+  GetPage(name: AppRoute.onBoarding, page: () => const FirstPage()),
   GetPage(
       name: AppRoute.verfiyCodeSignUp, page: () => const VerfiyCodeSignUp()),
   //
