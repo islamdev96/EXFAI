@@ -23,7 +23,7 @@ class SettingCard extends StatelessWidget {
         children: <Widget>[
           _buildSettingsTile(
             Icons.card_travel,
-            "orders".tr,
+            "الطلبات",
             () {
               Get.toNamed(AppRoute.orderspending);
             },
@@ -47,31 +47,39 @@ class SettingCard extends StatelessWidget {
           const Divider(),
           _buildSettingsTile(
             Icons.phone_callback_outlined,
-            "contactUs".tr,
+            "تواصل معنا",
             () {
               launch('tel://01065807020');
             },
           ),
           const Divider(),
-          ListTile(
-            leading: const Icon(
-              Icons.safety_check,
-              color: AppColor.primary,
-            ),
-            title: Text(
-              "changeLanguage".tr,
-              style: const TextStyle(
-                color: AppColor.secondaryText,
-              ),
-            ),
-            trailing: const Icon(Icons.keyboard_arrow_right),
-            onTap: () {},
+          _buildSettingsTile(
+            Icons.card_travel,
+            "اضافه كتاب",
+            () {
+              Get.toNamed(AppRoute.addbookView);
+            },
           ),
+
+          // ListTile(
+          //   leading: const Icon(
+          //     Icons.safety_check,
+          //     color: AppColor.primary,
+          //   ),
+          //   title: Text(
+          //     "changeLanguage".tr,
+          //     style: const TextStyle(
+          //       color: AppColor.secondaryText,
+          //     ),
+          //   ),
+          //   trailing: const Icon(Icons.keyboard_arrow_right),
+          //   onTap: () {},
+          // ),
           const Divider(),
           ListTile(
-            title: Text(
-              "logout".tr,
-              style: const TextStyle(color: AppColor.secondaryText),
+            title: const Text(
+              "تسجيل الخروج",
+              style: TextStyle(color: AppColor.secondaryText),
             ),
             trailing: const Icon(Icons.exit_to_app, color: AppColor.primary),
             onTap: () {

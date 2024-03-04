@@ -38,7 +38,7 @@ class WidgetAddBookInCategories extends GetView<AddBookControllerImp> {
                       style: TextStyle(
                         color: AppColor.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: 14.sp,
+                        fontSize: 14.spMax,
                       ),
                     ),
                     SizedBox(height: 10.h),
@@ -54,29 +54,24 @@ class WidgetAddBookInCategories extends GetView<AddBookControllerImp> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        // IconButton(
-                        //   onPressed: () {},
-                        //   icon: Icon(
-                        //       active
-                        //           ? Icons.favorite
-                        //           : Icons.favorite_border_outlined,
-                        //       color: AppColor.red),
-                        // ),
                         GetBuilder<FavoriteController>(
                           builder: (controller) => IconButton(
-                            onPressed: () {
+                            onPressed: () async {
                               if (controller
                                       .isFavorite[addBookModel.addbookId] ==
                                   "1") {
                                 controller.setFavorite(
                                     addBookModel.addbookId, "0");
-                                // controller
-                                // .removeFavorite(addBookModel.addbookId!);
+                                await controller
+                                    .removeFavorite(addBookModel.addbookId!);
                               } else {
                                 controller.setFavorite(
                                     addBookModel.addbookId, "1");
-                                controller.addFavorite(addBookModel.addbookId!);
+                                await controller
+                                    .addFavorite(addBookModel.addbookId!);
                               }
+                              // After adding/removing, update the UI
+                              controller.update();
                             },
                             icon: Icon(
                               controller.isFavorite[addBookModel.addbookId] ==

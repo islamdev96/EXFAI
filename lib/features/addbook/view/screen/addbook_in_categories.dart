@@ -1,67 +1,67 @@
 // ignore_for_file: unused_import
 
-import 'package:exfai/features/search/view/screen/list_search.dart'
-    as search_screen;
-import 'package:exfai/features/search/view/screen/list_search.dart';
+import 'package:exfai/view/search_text_field.dart';
 
 import '../../../../all_export.dart';
 
-class AddBookInCategories extends StatelessWidget {
+class AddBookInCategories extends StatefulWidget {
   const AddBookInCategories({super.key});
 
-  ///
+  @override
+  State<AddBookInCategories> createState() => _AddBookInCategoriesState();
+}
+
+class _AddBookInCategoriesState extends State<AddBookInCategories> {
+  late AddBookControllerImp controller;
+  late FavoriteController controllerFavorite;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = Get.put(AddBookControllerImp());
+    controllerFavorite = Get.put(FavoriteController());
+  }
+
   @override
   Widget build(BuildContext context) {
-    AddBookControllerImp controller = Get.put(AddBookControllerImp());
-    FavoriteController controllerFavorite = Get.put(FavoriteController());
-
     return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.all(15),
-        child: ListView(children: [
-          CustomAppBar(
-            myController: controller.search!,
-            titleAppBar: "ابحث عن الكتاب",
-            onPressedSearch: () {
-              controller.onSearchItems();
-            },
-            onChanged: (val) {
-              controller.checkSearch(val);
-            },
-            // onPressedIconFavorite: () {
-            //   Get.toNamed(AppRoute.myfavroite);
-            // },
-          ),
+      body: ListView(
+        children: [
+          const SizedBox(height: 20),
+          const SearchTextField(),
           const SizedBox(height: 20),
           const ListCategoriesAddBook(),
           GetBuilder<AddBookControllerImp>(
-              builder: (controller) => HandlingDataView(
-                  statusRequest: controller.statusRequest,
-                  widget: !controller.isSearch
-                      ? GridView.builder(
-                          shrinkWrap: true,
-                          physics: const NeverScrollableScrollPhysics(),
-                          itemCount: controller.data.length,
-                          gridDelegate:
-                              const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2, childAspectRatio: 0.7),
-                          itemBuilder: (BuildContext context, index) {
-                            controllerFavorite.isFavorite[controller.data[index]
-                                    ['addbook_id']] =
-                                controller.data[index]['favorite'];
-                            return WidgetAddBookInCategories(
-                              addBookModel:
-                                  AddBookModel.fromJson(controller.data[index]),
-                            );
-                          })
-                      : ListSearch(listdatamodel: controller.listdata)))
-        ]),
+            builder: (controller) => HandlingDataView(
+              statusRequest: controller.statusRequest,
+              widget: !controller.isSearch
+                  ? GridView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: controller.data.length,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        childAspectRatio: 0.7,
+                      ),
+                      itemBuilder: (BuildContext context, index) {
+                        controllerFavorite.isFavorite[controller.data[index]
+                                ['addbook_id']] =
+                            controller.data[index]['favorite'];
+                        return WidgetAddBookInCategories(
+                          addBookModel:
+                              AddBookModel.fromJson(controller.data[index]),
+                        );
+                      },
+                    )
+                  : const SearchTextField(), // Empty container instead of search_screen.ListSearch
+            ),
+          ),
+        ],
       ),
     );
   }
 }
-
-
 
 
 // class AddBookInCategories extends StatefulWidget {

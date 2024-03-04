@@ -15,7 +15,7 @@ export 'package:exfai/features/categories/controller/add_controller.dart';
 export 'package:exfai/core/shared/customdropdownsearch.dart';
 export 'package:exfai/data/datasource/remote/offer_data.dart';
 export 'package:exfai/view/Settings/settings_page.dart';
-export 'package:exfai/features/addbook/view/screen/list_addbook_home.dart';
+export 'package:exfai/features/addbook/view/screen/addbook_in_home.dart';
 export 'package:exfai/features/addbook/controller/product_details_controller.dart';
 export 'package:exfai/features/categories/view/screen/drawer_page%20.dart';
 export 'package:exfai/features/addbook/view/screen/book/add.dart';

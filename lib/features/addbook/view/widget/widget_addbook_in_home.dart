@@ -1,14 +1,16 @@
 import '../../../../all_export.dart';
 
-class WidgetListAddBookHome extends StatelessWidget {
+class WidgetAddBookInHome extends StatelessWidget {
   final AddBookModel addBookModel;
-  WidgetListAddBookHome({super.key, required this.addBookModel});
+  WidgetAddBookInHome({super.key, required this.addBookModel});
   final FavoriteController controller = Get.put(FavoriteController());
 
   @override
   Widget build(BuildContext context) {
     final title = addBookModel.addbookTitle!;
-    final firstFiveWords = title.split(' ').take(5).join(' ');
+    final firstFiveWordsTitle = title.split(' ').take(5).join(' ');
+    // final city = addBookModel.addbookCity!;
+    // final firstFiveWordsCity = city.split(' ').take(2).join(' ');
 
     return InkWell(
       onTap: () {
@@ -41,7 +43,7 @@ class WidgetListAddBookHome extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      firstFiveWords,
+                      firstFiveWordsTitle,
                       style: TextStyle(
                         color: AppColor.black,
                         fontSize: 16.sp,
@@ -60,19 +62,22 @@ class WidgetListAddBookHome extends StatelessWidget {
                         ),
                         GetBuilder<FavoriteController>(
                           builder: (controller) => IconButton(
-                            onPressed: () {
+                            onPressed: () async {
                               if (controller
                                       .isFavorite[addBookModel.addbookId] ==
                                   "1") {
                                 controller.setFavorite(
                                     addBookModel.addbookId, "0");
-                                // controller
-                                // .removeFavorite(addBookModel.addbookId!);
+                                await controller
+                                    .removeFavorite(addBookModel.addbookId!);
                               } else {
                                 controller.setFavorite(
                                     addBookModel.addbookId, "1");
-                                controller.addFavorite(addBookModel.addbookId!);
+                                await controller
+                                    .addFavorite(addBookModel.addbookId!);
                               }
+                              // After adding/removing, update the UI
+                              controller.update();
                             },
                             icon: Icon(
                               controller.isFavorite[addBookModel.addbookId] ==
@@ -85,6 +90,14 @@ class WidgetListAddBookHome extends StatelessWidget {
                         ),
                       ],
                     ),
+                    // Text(
+                    //   firstFiveWordsCity,
+                    //   style: TextStyle(
+                    //     color: AppColor.black,
+                    //     fontSize: 16.sp,
+                    //     fontWeight: FontWeight.bold,
+                    //   ),
+                    // ),
                     SizedBox(height: 10.h),
                   ],
                 ),

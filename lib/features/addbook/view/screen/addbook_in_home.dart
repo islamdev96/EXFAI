@@ -1,9 +1,9 @@
-import 'package:exfai/features/addbook/view/widget/widget_list_addbook_home.dart';
+import 'package:exfai/features/addbook/view/widget/widget_addbook_in_home.dart';
 
 import '../../../../all_export.dart';
 
-class ListAddBookHome extends GetView<HomeControllerImp> {
-  const ListAddBookHome({super.key});
+class AddBookInHome extends GetView<HomeControllerImp> {
+  const AddBookInHome({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class ListAddBookHome extends GetView<HomeControllerImp> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
-              child: WidgetListAddBookHome(
+              child: WidgetAddBookInHome(
                 addBookModel:
                     AddBookModel.fromJson(controller.addbook[index * 2]),
               ),
@@ -25,7 +25,7 @@ class ListAddBookHome extends GetView<HomeControllerImp> {
             const SizedBox(width: 10), // Add some space between products
             Expanded(
               child: (index * 2 + 1 < controller.addbook.length)
-                  ? WidgetListAddBookHome(
+                  ? WidgetAddBookInHome(
                       addBookModel: AddBookModel.fromJson(
                           controller.addbook[index * 2 + 1]),
                     )

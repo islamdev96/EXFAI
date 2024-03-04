@@ -1,5 +1,6 @@
 import 'package:exfai/features/search/view/screen/list_search.dart';
 import 'package:exfai/features/search/view/screen/search_delegate.dart';
+import 'package:exfai/view/search_text_field.dart';
 import 'package:exfai/view/widget/home/list_categories_home.dart';
 
 import '../../all_export.dart';
@@ -32,28 +33,34 @@ class _HamzaHomeState extends State<HamzaHome> {
                           title: 'يا هلا بك في همزة',
                           imageUrl: 'assets/images/66.png',
                         ),
-                        IconButton(
-                          onPressed: () {
-                            showSearch(
-                                context: context,
-                                delegate: AddBookSearchDelegate(
-                                    addBookModel: controller.addbook
-                                        .map(
-                                            (map) => AddBookModel.fromJson(map))
-                                        .toList()));
-                          },
-                          icon: const Icon(Icons.search),
+                        SizedBox(
+                          height: 25.h,
                         ),
-                        CustomAppBar(
-                          myController: controller.search!,
-                          titleAppBar: "ابحث عن الكتاب",
-                          onPressedSearch: () {
-                            controller.onSearchItems();
-                          },
-                          onChanged: (val) {
-                            controller.checkSearch(val);
-                          },
-                        ),
+                        // TextField(
+                        //   cursorColor: AppColor.red,
+                        //   onTap: () {
+                        //     showSearch(
+                        //       context: context,
+                        //       delegate: AddBookSearchDelegate(
+                        //         addBookModel: controller.addbook
+                        //             .map((map) => AddBookModel.fromJson(map))
+                        //             .toList(),
+                        //       ),
+                        //     );
+                        //   },
+                        //   readOnly:
+                        //       true, // Make the text field read-only to prevent direct typing
+                        //   decoration: const InputDecoration(
+                        //       hintText: "ابحث عن الكتاب", // Placeholder text
+                        //       prefixIcon: Icon(Icons.search), // Search icon
+                        //       border: OutlineInputBorder(
+                        //           borderSide: BorderSide(color: AppColor.red),
+                        //           borderRadius: BorderRadius.all(Radius.circular(
+                        //               55))) // Optional: Add border around the text field
+                        //       ),
+                        // ),
+
+                        const SearchTextField(),
                         SizedBox(height: 30.h),
                         Center(
                           child: Text(
@@ -77,10 +84,7 @@ class _HamzaHomeState extends State<HamzaHome> {
                         SizedBox(height: 30.h),
 
                         const ListCategoriesHome(),
-                        // const ListItemsHome(),
-                        const ListAddBookHome(), // تم استبدال ListItemsHome بـ ListAddBookHome
-
-                        // const ListAddBookHome(), // تم استبدال ListItemsHome بـ ListAddBookHome
+                        const AddBookInHome(), // تم استبدال ListItemsHome بـ ListAddBookHome
                       ],
                     )
                   : Column(
