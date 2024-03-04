@@ -18,6 +18,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoute.categoriesAdd, page: () => const CategoriesAdd()),
   GetPage(name: AppRoute.categoriesView, page: () => const CategoriesView()),
   GetPage(name: AppRoute.categoriesEdit, page: () => const CategoriesEdit()),
+  GetPage(name: AppRoute.settingsPage, page: () => const SettingsPage()),
   // GetPage(homepage
   //     name: AppRoute.categoriesDetails, page: () => const CategoriesDetails()),
   // GetPage(name: AppRoute.categories, page: () => const Categories()),

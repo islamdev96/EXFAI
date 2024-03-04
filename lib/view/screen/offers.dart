@@ -16,19 +16,30 @@ class OffersView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: ListView(children: [
                 CustomAppBar(
-                  mycontroller: controller.search!,
-                  titleappbar: "findYourProduct".tr,
-                  // onPressedIcon: () {},
+                  myController: controller.search!,
+                  titleAppBar: "ابحث عن الكتاب",
                   onPressedSearch: () {
                     controller.onSearchItems();
                   },
                   onChanged: (val) {
                     controller.checkSearch(val);
                   },
-                  // onPressedIconFavorite: () {
-                  //   Get.toNamed(AppRoute.myFavroite);
-                  // },
                 ),
+
+                // CustomAppBar(
+                //   mycontroller: controller.search!,
+                //   titleappbar: "findYourProduct".tr,
+                //   // onPressedIcon: () {},
+                //   onPressedSearch: () {
+                //     controller.onSearchItems();
+                //   },
+                //   onChanged: (val) {
+                //     controller.checkSearch(val);
+                //   },
+                //   // onPressedIconFavorite: () {
+                //   //   Get.toNamed(AppRoute.myFavroite);
+                //   // },
+                // ),
                 const SizedBox(height: 20),
                 controller.isSearch
                     ? HandlingDataView(

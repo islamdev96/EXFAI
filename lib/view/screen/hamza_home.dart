@@ -1,4 +1,5 @@
 import 'package:exfai/features/search/view/screen/list_search.dart';
+import 'package:exfai/features/search/view/screen/search_delegate.dart';
 import 'package:exfai/view/widget/home/list_categories_home.dart';
 
 import '../../all_export.dart';
@@ -20,58 +21,92 @@ class _HamzaHomeState extends State<HamzaHome> {
         child: ListView(
           children: [
             HandlingDataView(
-                statusRequest: controller.statusRequest,
-                widget: !controller.isSearch
-                    ? Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const PageAppBar(),
-                          const CustomCardHome(
-                            title: 'يا هلا بك في همزة',
-                            imageUrl: 'assets/images/66.png',
+              statusRequest: controller.statusRequest,
+              widget: !controller.isSearch
+                  ? Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const PageAppBar(),
+                        const CustomCardHome(
+                          title: 'يا هلا بك في همزة',
+                          imageUrl: 'assets/images/66.png',
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            showSearch(
+                                context: context,
+                                delegate: AddBookSearchDelegate(
+                                    addBookModel: controller.addbook
+                                        .map(
+                                            (map) => AddBookModel.fromJson(map))
+                                        .toList()));
+                          },
+                          icon: const Icon(Icons.search),
+                        ),
+                        CustomAppBar(
+                          myController: controller.search!,
+                          titleAppBar: "ابحث عن الكتاب",
+                          onPressedSearch: () {
+                            controller.onSearchItems();
+                          },
+                          onChanged: (val) {
+                            controller.checkSearch(val);
+                          },
+                        ),
+                        SizedBox(height: 30.h),
+                        Center(
+                          child: Text(
+                            'ابحث عن كتاب مستعمل',
+                            style: TextStyle(
+                                color: AppColor.black,
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.bold),
                           ),
-
-                          CustomAppBar(
-                            mycontroller: controller.search!,
-                            titleappbar: "ابحث عن الكتاب",
-                            onPressedSearch: () {
-                              controller.onSearchItems();
-                            },
-                            onChanged: (val) {
-                              controller.checkSearch(val);
-                            },
+                        ),
+                        Center(
+                          child: Text(
+                            'او اعرض كتابك',
+                            style: TextStyle(
+                                color: AppColor.black,
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(height: 30.h),
-                          Center(
-                            child: Text(
-                              'ابحث عن كتاب مستعمل',
-                              style: TextStyle(
-                                  color: AppColor.black,
-                                  fontSize: 12.sp,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          Center(
-                            child: Text(
-                              'او اعرض كتابك',
-                              style: TextStyle(
-                                  color: AppColor.black,
-                                  fontSize: 12.sp,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
+                        ),
 
-                          SizedBox(height: 30.h),
+                        SizedBox(height: 30.h),
 
-                          const ListCategoriesHome(),
-                          // const ListItemsHome(),
-                          const ListAddBookHome(), // تم استبدال ListItemsHome بـ ListAddBookHome
+                        const ListCategoriesHome(),
+                        // const ListItemsHome(),
+                        const ListAddBookHome(), // تم استبدال ListItemsHome بـ ListAddBookHome
 
-                          // const ListAddBookHome(), // تم استبدال ListItemsHome بـ ListAddBookHome
-                        ],
-                      )
-                    : ListSearch(listdatamodel: controller.listdata)),
+                        // const ListAddBookHome(), // تم استبدال ListItemsHome بـ ListAddBookHome
+                      ],
+                    )
+                  : Column(
+                      children: [
+                        const PageAppBar(),
+                        IconButton(
+                          onPressed: () {
+                            Get.toNamed(AppRoute.settingsPage);
+                          },
+                          icon: const Icon(Icons.arrow_back),
+                        ),
+                        CustomAppBar(
+                          myController: controller.search!,
+                          titleAppBar: "ابحث عن الكتاب",
+                          onPressedSearch: () {
+                            controller.onSearchItems();
+                          },
+                          onChanged: (val) {
+                            controller.checkSearch(val);
+                          },
+                        ),
+                        SizedBox(height: 30.h),
+                        ListSearch(listdatamodel: controller.listdata),
+                      ],
+                    ),
+            ),
             SizedBox(height: 100.h),
           ],
         ),

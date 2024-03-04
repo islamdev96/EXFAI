@@ -1,7 +1,7 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:exfai/all_export.dart';
-import 'package:exfai/features/addbook/controller/edit_controller.dart';
+import 'package:exfai/features/addbook/controller/addbook/edit_controller.dart';
 
 class AddBookEdit extends StatefulWidget {
   const AddBookEdit({super.key});

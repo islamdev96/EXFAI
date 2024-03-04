@@ -21,6 +21,7 @@ class WidgetListCategoriesHome extends GetView<HomeControllerImp> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25),
         ),
+        // ignore: unrelated_type_equality_checks
         selected: controller.categories == categoriesModel.categoriesId,
         onTap: () {
           controller.goToItems(

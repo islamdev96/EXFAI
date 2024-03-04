@@ -1,3 +1,5 @@
+// ignore_for_file: overridden_fields
+
 import '../../../all_export.dart';
 
 abstract class AddBookController extends GetxController {
@@ -12,7 +14,7 @@ class AddBookControllerImp extends SearchMixController {
   String? catid;
   int? selectedCat;
 
-  AddbookData testData = AddbookData(Get.find());
+  AddBookData addBookData = AddBookData(Get.find());
 
   String deliverytime = "";
   List data = [];
@@ -47,7 +49,7 @@ class AddBookControllerImp extends SearchMixController {
   getItems(String categoryid) async {
     data.clear();
     statusRequest = StatusRequest.loading;
-    var response = await testData.getData(
+    var response = await addBookData.getData(
         categoryid, myServices.sharedPreferences.getString("id")!);
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {

@@ -1,7 +1,7 @@
 class AppLink {
   //========================== Server ============================
   static const String server = "https://exfai.com/Hamza";
-  static const String serverImage = "https://exfai.com/Hamza/upload";
+  static const String serverImage = "$server/upload";
   // ================================= Auth ========================== //
 
   static const String signUp = "$server/auth/signup.php";

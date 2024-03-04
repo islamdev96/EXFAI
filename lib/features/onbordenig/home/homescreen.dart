@@ -1,4 +1,3 @@
- 
 import 'package:exfai/core/functions/alertexitapp.dart';
 
 import '../../../all_export.dart';
@@ -23,6 +22,7 @@ class HomeScreen extends StatelessWidget {
             child: const Icon(Icons.shopping_basket_outlined)),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: const CustomBottomAppBarHome(),
+        // ignore: deprecated_member_use
         body: WillPopScope(
           onWillPop: () => Get.alertExitApp(),
           child: controller.listPage.elementAt(controller.currentpage),

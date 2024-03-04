@@ -18,6 +18,7 @@ class HomeScreenControllerImp extends HomeScreenController {
   ];
 
   @override
+  // ignore: avoid_renaming_method_parameters
   changePage(int i) {
     currentpage = i;
     update();

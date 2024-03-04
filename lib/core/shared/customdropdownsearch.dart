@@ -39,7 +39,7 @@ class _CustomDropdownSearchState extends State<CustomDropdownSearch> {
             color: Colors.blue,
           ),
         ),
-        data: widget.listdata ?? [],
+        data: widget.listdata,
         selectedItems: (List<dynamic> selectedList) {
           SelectedListItem selectedListItem = selectedList[0];
           widget.dropdownSelectedName.text = selectedListItem.name;

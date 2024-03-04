@@ -1,4 +1,4 @@
-import '../../all_export.dart';
+import '../../../../all_export.dart';
 
 class MyFavorite extends StatelessWidget {
   const MyFavorite({super.key});
@@ -14,20 +14,31 @@ class MyFavorite extends StatelessWidget {
         child: GetBuilder<MyFavoriteController>(
             builder: ((controller) => ListView(children: [
                   CustomAppBar(
-                    mycontroller: controller.search!,
-                    titleappbar: "findYourProduct".tr,
-                    iconData: Icons.arrow_forward,
-                    // onPressedIcon: () {},
+                    myController: controller.search!,
+                    titleAppBar: "ابحث عن الكتاب",
                     onPressedSearch: () {
                       controller.onSearchItems();
                     },
                     onChanged: (val) {
                       controller.checkSearch(val);
                     },
-                    // onPressedIconFavorite: () {
-                    //   Get.offAllNamed(AppRoute.homepage);
-                    // },
                   ),
+
+                  // CustomAppBar(
+                  //   mycontroller: controller.search!,
+                  //   titleappbar: "findYourProduct".tr,
+                  //   iconData: Icons.arrow_forward,
+                  //   // onPressedIcon: () {},
+                  //   onPressedSearch: () {
+                  //     controller.onSearchItems();
+                  //   },
+                  //   onChanged: (val) {
+                  //     controller.checkSearch(val);
+                  //   },
+                  //   // onPressedIconFavorite: () {
+                  //   //   Get.offAllNamed(AppRoute.homepage);
+                  //   // },
+                  // ),
                   SizedBox(height: 30.h),
                   Center(
                     child: Text(

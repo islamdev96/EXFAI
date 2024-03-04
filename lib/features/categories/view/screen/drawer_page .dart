@@ -49,6 +49,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: const Text('تسجيل الدخول',
                   style: TextStyle(color: Colors.white)),
               onTap: () {
+                // Get.to(const SearchBarApp());
                 // أضف العمليات اللازمة عند النقر على "تسجيل الدخول"
 
                 // Add your navigation logic here

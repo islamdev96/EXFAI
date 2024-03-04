@@ -16,23 +16,30 @@ class ListSearch extends GetView<HomeControllerImp> {
             controller.goToPageProductDetails(listdatamodel[index]);
           },
           child: Container(
+            color: AppColor.red,
             margin: const EdgeInsets.symmetric(vertical: 20),
             child: Card(
               child: Container(
                 padding: const EdgeInsets.all(10),
                 child: Row(
                   children: [
-                    Expanded(
-                        child: CachedNetworkImage(
-                      imageUrl:
-                          "${AppLink.imagesAddBook}/${listdatamodel[index].addbookImage!}",
-                    )),
+                    // Expanded(
+                    //   child: CachedNetworkImage(
+                    //     imageUrl:
+                    //         "${AppLink.imagesAddBook}/${listdatamodel[index].addbookImage!}",
+                    //   ),
+                    // ),
                     Expanded(
                       flex: 2,
                       child: ListTile(
-                        title: Text(listdatamodel[index].addbookTitle!),
-                        subtitle:
-                            Text(listdatamodel[index].addbookDescription!),
+                        title: Text(
+                          listdatamodel[index].addbookTitle!,
+                          style: const TextStyle(color: AppColor.black),
+                        ),
+                        // subtitle: Text(
+                        //   listdatamodel[index].addbookDescription!,
+                        //   style: TextStyle(color: AppColor.black),
+                        // ),
                       ),
                     ),
                   ],

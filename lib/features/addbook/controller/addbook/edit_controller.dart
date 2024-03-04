@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import '../../../all_export.dart';
+import '../../../../all_export.dart';
 
 class AddBookEditController extends GetxController {
   AddBookData addBookData = AddBookData(Get.find());

@@ -7,6 +7,12 @@ import '../../../../all_export.dart';
 class AddBookData {
   Crud crud;
   AddBookData(this.crud);
+  Future<dynamic> getData(String id, String userid) async {
+    var response = await crud
+        .postData(AppLink.addbook, {"id": id.toString(), "usersid": userid});
+    return response.fold((l) => l, (r) => r);
+  }
+
   get() async {
     var response = await crud.postData(AppLink.addbookView, {});
     return response.fold((l) => l, (r) => r);

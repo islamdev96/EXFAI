@@ -1,4 +1,4 @@
-import '../../all_export.dart';
+import '../../../../all_export.dart';
 
 class FavoriteController extends GetxController {
   FavoriteData favoriteData = FavoriteData(Get.find());

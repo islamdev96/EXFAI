@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:exfai/all_export.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:image_picker/image_picker.dart';
 
 Future<File?> imageUploadCamera() async {
   final XFile? file = await ImagePicker().pickImage(
@@ -37,14 +36,12 @@ void showbottonmenu(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Container(
-              child: const Text(
-                "اختيار صورة",
-                style: TextStyle(
-                  fontSize: 22,
-                  color: AppColor.primary,
-                  fontWeight: FontWeight.bold,
-                ),
+            const Text(
+              "اختيار صورة",
+              style: TextStyle(
+                fontSize: 22,
+                color: AppColor.primary,
+                fontWeight: FontWeight.bold,
               ),
             ),
             ListTile(

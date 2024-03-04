@@ -2,6 +2,8 @@ import '../../../../all_export.dart';
 
 class WidgetAddBookInCategories extends GetView<AddBookControllerImp> {
   final AddBookModel addBookModel;
+  // final bool active;
+
   const WidgetAddBookInCategories({super.key, required this.addBookModel});
 
   @override
@@ -52,6 +54,14 @@ class WidgetAddBookInCategories extends GetView<AddBookControllerImp> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+                        // IconButton(
+                        //   onPressed: () {},
+                        //   icon: Icon(
+                        //       active
+                        //           ? Icons.favorite
+                        //           : Icons.favorite_border_outlined,
+                        //       color: AppColor.red),
+                        // ),
                         GetBuilder<FavoriteController>(
                           builder: (controller) => IconButton(
                             onPressed: () {

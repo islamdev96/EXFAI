@@ -10,15 +10,15 @@ extension ExtensionSnackbar on GetInterface {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
-        title: Text(
-          "warning".tr,
-          style: const TextStyle(
+        title: const Text(
+          "تنبيه",
+          style: TextStyle(
             color: AppColor.white,
             fontWeight: FontWeight.bold,
           ),
         ),
         content: Text(
-          "doYouWantToExitTheApp".tr,
+          "هل تريد الخروج من التطبيق؟",
           style: TextStyle(color: AppColor.white, fontSize: 16.sp),
         ),
         actions: [
@@ -35,9 +35,9 @@ extension ExtensionSnackbar on GetInterface {
                 onPressed: () {
                   exit(0);
                 },
-                child: Text(
-                  "confirmation".tr,
-                  style: const TextStyle(
+                child: const Text(
+                  "تاكيد",
+                  style: TextStyle(
                     color: AppColor.white,
                   ),
                 ),
@@ -54,9 +54,9 @@ extension ExtensionSnackbar on GetInterface {
                 onPressed: () {
                   Get.back(result: false);
                 },
-                child: Text(
-                  "cancellation".tr,
-                  style: const TextStyle(
+                child: const Text(
+                  "الغاء",
+                  style: TextStyle(
                     color: AppColor.black,
                   ),
                 ),

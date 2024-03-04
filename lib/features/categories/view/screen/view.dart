@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable, deprecated_member_use
+
 import 'package:exfai/all_export.dart';
 
 class CategoriesView extends StatelessWidget {

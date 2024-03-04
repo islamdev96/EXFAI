@@ -1,3 +1,4 @@
+// ignore: depend_on_referenced_packages
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'all_export.dart';
 
@@ -6,19 +7,25 @@ void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await initialServices();
 
-  runApp( const MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
-   const MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
+  bool isDark = false;
+
   @override
   Widget build(BuildContext context) {
+    final ThemeData themeData = ThemeData(
+        useMaterial3: true,
+        brightness: isDark ? Brightness.dark : Brightness.light);
+
     return ScreenUtilInit(
       useInheritedMediaQuery: true,
       designSize: const Size(360, 690),
@@ -33,12 +40,7 @@ class _MyAppState extends State<MyApp> {
             GlobalCupertinoLocalizations.delegate,
           ],
 
-          theme: ThemeData(
-            listTileTheme: const ListTileThemeData(
-              textColor: Colors.white,
-            ),
-            useMaterial3: true,
-          ),
+          theme: themeData,
           debugShowCheckedModeBanner: false,
           initialBinding: InitialBindings(),
           getPages: routes,

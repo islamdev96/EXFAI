@@ -24,7 +24,7 @@ export 'package:exfai/features/addbook/view/screen/book/view.dart';
 export 'package:exfai/features/categories/view/screen/add.dart';
 export 'package:exfai/features/categories/view/screen/edit.dart';
 export 'package:exfai/features/categories/view/screen/view.dart';
-export 'package:exfai/features/addbook/controller/view_controller.dart';
+export 'package:exfai/features/addbook/controller/addbook/view_controller.dart';
 
 export 'package:exfai/features/addbook/data/datasource/addbook_data.dart';
 export 'package:exfai/features/categories/view/widget/cardadmin.dart';
@@ -46,7 +46,7 @@ export 'package:exfai/data/model/myfavorite.dart';
 export 'package:exfai/data/datasource/static/static.dart';
 export 'package:exfai/controller/cart_controller.dart';
 export 'package:cached_network_image/cached_network_image.dart';
-export 'package:exfai/controller/favorite_controller.dart';
+export 'package:exfai/features/favorite/controller/favorite_controller.dart';
 export 'package:exfai/view/widget/cart/buttoncart.dart';
 export 'package:exfai/view/widget/cart/custombuttoncoupon.dart';
 export 'package:exfai/view/widget/home/custombuttonappbar.dart';
@@ -71,7 +71,7 @@ export 'package:exfai/view/screen/auth/verifycodesignup.dart';
 export 'package:exfai/view/screen/cart.dart';
 export 'package:exfai/view/screen/checkout.dart';
 export 'package:exfai/view/screen/homescreen.dart';
-export 'package:exfai/view/screen/myfavorite.dart';
+export 'package:exfai/features/favorite/view/screen/myfavorite.dart';
 export 'package:exfai/view/screen/orders/archive.dart';
 export 'package:exfai/view/screen/orders/details.dart';
 export 'package:exfai/view/screen/orders/pending.dart';
@@ -103,7 +103,7 @@ export 'package:exfai/view/widget/home/customcardhome.dart';
 export 'package:exfai/view/widget/home/customtitlehome.dart';
 export 'package:exfai/view/widget/home/custombottomappbarhome.dart';
 export 'package:exfai/view/screen/hamza_home.dart';
-export 'package:exfai/view/widget/myfavorite/customlistfavoriteitems.dart';
+export 'package:exfai/features/favorite/view/widget/customlistfavoriteitems.dart';
 export 'package:exfai/controller/notification_controller.dart';
 export 'package:exfai/view/widget/productdetails/priceandcount.dart';
 export 'package:exfai/view/widget/productdetails/toppageproductdetails.dart';
@@ -132,7 +132,7 @@ export 'package:google_maps_flutter/google_maps_flutter.dart';
 
 export '../../../controller/onboarding_controller.dart';
 
-export '../../../controller/myfavoritecontroller.dart';
+export 'features/favorite/controller/myfavoritecontroller.dart';
 export 'dart:async';
 export 'package:geolocator/geolocator.dart';
 export 'package:firebase_messaging/firebase_messaging.dart';
@@ -146,8 +146,7 @@ export '../../data/datasource/remote/orders/pending_data.dart';
 export '../data/datasource/remote/cart_data.dart';
 export '../data/model/couponmodel.dart';
 export '../data/datasource/remote/home_data.dart';
-export '../data/datasource/remote/items_data.dart';
-export '../data/datasource/remote/myfavorite_data.dart';
+export 'features/favorite/data/myfavorite_data.dart';
 export 'dart:convert';
 export 'package:exfai/core/class/statusrequest.dart';
 export 'package:exfai/firebase_options.dart';
@@ -158,7 +157,7 @@ export '../data/datasource/remote/orders/notification_data.dart';
 
 export '../view/screen/notification.dart';
 
-export '../data/datasource/remote/favorite_data.dart';
+export 'features/favorite/data/favorite_data.dart';
 
 export '../data/datasource/remote/address_data.dart';
 export '../data/datasource/remote/checkout_date.dart';

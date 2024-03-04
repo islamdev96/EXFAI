@@ -1,6 +1,6 @@
 // ignore_for_file: overridden_fields
 
-import '../../all_export.dart';
+import '../../../../all_export.dart';
 
 class MyFavoriteController extends SearchMixController {
   MyFavoriteData favoriteData = MyFavoriteData(Get.find());

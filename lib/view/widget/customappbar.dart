@@ -1,58 +1,91 @@
-import '../../../all_export.dart';
+import '../../all_export.dart';
 
-class CustomAppBar extends StatelessWidget {
-  final String titleappbar;
-  // final void Function()? onPressedIconFavorite;
-  final void Function()? onPressedSearch;
-  final void Function(String)? onChanged;
-  final TextEditingController mycontroller;
-  final IconData iconData;
-  const CustomAppBar(
-      {super.key,
-      required this.titleappbar,
-      this.onPressedSearch,
-      // required this.onPressedIconFavorite,
-      this.onChanged,
-      required this.mycontroller,
-      this.iconData = Icons.favorite_border_outlined});
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final String titleAppBar;
+  final Function()? onPressedSearch;
+  final Function(String)? onChanged;
+  final TextEditingController myController;
+
+  const CustomAppBar({
+    super.key,
+    required this.titleAppBar,
+    required this.myController,
+    this.onPressedSearch,
+    this.onChanged,
+  });
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: 10),
-      child: Row(children: [
-        Expanded(
-            child: TextFormField(
-          controller: mycontroller,
-          onChanged: onChanged,
-          decoration: InputDecoration(
-              prefixIcon: IconButton(
-                  icon: const Icon(Icons.search), onPressed: onPressedSearch),
-              hintText: titleappbar,
-              hintStyle:
-                  const TextStyle(fontSize: 18, color: AppColor.secondaryText),
-              border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.circular(50)),
-              filled: true,
-              fillColor: AppColor.secondaryBackground),
-        )),
-        // const SizedBox(width: 10),
-        // Container(
-        //   decoration: BoxDecoration(
-        //       color: AppColor.primary, borderRadius: BorderRadius.circular(10)),
-        //   width: 60,
-        //   // padding: const EdgeInsets.symmetric(vertical: 8),
-        //   // child: IconButton(
-        //   //   onPressed: onPressedIconFavorite,
-        //   //   icon: Icon(
-        //   //     iconData,
-        //   //     size: 30,
-        //   //     color: AppColor.white,
-        //   //   ),
-        //   // ),
-        // )
-      ]),
+    return AppBar(
+      title: TextFormField(
+        controller: myController,
+        onChanged: onChanged,
+        decoration: InputDecoration(
+          hintText: titleAppBar,
+          prefixIcon: IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: onPressedSearch,
+          ),
+        ),
+      ),
     );
   }
 }
+
+// class ListSearch extends StatelessWidget {
+//   final List<AddBookModel> listDataModel;
+
+//   const ListSearch({
+//     super.key,
+//     required this.listDataModel,
+//   });
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return ListView.builder(
+//       itemCount: listDataModel.length,
+//       shrinkWrap: true,
+//       physics: const NeverScrollableScrollPhysics(),
+//       itemBuilder: (context, index) {
+//         return InkWell(
+//           onTap: () {
+//             Get.find<HomeControllerImp>()
+//                 .goToPageProductDetails(listDataModel[index]);
+//           },
+//           child: Container(
+//             margin: const EdgeInsets.symmetric(vertical: 20),
+//             child: Card(
+//               child: Padding(
+//                 padding: const EdgeInsets.all(10),
+//                 child: Row(
+//                   children: [
+//                     Expanded(
+//                       child: CachedNetworkImage(
+//                         imageUrl:
+//                             "${AppLink.imagesAddBook}/${listDataModel[index].addbookImage!}",
+//                       ),
+//                     ),
+//                     Expanded(
+//                       flex: 2,
+//                       child: ListTile(
+//                         title: Text(
+//                           listDataModel[index].addbookTitle!,
+//                           style: const TextStyle(
+//                               color: Color.fromRGBO(0, 0, 0, 1)),
+//                         ),
+//                         // Add more widgets as needed
+//                       ),
+//                     ),
+//                   ],
+//                 ),
+//               ),
+//             ),
+//           ),
+//         );
+//       },
+//     );
+//   }
+// }
