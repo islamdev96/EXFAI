@@ -28,7 +28,6 @@ class _CategoriesAddState extends State<CategoriesAdd> {
                   CustomTextFormGlobal(
                     hinttext: "Enter Category Name",
                     labeltext: "Category Name",
-                    iconData: Icons.category,
                     mycontroller: controller.name,
                     valid: (val) {
                       return validateInput(
@@ -39,7 +38,6 @@ class _CategoriesAddState extends State<CategoriesAdd> {
                   CustomTextFormGlobal(
                     hinttext: "Enter Category Name (Arabic)",
                     labeltext: "Category Name (Arabic)",
-                    iconData: Icons.category,
                     mycontroller: controller.description,
                     valid: (val) {
                       return validateInput(

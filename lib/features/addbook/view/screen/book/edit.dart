@@ -30,7 +30,6 @@ class _AddBookEditState extends State<AddBookEdit> {
                           CustomTextFormGlobal(
                               hinttext: "title",
                               labeltext: "title",
-                              iconData: Icons.category,
                               mycontroller: controller.title,
                               valid: (val) {
                                 return validateInput(val!, 1, 50, "");
@@ -39,7 +38,6 @@ class _AddBookEditState extends State<AddBookEdit> {
                           CustomTextFormGlobal(
                               hinttext: " description",
                               labeltext: "description",
-                              iconData: Icons.category,
                               mycontroller: controller.description,
                               valid: (val) {
                                 return validateInput(val!, 1, 50, "");
@@ -48,7 +46,6 @@ class _AddBookEditState extends State<AddBookEdit> {
                           CustomTextFormGlobal(
                               hinttext: "author",
                               labeltext: "author",
-                              iconData: Icons.category,
                               mycontroller: controller.author,
                               valid: (val) {
                                 return validateInput(val!, 1, 200, "");
@@ -57,7 +54,6 @@ class _AddBookEditState extends State<AddBookEdit> {
                           CustomTextFormGlobal(
                               hinttext: "city",
                               labeltext: "city",
-                              iconData: Icons.category,
                               mycontroller: controller.city,
                               valid: (val) {
                                 return validateInput(val!, 1, 200, "");
@@ -66,7 +62,6 @@ class _AddBookEditState extends State<AddBookEdit> {
                           CustomTextFormGlobal(
                               hinttext: "communication",
                               labeltext: "communication",
-                              iconData: Icons.category,
                               mycontroller: controller.communication,
                               valid: (val) {
                                 return validateInput(val!, 1, 30, "");
@@ -75,7 +70,6 @@ class _AddBookEditState extends State<AddBookEdit> {
                           CustomTextFormGlobal(
                               hinttext: " price",
                               labeltext: " price",
-                              iconData: Icons.category,
                               mycontroller: controller.price,
                               valid: (val) {
                                 return validateInput(val!, 1, 30, "");
@@ -84,7 +78,6 @@ class _AddBookEditState extends State<AddBookEdit> {
                           CustomTextFormGlobal(
                               hinttext: " count",
                               labeltext: " count",
-                              iconData: Icons.category,
                               mycontroller: controller.count,
                               valid: (val) {
                                 return validateInput(val!, 1, 30, "");
@@ -93,7 +86,6 @@ class _AddBookEditState extends State<AddBookEdit> {
                           CustomTextFormGlobal(
                               hinttext: " discount",
                               labeltext: " discount",
-                              iconData: Icons.category,
                               mycontroller: controller.discount,
                               valid: (val) {
                                 return validateInput(val!, 1, 30, "");

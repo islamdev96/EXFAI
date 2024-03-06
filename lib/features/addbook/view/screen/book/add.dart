@@ -2,7 +2,10 @@
 
 // ignore_for_file: unused_local_variable, avoid_print
 
+import 'dart:io';
+
 import 'package:exfai/features/addbook/controller/addbook/add_controller.dart';
+import 'package:exfai/features/addbook/view/screen/city.dart';
 
 import '../../../../../all_export.dart';
 
@@ -16,12 +19,8 @@ class AddBookAdd extends StatefulWidget {
 class _AddBookAddState extends State<AddBookAdd> {
   @override
   Widget build(BuildContext context) {
-    print("Building AddBookAdd view");
     AddBookAddController controller = Get.put(AddBookAddController());
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Add Item'),
-      ),
       body: GetBuilder<AddBookAddController>(
           builder: (controller) => HandlingDataView(
                 statusRequest: controller.statusRequest!,
@@ -31,10 +30,20 @@ class _AddBookAddState extends State<AddBookAdd> {
                       key: controller.formState,
                       child: ListView(
                         children: [
+                          const PageAppBar(),
+                          const CustomCardHome(
+                            title: "اعرض كتابك",
+                            imageUrl: 'assets/images/23.png',
+                            imageHeight: 65,
+                            imageWidth: 65,
+                          ),
+                          SizedBox(
+                            height: 25.h,
+                          ),
+
                           CustomTextFormGlobal(
-                            hinttext: " title",
-                            labeltext: " title",
-                            iconData: Icons.category,
+                            hinttext: "مثل كتاب حياة في الاداره",
+                            labeltext: "عنوان الكتاب",
                             mycontroller: controller.title,
                             valid: (val) {
                               return validateInput(val!, 1, 30, "");
@@ -42,73 +51,51 @@ class _AddBookAddState extends State<AddBookAdd> {
                             isNumber: false,
                           ),
                           CustomTextFormGlobal(
-                              hinttext: " description",
-                              labeltext: " description",
-                              iconData: Icons.category,
+                              hinttext: " مثل عما يتحدث الكتاب",
+                              labeltext: " وصف الكتاب",
                               mycontroller: controller.description,
                               valid: (val) {
                                 return validateInput(val!, 1, 30, "");
                               },
                               isNumber: false),
                           CustomTextFormGlobal(
-                              hinttext: " author",
-                              labeltext: " author",
-                              iconData: Icons.category,
+                              hinttext: " مثل غازي القصيبي",
+                              labeltext: " مؤلف الكتاب",
                               mycontroller: controller.author,
                               valid: (val) {
                                 return validateInput(val!, 1, 30, "");
                               },
                               isNumber: false),
+                          CustomDropdownSearch(
+                              title: "تصنيف الكتاب",
+                              listdata: controller.dropdownlist,
+                              dropdownSelectedName: controller.categorieName!,
+                              dropdownSelectedID: controller.categoriesid!),
+                          CustomDropdownSearchCity(
+                            title: "حدد المدينه",
+                            dropdownSelectedName: TextEditingController(),
+                            dropdownSelectedID: TextEditingController(),
+                            citiesList: citiesList,
+                          ),
                           CustomTextFormGlobal(
-                              hinttext: " city",
-                              labeltext: " city",
-                              iconData: Icons.category,
-                              mycontroller: controller.city,
-                              valid: (val) {
-                                return validateInput(val!, 1, 30, "");
-                              },
-                              isNumber: false),
-                          CustomTextFormGlobal(
-                              hinttext: " price",
-                              labeltext: " price",
-                              iconData: Icons.category,
+                              hinttext: " بكم ودك تبيع كتابك",
+                              labeltext: " السعر",
                               mycontroller: controller.price,
                               valid: (val) {
                                 return validateInput(val!, 1, 30, "");
                               },
                               isNumber: true),
                           CustomTextFormGlobal(
-                              hinttext: " communication",
-                              labeltext: " communication",
-                              iconData: Icons.category,
+                              hinttext: "التواصل عن طريق",
+                              labeltext: " التواصل",
                               mycontroller: controller.communication,
                               valid: (val) {
                                 return validateInput(val!, 1, 30, "");
                               },
                               isNumber: false),
-                          CustomTextFormGlobal(
-                              hinttext: " count",
-                              labeltext: " count",
-                              iconData: Icons.category,
-                              mycontroller: controller.count!,
-                              valid: (val) {
-                                return validateInput(val!, 1, 30, "");
-                              },
-                              isNumber: true),
-                          CustomTextFormGlobal(
-                              hinttext: " discount",
-                              labeltext: " discount",
-                              iconData: Icons.category,
-                              mycontroller: controller.discount!,
-                              valid: (val) {
-                                return validateInput(val!, 1, 30, "");
-                              },
-                              isNumber: true),
-                          CustomDropdownSearch(
-                              title: "Choose Category",
-                              listdata: controller.dropdownlist,
-                              dropdownSelectedName: controller.categorieName!,
-                              dropdownSelectedID: controller.categoriesid!),
+                          const SizedBox(
+                              height:
+                                  20), // Add some spacing between the two elements
                           Container(
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 20),
@@ -118,11 +105,14 @@ class _AddBookAddState extends State<AddBookAdd> {
                                 onPressed: () {
                                   controller.showOptionImage();
                                 },
-                                child: const Text("choose item image "),
+                                child: const Text(
+                                  "اختر صورة الكتاب",
+                                  style: TextStyle(color: Colors.white),
+                                ),
                               )),
-                          if (controller.file != null)
+                          if (controller.files != null)
                             Image.file(
-                              controller.file!,
+                              controller.files!,
                               width: 100,
                               height: 100,
                             ),

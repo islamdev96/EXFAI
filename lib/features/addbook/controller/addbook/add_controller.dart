@@ -24,25 +24,25 @@ class AddBookAddController extends GetxController {
   TextEditingController? categoriesid;
   StatusRequest? statusRequest = StatusRequest.none;
 
-  File? file;
+  File? files;
 
   showOptionImage() async {
     showbottonmenu(chooseImageCamera, chooseImageGallery);
   }
 
   chooseImageCamera() async {
-    file = await imageUploadCamera();
+    files = await imageUploadCamera();
     update();
   }
 
   chooseImageGallery() async {
-    file = await fileUploadGallery();
+    files = await fileUploadGallery();
     update();
   }
 
   addData() async {
     if (formState.currentState!.validate()) {
-      if (file == null) {
+      if (files == null) {
         Get.snackbar("Warning", "Please Choose Image ");
         return; // توقف عن إرسال البيانات إذا لم يتم اختيار الصورة
       }
@@ -64,7 +64,7 @@ class AddBookAddController extends GetxController {
         "datenow": DateTime.now().toString()
       };
 
-      var response = await addBookData.add(data, file!);
+      var response = await addBookData.add(data, files!);
 
       statusRequest = handlingData(response);
 
@@ -173,30 +173,30 @@ class AddBookAddController extends GetxController {
     super.onInit();
   }
 
-  showDropdown(context) {
-    DropDownState(
-      DropDown(
-        bottomSheetTitle: const Text(
-          "title",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20.0,
-          ),
-        ),
-        submitButtonChild: const Text(
-          'Done',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        data: [SelectedListItem(name: "a"), SelectedListItem(name: "b")],
-        selectedItems: (List<dynamic> selectedList) {
-          SelectedListItem selectedListItem = selectedList[0];
-          dropdownname.text = selectedListItem.name;
-        },
-        // showSnackBar(list.toString());
-      ),
-    ).showModal(context);
-  }
+  // showDropdown(context) {
+  //   DropDownState(
+  //     DropDown(
+  //       bottomSheetTitle: const Text(
+  //         "title",
+  //         style: TextStyle(
+  //           fontWeight: FontWeight.bold,
+  //           fontSize: 20.0,
+  //         ),
+  //       ),
+  //       submitButtonChild: const Text(
+  //         'Done',
+  //         style: TextStyle(
+  //           fontSize: 16,
+  //           fontWeight: FontWeight.bold,
+  //         ),
+  //       ),
+  //       data: [SelectedListItem(name: "a"), SelectedListItem(name: "b")],
+  //       selectedItems: (List<dynamic> selectedList) {
+  //         SelectedListItem selectedListItem = selectedList[0];
+  //         dropdownname.text = selectedListItem.name;
+  //       },
+  //       // showSnackBar(list.toString());
+  //     ),
+  //   ).showModal(context);
+  // }
 }

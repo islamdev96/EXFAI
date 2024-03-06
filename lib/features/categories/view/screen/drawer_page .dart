@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:exfai/features/addbook/view/screen/addbook_home.dart';
+import 'package:exfai/features/addbook/view/screen/useful_beneficial_page.dart';
 
 import '../../../../all_export.dart';
 
@@ -70,7 +71,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: const Text('الكتب العامة',
                   style: TextStyle(color: Colors.white)),
               onTap: () {
-                // Get.to(() => const AddBookPage());
+                Get.to(() => const UsefulBeneficialPage());
                 // Add your navigation logic here
               },
             ),

@@ -3,11 +3,15 @@ import 'package:flutter/material.dart';
 class CustomCardHome extends StatelessWidget {
   final String title;
   final String imageUrl;
+  final double imageWidth;
+  final double imageHeight;
 
   const CustomCardHome({
     super.key,
     required this.title,
     required this.imageUrl,
+    this.imageWidth = 45,
+    this.imageHeight = 45,
   });
 
   @override
@@ -20,8 +24,8 @@ class CustomCardHome extends StatelessWidget {
             child: imageUrl.isNotEmpty
                 ? Image.asset(
                     imageUrl,
-                    width: 35,
-                    height: 35,
+                    width: imageWidth,
+                    height: imageHeight,
                   )
                 : const Placeholder(
                     fallbackHeight: 35,

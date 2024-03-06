@@ -26,6 +26,8 @@ class AppColor {
   // static const Color red = Color(0xFFE74C3C); // Light Blue-Gray
   static const Color red2 = Color(0xFFD3204B); // Light Blue-Gray
   static const Color green = Color(0xFFfbfbf1); // Light Blue-Gray
+  static const Color primary2 =
+      Color.fromARGB(255, 3, 46, 79); // Light Blue-Gray
 
   static Color secondaryBackground = Colors.grey.withOpacity(0.1);
 }

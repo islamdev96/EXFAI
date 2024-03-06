@@ -29,7 +29,6 @@ class _CategoriesEditState extends State<CategoriesEdit> {
                           CustomTextFormGlobal(
                               hinttext: " اخل اسم القسم",
                               labeltext: "category name",
-                              iconData: Icons.category,
                               mycontroller: controller.name,
                               valid: (val) {
                                 return validateInput(val!, 1, 30, "");
@@ -38,7 +37,6 @@ class _CategoriesEditState extends State<CategoriesEdit> {
                           CustomTextFormGlobal(
                               hinttext: "description",
                               labeltext: "description",
-                              iconData: Icons.category,
                               mycontroller: controller.description,
                               valid: (val) {
                                 return validateInput(val!, 1, 30, "");
