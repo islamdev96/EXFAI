@@ -18,7 +18,7 @@
 //           DrawerHeader(
 //             padding: EdgeInsets.only(top: 70.h, right: 25.h),
 //             child: const Text(
-//               'مرحبًا بك في ${AppTextAsset.appName}',
+//               'مرحبًا بك في  ${AppTextAsset.appName}',
 //               style: TextStyle(
 //                 color: Colors.white,
 //                 fontSize: 24,
@@ -68,7 +68,7 @@
 //             leading:
 //                 const Icon(Icons.question_answer_sharp, color: Colors.white),
 //             title:
-//                 const Text("حول ${AppTextAsset.appName}", style: TextStyle(color: Colors.white)),
+//                 const Text("حول  ${AppTextAsset.appName}", style: TextStyle(color: Colors.white)),
 //             onTap: () {
 //               Get.to(() => const UsefulBeneficialPage());
 //             },

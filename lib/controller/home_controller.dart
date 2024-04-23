@@ -52,7 +52,7 @@ class HomeControllerImp extends HomeController {
       if (response['status'] == "success") {
         categories.addAll(response['categories']['data']);
         items.addAll(response['items']['data']);
-        settingsdata.addAll(response['settings']['data']);
+        // settingsdata.addAll(response['settings']['data']);
         if (settingsdata.isNotEmpty) {
           if (settingsdata[0]['settings_titleome'] != null) {
             titleHomeCard = settingsdata[0]['settings_titleome'] ?? "";

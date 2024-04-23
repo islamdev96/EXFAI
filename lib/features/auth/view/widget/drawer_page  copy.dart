@@ -19,7 +19,7 @@ class CustomDrawerLogin extends StatelessWidget {
                 color: Colors.blue.withOpacity(0.1),
               ),
               child: const Text(
-                'مرحبًا بك في ${AppTextAsset.appName}',
+                'مرحبًا بك في  ${AppTextAsset.appName}',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,

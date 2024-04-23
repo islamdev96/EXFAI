@@ -1,32 +1,43 @@
-import 'package:get/get.dart';
+import '../../all_export.dart';
 
-validateInput(String val, int min, int max, String type) {
+String? validateInput(String val, int min, int max, String type) {
   if (type == "username") {
-    if (!GetUtils.isUsername(val)) {
-      return "not valid username";
+    // التحقق من أن الاسم لا يكون فارغًا
+    if (val.isEmpty) {
+      return "الرجاء إدخال اسم صالح";
     }
   }
   if (type == "email") {
     if (!GetUtils.isEmail(val)) {
-      return "not valid email";
+      return "البريد الإلكتروني غير صالح";
     }
   }
 
   if (type == "phone") {
     if (!GetUtils.isPhoneNumber(val)) {
-      return "not valid phone";
+      return "رقم الهاتف غير صالح";
     }
   }
 
   if (val.isEmpty) {
-    return "can't be Empty";
+    return "لا يمكن أن يكون فارغًا";
   }
 
   if (val.length < min) {
-    return "can't be less than $min";
+    return "لا يمكن أن يكون أقل من $min أحرف";
   }
 
   if (val.length > max) {
-    return "can't be larger than $max";
+    return "لا يمكن أن يكون أكبر من $max أحرف";
   }
+
+  return null; // إذا كان الإدخال صالحًا
+}
+
+String? validateInputOptional(String? val, int min, int max, String type) {
+  // إذا كانت القيمة فارغة، فلا توجد حاجة لمزيد من التحقق
+  if (val == null || val.isEmpty) {
+    return null; // قبول القيمة الفارغة
+  }
+  return null;
 }

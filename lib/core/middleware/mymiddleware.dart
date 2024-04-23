@@ -1,17 +1,20 @@
-import '../../all_export.dart';
+import '../../../all_export.dart';
 
 class MyMiddleWare extends GetMiddleware {
   @override
   int? get priority => 1;
 
-  MyServices myServices = Get.find();
-
   @override
   RouteSettings? redirect(String? route) {
-    if (myServices.sharedPreferences.getString("step") == "2") {
+    final MyServices myServices = Get.find(); // الوصول إلى MyServices مباشرةً
+
+    String? loginController =
+        myServices.sharedPreferences.getString("LoginController");
+    String? userId = myServices.getCurrentUserId();
+
+    if (loginController == "true") {
       return const RouteSettings(name: AppRoute.homepage);
-    }
-    if (myServices.sharedPreferences.getString("step") == "1") {
+    } else if (userId == null) {
       return const RouteSettings(name: AppRoute.login);
     }
 

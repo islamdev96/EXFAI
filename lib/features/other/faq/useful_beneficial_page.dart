@@ -44,7 +44,7 @@
 //                 children: [
 //                   Center(
 //                     child: Text(
-//                       "كم تكلفة عمولة ${AppTextAsset.appName}",
+//                       "كم تكلفة عمولة  ${AppTextAsset.appName}",
 //                       style: TextStyle(
 //                         color: AppColors.black,
 //                         fontSize: 22,
@@ -55,7 +55,7 @@
 //                   ),
 //                   Center(
 //                     child: Text(
-//                       "تبلغ عموله ${AppTextAsset.appName} ريالان فقط لكل كتاب يدفعها البائع في حاله بيعه عن طريق المنصه ويمكن تحويل العمولة عن طريق",
+//                       "تبلغ عموله  ${AppTextAsset.appName} ريالان فقط لكل كتاب يدفعها البائع في حاله بيعه عن طريق المنصه ويمكن تحويل العمولة عن طريق",
 //                       style: TextStyle(
 //                         color: AppColors.secondaryText,
 //                         fontSize: 16,

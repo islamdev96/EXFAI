@@ -16,7 +16,7 @@ class VerfiyCode extends StatelessWidget {
         child: ListView(children: [
           const PageAppBarLogin(),
           const TitleAndPictureAtTheHeadOfThePage(
-            title: 'يا هلا بك في ${AppTextAsset.appName}',
+            title: 'يا هلا بك في  ${AppTextAsset.appName}',
             imageUrl: AppImageAsset.appLogo,
           ),
           const SizedBox(height: 20),

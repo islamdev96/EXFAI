@@ -52,7 +52,8 @@ class ItemsModel {
     itemsPrice = json['items_price'].toString();
     itemsDiscount = json['items_discount'].toString();
     itemsDate = json['items_date'];
-    itemsCat = json['items_cat'];
+    itemsCat = json['items_cat'].toString();
+    itemsDate = json['items_date'];
     itemsPriceDiscount = json['itemspricedisount'].toString();
     categoriesId = json['categories_id'].toString();
     categoriesName = json['categories_name'];
