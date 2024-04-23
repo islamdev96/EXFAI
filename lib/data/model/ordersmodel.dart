@@ -43,26 +43,26 @@ class OrdersModel {
       this.addressLong});
 
   OrdersModel.fromJson(Map<String, dynamic> json) {
-    ordersId = json['orders_id'];
-    ordersUsersid = json['orders_usersid'];
+    ordersId = json['orders_id'].toString();
+    ordersUsersid = json['orders_usersid'].toString();
     ordersAddress = json['orders_address'];
     ordersType = json['orders_type'];
-    ordersPricedelivery = json['orders_pricedelivery'];
-    ordersPrice = json['orders_price'];
-    ordersTotalprice = json['orders_totalprice'];
-    ordersCoupon = json['orders_coupon'];
-    ordersRating = json['orders_rating'];
-    ordersNoterating = json['orders_noterating'];
+    ordersPricedelivery = json['orders_pricedelivery'].toString();
+    ordersPrice = json['orders_price'].toString();
+    ordersTotalprice = json['orders_totalprice'].toString();
+    ordersCoupon = json['orders_coupon'].toString();
+    ordersRating = json['orders_rating'].toString();
+    ordersNoterating = json['orders_noterating'].toString();
     ordersPaymentmethod = json['orders_paymentmethod'];
     ordersStatus = json['orders_status'];
     ordersDatetime = json['orders_datetime'];
-    addressId = json['address_id'];
-    addressUsersid = json['address_usersid'];
+    addressId = json['address_id'].toString();
+    addressUsersid = json['address_usersid'].toString();
     addressName = json['address_name'];
     addressCity = json['address_city'];
     addressStreet = json['address_street'];
-    addressLat = json['address_lat'];
-    addressLong = json['address_long'];
+    addressLat = json['address_lat'].toString();
+    addressLong = json['address_long'].toString();
   }
 
   Map<String, dynamic> toJson() {

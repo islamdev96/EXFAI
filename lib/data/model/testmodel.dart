@@ -19,12 +19,12 @@ class TestModel {
       this.usersCreate});
 
   TestModel.fromJson(Map<String, dynamic> json) {
-    usersId = json['users_id'];
+    usersId = json['users_id'].toString();
     usersName = json['users_name'];
-    usersPassword = json['users_password'];
+    usersPassword = json['users_password'].toString();
     usersEmail = json['users_email'];
-    usersPhone = json['users_phone'];
-    usersVerfiycode = json['users_verfiycode'];
+    usersPhone = json['users_phone'].toString();
+    usersVerfiycode = json['users_verfiycode'].toString();
     usersApprove = json['users_approve'];
     usersCreate = json['users_create'];
   }

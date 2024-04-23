@@ -18,8 +18,8 @@ class AddressModel {
   });
 
   AddressModel.fromJson(Map<String, dynamic> json) {
-    addressId = json['address_id'];
-    addressUsersid = json['address_usersid'];
+    addressId = json['address_id'].toString();
+    addressUsersid = json['address_usersid'].toString();
     addressName = json['address_name'];
     addressCity = json['address_city'];
     addressStreet = json['address_street'];

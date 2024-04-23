@@ -1,3 +1,5 @@
+// ignore_for_file: use_super_parameters
+
 import 'all_export.dart';
 
 void main() async {

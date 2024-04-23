@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import '../../all_export.dart';
 
 class ProductDetails extends StatelessWidget {

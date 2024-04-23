@@ -35,22 +35,22 @@ class MyFavoriteModel {
       this.usersId});
 
   MyFavoriteModel.fromJson(Map<String, dynamic> json) {
-    favoriteId = json['favorite_id'];
-    favoriteUsersid = json['favorite_usersid'];
-    favoriteItemsid = json['favorite_itemsid'];
-    itemsId = json['items_id'];
+    favoriteId = json['favorite_id'].toString();
+    favoriteUsersid = json['favorite_usersid'].toString();
+    favoriteItemsid = json['favorite_itemsid'].toString();
+    itemsId = json['items_id'].toString();
     itemsName = json['items_name'];
     itemsNameAr = json['items_name_ar'];
     itemsDesc = json['items_desc'];
     itemsDescAr = json['items_desc_ar'];
     itemsImage = json['items_image'];
-    itemsCount = json['items_count'];
-    itemsActive = json['items_active'];
-    itemsPrice = json['items_price'];
-    itemsDiscount = json['items_discount'];
+    itemsCount = json['items_count'].toString();
+    itemsActive = json['items_active'].toString();
+    itemsPrice = json['items_price'].toString();
+    itemsDiscount = json['items_discount'].toString();
     itemsDate = json['items_date'];
     itemsCat = json['items_cat'];
-    usersId = json['users_id'];
+    usersId = json['users_id'].toString();
   }
 
   Map<String, dynamic> toJson() {

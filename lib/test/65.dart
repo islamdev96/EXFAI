@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:exfai/view/Settings/settings_page.dart';
 import 'package:titled_navigation_bar/titled_navigation_bar.dart';
 
@@ -12,6 +14,7 @@ class TitledNavigationBottomPage extends StatefulWidget {
   const TitledNavigationBottomPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _TitledNavigationBottomPageState createState() =>
       _TitledNavigationBottomPageState();
 }

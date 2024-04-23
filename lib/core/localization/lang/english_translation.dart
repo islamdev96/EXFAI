@@ -18,7 +18,6 @@ class EnglishTranslation extends MyTranslation {
           "archive": "Archive",
           "aboutUs": "About Us",
           "contactUs": "Contact Us",
-          "logout": "Logout",
           "shipping": "Shipping",
           "minute": "Minute",
           "ratingDialog": "Rating Dialog",
@@ -74,7 +73,6 @@ class EnglishTranslation extends MyTranslation {
           "doYouWantToExitTheApp": "Do you want to exit the app?",
           "confirmation": "Confirmation",
           "cancellation": "Cancellation",
-          "chooseTheLanguage": "Choose the Language",
 
           //========================== Application ============================//
 

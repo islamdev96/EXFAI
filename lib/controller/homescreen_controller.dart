@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_renaming_method_parameters
+
 import 'package:exfai/view/Settings/settings_page.dart';
 
 import '../all_export.dart';
