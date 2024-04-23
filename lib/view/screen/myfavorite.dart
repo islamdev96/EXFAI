@@ -8,7 +8,7 @@ class MyFavorite extends StatelessWidget {
     Get.put(MyFavoriteController());
 
     return Scaffold(
-      backgroundColor: AppColor.scaffoldBackgroundColor,
+      backgroundColor: AppColors.scaffoldBackgroundColor,
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: GetBuilder<MyFavoriteController>(

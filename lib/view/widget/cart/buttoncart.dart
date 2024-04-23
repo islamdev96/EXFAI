@@ -12,8 +12,8 @@ class CustomButtonCart extends StatelessWidget {
     super.key,
     required this.textbutton,
     this.onPressed,
-    this.buttonColor = AppColor.secondaryBackground,
-    this.textColor = AppColor.white,
+    this.buttonColor = AppColors.secondaryBackground,
+    this.textColor = AppColors.white,
   });
 
   @override

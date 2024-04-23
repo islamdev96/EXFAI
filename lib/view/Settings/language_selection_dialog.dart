@@ -11,7 +11,7 @@ class LanguageSelectionDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      backgroundColor: AppColor.scaffoldBackgroundColor,
+      backgroundColor: AppColors.scaffoldBackgroundColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
       ),
@@ -30,7 +30,7 @@ class LanguageSelectionDialog extends StatelessWidget {
           Text(
             "chooseTheLanguage".tr,
             style: const TextStyle(
-              color: AppColor.primary,
+              color: AppColors.primary,
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -60,13 +60,13 @@ class LanguageSelectionDialog extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         decoration: BoxDecoration(
-          color: AppColor.primary,
+          color: AppColors.primary,
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Text(
           languageName,
           style: const TextStyle(
-            color: AppColor.white,
+            color: AppColors.white,
             fontSize: 16,
           ),
         ),

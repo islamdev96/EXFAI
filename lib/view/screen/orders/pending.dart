@@ -8,12 +8,12 @@ class OrdersPending extends StatelessWidget {
     Get.put(OrdersPendingController());
 
     return Scaffold(
-      backgroundColor: AppColor.secondaryBackground,
+      backgroundColor: AppColors.secondaryBackground,
       appBar: AppBar(
-        backgroundColor: AppColor.scaffoldBackgroundColor,
+        backgroundColor: AppColors.scaffoldBackgroundColor,
         title: Text(
           'orders'.tr,
-          style: const TextStyle(color: AppColor.primary),
+          style: const TextStyle(color: AppColors.primary),
         ),
       ),
       body: Padding(
@@ -50,7 +50,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
 
     return Card(
       child: Container(
-        color: AppColor.white,
+        color: AppColors.white,
         padding: EdgeInsets.all(55.spMax),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +62,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontWeight: FontWeight.bold,
-                    color: AppColor.secondaryText,
+                    color: AppColors.secondaryText,
                   ),
                 ),
                 const Spacer(),
@@ -74,7 +74,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
               style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.bold,
-                color: AppColor.secondaryText,
+                color: AppColors.secondaryText,
               ),
             ),
             Text(
@@ -82,7 +82,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
               style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.bold,
-                color: AppColor.secondaryText,
+                color: AppColors.secondaryText,
               ),
             ),
             Text(
@@ -90,7 +90,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
               style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.bold,
-                color: AppColor.secondaryText,
+                color: AppColors.secondaryText,
               ),
             ),
             Text(
@@ -98,7 +98,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
               style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.bold,
-                color: AppColor.secondaryText,
+                color: AppColors.secondaryText,
               ),
             ),
             Text(
@@ -106,7 +106,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
               style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.bold,
-                color: AppColor.secondaryText,
+                color: AppColors.secondaryText,
               ),
             ),
             const Divider(),
@@ -115,7 +115,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                 Text(
                   "$totalPrice : ${listdata.ordersTotalprice} \$ ",
                   style: const TextStyle(
-                    color: AppColor.secondaryText,
+                    color: AppColors.secondaryText,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -126,8 +126,8 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                     onPressed: () {
                       controller.deleteOrder(listdata.ordersId!);
                     },
-                    color: AppColor.primary,
-                    textColor: AppColor.white,
+                    color: AppColors.primary,
+                    textColor: AppColors.white,
                     child: Text("delete".tr),
                   ),
                 if (listdata.ordersStatus! == "3")

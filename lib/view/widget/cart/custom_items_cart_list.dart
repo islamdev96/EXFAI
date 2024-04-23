@@ -23,7 +23,7 @@ class CustomItemsCartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: AppColor.secondaryBackground,
+      color: AppColors.secondaryBackground,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
@@ -42,7 +42,7 @@ class CustomItemsCartList extends StatelessWidget {
                 subtitle: Text(
                   price,
                   style: const TextStyle(
-                    color: AppColor.secondaryText,
+                    color: AppColors.secondaryText,
                     fontSize: 17,
                   ),
                 ),
@@ -54,7 +54,7 @@ class CustomItemsCartList extends StatelessWidget {
                 children: [
                   IconButton(
                     iconSize: 32,
-                    color: AppColor.primary,
+                    color: AppColors.primary,
                     onPressed: onAdd,
                     icon: const Icon(Icons.add_box_rounded),
                   ),
@@ -63,7 +63,7 @@ class CustomItemsCartList extends StatelessWidget {
                     count,
                     style: const TextStyle(
                       fontFamily: "sans",
-                      color: AppColor.black,
+                      color: AppColors.black,
                     ),
                   ),
                   SizedBox(

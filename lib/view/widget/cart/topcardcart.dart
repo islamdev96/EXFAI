@@ -11,12 +11,12 @@ class TopCardCart extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 20),
       // height: 20,
       decoration: BoxDecoration(
-        color: AppColor.secondaryBackground,
+        color: AppColors.secondaryBackground,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Text(message,
           textAlign: TextAlign.center,
-          style: TextStyle(color: AppColor.black, fontSize: 16.sp)),
+          style: TextStyle(color: AppColors.black, fontSize: 16.sp)),
     );
   }
 }

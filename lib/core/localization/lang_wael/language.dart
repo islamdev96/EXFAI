@@ -10,7 +10,7 @@ class Languages extends GetView<LocaleController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.scaffoldBackgroundColor,
+      backgroundColor: AppColors.scaffoldBackgroundColor,
       body: Container(
         padding: const EdgeInsets.all(15),
         child: Column(
@@ -19,7 +19,7 @@ class Languages extends GetView<LocaleController> {
             Text("chooseTheLanguage".tr,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: AppColor.scaffoldBackgroundColor,
+                    color: AppColors.scaffoldBackgroundColor,
                     fontSize: 18.sp)),
             const SizedBox(height: 20),
             CustomButtonLang(

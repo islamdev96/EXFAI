@@ -46,7 +46,7 @@ class _ItemsHomeState extends State<ItemsHome> {
         });
       },
       child: Container(
-        color: AppColor.secondaryBackground,
+        color: AppColors.secondaryBackground,
         padding: const EdgeInsets.all(10),
         margin: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
@@ -68,7 +68,7 @@ class _ItemsHomeState extends State<ItemsHome> {
                 Text(
                   "${translateDatabase(widget.itemsModel.itemsNameAr, widget.itemsModel.itemsName)}",
                   style: TextStyle(
-                    color: AppColor.secondaryText,
+                    color: AppColors.secondaryText,
                     fontSize: 18.sp,
                     fontWeight: FontWeight.bold,
                   ),

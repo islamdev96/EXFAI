@@ -47,13 +47,13 @@ class Categories extends GetView<HomeControllerImp> {
               children: [
                 Container(
                   decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: AppColor.green
+                      shape: BoxShape.circle, color: AppColors.green
                       // color: Color.fromARGB(255, 189, 239, 162),
                       ),
                 ),
                 SvgPicture.network(
                   "${AppLink.imagestCategories}/${categoriesModel.categoriesImage}",
-                  color: AppColor.black,
+                  color: AppColors.black,
                   height: 70, // Adjust image height as needed
                 ),
               ],
@@ -64,7 +64,7 @@ class Categories extends GetView<HomeControllerImp> {
             "${translateDatabase(categoriesModel.categoriesNamaAr, categoriesModel.categoriesName)}",
             style: TextStyle(
                 fontSize: 14.sp,
-                color: AppColor.secondaryText,
+                color: AppColors.secondaryText,
                 fontWeight: FontWeight.bold),
           ),
         ],

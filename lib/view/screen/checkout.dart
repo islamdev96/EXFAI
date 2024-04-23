@@ -7,14 +7,14 @@ class Checkout extends StatelessWidget {
   Widget build(BuildContext context) {
     CheckoutController controller = Get.put(CheckoutController());
     return Scaffold(
-      backgroundColor: AppColor.scaffoldBackgroundColor,
+      backgroundColor: AppColors.scaffoldBackgroundColor,
       appBar: AppBar(
         title: Text("checkout".tr),
       ),
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: MaterialButton(
-          color: AppColor.primary,
+          color: AppColors.primary,
           textColor: Colors.white,
           onPressed: () {
             controller.checkout();
@@ -24,7 +24,7 @@ class Checkout extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 16.sp,
-              color: AppColor.white,
+              color: AppColors.white,
             ),
           ),
         ),

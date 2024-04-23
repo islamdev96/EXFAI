@@ -32,14 +32,14 @@ class ProductDetails extends StatelessWidget {
       height: 40,
       child: MaterialButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        color: AppColor.scaffoldBackgroundColor,
+        color: AppColors.scaffoldBackgroundColor,
         onPressed: () {
           Get.toNamed(AppRoute.cart);
         },
         child: Text(
           "goToCart".tr,
           style: const TextStyle(
-            color: AppColor.primary,
+            color: AppColors.primary,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -57,7 +57,7 @@ class ProductDetails extends StatelessWidget {
           Text(
             "${translateDatabase(controller.itemsModel.itemsNameAr, controller.itemsModel.itemsName)}",
             style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                  color: AppColor.primary,
+                  color: AppColors.primary,
                 ),
           ),
           const SizedBox(height: 10),
@@ -73,7 +73,7 @@ class ProductDetails extends StatelessWidget {
             style: Theme.of(context).textTheme.displayLarge!.copyWith(
                   fontSize: 16,
                   fontWeight: FontWeight.w300,
-                  color: AppColor.primary,
+                  color: AppColors.primary,
                 ),
           ),
           const SizedBox(height: 10),

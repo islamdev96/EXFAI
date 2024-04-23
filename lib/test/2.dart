@@ -34,7 +34,7 @@ class _Show3DPageWidgetState extends State<Show3DPageWidget> {
                   setState(() => _offset += details.delta),
               onDoubleTap: () => setState(() => _offset = Offset.zero),
               child: Scaffold(
-                backgroundColor: AppColor.scaffoldBackgroundColor,
+                backgroundColor: AppColors.scaffoldBackgroundColor,
                 appBar: AppBar(
                   title: const Text('Title'),
                 ),

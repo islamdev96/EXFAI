@@ -25,7 +25,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                       style: TextStyle(
                           fontSize: 18.sp,
                           fontWeight: FontWeight.bold,
-                          color: AppColor.secondaryText)),
+                          color: AppColors.secondaryText)),
                   const Spacer(),
                   // Text(listdata.ordersDatetime!)
                   // Text(
@@ -45,35 +45,35 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                   style: TextStyle(
                       fontSize: 14.sp,
                       fontWeight: FontWeight.bold,
-                      color: AppColor.secondaryText)),
+                      color: AppColors.secondaryText)),
               Text("$orderPrice : ${listdata.ordersPrice} \$",
                   style: TextStyle(
                       fontSize: 14.sp,
                       fontWeight: FontWeight.bold,
-                      color: AppColor.secondaryText)),
+                      color: AppColors.secondaryText)),
               Text("$deliveryPrice : ${listdata.ordersPricedelivery} \$ ",
                   style: TextStyle(
                       fontSize: 14.sp,
                       fontWeight: FontWeight.bold,
-                      color: AppColor.secondaryText)),
+                      color: AppColors.secondaryText)),
               Text(
                   "$paymentMethod : ${controller.printPaymentMethod(listdata.ordersPaymentmethod!)} ",
                   style: TextStyle(
                       fontSize: 14.sp,
                       fontWeight: FontWeight.bold,
-                      color: AppColor.secondaryText)),
+                      color: AppColors.secondaryText)),
               Text(
                   "$orderStatus : ${controller.printOrderStatus(listdata.ordersStatus!)} ",
                   style: TextStyle(
                       fontSize: 14.sp,
                       fontWeight: FontWeight.bold,
-                      color: AppColor.secondaryText)),
+                      color: AppColors.secondaryText)),
               const Divider(),
               Row(
                 children: [
                   Text("$totalPrice : ${listdata.ordersTotalprice} \$ ",
                       style: const TextStyle(
-                          color: AppColor.secondaryText,
+                          color: AppColors.secondaryText,
                           fontWeight: FontWeight.bold)),
                   const Spacer(),
                   // MaterialButton(
@@ -91,8 +91,8 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                       onPressed: () {
                         controller.deleteOrder(listdata.ordersId!);
                       },
-                      color: AppColor.primary,
-                      textColor: AppColor.white,
+                      color: AppColors.primary,
+                      textColor: AppColors.white,
                       child: Text("delete".tr),
                     ),
                   if (listdata.ordersStatus! == "3")

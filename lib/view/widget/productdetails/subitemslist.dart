@@ -17,15 +17,15 @@ class SubitemsList extends GetView<ProductDetailsControllerImp> {
             width: 90,
             decoration: BoxDecoration(
                 color: controller.subitems[index]['active'] == "1"
-                    ? AppColor.primary
+                    ? AppColors.primary
                     : Colors.white,
-                border: Border.all(color: AppColor.primary),
+                border: Border.all(color: AppColors.primary),
                 borderRadius: BorderRadius.circular(10)),
             child: Text(controller.subitems[index]['name'],
                 style: TextStyle(
                     color: controller.subitems[index]['active'] == "1"
-                        ? AppColor.primary
-                        : AppColor.primary,
+                        ? AppColors.primary
+                        : AppColors.primary,
                     fontWeight: FontWeight.bold)),
           ),
         )

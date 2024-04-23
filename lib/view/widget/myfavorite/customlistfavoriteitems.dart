@@ -12,7 +12,7 @@ class CustomListFavoriteItems extends GetView<MyFavoriteController> {
           // controller.goToPageProductDetails(itemsModel);
         },
         child: Card(
-          color: AppColor.white,
+          color: AppColors.white,
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Column(
@@ -33,7 +33,7 @@ class CustomListFavoriteItems extends GetView<MyFavoriteController> {
                       translateDatabase(
                           itemsModel.itemsNameAr, itemsModel.itemsName),
                       style: const TextStyle(
-                          color: AppColor.black,
+                          color: AppColors.black,
                           fontSize: 16,
                           fontWeight: FontWeight.bold)),
                   Row(
@@ -61,7 +61,7 @@ class CustomListFavoriteItems extends GetView<MyFavoriteController> {
                     children: [
                       Text("${itemsModel.itemsPrice} \$",
                           style: const TextStyle(
-                              color: AppColor.primary,
+                              color: AppColors.primary,
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                               fontFamily: "sans")),
@@ -72,7 +72,7 @@ class CustomListFavoriteItems extends GetView<MyFavoriteController> {
                           },
                           icon: const Icon(
                             Icons.delete_outline_outlined,
-                            color: AppColor.red,
+                            color: AppColors.red,
                           ))
                     ],
                   )

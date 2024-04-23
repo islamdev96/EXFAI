@@ -12,11 +12,11 @@ class Cart extends StatelessWidget {
 
     CartController cartController = Get.put(CartController());
     return Scaffold(
-        backgroundColor: AppColor.scaffoldBackgroundColor,
+        backgroundColor: AppColors.scaffoldBackgroundColor,
         appBar: AppBar(
           title: Text(
             "myCart".tr,
-            style: TextStyle(color: AppColor.black),
+            style: TextStyle(color: AppColors.black),
           ),
         ),
         bottomNavigationBar: GetBuilder<CartController>(

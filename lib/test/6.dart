@@ -22,7 +22,7 @@ class MyCustomWidget extends StatelessWidget {
     double w = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: AppColor.scaffoldBackgroundColor,
+      backgroundColor: AppColors.scaffoldBackgroundColor,
       body: CircularParticle(
         width: w,
         height: h,

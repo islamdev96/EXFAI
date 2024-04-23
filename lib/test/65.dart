@@ -37,7 +37,7 @@ class _TitledNavigationBottomPageState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.scaffoldBackgroundColor,
+      backgroundColor: AppColors.scaffoldBackgroundColor,
       appBar: AppBar(),
       body: const Center(
         child: Column(

@@ -17,18 +17,18 @@ class CardDeliveryTypeCheckout extends StatelessWidget {
       height: 120,
       width: 120,
       decoration: BoxDecoration(
-          color: active ? AppColor.secondaryBackground : null,
-          border: Border.all(color: AppColor.secondaryBackground)),
+          color: active ? AppColors.secondaryBackground : null,
+          border: Border.all(color: AppColors.secondaryBackground)),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Image.asset(
           imagename,
           width: 60,
-          color: active ? AppColor.primary : null,
+          color: active ? AppColors.primary : null,
         ),
         Text(
           title,
           style: TextStyle(
-              color: active ? AppColor.primary : AppColor.primary,
+              color: active ? AppColors.primary : AppColors.primary,
               fontWeight: FontWeight.bold),
         )
       ]),
