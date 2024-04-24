@@ -48,6 +48,7 @@ class LoginControllerImp extends LoginController {
             // myServices.sharedPreferences
             //     .setString("phone", response['data']['users_phone']);
             myServices.sharedPreferences.setString("LoginController", "true");
+
             FirebaseMessaging.instance.subscribeToTopic("users");
             FirebaseMessaging.instance.subscribeToTopic("users$usersid");
 

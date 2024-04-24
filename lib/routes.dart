@@ -1,8 +1,12 @@
+import 'package:exfai/core/functions/splash_screen.dart';
+
 import 'all_export.dart';
 
 List<GetPage<dynamic>>? routes = [
   GetPage(
-      name: "/", page: () => const Languages(), middlewares: [MyMiddleWare()]),
+      name: "/",
+      page: () => const SplashScreen(),
+      middlewares: [MyMiddleWare()]),
   // name: "/", page: () => const OnBoarding(), middlewares: [MyMiddleWare()]),
   GetPage(name: AppRoute.languages, page: () => const Languages()),
   GetPage(name: AppRoute.onBoarding, page: () => const OnBoarding()),
