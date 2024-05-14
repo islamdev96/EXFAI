@@ -42,7 +42,7 @@ class SignUpControllerImp extends SignUpController {
       if (StatusRequest.success == statusRequest) {
         if (response['status'] == "success") {
           // data.addAll(response['data']);
-          Get.offNamed(AppRoute.verfiyCodeSignUp,
+          Get.offNamed(AppRoute.homepage,
               arguments: {"email": emailController.text});
         } else {
           Get.defaultDialog(

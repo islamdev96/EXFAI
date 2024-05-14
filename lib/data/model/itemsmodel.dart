@@ -41,26 +41,26 @@ class ItemsModel {
       this.favorite});
 
   ItemsModel.fromJson(Map<String, dynamic> json) {
-    itemsId = json['items_id'].toString();
-    itemsName = json['items_name'];
-    itemsNameAr = json['items_name_ar'];
-    itemsDesc = json['items_desc'];
-    itemsDescAr = json['items_desc_ar'];
-    itemsImage = json['items_image'];
-    itemsCount = json['items_count'].toString();
-    itemsActive = json['items_active'].toString();
-    itemsPrice = json['items_price'].toString();
-    itemsDiscount = json['items_discount'].toString();
-    itemsDate = json['items_date'];
-    itemsCat = json['items_cat'].toString();
-    itemsDate = json['items_date'];
-    itemsPriceDiscount = json['itemspricedisount'].toString();
-    categoriesId = json['categories_id'].toString();
-    categoriesName = json['categories_name'];
-    categoriesNamaAr = json['categories_nama_ar'];
-    categoriesImage = json['categories_image'];
-    categoriesDatetime = json['categories_datetime'];
-    favorite = json['favorite'];
+    itemsId = json['items_id']?.toString();
+    itemsName = json['items_name']?.toString();
+    itemsNameAr = json['items_name_ar']?.toString();
+    itemsDesc = json['items_desc']?.toString();
+    itemsDescAr = json['items_desc_ar']?.toString();
+    itemsImage = json['items_image']?.toString();
+    itemsCount = json['items_count']?.toString();
+    itemsActive = json['items_active']?.toString();
+    itemsPrice = json['items_price']?.toString();
+    itemsDiscount = json['items_discount']?.toString();
+    itemsDate = json['items_date']?.toString();
+    itemsCat = json['items_cat']?.toString();
+    itemsDate = json['items_date']?.toString();
+    itemsPriceDiscount = json['itemspricedisount']?.toString();
+    categoriesId = json['categories_id']?.toString();
+    categoriesName = json['categories_name']?.toString();
+    categoriesNamaAr = json['categories_nama_ar']?.toString();
+    categoriesImage = json['categories_image']?.toString();
+    categoriesDatetime = json['categories_datetime']?.toString();
+    favorite = json['favorite']?.toString();
   }
 
   Map<String, dynamic> toJson() {

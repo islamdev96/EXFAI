@@ -36,30 +36,18 @@ class LoginControllerImp extends LoginController {
       statusRequest = handlingData(response);
       if (StatusRequest.success == statusRequest) {
         if (response['status'] == "success") {
-          // data.addAll(response['data']);
-          if (response['data']['users_approve'] == "1") {
-            myServices.sharedPreferences
-                .setString("id", response['data']['users_id']);
-            String usersid = myServices.sharedPreferences.getString("id")!;
-            myServices.sharedPreferences
-                .setString("username", response['data']['users_name']);
-            myServices.sharedPreferences
-                .setString("email", response['data']['users_email']);
-            // myServices.sharedPreferences
-            //     .setString("phone", response['data']['users_phone']);
-            myServices.sharedPreferences.setString("LoginController", "true");
+          myServices.sharedPreferences
+              .setString("id", response['data']['users_id'].toString());
+          myServices.sharedPreferences
+              .setString("username", response['data']['users_name']);
+          myServices.sharedPreferences
+              .setString("email", response['data']['users_email']);
+          myServices.sharedPreferences.setString("LoginController", "true");
 
-            FirebaseMessaging.instance.subscribeToTopic("users");
-            FirebaseMessaging.instance.subscribeToTopic("users$usersid");
-
-            Get.offNamed(AppRoute.homepage);
-          } else {
-            Get.toNamed(AppRoute.homepage, arguments: {"email": email.text});
-          }
+          Get.offNamed(AppRoute.homepage);
         } else {
           Get.defaultDialog(
-              title: "تنبيه",
-              middleText: "البريد الإلكتروني أو كلمة السر غير صحيحة");
+              title: "ُWarning", middleText: "Email Or Password Not Correct");
           statusRequest = StatusRequest.failure;
         }
       }

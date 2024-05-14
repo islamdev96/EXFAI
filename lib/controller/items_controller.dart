@@ -49,7 +49,7 @@ class ItemsControllerImp extends SearchMixController {
     data.clear();
     statusRequest = StatusRequest.loading;
     var response = await testData.getData(
-        categoryid, myServices.sharedPreferences.getString("id")!);
+        categoryid, myServices.sharedPreferences.getString("id").toString());
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       // Start backend

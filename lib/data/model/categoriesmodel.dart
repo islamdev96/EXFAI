@@ -14,10 +14,10 @@ class CategoriesModel {
 
   CategoriesModel.fromJson(Map<String, dynamic> json) {
     categoriesId = json['categories_id'].toString();
-    categoriesName = json['categories_name'];
-    categoriesNamaAr = json['categories_nama_ar'];
-    categoriesImage = json['categories_image'];
-    categoriesDatetime = json['categories_datetime'];
+    categoriesName = json['categories_name']?.toString();
+    categoriesNamaAr = json['categories_nama_ar']?.toString();
+    categoriesImage = json['categories_image']?.toString();
+    categoriesDatetime = json['categories_datetime']?.toString();
   }
 
   Map<String, dynamic> toJson() {
