@@ -44,15 +44,15 @@ class LocaleController extends GetxController {
 
   void fcmConfig() {
     FirebaseMessaging.onMessage.listen((message) {
-      FlutterRingtonePlayer().playNotification();
+      // FlutterRingtonePlayer().playNotification();
       Get.snackbar(message.notification!.title!, message.notification!.body!);
-      refreshPageNotification(message.data);
+      // refreshPageNotification(message.data);
     });
   }
 
   @override
   void onInit() {
-    requestPermissionNotification();
+    // requestPermissionNotification();
     fcmConfig();
     requestPerLocation();
 

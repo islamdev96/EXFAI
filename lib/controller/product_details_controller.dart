@@ -1,10 +1,8 @@
-import '../../all_export.dart';
+import '../all_export.dart';
 
 abstract class ProductDetailsController extends GetxController {}
 
 class ProductDetailsControllerImp extends ProductDetailsController {
-  // CartController cartController = Get.put(CartController());
-
   late ItemsModel itemsModel;
 
   CartData cartData = CartData(Get.find());
@@ -29,17 +27,22 @@ class ProductDetailsControllerImp extends ProductDetailsController {
         myServices.sharedPreferences.getString("id")!, itemsid);
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
-      // Start backend
       if (response['status'] == "success") {
         int countitems = 0;
-        countitems = int.parse(response['data']);
+        // Check the type of response['data']
+        if (response['data'] is String) {
+          countitems = int.parse(response['data']);
+        } else if (response['data'] is int) {
+          countitems = response['data'];
+        } else {
+          throw Exception('Unexpected data type');
+        }
         return countitems;
-        // data.addAll(response['data']);
       } else {
         statusRequest = StatusRequest.failure;
       }
-      // End
     }
+    return 0; // Default value in case of failure
   }
 
   addItems(String itemsid) async {
@@ -49,16 +52,13 @@ class ProductDetailsControllerImp extends ProductDetailsController {
         myServices.sharedPreferences.getString("id")!, itemsid);
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
-      // Start backend
       if (response['status'] == "success") {
         Get.rawSnackbar(
             title: "alert".tr,
             messageText: Text("theProductHasBeenAddedToTheCart".tr));
-        // data.addAll(response['data']);
       } else {
         statusRequest = StatusRequest.failure;
       }
-      // End
     }
     update();
   }
@@ -66,21 +66,17 @@ class ProductDetailsControllerImp extends ProductDetailsController {
   deleteitems(String itemsid) async {
     statusRequest = StatusRequest.loading;
     update();
-
     var response = await cartData.deleteCart(
         myServices.sharedPreferences.getString("id")!, itemsid);
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
-      // Start backend
       if (response['status'] == "success") {
         Get.rawSnackbar(
             title: "alert".tr,
             messageText: Text("theProductHasBeenRemovedFromTheCart".tr));
-        // data.addAll(response['data']);
       } else {
         statusRequest = StatusRequest.failure;
       }
-      // End
     }
     update();
   }

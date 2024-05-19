@@ -4,6 +4,7 @@ class CustomTextSignUpOrSignIn extends StatelessWidget {
   final String textone;
   final String texttwo;
   final void Function() onTap;
+  // ignore: use_super_parameters
   const CustomTextSignUpOrSignIn(
       {Key? key,
       required this.textone,
