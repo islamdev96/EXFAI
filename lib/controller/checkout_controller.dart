@@ -61,7 +61,7 @@ class CheckoutController extends GetxController {
     String defaultOrderType = "default_order";
 
     Map data = {
-      "usersid": myServices.sharedPreferences.getString("id"),
+      "usersid": myServices.sharedPreferences.getString("id").toString(),
       "addressid": defaultAddressId,
       "orderstype": defaultOrderType,
       "pricedelivery": "10",

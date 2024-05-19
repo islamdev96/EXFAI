@@ -5,7 +5,7 @@ export '../../../controller/myfavoritecontroller.dart';
 export '../../../controller/onboarding_controller.dart';
 export '../../../controller/orders/archive_controller.dart';
 export '../../../core/class/handlingdataview.dart';
-export '../../../core/constant/imgaeasset.dart';
+export 'core/constant/app_image_asset.dart';
 export '../../../core/functions/translatefatabase.dart';
 export '../../../core/shared/custombutton.dart';
 export '../../../data/model/addressmodel.dart';
@@ -21,6 +21,8 @@ export '../../data/model/cartmodel.dart';
 export '../core/functions/handingdatacontroller.dart';
 export '../data/datasource/remote/cart_data.dart';
 export '../data/datasource/remote/checkout_date.dart';
+export 'package:exfai/core/shared/custom_cached_network_image.dart';
+
 export '../data/datasource/remote/favorite_data.dart';
 export '../data/datasource/remote/home_data.dart';
 export '../data/datasource/remote/items_data.dart';

@@ -1,4 +1,4 @@
-import 'package:exfai/view/widget/home/list_categories_home.dart';
+import 'package:exfai/features/categories/list_categories_home.dart';
 
 import '../../all_export.dart';
 
@@ -37,14 +37,6 @@ class HomePage extends StatelessWidget {
                               title: "A summer surprise", body: "Cashback 20%"),
                           CustomTitleHome(title: "categories".tr),
                           const ListCategoriesHome(),
-                          CustomTitleHome(title: "categories".tr),
-                          const ListCategoriesHome(),
-                          CustomTitleHome(title: "productForYou".tr),
-                          const ListItemsHome(),
-                          CustomTitleHome(title: "productForYou".tr),
-                          const ListItemsHome(),
-                          CustomTitleHome(title: "productForYou".tr),
-                          const ListItemsHome(),
                           CustomTitleHome(title: "productForYou".tr),
                           const ListItemsHome(),
                         ],

@@ -130,8 +130,10 @@ class CartController extends GetxController {
           Map dataresponsecountprice = response['countprice'];
           data.clear();
           data.addAll(dataresponse.map((e) => CartModel.fromJson(e)));
-          totalcountitems = int.parse(dataresponsecountprice['totalcount']);
-          priceorders = double.parse(dataresponsecountprice['totalprice']);
+          totalcountitems =
+              int.parse(dataresponsecountprice['totalcount'].toString());
+          priceorders =
+              double.parse(dataresponsecountprice['totalprice'].toString());
         }
       } else {
         statusRequest = StatusRequest.failure;

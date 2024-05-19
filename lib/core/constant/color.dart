@@ -9,7 +9,8 @@ class AppColors {
 
   // Secondary Colors
   static const Color secondaryText = Color(0xFF34495E); // Dark Gray
-  static const Color secondaryBackground = Color(0xFFfbfbf1);
+  static const Color secondaryBackground =
+      Color(0xFFE0E0E0); // يمكنك تعيين اللون الذي تريده هنا
 
   /// Light Blue-Gray
 

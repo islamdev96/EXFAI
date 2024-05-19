@@ -10,6 +10,9 @@ class AppImageAsset {
   static const String backgroundImageBook =
       '$rootImages/top/backgroundImageBook.png';
 
+//////////////////////////////////////////////
+  ///
+  ///
   static const String onBoardingImageOne = "$rootImages/one.PNG";
   static const String onBoardingImageTwo = "$rootImages/two.PNG";
   static const String onBoardingImageThree = "$rootImages/three.PNG";
@@ -30,6 +33,7 @@ class AppImageAsset {
   static const String deliveryImage = "$rootImages/005-delivery-man.png";
   static const String deliveryImage2 = "$rootImages/006-delivery.png";
   //  static const String avatar = "$rootImages/avatar.png" ;
+  static const String backupImage = '$rootImages/top/backup_image.jpg';
 
   // static const String onBoardingImageFour   = "$rootImages/onboardingfour.PNG" ;
 }
