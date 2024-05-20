@@ -12,6 +12,22 @@ class Items extends StatefulWidget {
 }
 
 class _ItemsState extends State<Items> {
+  late ItemsControllerImp controller;
+  late FavoriteController controllerFavorite;
+  @override
+  void initState() {
+    super.initState();
+    controller = Get.put(ItemsControllerImp());
+    controllerFavorite = Get.put(FavoriteController());
+  }
+
+  @override
+  void dispose() {
+    Get.delete<ItemsControllerImp>(); // Dispose controller
+    Get.delete<FavoriteController>(); // Dispose controller
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     ItemsControllerImp controller = Get.put(ItemsControllerImp());

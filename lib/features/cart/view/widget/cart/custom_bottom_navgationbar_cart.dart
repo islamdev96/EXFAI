@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_unnecessary_containers, unused_local_variable
 
-import '../../../all_export.dart';
+import '../../../../../all_export.dart';
 
 class BottomNavgationBarCart extends GetView<CartController> {
   final String price;
@@ -123,19 +123,22 @@ class BottomNavgationBarCart extends GetView<CartController> {
                             fontWeight: FontWeight.bold,
                             color: AppColors.black))),
                 Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Text("$totalprice \$",
-                        style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.red)))
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    "$totalprice \$",
+                    style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.primary),
+                  ),
+                ),
               ],
             ),
           ]),
         ),
         const SizedBox(height: 10),
         CustomButtonCart(
-          buttonColor: AppColors.primary,
+          buttonColor: AppColors.primary33,
           textbutton: "order".tr,
           onPressed: () {
             controller.goToPageCheckout();

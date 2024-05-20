@@ -13,6 +13,8 @@ class WidgetItemsInHome2 extends GetView<HomeControllerImp> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<FavoriteController>(builder: (favoriteController) {
+      var itemsId = itemsModel.itemsId!;
+
       return InkWell(
         onTap: () {
           controller.goToPageProductDetails(itemsModel);
@@ -70,16 +72,15 @@ class WidgetItemsInHome2 extends GetView<HomeControllerImp> {
                         return IconButton(
                           onPressed: () async {
                             if (FavoriteController.favoriteItemsIds
-                                .contains(itemsModel.itemsId)) {
-                              await controller
-                                  .removeFavorite(itemsModel.itemsId!);
+                                .contains(itemsId)) {
+                              await controller.removeFavorite(itemsId);
                             } else {
-                              await controller.addFavorite(itemsModel.itemsId!);
+                              await controller.addFavorite(itemsId);
                             }
                           },
                           icon: Icon(
                             FavoriteController.favoriteItemsIds
-                                    .contains(itemsModel.itemsId)
+                                    .contains(itemsId)
                                 ? Icons.favorite
                                 : Icons.favorite_border_outlined,
                             color: AppColors.red,

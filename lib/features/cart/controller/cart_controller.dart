@@ -1,4 +1,4 @@
-import '../../all_export.dart';
+import '../../../../all_export.dart';
 
 class CartController extends GetxController {
   TextEditingController? controllercoupon;
@@ -32,9 +32,18 @@ class CartController extends GetxController {
     if (StatusRequest.success == statusRequest) {
       // Start backend
       if (response['status'] == "success") {
-        Get.rawSnackbar(
-            title: "alert".tr,
-            messageText: Text("theProductHasBeenAddedToTheCart".tr));
+        Get.snackbar(
+          "alert".tr,
+          "theProductHasBeenAddedToTheCart".tr,
+          animationDuration: const Duration(seconds: 2),
+          snackPosition: SnackPosition.TOP,
+          duration: const Duration(seconds: 2),
+          icon: const Icon(
+            Icons.shopping_cart,
+            color: AppColors.white,
+          ),
+        );
+
         // data.addAll(response['data']);
       } else {
         statusRequest = StatusRequest.failure;
@@ -67,9 +76,21 @@ class CartController extends GetxController {
     if (StatusRequest.success == statusRequest) {
       // Start backend
       if (response['status'] == "success") {
-        Get.rawSnackbar(
-            title: "alert".tr,
-            messageText: Text("theProductHasBeenRemovedFromTheCart".tr));
+        Get.snackbar(
+          "alert".tr,
+          "theProductHasBeenRemovedFromTheCart".tr,
+          animationDuration: const Duration(seconds: 2),
+          snackPosition: SnackPosition.TOP,
+          duration: const Duration(seconds: 2),
+          icon: const Icon(
+            Icons.shopping_cart,
+            color: AppColors.white,
+          ),
+        );
+
+        // Get.rawSnackbar(
+        //     title: "alert".tr,
+        //     messageText: Text("theProductHasBeenRemovedFromTheCart".tr));
         // data.addAll(response['data']);
       } else {
         statusRequest = StatusRequest.failure;

@@ -1,4 +1,4 @@
-import '../../../all_export.dart';
+import '../../../../../all_export.dart';
 
 class CustomButtonCoupon extends StatelessWidget {
   final String textbutton;
@@ -12,11 +12,13 @@ class CustomButtonCoupon extends StatelessWidget {
       // padding: const EdgeInsets.symmetric(horizontal: 20),
       width: double.infinity,
       child: MaterialButton(
-        color: AppColors.primary,
+        color: AppColors.primary33,
         onPressed: onPressed,
-        child: Text(textbutton,
-            style: const TextStyle(
-                fontWeight: FontWeight.bold, color: AppColors.white)),
+        child: Text(
+          textbutton,
+          style: const TextStyle(
+              fontWeight: FontWeight.bold, color: AppColors.white),
+        ),
       ),
     );
   }

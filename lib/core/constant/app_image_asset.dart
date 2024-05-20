@@ -4,7 +4,7 @@ class AppImageAsset {
   static const String rootSvg = "assets/svg";
   static const String logo = "$rootImages/logoapp.png";
 
-  static const String appLogo = '$rootImages/top/applogo.png';
+  static const String appLogo = '$rootImages/top/logo.png';
   static const String showYourBook = '$rootImages/top/showYourBook.png';
   static const String icons8favourite = '$rootSvg/22.gif';
   static const String backgroundImageBook =

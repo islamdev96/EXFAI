@@ -12,21 +12,21 @@ class FavoriteController extends GetxController {
 
   static Set favoriteItemsIds = {};
 
-  void notifyFavoriteItemAddition(itemsid) {
-    favoriteItemsIds.add(itemsid);
+  void notifyFavoriteItemAddition(itemsId) {
+    favoriteItemsIds.add(itemsId);
     update();
   }
 
-  void notifyFavoriteItemRemoval(itemsid) {
-    favoriteItemsIds.remove(itemsid);
+  void notifyFavoriteItemRemoval(itemsId) {
+    favoriteItemsIds.remove(itemsId);
     update();
   }
 
-  addFavorite(String itemsid) async {
+  addFavorite(String itemsId) async {
     data.clear();
     statusRequest = StatusRequest.loading;
     var response = await favoriteData.addFavorite(
-      itemsid,
+      itemsId,
       myServices.sharedPreferences.getString("id")!.toString() ?? "465",
     );
     statusRequest = handlingData(response);
@@ -54,7 +54,7 @@ class FavoriteController extends GetxController {
               ),
             ));
 
-        notifyFavoriteItemAddition(itemsid);
+        notifyFavoriteItemAddition(itemsId);
       } else {
         statusRequest = StatusRequest.failure;
       }
@@ -62,11 +62,11 @@ class FavoriteController extends GetxController {
     }
   }
 
-  removeFavorite(String itemsid) async {
+  removeFavorite(String itemsId) async {
     data.clear();
     statusRequest = StatusRequest.loading;
     var response = await favoriteData.removeFavorite(
-      itemsid,
+      itemsId,
       myServices.sharedPreferences.getString("id")!.toString() ?? "465",
     );
     statusRequest = handlingData(response);
@@ -94,7 +94,7 @@ class FavoriteController extends GetxController {
               ),
             ));
 
-        notifyFavoriteItemRemoval(itemsid);
+        notifyFavoriteItemRemoval(itemsId);
       } else {
         statusRequest = StatusRequest.failure;
       }
