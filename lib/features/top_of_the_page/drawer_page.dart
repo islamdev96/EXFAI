@@ -7,7 +7,7 @@ class WidgetDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final SignUpControllerImp controller = Get.put(SignUpControllerImp());
+    Get.put(SignUpControllerImp());
 
     return Drawer(
       backgroundColor: AppColors.primary2,

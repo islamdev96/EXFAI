@@ -1,7 +1,7 @@
 import '../../../../all_export.dart';
 
 class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp> {
-  const CustomButtonOnBoarding({Key? key}) : super(key: key);
+  const CustomButtonOnBoarding({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
