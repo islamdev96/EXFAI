@@ -1,4 +1,4 @@
-import 'package:exfai/features/categories/list_categories_home.dart';
+import 'package:exfai/features/categories/view/screen/list_categories_home.dart';
 
 import '../../all_export.dart';
 

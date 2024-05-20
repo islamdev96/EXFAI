@@ -1,8 +1,5 @@
 // ignore_for_file: unused_field, deprecated_member_use
 
-import 'package:exfai/features/favorite/controller/myfavoritecontroller.dart';
-import 'package:exfai/features/favorite/view/screen/widget_favorite_item.dart';
-
 import '../../../../all_export.dart';
 
 class MyFavorite extends StatefulWidget {

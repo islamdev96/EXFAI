@@ -21,9 +21,7 @@ class WidgetItemsInHome2 extends GetView<HomeControllerImp> {
 
       return InkWell(
         onTap: () {
-          Get.offAndToNamed(AppRoute.productDetails, arguments: {
-            "ItemsModel": itemsModel,
-          });
+          controller.goToPageProductDetails(itemsModel);
         },
         child: Container(
           padding: const EdgeInsets.all(16),

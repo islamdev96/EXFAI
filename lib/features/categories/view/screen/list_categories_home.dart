@@ -2,7 +2,7 @@
 
 import 'package:exfai/features/categories/view/widget/categories_widget.dart';
 
-import '../../all_export.dart';
+import '../../../../all_export.dart';
 
 class ListCategoriesHome extends GetView<HomeControllerImp> {
   const ListCategoriesHome({super.key});

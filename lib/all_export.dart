@@ -9,6 +9,7 @@ export 'package:exfai/features/categories/view/widget/list_categories.dart';
 export 'package:exfai/features/favorite/data/model/favorite_model.dart';
 export 'package:exfai/features/favorite/controller/favorite_controller.dart';
 export 'package:exfai/features/favorite/controller/myfavoritecontroller.dart';
+export 'package:exfai/features/favorite/view/screen/widget_favorite_item.dart';
 
 export '../../../controller/address/view_controller.dart';
 export '../../../controller/onboarding_controller.dart';
@@ -111,7 +112,7 @@ export 'package:exfai/view/screen/cart.dart';
 export 'package:exfai/view/screen/checkout.dart';
 export 'package:exfai/view/screen/home.dart';
 export 'package:exfai/view/screen/homescreen.dart';
-export 'package:exfai/view/screen/items.dart';
+export 'package:exfai/features/items/view/screen/items.dart';
 export 'package:exfai/view/screen/onboarding.dart';
 export 'package:exfai/view/screen/orders/archive.dart';
 export 'package:exfai/view/screen/orders/details.dart';

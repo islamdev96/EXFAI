@@ -2,7 +2,7 @@
 
 import 'package:exfai/features/categories/view/widget/widget_book_in_homecopy.dart';
 
-import '../../all_export.dart';
+import '../../../../all_export.dart';
 
 class Items extends StatelessWidget {
   const Items({super.key});
