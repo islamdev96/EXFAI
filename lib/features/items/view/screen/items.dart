@@ -4,9 +4,14 @@ import 'package:exfai/features/categories/view/widget/widget_book_in_homecopy.da
 
 import '../../../../all_export.dart';
 
-class Items extends StatelessWidget {
+class Items extends StatefulWidget {
   const Items({super.key});
 
+  @override
+  State<Items> createState() => _ItemsState();
+}
+
+class _ItemsState extends State<Items> {
   @override
   Widget build(BuildContext context) {
     ItemsControllerImp controller = Get.put(ItemsControllerImp());
@@ -37,20 +42,6 @@ class Items extends StatelessWidget {
                   );
                 },
               ),
-              // widget: GridView.builder(
-              //   shrinkWrap: true,
-              //   physics: const NeverScrollableScrollPhysics(),
-              //   itemCount: controller.data.length,
-              //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              //       crossAxisCount: 2, childAspectRatio: 0.7),
-              //   itemBuilder: (BuildContext context, index) {
-              //     controllerFav.isFavorite[controller.data[index]['items_id']] =
-              //         controller.data[index]['favorite'];
-              //     return CustomListItems(
-              //       itemsModel: ItemsModel.fromJson(controller.data[index]),
-              //     );
-              //   },
-              // ),
             ),
           ),
         ],

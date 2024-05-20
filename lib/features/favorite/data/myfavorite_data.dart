@@ -3,7 +3,7 @@ import '../../../../all_export.dart';
 class MyFavoriteData {
   Crud crud;
   MyFavoriteData(this.crud);
-  getData(String? id) async {
+  getData(String id) async {
     var response = await crud.postData(AppLink.favoriteView, {"id": id});
     return response.fold((l) => l, (r) => r);
   }

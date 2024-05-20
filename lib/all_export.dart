@@ -10,6 +10,8 @@ export 'package:exfai/features/favorite/data/model/favorite_model.dart';
 export 'package:exfai/features/favorite/controller/favorite_controller.dart';
 export 'package:exfai/features/favorite/controller/myfavoritecontroller.dart';
 export 'package:exfai/features/favorite/view/screen/widget_favorite_item.dart';
+export 'package:exfai/features/favorite/data/myfavorite_data.dart';
+export 'package:exfai/features/favorite/data/favorite_data.dart';
 
 export '../../../controller/address/view_controller.dart';
 export '../../../controller/onboarding_controller.dart';
@@ -34,10 +36,8 @@ export '../data/datasource/remote/checkout_date.dart';
 export 'package:exfai/core/shared/custom_cached_network_image.dart';
 export 'package:exfai/features/top_of_the_page/title_and_picture_at_the_head_of_the_page.dart';
 
-export '../data/datasource/remote/favorite_data.dart';
 export '../data/datasource/remote/home_data.dart';
 export '../data/datasource/remote/items_data.dart';
-export '../data/datasource/remote/myfavorite_data.dart';
 export '../data/datasource/remote/orders/notification_data.dart';
 export '../data/datasource/remote/test_data.dart';
 export '../data/model/couponmodel.dart';
