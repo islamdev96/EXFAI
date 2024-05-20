@@ -1,5 +1,3 @@
-import 'package:exfai/core/functions/splash_screen.dart';
-
 import 'all_export.dart';
 
 List<GetPage<dynamic>>? routes = [
@@ -29,7 +27,7 @@ List<GetPage<dynamic>>? routes = [
   //
   GetPage(name: AppRoute.homepage, page: () => const HomeScreen()),
   GetPage(name: AppRoute.items, page: () => const Items()),
-  GetPage(name: AppRoute.productdetails, page: () => const ProductDetails()),
+  GetPage(name: AppRoute.productDetails, page: () => const ProductDetails()),
   GetPage(name: AppRoute.myFavroite, page: () => const MyFavorite()),
   //
   // GetPage(name: AppRoute.addressview, page: () => const AddressView()),

@@ -5,8 +5,7 @@ import '../../../all_export.dart';
 class CustomListItemsOffer extends GetView<OffersController> {
   final ItemsModel itemsModel;
   // final bool active;
-  const CustomListItemsOffer({Key? key, required this.itemsModel})
-      : super(key: key);
+  const CustomListItemsOffer({super.key, required this.itemsModel});
 
   @override
   Widget build(BuildContext context) {
@@ -47,30 +46,30 @@ class CustomListItemsOffer extends GetView<OffersController> {
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: "sans")),
-                          GetBuilder<FavoriteController>(
-                              builder: (controller) => IconButton(
-                                  onPressed: () {
-                                    if (controller
-                                            .isFavorite[itemsModel.itemsId] ==
-                                        "1") {
-                                      controller.setFavorite(
-                                          itemsModel.itemsId, "0");
-                                      controller
-                                          .removeFavorite(itemsModel.itemsId!);
-                                    } else {
-                                      controller.setFavorite(
-                                          itemsModel.itemsId, "1");
-                                      controller
-                                          .addFavorite(itemsModel.itemsId!);
-                                    }
-                                  },
-                                  icon: Icon(
-                                    controller.isFavorite[itemsModel.itemsId] ==
-                                            "1"
-                                        ? Icons.favorite
-                                        : Icons.favorite_border_outlined,
-                                    color: AppColors.secondaryBackground,
-                                  )))
+                          // GetBuilder<FavoriteController>(
+                          //     builder: (controller) => IconButton(
+                          //         onPressed: () {
+                          //           if (controller
+                          //                   .isFavorite[itemsModel.itemsId] ==
+                          //               "1") {
+                          //             controller.setFavorite(
+                          //                 itemsModel.itemsId, "0");
+                          //             controller
+                          //                 .removeFavorite(itemsModel.itemsId!);
+                          //           } else {
+                          //             controller.setFavorite(
+                          //                 itemsModel.itemsId, "1");
+                          //             controller
+                          //                 .addFavorite(itemsModel.itemsId!);
+                          //           }
+                          //         },
+                          //         icon: Icon(
+                          //           controller.isFavorite[itemsModel.itemsId] ==
+                          //                   "1"
+                          //               ? Icons.favorite
+                          //               : Icons.favorite_border_outlined,
+                          //           color: AppColors.secondaryBackground,
+                          //         )))
                         ],
                       )
                     ]),
