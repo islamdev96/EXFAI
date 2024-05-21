@@ -131,7 +131,7 @@ export 'package:exfai/view/widget/home/custombottomappbarhome.dart';
 export 'package:exfai/view/widget/home/custombuttonappbar.dart';
 export 'package:exfai/view/widget/home/customcardhome.dart';
 export 'package:exfai/view/widget/home/customtitlehome.dart';
-export 'package:exfai/view/widget/home/list_items_home.dart';
+export 'package:exfai/features/items/view/screen/list_items_home.dart';
 export 'package:exfai/view/widget/items/customlistitems.dart';
 export 'package:exfai/view/widget/onboarding/custombutton.dart';
 export 'package:exfai/view/widget/onboarding/customslider.dart';

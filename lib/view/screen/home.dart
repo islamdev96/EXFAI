@@ -1,4 +1,7 @@
 import 'package:exfai/features/categories/view/screen/list_categories_home.dart';
+import 'package:exfai/features/items/view/screen/dd.dart';
+import 'package:exfai/features/items/view/widget/items_home.dart';
+import 'package:flutter/material.dart';
 
 import '../../all_export.dart';
 
@@ -35,6 +38,12 @@ class HomePage extends StatelessWidget {
                         children: [
                           const CustomCardHome(
                               title: "A summer surprise", body: "Cashback 20%"),
+                          InkWell(
+                              onTap: () {
+                                Get.to(const MyHomePage());
+                              },
+                              child:
+                                  CustomTitleHome(title: "categories_Test".tr)),
                           CustomTitleHome(title: "categories".tr),
                           const ListCategoriesHome(),
                           CustomTitleHome(title: "productForYou".tr),

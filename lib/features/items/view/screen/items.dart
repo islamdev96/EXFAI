@@ -1,6 +1,6 @@
 // ignore_for_file: unused_local_variable
 
-import 'package:exfai/features/categories/view/widget/widget_book_in_homecopy.dart';
+import 'package:exfai/features/items/view/widget/widget_book_in_homecopy.dart';
 
 import '../../../../all_export.dart';
 
