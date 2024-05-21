@@ -1,4 +1,4 @@
-import '../../../../all_export.dart';
+import '../../../../../all_export.dart';
 
 class CategoriesWidget extends GetView<HomeControllerImp> {
   final CategoriesModel categoriesModel;

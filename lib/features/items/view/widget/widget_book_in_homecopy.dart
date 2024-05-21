@@ -66,28 +66,28 @@ class WidgetItemsInHome2 extends GetView<HomeControllerImp> {
                         fontSize: 16,
                       ),
                     ),
-                    GetBuilder<FavoriteController>(
-                      // GetBuilder جديد
-                      builder: (controller) {
-                        return IconButton(
-                          onPressed: () async {
-                            if (FavoriteController.favoriteItemsIds
-                                .contains(itemsId)) {
-                              await controller.removeFavorite(itemsId);
-                            } else {
-                              await controller.addFavorite(itemsId);
-                            }
-                          },
-                          icon: Icon(
-                            FavoriteController.favoriteItemsIds
-                                    .contains(itemsId)
-                                ? Icons.favorite
-                                : Icons.favorite_border_outlined,
-                            color: AppColors.red,
-                          ),
-                        );
-                      },
-                    ),
+                    // GetBuilder<FavoriteController>(
+                    //   // GetBuilder جديد
+                    //   builder: (controller) {
+                    //     return IconButton(
+                    //       onPressed: () async {
+                    //         if (FavoriteController.favoriteItemsIds
+                    //             .contains(itemsId)) {
+                    //           await controller.removeFavorite(itemsId);
+                    //         } else {
+                    //           await controller.addFavorite(itemsId);
+                    //         }
+                    //       },
+                    //       icon: Icon(
+                    //         FavoriteController.favoriteItemsIds
+                    //                 .contains(itemsId)
+                    //             ? Icons.favorite
+                    //             : Icons.favorite_border_outlined,
+                    //         color: AppColors.red,
+                    //       ),
+                    //     );
+                    //   },
+                    // ),
                   ],
                 ),
               ),

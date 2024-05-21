@@ -1,8 +1,8 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:exfai/features/categories/view/widget/categories_widget.dart';
+import 'package:exfai/features/home/view/widget/categories/categories_widget.dart';
 
-import '../../../../all_export.dart';
+import '../../../../../all_export.dart';
 
 class ListCategoriesHome extends GetView<HomeControllerImp> {
   const ListCategoriesHome({super.key});
