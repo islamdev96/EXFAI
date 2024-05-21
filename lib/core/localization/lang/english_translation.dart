@@ -4,6 +4,9 @@ class EnglishTranslation extends MyTranslation {
   @override
   Map<String, Map<String, String>> get keys => {
         "en": {
+          //========================== Anather ============================//
+          "EGP ": "EGP",
+
           //========================== Checkout ============================//
 
           "addNewAddress": "Add new address",

@@ -1,7 +1,3 @@
-// product_details_bottom_bar.dart
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
 import '../../../../all_export.dart';
 
 class ProductDetailsBottomBar extends StatelessWidget {

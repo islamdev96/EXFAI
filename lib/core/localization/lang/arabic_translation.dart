@@ -4,6 +4,9 @@ class ArabicTranslation extends MyTranslation {
   @override
   Map<String, Map<String, String>> get keys => {
         "ar": {
+          //========================== Anather ============================//
+          "EGP ": "جنيه",
+
           //========================== Checkout ============================//
           //========================== عملية الدفع ============================//
 
