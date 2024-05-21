@@ -12,7 +12,6 @@ buildscript {
         // implementation 'com.google.android.material:material:<version>'
     }
 }
-
 allprojects {
     repositories {
         google()
