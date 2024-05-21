@@ -2,7 +2,7 @@
 
 import 'package:exfai/core/functions/alertexitapp.dart';
 
-import '../../all_export.dart';
+import '../../../../all_export.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

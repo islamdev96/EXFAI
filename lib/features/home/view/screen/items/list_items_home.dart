@@ -1,8 +1,8 @@
 // ignore_for_file: library_private_types_in_public_api
 
-import 'package:exfai/features/items/view/widget/items_home.dart';
+import 'package:exfai/features/home/view/widget/items/items_home.dart';
 
-import '../../../../all_export.dart';
+import '../../../../../all_export.dart';
 
 class ListItemsHome extends GetView<HomeControllerImp> {
   const ListItemsHome({

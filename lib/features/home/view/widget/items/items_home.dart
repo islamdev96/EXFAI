@@ -1,4 +1,4 @@
-import '../../../../all_export.dart';
+import '../../../../../all_export.dart';
 
 class ItemsHome extends StatefulWidget {
   final ItemsModel itemsModel;

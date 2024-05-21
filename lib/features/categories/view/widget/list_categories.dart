@@ -71,7 +71,7 @@ class Categories extends GetView<ItemsControllerImp> {
                       fontSize: 16,
                       color: controller.selectedCat == index
                           ? Colors.white
-                          : AppColors.red,
+                          : AppColors.primary33,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
