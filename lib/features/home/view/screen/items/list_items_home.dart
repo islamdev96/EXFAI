@@ -21,6 +21,9 @@ class ListItemsHome extends GetView<HomeControllerImp> {
             itemsModel: ItemsModel.fromJson(controller.items[i]),
           );
         },
+        shrinkWrap: true, // Important to avoid height errors
+        physics:
+            const NeverScrollableScrollPhysics(), // Disable scrolling to avoid conflicts
       ),
     );
   }

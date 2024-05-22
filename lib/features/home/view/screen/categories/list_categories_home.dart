@@ -22,6 +22,9 @@ class ListCategoriesHome extends GetView<HomeControllerImp> {
                 CategoriesModel.fromJson(controller.categories[index]),
           );
         },
+        shrinkWrap: true, // Important to avoid height errors
+        physics:
+            const NeverScrollableScrollPhysics(), // Disable scrolling to avoid conflicts
       ),
     );
   }

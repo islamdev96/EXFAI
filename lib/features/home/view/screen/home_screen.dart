@@ -1,33 +1,38 @@
 import 'package:exfai/features/home/view/screen/categories/list_categories_home.dart';
-
 import '../../../../all_export.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     Get.put(HomeControllerImp());
-    return GetBuilder<HomeControllerImp>(
-      builder: (controller) => Container(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: ListView(
-          children: [
-            CustomAppBar(
-              mycontroller: controller.search!,
-              titleappbar: "findYourProduct".tr,
-              // onPressedIcon: () {},
-              onPressedSearch: () {
-                controller.onSearchItems();
-              },
-              onChanged: (val) {
-                controller.checkSearch(val);
-              },
-              onPressedIconFavorite: () {
-                Get.toNamed(AppRoute.myFavroite);
-              },
-            ),
-            HandlingDataView(
+    return Scaffold(
+      // Add Scaffold here
+      body: GetBuilder<HomeControllerImp>(
+        builder: (controller) => Container(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: ListView(
+            children: [
+              CustomAppBar(
+                mycontroller: controller.search!,
+                titleappbar: "findYourProduct".tr,
+                onPressedSearch: () {
+                  controller.onSearchItems();
+                },
+                onChanged: (val) {
+                  controller.checkSearch(val);
+                },
+                onPressedIconFavorite: () {
+                  Get.toNamed(AppRoute.myFavroite);
+                },
+              ),
+              HandlingDataView(
                 statusRequest: controller.statusRequest,
                 widget: !controller.isSearch
                     ? Column(
@@ -41,11 +46,10 @@ class HomePage extends StatelessWidget {
                           const ListItemsHome(),
                         ],
                       )
-                    : ListItemsSearch(listdatamodel: controller.listdata))
-
-            // const CustomTitleHome(title: "Offer"),
-            // const ListItemsHome()
-          ],
+                    : ListItemsSearch(listdatamodel: controller.listdata),
+              ),
+            ],
+          ),
         ),
       ),
     );
