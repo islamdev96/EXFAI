@@ -14,7 +14,7 @@ class Cart extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.scaffoldBackgroundColor,
       appBar: AppBar(
-        backgroundColor: AppColors.primary33, //  تغيير لون الباك جراوند
+        backgroundColor: AppColors.primary3, //  تغيير لون الباك جراوند
         title: Text(
           "myCart".tr,
           style: TextStyle(color: AppColors.black),

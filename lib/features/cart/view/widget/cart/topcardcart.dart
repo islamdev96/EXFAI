@@ -10,7 +10,7 @@ class TopCardCart extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       margin: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
-        color: AppColors.primary33,
+        color: AppColors.primary3,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
@@ -27,7 +27,7 @@ class TopCardCart extends StatelessWidget {
           Container(
             height: 5,
             decoration: const BoxDecoration(
-              color: AppColors.primary33, // لون الشريط
+              color: AppColors.primary3, // لون الشريط
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20),
                 topRight: Radius.circular(20),

@@ -6,8 +6,10 @@ class AppColors {
   static const Color scaffoldBackgroundColor =
       Color(0xFFFFFFFF); // Light Blue-Gray
   static const Color primary = Color(0xFF0066b2); // Light Blue-Gray
-  static const Color primary33 = Color(0xFF00b4d8); // Light Blue-Gray
-  static const Color primary34 = Color(0xFFCAF0F8); // Light Blue-Gray
+  static const Color primary2 = Color(0xFF0B102C); // Light Blue-Gray
+
+  static const Color primary3 = Color(0xFF00b4d8); // Light Blue-Gray
+  static const Color primary4 = Color(0xFFCAF0F8); // Light Blue-Gray
 
   // Secondary Colors
   static const Color secondaryText = Color(0xFF34495E); // Dark Gray
@@ -29,5 +31,4 @@ class AppColors {
   // static const Color red = Color(0xFFE74C3C); // Light Blue-Gray
   static const Color red2 = Color(0xFFD3204B); // Light Blue-Gray
   static const Color green1 = Colors.green; // Light Blue-Gray
-  static const Color primary2 = Color(0xFF0B102C); // Light Blue-Gray
 }

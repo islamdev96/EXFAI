@@ -10,7 +10,7 @@ class WidgetDrawer extends StatelessWidget {
     Get.put(SignUpControllerImp());
 
     return Drawer(
-      backgroundColor: AppColors.primary33,
+      backgroundColor: AppColors.primary3,
       child: ListView(
         children: <Widget>[
           const PageAppBar2(),

@@ -12,7 +12,7 @@ class CustomButtonCoupon extends StatelessWidget {
       // padding: const EdgeInsets.symmetric(horizontal: 20),
       width: double.infinity,
       child: MaterialButton(
-        color: AppColors.primary33,
+        color: AppColors.primary3,
         onPressed: onPressed,
         child: Text(
           textbutton,

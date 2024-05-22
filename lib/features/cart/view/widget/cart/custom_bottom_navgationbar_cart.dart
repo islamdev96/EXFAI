@@ -138,7 +138,7 @@ class BottomNavgationBarCart extends GetView<CartController> {
         ),
         const SizedBox(height: 10),
         CustomButtonCart(
-          buttonColor: AppColors.primary33,
+          buttonColor: AppColors.primary3,
           textbutton: "order".tr,
           onPressed: () {
             controller.goToPageCheckout();

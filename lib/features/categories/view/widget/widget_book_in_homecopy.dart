@@ -62,7 +62,7 @@ class WidgetItemsInHome2 extends GetView<HomeControllerImp> {
                     Text(
                       "${itemsModel.itemsPrice} ${AppTextAsset.theCurrency}",
                       style: const TextStyle(
-                        color: AppColors.primary33,
+                        color: AppColors.primary3,
                         fontSize: 16,
                       ),
                     ),

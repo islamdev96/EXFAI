@@ -20,7 +20,7 @@ class PageAppBar extends GetView<HomeControllerImp> {
             },
             icon: const FaIcon(
               FontAwesomeIcons.barsStaggered,
-              color: AppColors.primary33,
+              color: AppColors.primary3,
             ),
           ),
           // SizedBox(height: 10.h),

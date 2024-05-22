@@ -116,7 +116,7 @@ export 'package:exfai/view/screen/address/view.dart';
 export 'package:exfai/features/cart/view/screen/cart.dart';
 export 'package:exfai/view/screen/checkout.dart';
 export 'package:exfai/features/home/view/screen/home_screen.dart';
-export 'package:exfai/features/items/view/screen/items.dart';
+export 'package:exfai/features/categories/view/screen/items.dart';
 export 'package:exfai/view/screen/onboarding.dart';
 export 'package:exfai/view/screen/orders/archive.dart';
 export 'package:exfai/view/screen/orders/details.dart';

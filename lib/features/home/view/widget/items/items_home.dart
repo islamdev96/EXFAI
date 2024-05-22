@@ -27,7 +27,7 @@ class _ItemsHomeState extends State<ItemsHome> {
           height: 10.h,
           width: 150.w,
           decoration: BoxDecoration(
-            color: AppColors.primary34,
+            color: AppColors.primary4,
             borderRadius: BorderRadius.circular(15),
             boxShadow: isHovered
                 ? [
