@@ -12,21 +12,23 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   int _selectedIndex = 0;
 
   final List<String> _navigationRoutes = [
-    // AppRoute.hamzaHome,
+    AppRoute.homepage,
     AppRoute.myFavroite,
+    AppRoute.homepage,
+
     // AppRoute.bookView,
   ];
 
   final List<IconData> _navigationIcons = [
     Icons.home_filled,
     Icons.favorite_outlined,
-    Icons.book_rounded,
+    Icons.home_filled,
   ];
 
   final List<String> _navigationLabels = [
     'الرئيسية',
     'المفضلة',
-    'كتبي',
+    'الرئيسية',
   ];
 
   void _onItemTapped(int index) {
@@ -47,8 +49,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         ),
       ),
       currentIndex: _selectedIndex,
-      selectedItemColor: AppColors.red,
-      unselectedItemColor: Colors.red,
+      selectedItemColor: AppColors.primary33,
+      unselectedItemColor: AppColors.primary33,
       onTap: _onItemTapped,
       type: BottomNavigationBarType.fixed,
       backgroundColor: Colors.white,

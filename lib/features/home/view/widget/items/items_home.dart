@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import '../../../../../all_export.dart';
 
 class ItemsHome extends StatefulWidget {
@@ -5,12 +7,11 @@ class ItemsHome extends StatefulWidget {
   const ItemsHome({super.key, required this.itemsModel});
 
   @override
-  // ignore: library_private_types_in_public_api
   _ItemsHomeState createState() => _ItemsHomeState();
 }
 
 class _ItemsHomeState extends State<ItemsHome> {
-  bool isHovered = false; // متغير للتحكم بتأثير التمرير
+  bool isHovered = false;
 
   @override
   Widget build(BuildContext context) {
@@ -20,43 +21,83 @@ class _ItemsHomeState extends State<ItemsHome> {
           "itemsmodel": widget.itemsModel,
         });
       },
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            // جعل الصورة تأخذ المساحة المتاحة
-            child: ClipRRect(
-              borderRadius:
-                  const BorderRadius.vertical(top: Radius.circular(15)),
-              child: Image.network(
-                "${AppLink.imagestItems}/${widget.itemsModel.itemsImage}",
-                fit: BoxFit.cover,
-              ),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Container(
+          height: 10.h,
+          width: 150.w,
+          decoration: BoxDecoration(
+            color: AppColors.primary34,
+            borderRadius: BorderRadius.circular(15),
+            boxShadow: isHovered
+                ? [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: const Offset(0, 3),
+                    ),
+                  ]
+                : [],
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, right: 17),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: CustomCachedNetworkImage(
+                      imageUrl:
+                          "${AppLink.imagestItems}/${widget.itemsModel.itemsImage}",
+                      width: 80.w,
+                      height: 80.h,
+                    ),
+                  ),
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  // crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Image with White Background
+                    // Plus Icon
+                    IconButton(
+                      color: AppColors.primary,
+                      onPressed: () {
+                        // Add item functionality
+                      },
+                      icon: const Icon(Icons.add_circle_outline, size: 30),
+                    ),
+                    Text(
+                      "${widget.itemsModel.itemsPrice} ${AppTextAsset.theCurrency}",
+                      style: TextStyle(
+                        color: AppColors.primary,
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    // Product Name
+                    Text(
+                      translateDatabase(
+                        widget.itemsModel.itemsNameAr,
+                        widget.itemsModel.itemsName,
+                      ),
+                      style: TextStyle(
+                        color: AppColors.secondaryText,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "${translateDatabase(widget.itemsModel.itemsNameAr, widget.itemsModel.itemsName)}",
-                style: TextStyle(
-                  color: AppColors.secondaryText,
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 5),
-              Text(
-                "${widget.itemsModel.itemsPrice} \$", // عرض السعر
-                style: TextStyle(
-                  color: AppColors.primary,
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-        ],
+        ),
       ),
     );
   }

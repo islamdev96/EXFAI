@@ -78,7 +78,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
               ),
             ),
             Text(
-              "$orderPrice : ${listdata.ordersPrice} \$",
+              "$orderPrice : ${listdata.ordersPrice} ${AppTextAsset.theCurrency}",
               style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.bold,
@@ -86,7 +86,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
               ),
             ),
             Text(
-              "$deliveryPrice : ${listdata.ordersPricedelivery} \$ ",
+              "$deliveryPrice : ${listdata.ordersPricedelivery} ${AppTextAsset.theCurrency} ",
               style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.bold,
@@ -113,7 +113,7 @@ class CardOrdersList extends GetView<OrdersPendingController> {
             Row(
               children: [
                 Text(
-                  "$totalPrice : ${listdata.ordersTotalprice} \$ ",
+                  "$totalPrice : ${listdata.ordersTotalprice} ${AppTextAsset.theCurrency} ",
                   style: const TextStyle(
                     color: AppColors.secondaryText,
                     fontWeight: FontWeight.bold,

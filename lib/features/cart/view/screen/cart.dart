@@ -70,7 +70,7 @@ class Cart extends StatelessWidget {
                                     name:
                                         "${cartController.data[index].itemsName}",
                                     price:
-                                        "${cartController.data[index].itemsprice} \$",
+                                        "${cartController.data[index].itemsprice} ${AppTextAsset.theCurrency}",
                                     count:
                                         "${cartController.data[index].countitems}"),
                                 Divider(),

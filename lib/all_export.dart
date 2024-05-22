@@ -14,6 +14,9 @@ export 'package:exfai/features/favorite/data/myfavorite_data.dart';
 export 'package:exfai/features/favorite/data/favorite_data.dart';
 export 'package:exfai/features/home/controller/home_controller.dart';
 export 'package:exfai/features/home/data/home_data.dart';
+export 'package:exfai/core/shared/custom_bottom_navigation_bar.dart';
+export 'package:exfai/features/search/view/screen/search_text_field.dart';
+export 'package:exfai/features/home/view/screen/categories/list_categories_home.dart';
 
 export '../../../controller/address/view_controller.dart';
 export '../../../controller/onboarding_controller.dart';

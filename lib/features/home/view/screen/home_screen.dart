@@ -1,4 +1,7 @@
-import 'package:exfai/features/home/view/screen/categories/list_categories_home.dart';
+// ignore_for_file: unused_local_variable, deprecated_member_use
+
+import 'package:exfai/core/functions/alertexitapp.dart';
+
 import '../../../../all_export.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,32 +14,35 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    HomeControllerImp controller = Get.put(HomeControllerImp());
+
     Get.put(HomeControllerImp());
+
     return Scaffold(
-      // Add Scaffold here
-      body: GetBuilder<HomeControllerImp>(
-        builder: (controller) => Container(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: ListView(
-            children: [
-              CustomAppBar(
-                mycontroller: controller.search!,
-                titleappbar: "findYourProduct".tr,
-                onPressedSearch: () {
-                  controller.onSearchItems();
-                },
-                onChanged: (val) {
-                  controller.checkSearch(val);
-                },
-                onPressedIconFavorite: () {
-                  Get.toNamed(AppRoute.myFavroite);
-                },
-              ),
-              HandlingDataView(
-                statusRequest: controller.statusRequest,
-                widget: !controller.isSearch
-                    ? Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+      bottomNavigationBar: const CustomBottomNavigationBar(),
+      backgroundColor: AppColors.scaffoldBackgroundColor,
+      body: ListView(
+        children: [
+          WillPopScope(
+            onWillPop: () => Get.alertExitApp(),
+            child: Padding(
+              padding: EdgeInsets.all(10.h),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const PageAppBar(),
+                  const TitleAndPictureAtTheHeadOfThePage(
+                    title: 'يا هلا بك في همزة',
+                    imageUrl: AppImageAsset.appLogo,
+                  ),
+                  SizedBox(height: 25.h),
+                  const SearchTextField(),
+                  SizedBox(height: 30.h),
+                  GetBuilder<HomeControllerImp>(
+                    builder: (controller) => HandlingDataView(
+                      statusRequest: controller.statusRequest,
+                      widget: Column(
                         children: [
                           const CustomCardHome(
                               title: "A summer surprise", body: "Cashback 20%"),
@@ -45,57 +51,15 @@ class _HomeScreenState extends State<HomeScreen> {
                           CustomTitleHome(title: "productForYou".tr),
                           const ListItemsHome(),
                         ],
-                      )
-                    : ListItemsSearch(listdatamodel: controller.listdata),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class ListItemsSearch extends GetView<HomeControllerImp> {
-  final List<ItemsModel> listdatamodel;
-  const ListItemsSearch({super.key, required this.listdatamodel});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: listdatamodel.length,
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemBuilder: (context, index) {
-        return InkWell(
-          onTap: () {
-            controller.goToPageProductDetails(listdatamodel[index]);
-          },
-          child: Container(
-            margin: const EdgeInsets.symmetric(vertical: 20),
-            child: Card(
-              child: Container(
-                padding: const EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Expanded(
-                        child: CachedNetworkImage(
-                            imageUrl:
-                                "${AppLink.imagestItems}/${listdatamodel[index].itemsImage}")),
-                    Expanded(
-                      flex: 2,
-                      child: ListTile(
-                        title: Text(listdatamodel[index].itemsName!),
-                        subtitle: Text(listdatamodel[index].categoriesName!),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
-        );
-      },
+        ],
+      ),
     );
   }
 }

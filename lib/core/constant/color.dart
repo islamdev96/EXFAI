@@ -7,6 +7,7 @@ class AppColors {
       Color(0xFFFFFFFF); // Light Blue-Gray
   static const Color primary = Color(0xFF0066b2); // Light Blue-Gray
   static const Color primary33 = Color(0xFF00b4d8); // Light Blue-Gray
+  static const Color primary34 = Color(0xFFCAF0F8); // Light Blue-Gray
 
   // Secondary Colors
   static const Color secondaryText = Color(0xFF34495E); // Dark Gray

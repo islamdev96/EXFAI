@@ -48,7 +48,7 @@ class PriceAndCountItems extends StatelessWidget {
         ),
         const Spacer(),
         Text(
-          "$price \$",
+          "$price ${AppTextAsset.theCurrency}",
           style: const TextStyle(
               color: AppColors.primary, fontSize: 30, height: 1.1),
         )

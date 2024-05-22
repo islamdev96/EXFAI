@@ -40,7 +40,7 @@
 //       // ignore: unused_local_variable
 //       final Uri refLink = instanceLink.link;
 
-//       Share.share("this is the \$  {refLink.data}");
+//       Share.share("this is the ${AppTextAsset.theCurrency}  {refLink.data}");
 //     }
 //   }
 // }

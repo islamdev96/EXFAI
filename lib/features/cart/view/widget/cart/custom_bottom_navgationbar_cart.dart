@@ -76,7 +76,7 @@ class BottomNavgationBarCart extends GetView<CartController> {
                             fontSize: 16, color: AppColors.secondaryText))),
                 Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Text("$price \$",
+                    child: Text("$price ${AppTextAsset.theCurrency}",
                         style: const TextStyle(
                             fontSize: 16, color: AppColors.secondaryText)))
               ],
@@ -125,7 +125,7 @@ class BottomNavgationBarCart extends GetView<CartController> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Text(
-                    "$totalprice \$",
+                    "$totalprice ${AppTextAsset.theCurrency}",
                     style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
