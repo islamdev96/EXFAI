@@ -13,22 +13,22 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
 
   final List<String> _navigationRoutes = [
     AppRoute.homepage,
-    AppRoute.myFavroite,
-    AppRoute.homepage,
+    AppRoute.cart,
+    AppRoute.settingsPage,
 
     // AppRoute.bookView,
   ];
 
   final List<IconData> _navigationIcons = [
     Icons.home_filled,
-    Icons.favorite_outlined,
-    Icons.home_filled,
+    Icons.card_travel,
+    Icons.settings,
   ];
 
   final List<String> _navigationLabels = [
     'الرئيسية',
-    'المفضلة',
-    'الرئيسية',
+    'cart',
+    'settingsPage',
   ];
 
   void _onItemTapped(int index) {

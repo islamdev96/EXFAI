@@ -5,7 +5,8 @@ class ArabicTranslation extends MyTranslation {
   Map<String, Map<String, String>> get keys => {
         "ar": {
           //========================== Anather ============================//
-          "EGP ": "جنيه",
+          "Egp": "جنيه",
+          "continueShopping": "مواصلة التسوق",
 
           //========================== Checkout ============================//
           //========================== عملية الدفع ============================//

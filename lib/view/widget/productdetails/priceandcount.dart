@@ -25,18 +25,11 @@ class PriceAndCountItems extends StatelessWidget {
                 color: AppColors.primary,
               ),
             ),
-            Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.only(bottom: 2),
-                width: 50,
-                // height: 30,
-                decoration:
-                    BoxDecoration(border: Border.all(color: Colors.black)),
-                child: Text(
-                  count,
-                  style: const TextStyle(
-                      fontSize: 20, height: 1.1, color: AppColors.primary),
-                )),
+            Text(
+              count,
+              style: const TextStyle(
+                  fontSize: 20, height: 1.1, color: AppColors.primary),
+            ),
             IconButton(
               onPressed: onRemove,
               icon: const Icon(
@@ -47,10 +40,27 @@ class PriceAndCountItems extends StatelessWidget {
           ],
         ),
         const Spacer(),
-        Text(
-          "$price ${AppTextAsset.theCurrency}",
-          style: const TextStyle(
-              color: AppColors.primary, fontSize: 30, height: 1.1),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text(
+              price,
+              style: const TextStyle(
+                color: AppColors.primary,
+                fontSize: 26,
+                height: 1.1,
+                fontWeight: FontWeight.bold, // Optionally make the price bolder
+              ),
+            ),
+            Text(
+              AppTextAsset.theCurrency,
+              style: const TextStyle(
+                color: AppColors.primary,
+                fontSize: 6, // Smaller font size for the currency
+                height: 1.1,
+              ),
+            ),
+          ],
         )
       ],
     );

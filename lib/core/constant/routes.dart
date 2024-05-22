@@ -16,6 +16,7 @@ class AppRoute {
   static const String productDetails = "/productdetails";
   static const String myFavroite = "/myfavroite";
   static const String cart = "/cart";
+  static const String settingsPage = "/settingsPage";
   // Address
 
   static const String addressview = "/addressview";

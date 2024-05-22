@@ -1,3 +1,5 @@
+import 'package:exfai/view/Settings/settings_page.dart';
+
 import 'all_export.dart';
 
 List<GetPage<dynamic>>? routes = [
@@ -28,6 +30,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoute.homepage, page: () => const HomeScreen()),
   GetPage(name: AppRoute.items, page: () => const Items()),
   GetPage(name: AppRoute.productDetails, page: () => const ProductDetails()),
+  GetPage(name: AppRoute.settingsPage, page: () => const SettingsPage()),
   GetPage(name: AppRoute.myFavroite, page: () => const MyFavorite()),
   //
   // GetPage(name: AppRoute.addressview, page: () => const AddressView()),

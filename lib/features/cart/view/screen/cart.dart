@@ -12,6 +12,7 @@ class Cart extends StatelessWidget {
 
     CartController cartController = Get.put(CartController());
     return Scaffold(
+      bottomNavigationBar: const CustomBottomNavigationBar(),
       backgroundColor: AppColors.scaffoldBackgroundColor,
       appBar: AppBar(
         backgroundColor: AppColors.primary3, //  تغيير لون الباك جراوند
@@ -19,17 +20,6 @@ class Cart extends StatelessWidget {
           "myCart".tr,
           style: TextStyle(color: AppColors.black),
         ),
-      ),
-      bottomNavigationBar: GetBuilder<CartController>(
-        builder: (controller) => BottomNavgationBarCart(
-            shipping: "0",
-            controllercoupon: controller.controllercoupon!,
-            onApplyCoupon: () {
-              controller.checkcoupon();
-            },
-            price: "${cartController.priceorders}",
-            discount: "${controller.discountcoupon}%",
-            totalprice: "${controller.getTotalPrice()}"),
       ),
       body: GetBuilder<CartController>(
         builder: ((controller) => HandlingDataView(
@@ -79,9 +69,28 @@ class Cart extends StatelessWidget {
                           ),
                           SizedBox(height: 25.h),
                           // Add "Continue Shopping" button
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Continue Shopping".tr),
+                          // ElevatedButton(
+                          //   style: ElevatedButton.styleFrom(
+                          //     backgroundColor: AppColors
+                          //         .primary3, // Background color of the button
+                          //     foregroundColor:
+                          //         Colors.white, // Text color of the button
+                          //   ),
+                          //   onPressed: () {
+                          //     Get.toNamed(AppRoute.homepage);
+                          //   },
+                          //   child: Text("continueShopping".tr),
+                          // ),
+                          GetBuilder<CartController>(
+                            builder: (controller) => BottomNavgationBarCart(
+                                shipping: "0",
+                                controllercoupon: controller.controllercoupon!,
+                                onApplyCoupon: () {
+                                  controller.checkcoupon();
+                                },
+                                price: "${cartController.priceorders}",
+                                discount: "${controller.discountcoupon}%",
+                                totalprice: "${controller.getTotalPrice()}"),
                           ),
                         ],
                       ),

@@ -5,7 +5,8 @@ class EnglishTranslation extends MyTranslation {
   Map<String, Map<String, String>> get keys => {
         "en": {
           //========================== Anather ============================//
-          "EGP ": "EGP",
+          "Egp": "EGP",
+          "continueShopping": "Continue Shopping",
 
           //========================== Checkout ============================//
 

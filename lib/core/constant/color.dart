@@ -9,7 +9,7 @@ class AppColors {
   static const Color primary2 = Color(0xFF0B102C); // Light Blue-Gray
 
   static const Color primary3 = Color(0xFF00b4d8); // Light Blue-Gray
-  static const Color primary4 = Color(0xFFCAF0F8); // Light Blue-Gray
+  static const Color primary4 = Color(0xFFcaf0f8); // Light Blue-Gray
 
   // Secondary Colors
   static const Color secondaryText = Color(0xFF34495E); // Dark Gray

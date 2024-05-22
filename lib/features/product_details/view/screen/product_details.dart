@@ -10,38 +10,31 @@ class ProductDetails extends StatelessWidget {
     final controller = Get.put(ProductDetailsControllerImp());
 
     return Scaffold(
-      bottomNavigationBar: _buildBottomNavigationBar(),
+      bottomNavigationBar: const CustomBottomNavigationBar(),
       body: GetBuilder<ProductDetailsControllerImp>(
-        builder: (controller) => ListView(
+        builder: (controller) => Column(
           children: [
-            const TopProductPageDetails(),
-            const SizedBox(height: 100),
-            HandlingDataView(
-              statusRequest: controller.statusRequest,
-              widget: _buildProductDetails(context, controller),
+            Expanded(
+              // Allow content to fill available space
+              child: ListView(
+                children: [
+                  const TopProductPageDetails(),
+                  SizedBox(height: 100.h),
+                  HandlingDataView(
+                    statusRequest: controller.statusRequest,
+                    widget: _buildProductDetails(context, controller),
+                  ),
+                  CustomButtonCart(
+                    buttonColor: AppColors.primary3,
+                    textbutton: "goToCart".tr,
+                    onPressed: () {
+                      Get.toNamed(AppRoute.cart);
+                    },
+                  )
+                ],
+              ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildBottomNavigationBar() {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      height: 40,
-      child: MaterialButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        color: AppColors.primary4,
-        onPressed: () {
-          Get.toNamed(AppRoute.cart);
-        },
-        child: Text(
-          "goToCart".tr,
-          style: const TextStyle(
-            color: AppColors.primary,
-            fontWeight: FontWeight.bold,
-          ),
         ),
       ),
     );
@@ -54,26 +47,27 @@ class ProductDetails extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: 15.h),
           Text(
             "${translateDatabase(controller.itemsModel.itemsNameAr, controller.itemsModel.itemsName)}",
             style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                  color: AppColors.primary,
+                  color: AppColors.primary2,
                 ),
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 15.h),
           PriceAndCountItems(
             onAdd: controller.add,
             onRemove: controller.remove,
             price: "${controller.itemsModel.itemsPrice}",
             count: "${controller.countitems}",
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 35.h),
           Text(
             "${translateDatabase(controller.itemsModel.itemsDescAr, controller.itemsModel.itemsDesc)}",
             style: Theme.of(context).textTheme.displayLarge!.copyWith(
                   fontSize: 16,
                   fontWeight: FontWeight.w300,
-                  color: AppColors.primary,
+                  color: AppColors.secondaryText,
                 ),
           ),
           const SizedBox(height: 10),
