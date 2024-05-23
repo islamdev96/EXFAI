@@ -263,7 +263,6 @@ class EnglishTranslation extends MyTranslation {
           "discount": "Discount",
           "subTotal": "Sub Total",
           "checkout": "Checkout",
-          "continueShopping": "Continue Shopping",
           "add": "Add",
           "quantity": "Quantity",
           "totalQuantity": "Total Quantity",

@@ -57,7 +57,7 @@ class ItemsModel {
     itemsPriceDiscount = json['itemspricedisount']?.toString();
     categoriesId = json['categories_id']?.toString();
     categoriesName = json['categories_name']?.toString();
-    categoriesNamaAr = json['categories_nama_ar']?.toString();
+    categoriesNamaAr = json['categories_name_ar']?.toString();
     categoriesImage = json['categories_image']?.toString();
     categoriesDatetime = json['categories_datetime']?.toString();
     favorite = json['favorite']?.toString();
@@ -79,7 +79,7 @@ class ItemsModel {
     data['items_cat'] = itemsCat;
     data['categories_id'] = categoriesId;
     data['categories_name'] = categoriesName;
-    data['categories_nama_ar'] = categoriesNamaAr;
+    data['categories_name_ar'] = categoriesNamaAr;
     data['categories_image'] = categoriesImage;
     data['categories_datetime'] = categoriesDatetime;
     return data;

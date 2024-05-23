@@ -1,11 +1,10 @@
-import 'package:flutter/material.dart';
-
 import '../../../all_export.dart';
 
 class AnimatedCounter extends StatefulWidget {
   const AnimatedCounter({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _AnimatedCounterState createState() => _AnimatedCounterState();
 }
 

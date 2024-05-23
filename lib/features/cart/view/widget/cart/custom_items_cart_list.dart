@@ -44,8 +44,9 @@ class CustomItemsCartList extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: CachedNetworkImage(
                 imageUrl: "${AppLink.imagestItems}/$imageName",
-                height: 80.h,
-                fit: BoxFit.cover,
+                height: 85.h,
+                width: 80.w,
+                fit: BoxFit.fill,
               ),
             ),
           ),
@@ -64,12 +65,27 @@ class CustomItemsCartList extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 5.h),
-                  Text(
-                    price,
-                    style: TextStyle(
-                      fontSize: 14.sp,
-                      color: AppColors.secondaryText,
-                    ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        price,
+                        style: const TextStyle(
+                          color: AppColors.primary,
+                          fontSize: 22.0,
+                          height: 1.1,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        AppTextAsset.theCurrency,
+                        style: const TextStyle(
+                          color: AppColors.primary,
+                          fontSize: 6.0,
+                          height: 1.1,
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

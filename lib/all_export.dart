@@ -17,6 +17,7 @@ export 'package:exfai/features/home/data/home_data.dart';
 export 'package:exfai/core/shared/custom_bottom_navigation_bar.dart';
 export 'package:exfai/features/search/view/screen/search_text_field.dart';
 export 'package:exfai/features/home/view/screen/categories/list_categories_home.dart';
+export 'package:exfai/features/home/view/widget/items/price_with_currency.dart';
 
 export '../../../controller/address/view_controller.dart';
 export '../../../controller/onboarding_controller.dart';
@@ -142,7 +143,7 @@ export 'package:exfai/view/widget/onboarding/customslider.dart';
 export 'package:exfai/view/widget/onboarding/dotcontroller.dart';
 export 'package:exfai/view/widget/orders/orderslistcardarchive.dart';
 export 'package:exfai/view/widget/orders/orderstracking.dart';
-export 'package:exfai/view/widget/productdetails/priceandcount.dart';
+export 'package:exfai/features/product_details/view/widget/priceandcount.dart';
 export 'package:exfai/view/widget/productdetails/toppageproductdetails.dart';
 export 'package:firebase_core/firebase_core.dart';
 export 'package:firebase_messaging/firebase_messaging.dart';

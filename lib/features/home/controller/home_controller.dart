@@ -113,6 +113,77 @@ class SearchMixController extends GetxController {
     update();
   }
 
+  addItems(String itemsid) async {
+    statusRequest = StatusRequest.loading;
+    update();
+    var response = await cartData.addCart(
+        myServices.sharedPreferences.getString("id")!, itemsid);
+    statusRequest = handlingData(response);
+    if (StatusRequest.success == statusRequest) {
+      if (response['status'] == "success") {
+        Get.snackbar(
+          "alert".tr,
+          "theProductHasBeenAddedToTheCart".tr,
+          animationDuration: const Duration(seconds: 2),
+          snackPosition: SnackPosition.TOP,
+          duration: const Duration(seconds: 2),
+          icon: const Icon(
+            Icons.shopping_cart,
+            color: AppColors.white,
+          ),
+        );
+      } else {
+        statusRequest = StatusRequest.failure;
+      }
+    }
+    update();
+  }
+
+  CartData cartData = CartData(Get.find());
+
+  deleteitems(String itemsid) async {
+    statusRequest = StatusRequest.loading;
+    update();
+    var response = await cartData.deleteCart(
+        myServices.sharedPreferences.getString("id")!, itemsid);
+    statusRequest = handlingData(response);
+    if (StatusRequest.success == statusRequest) {
+      if (response['status'] == "success") {
+        Get.snackbar(
+          "alert".tr,
+          "theProductHasBeenRemovedFromTheCart".tr,
+          animationDuration: const Duration(seconds: 2),
+          snackPosition: SnackPosition.TOP,
+          duration: const Duration(seconds: 2),
+          icon: const Icon(
+            Icons.shopping_cart,
+            color: AppColors.white,
+          ),
+        );
+      } else {
+        statusRequest = StatusRequest.failure;
+      }
+    }
+    update();
+  }
+
+  late ItemsModel itemsModel;
+  int countitems = 0;
+
+  add() {
+    addItems(itemsModel.itemsId!);
+    countitems++;
+    update();
+  }
+
+  remove() {
+    if (countitems > 0) {
+      deleteitems(itemsModel.itemsId!);
+      countitems--;
+      update();
+    }
+  }
+
   bool isSearch = false;
   TextEditingController? search;
   checkSearch(val) {

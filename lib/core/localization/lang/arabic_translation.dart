@@ -261,7 +261,6 @@ class ArabicTranslation extends MyTranslation {
           "discount": "الخصم",
           "subTotal": "المجموع الفرعي",
           "checkout": "اتمام الشراء",
-          "continueShopping": "متابعة التسوق",
           "add": "إضافة",
           "quantity": "الكمية",
           "totalQuantity": "مجموع الكميات",

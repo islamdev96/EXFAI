@@ -58,8 +58,12 @@ class ProductDetails extends StatelessWidget {
           PriceAndCountItems(
             onAdd: controller.add,
             onRemove: controller.remove,
-            price: "${controller.itemsModel.itemsPrice}",
             count: "${controller.countitems}",
+          ),
+          PriceWithCurrency(
+            priceFontSize: 30,
+            price: "${controller.itemsModel.itemsPrice}",
+            color: AppColors.red,
           ),
           SizedBox(height: 35.h),
           Text(
