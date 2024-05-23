@@ -22,24 +22,22 @@ class _ItemsHomeState extends State<ItemsHome> {
         });
       },
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(5.0),
         child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+                spreadRadius: 2,
+                blurRadius: 5,
+                offset: const Offset(0, 3),
+              ),
+            ],
+          ),
           height: 10.h,
           width: 150.w,
-          decoration: BoxDecoration(
-            color: AppColors.primary4,
-            borderRadius: BorderRadius.circular(15),
-            boxShadow: isHovered
-                ? [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: const Offset(0, 3),
-                    ),
-                  ]
-                : [],
-          ),
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(

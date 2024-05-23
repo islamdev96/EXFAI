@@ -17,14 +17,14 @@ class ListCategoriesHome extends GetView<HomeControllerImp> {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return CategoriesWidget(
-            i: index,
+            index: index,
             categoriesModel:
                 CategoriesModel.fromJson(controller.categories[index]),
           );
         },
-        shrinkWrap: true, // Important to avoid height errors
-        physics:
-            const NeverScrollableScrollPhysics(), // Disable scrolling to avoid conflicts
+        // shrinkWrap: true, // Important to avoid height errors
+        // physics:
+        //     const NeverScrollableScrollPhysics(), // Disable scrolling to avoid conflicts
       ),
     );
   }

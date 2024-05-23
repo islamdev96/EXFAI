@@ -31,18 +31,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const PageAppBar(),
-                  const TitleAndPictureAtTheHeadOfThePage(
-                    title: 'يا هلا بك في همزة',
-                    imageUrl: AppImageAsset.appLogo,
-                  ),
-                  SizedBox(height: 25.h),
-                  const SearchTextField(),
-                  SizedBox(height: 30.h),
+                  const SearchAppBar(),
                   GetBuilder<HomeControllerImp>(
                     builder: (controller) => HandlingDataView(
                       statusRequest: controller.statusRequest,
                       widget: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           const CustomCardHome(
                               title: "A summer surprise", body: "Cashback 20%"),

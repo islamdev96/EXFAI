@@ -2,32 +2,20 @@ import '../../../../../all_export.dart';
 
 class CategoriesWidget extends GetView<HomeControllerImp> {
   final CategoriesModel categoriesModel;
-  final int? i;
+  final int? index;
 
   const CategoriesWidget(
-      {super.key, required this.categoriesModel, required this.i});
+      {super.key, required this.categoriesModel, required this.index});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
         controller.goToItems(
-            controller.categories, i!, categoriesModel.categoriesId!);
+            controller.categories, index!, categoriesModel.categoriesId!);
       },
       child: Container(
         padding: const EdgeInsets.all(8),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.2),
-              spreadRadius: 2,
-              blurRadius: 5,
-              offset: const Offset(0, 3),
-            ),
-          ],
-        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

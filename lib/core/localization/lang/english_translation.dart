@@ -7,6 +7,7 @@ class EnglishTranslation extends MyTranslation {
           //========================== Anather ============================//
           "Egp": "EGP",
           "continueShopping": "Continue Shopping",
+          "findAProduct": "Find a product",
 
           //========================== Checkout ============================//
 
