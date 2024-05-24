@@ -115,7 +115,6 @@ class _ItemsHomeState extends State<ItemsHome> {
           if (itemCount > 0) itemCount--;
         });
       },
-      price: widget.itemsModel.itemsPrice!,
       count: itemCount.toString(),
     );
   }
@@ -124,14 +123,12 @@ class _ItemsHomeState extends State<ItemsHome> {
 class PriceAndCountItems extends StatelessWidget {
   final void Function()? onAdd;
   final void Function()? onRemove;
-  final String price;
   final String count;
 
   const PriceAndCountItems({
     super.key,
     required this.onAdd,
     required this.onRemove,
-    required this.price,
     required this.count,
   });
 

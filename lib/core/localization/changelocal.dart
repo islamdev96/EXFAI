@@ -2,9 +2,7 @@ import '../../../../all_export.dart';
 
 class LocaleController extends GetxController {
   Locale? language;
-
   MyServices myServices = Get.find();
-
   ThemeData appTheme = themeEnglish;
 
   void changeLang(String langCode) {
@@ -57,16 +55,26 @@ class LocaleController extends GetxController {
     requestPerLocation();
 
     String? sharedPrefLang = myServices.sharedPreferences.getString("lang");
-    if (sharedPrefLang == "ar") {
-      language = const Locale("ar");
-      appTheme = themeArabic;
-    } else if (sharedPrefLang == "en") {
-      language = const Locale("en");
-      appTheme = themeEnglish;
+    if (sharedPrefLang != null) {
+      // إذا كانت اللغة محفوظة في التفضيلات المشتركة، استخدمها
+      language = Locale(sharedPrefLang);
+      appTheme = sharedPrefLang == "ar" ? themeArabic : themeEnglish;
     } else {
-      language = Locale(Get.deviceLocale!.languageCode);
-      appTheme = themeEnglish;
+      // استخدم لغة الجهاز الافتراضية إذا لم تكن اللغة محفوظة
+      String deviceLang = Get.deviceLocale?.languageCode ?? 'en';
+      if (deviceLang == "ar" || deviceLang == "en") {
+        language = Locale(deviceLang);
+        appTheme = deviceLang == "ar" ? themeArabic : themeEnglish;
+      } else {
+        // إذا كانت لغة الجهاز ليست العربية أو الإنجليزية، استخدم الإنجليزية كلغة افتراضية
+        language = const Locale("en");
+        appTheme = themeEnglish;
+      }
     }
+
+    // تحديث لغة التطبيق وموضوعه بناءً على الإعدادات
+    Get.updateLocale(language!);
+    Get.changeTheme(appTheme);
 
     super.onInit();
   }

@@ -26,9 +26,9 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   ];
 
   final List<String> _navigationLabels = [
-    'الرئيسية',
-    'cart',
-    'settingsPage',
+    'home'.tr,
+    'cart'.tr,
+    'more'.tr,
   ];
 
   void _onItemTapped(int index) {

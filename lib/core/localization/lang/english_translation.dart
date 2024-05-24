@@ -5,9 +5,13 @@ class EnglishTranslation extends MyTranslation {
   Map<String, Map<String, String>> get keys => {
         "en": {
           //========================== Anather ============================//
-          "Egp": "EGP",
+          "egp": "EGP",
           "continueShopping": "Continue Shopping",
           "findAProduct": "Find a product",
+          "home": "Home",
+          "cart": "Cart",
+          "more": "More",
+          "noResultsFound": "No results found",
 
           //========================== Checkout ============================//
 
@@ -194,9 +198,7 @@ class EnglishTranslation extends MyTranslation {
           "welcome": "Welcome",
           "findYourProduct": "Find Your Product",
 
-          "home": "Home",
           "category": "Category",
-          "cart": "Cart",
           "profile": "Profile",
           "search": "Search",
           "searchForProduct": "Search For Product",

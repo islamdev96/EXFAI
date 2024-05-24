@@ -5,9 +5,13 @@ class ArabicTranslation extends MyTranslation {
   Map<String, Map<String, String>> get keys => {
         "ar": {
           //========================== Anather ============================//
-          "Egp": "جنيه",
+          "egp": "جنيه",
           "continueShopping": "مواصلة التسوق",
           "findAProduct": "ابحث عن منتج",
+          "home": "الرئيسية",
+          "cart": "العربة",
+          "more": "المزيد",
+          "noResultsFound": "لم يتم العثور على نتائج",
 
           //========================== Checkout ============================//
           //========================== عملية الدفع ============================//
@@ -192,9 +196,7 @@ class ArabicTranslation extends MyTranslation {
           "welcome": "مرحبًا",
           "findYourProduct": "ابحث عن منتجك",
 
-          "home": "الصفحة الرئيسية",
           "category": "الفئة",
-          "cart": "السلة",
           "profile": "الملف الشخصي",
           "search": "بحث",
           "searchForProduct": "البحث عن منتج",

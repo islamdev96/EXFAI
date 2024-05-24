@@ -40,25 +40,31 @@ class ItemsSearchDelegate extends SearchDelegate<List<ItemsModel>> {
   }
 
   Widget _buildSearchResults(BuildContext context) {
-    final filteredList = itemsModel.where((items) =>
-        items.itemsName!.toLowerCase().contains(query.toLowerCase()) ||
-        items.itemsDesc!.toLowerCase().contains(query.toLowerCase()));
+    final filteredList = itemsModel.where((items) {
+      final name = translateDatabase(items.itemsNameAr, items.itemsName);
+      final desc = translateDatabase(items.itemsDescAr, items.itemsDesc);
+
+      return name.toLowerCase().contains(query.toLowerCase()) ||
+          desc.toLowerCase().contains(query.toLowerCase());
+    }).toList();
 
     if (filteredList.isEmpty) {
-      return const Center(
-        child: Text('لم يتم العثور على نتائج'),
+      return Center(
+        child: Text("noResultsFound".tr),
       );
     }
 
     return ListView.separated(
+      padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
       itemBuilder: (context, index) {
-        final items = filteredList.elementAt(index);
+        final items = filteredList[index];
         return ItemsCard(items: items);
       },
       separatorBuilder: (context, index) {
         return Divider(
-          height: 0.0001.h,
-          thickness: 0.0001.h,
+          height: 1,
+          thickness: 1,
+          color: Colors.grey[200],
         );
       },
       itemCount: filteredList.length,
