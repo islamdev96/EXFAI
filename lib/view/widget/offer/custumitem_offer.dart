@@ -40,8 +40,7 @@ class CustomListItemsOffer extends GetView<OffersController> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                              "${itemsModel.itemsPriceDiscount} ${AppTextAsset.theCurrency}",
+                          Text("${itemsModel.itemsPriceDiscount} ${"egp".tr}",
                               style: const TextStyle(
                                   color: AppColors.secondaryBackground,
                                   fontSize: 16,

@@ -1,9 +1,5 @@
-import 'package:exfai/all_export.dart';
-
 class AppTextAsset {
   static const String appName = "اكس فاي";
-  static String theCurrency = "egp".tr;
-  static const String showYourBook = "أظهر كتابك";
   static const String favourite = "المفضلة";
   static const String backgroundImageBook = "صورة خلفية الكتاب";
 

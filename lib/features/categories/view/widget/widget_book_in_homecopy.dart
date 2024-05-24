@@ -60,7 +60,7 @@ class WidgetItemsInHome2 extends GetView<HomeControllerImp> {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      "${itemsModel.itemsPrice} ${AppTextAsset.theCurrency}",
+                      "${itemsModel.itemsPrice} ${"egp".tr}",
                       style: const TextStyle(
                         color: AppColors.primary3,
                         fontSize: 16,

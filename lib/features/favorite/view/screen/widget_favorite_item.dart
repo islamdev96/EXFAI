@@ -59,7 +59,7 @@ class WidgetFavoriteItem extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    "${itemsModel.itemsPrice} ${AppTextAsset.theCurrency}",
+                    "${itemsModel.itemsPrice} ${"egp".tr}",
                     style: const TextStyle(
                       color: AppColors.red,
                       fontSize: 16,

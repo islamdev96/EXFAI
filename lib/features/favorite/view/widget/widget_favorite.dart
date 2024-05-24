@@ -48,8 +48,7 @@ class WidgetFavorite extends GetView<MyFavoriteController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                          "${favoriteModel.itemsPrice} ${AppTextAsset.theCurrency}",
+                      Text("${favoriteModel.itemsPrice} ${"egp".tr}",
                           style: TextStyle(
                               color: AppColors.red,
                               fontSize: 12.sp,

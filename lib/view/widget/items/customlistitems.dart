@@ -100,7 +100,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                     children: [
                       // Price
                       Text(
-                        "${itemsModel.itemsPriceDiscount} ${AppTextAsset.theCurrency}",
+                        "${itemsModel.itemsPriceDiscount} ${"egp".tr}",
                         style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,

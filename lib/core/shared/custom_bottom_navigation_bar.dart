@@ -15,20 +15,12 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     AppRoute.homepage,
     AppRoute.cart,
     AppRoute.settingsPage,
-
-    // AppRoute.bookView,
   ];
 
   final List<IconData> _navigationIcons = [
     Icons.home_filled,
     Icons.card_travel,
     Icons.settings,
-  ];
-
-  final List<String> _navigationLabels = [
-    'home'.tr,
-    'cart'.tr,
-    'more'.tr,
   ];
 
   void _onItemTapped(int index) {
@@ -40,20 +32,37 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      items: List.generate(
-        _navigationIcons.length,
-        (index) => BottomNavigationBarItem(
-          icon: Icon(_navigationIcons[index]),
-          label: _navigationLabels[index],
-        ),
-      ),
-      currentIndex: _selectedIndex,
-      selectedItemColor: AppColors.primary3,
-      unselectedItemColor: AppColors.primary3,
-      onTap: _onItemTapped,
-      type: BottomNavigationBarType.fixed,
-      backgroundColor: Colors.white,
+    return GetBuilder<LocaleController>(
+      builder: (_) {
+        return BottomNavigationBar(
+          items: List.generate(
+            _navigationIcons.length,
+            (index) => BottomNavigationBarItem(
+              icon: Icon(_navigationIcons[index]),
+              label: _getNavigationLabel(index),
+            ),
+          ),
+          currentIndex: _selectedIndex,
+          selectedItemColor: AppColors.primary3,
+          unselectedItemColor: AppColors.primary3,
+          onTap: _onItemTapped,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.white,
+        );
+      },
     );
+  }
+
+  String _getNavigationLabel(int index) {
+    switch (index) {
+      case 0:
+        return 'home'.tr;
+      case 1:
+        return 'cart'.tr;
+      case 2:
+        return 'more'.tr;
+      default:
+        return '';
+    }
   }
 }

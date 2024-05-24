@@ -68,7 +68,7 @@
 //                           Container(
 //                             padding: EdgeInsets.symmetric(horizontal: 10),
 //                             child: Text(
-//                                 "$totalPrice : ${controller.ordersModel.ordersTotalprice}${AppTextAsset.theCurrency}",
+//                                 "$totalPrice : ${controller.ordersModel.ordersTotalprice}${"egp".tr}",
 //                                 textAlign: TextAlign.center,
 //                                 style: TextStyle(
 //                                     color: AppColor.secondaryBackground,

@@ -19,7 +19,7 @@ class LocaleController extends GetxController {
 
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      Get.snackbar("Alert", "Please turn on the location service");
+      // Get.snackbar("Alert", "Please turn on the location service");
       return;
     }
 
@@ -27,15 +27,15 @@ class LocaleController extends GetxController {
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-        Get.snackbar(
-            "Alert", "Please give the location permission for the application");
+        // Get.snackbar(
+        //     "Alert", "Please give the location permission for the application");
         return;
       }
     }
 
     if (permission == LocationPermission.deniedForever) {
-      Get.snackbar("Alert",
-          "The application cannot be used without specifying your location");
+      // Get.snackbar("Alert",
+      //     "The application cannot be used without specifying your location");
       return;
     }
   }

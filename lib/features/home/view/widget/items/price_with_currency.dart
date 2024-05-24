@@ -31,7 +31,7 @@ class PriceWithCurrency extends StatelessWidget {
           ),
         ),
         Text(
-          AppTextAsset.theCurrency,
+          "egp".tr,
           style: TextStyle(
             color: color,
             fontSize: currencyFontSize,

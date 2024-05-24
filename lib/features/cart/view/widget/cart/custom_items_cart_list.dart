@@ -78,7 +78,7 @@ class CustomItemsCartList extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        AppTextAsset.theCurrency,
+                        "egp".tr,
                         style: const TextStyle(
                           color: AppColors.primary,
                           fontSize: 6.0,

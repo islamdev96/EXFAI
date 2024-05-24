@@ -50,8 +50,8 @@
 //               const Divider(),
 //               Text(
 //                   "$orderType : ${controller.printOrderType(listdata.ordersType!)}"),
-//               Text("$orderPrice : ${listdata.ordersPrice} ${AppTextAsset.theCurrency}"),
-//               Text("$deliveryPrice : ${listdata.ordersPricedelivery} ${AppTextAsset.theCurrency} "),
+//               Text("$orderPrice : ${listdata.ordersPrice} ${"egp".tr}"),
+//               Text("$deliveryPrice : ${listdata.ordersPricedelivery} ${"egp".tr} "),
 //               Text(
 //                   "$paymentMethod : ${controller.printPaymentMethod(listdata.ordersPaymentmethod!)} "),
 //               Text(
@@ -59,7 +59,7 @@
 //               const Divider(),
 //               Row(
 //                 children: [
-//                   Text("$totalPrice : ${listdata.ordersId} ${AppTextAsset.theCurrency} ",
+//                   Text("$totalPrice : ${listdata.ordersId} ${"egp".tr} ",
 //                       style: const TextStyle(
 //                           color: AppColor.primary,
 //                           fontWeight: FontWeight.bold)),
