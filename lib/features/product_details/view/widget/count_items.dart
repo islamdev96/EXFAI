@@ -1,10 +1,10 @@
 import '../../../../all_export.dart';
 
-class PriceAndCountItems extends StatelessWidget {
+class CountItems extends StatelessWidget {
   final void Function()? onAdd;
   final void Function()? onRemove;
   final String count;
-  const PriceAndCountItems(
+  const CountItems(
       {super.key,
       required this.onAdd,
       required this.onRemove,
@@ -36,6 +36,30 @@ class PriceAndCountItems extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ],
+    );
+  }
+}
+
+class CountItems2 extends StatelessWidget {
+  final void Function()? onAdd;
+  const CountItems2({
+    super.key,
+    required this.onAdd,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        IconButton(
+          onPressed: onAdd,
+          icon: const Icon(
+            Icons.add_box_rounded,
+            color: AppColors.primary,
+          ),
         ),
       ],
     );

@@ -1,7 +1,5 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:exfai/features/home/view/widget/categories/categories_widget.dart';
-
 import '../../../../../all_export.dart';
 
 class ListCategoriesHome extends GetView<HomeControllerImp> {

@@ -1,49 +1,51 @@
-// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: library_private_types_in_public_api, overridden_fields
 
 import '../../../../../all_export.dart';
 
-class ItemsHome extends StatefulWidget {
+class ItemsHome extends StatelessWidget {
   final ItemsModel itemsModel;
-  const ItemsHome({super.key, required this.itemsModel});
-
   @override
-  _ItemsHomeState createState() => _ItemsHomeState();
-}
-
-class _ItemsHomeState extends State<ItemsHome> {
-  int itemCount = 0;
+  final Key? key; // Add a
+  // ignore: use_key_in_widget_constructors
+  const ItemsHome({this.key, required this.itemsModel});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Get.toNamed("productdetails", arguments: {
-          "itemsmodel": widget.itemsModel,
-        });
-      },
-      child: Padding(
+      onTap: () => Get.toNamed(
+        "productdetails",
+        arguments: {"itemsmodel": itemsModel},
+      ),
+      child: Container(
         padding: const EdgeInsets.all(5.0),
-        child: Container(
-          decoration: _buildBoxDecoration(),
-          height: 150.h,
-          width: 150.w,
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              children: [
-                _buildImage(),
-                const SizedBox(height: 8.0),
-                PriceWithCurrency(
-                  price: "${widget.itemsModel.itemsPrice}",
-                  color: AppColors.black,
-                ),
-                const SizedBox(height: 4.0),
-                _buildProductName(),
-                const SizedBox(height: 8.0),
-                _buildPriceAndCountItems(),
-              ],
+        decoration: _buildBoxDecoration(),
+        height: 150.h,
+        width: 150.w,
+        child: Column(
+          // mainAxisAlignment:
+          //     MainAxisAlignment.spaceBetween, //  توزيع العناصر بشكل أفضل
+          children: [
+            _buildImage(),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: 8.0), //  إضافة مساحة جانبية
+              child: Column(
+                crossAxisAlignment:
+                    CrossAxisAlignment.start, //  محاذاة العناصر إلى اليسار
+                children: [
+                  _buildAddItemButton(), //  إضافة زر  CountItems2
+                  SizedBox(height: 8.h),
+                  PriceWithCurrency(
+                    price: "${itemsModel.itemsPrice}",
+                    color: AppColors.black,
+                  ),
+                  SizedBox(height: 4.h),
+                  _buildProductName(),
+                ],
+              ),
             ),
-          ),
+            // _buildAddItemButton(), //  استخدام  AddItemButton  لإضافة المنتج
+          ],
         ),
       ),
     );
@@ -68,97 +70,48 @@ class _ItemsHomeState extends State<ItemsHome> {
   // Method to build product image
   Widget _buildImage() {
     return Padding(
-      padding: const EdgeInsets.only(top: 15),
+      padding: EdgeInsets.only(top: 25.h),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(16.r),
+          topRight: Radius.circular(16.r),
+        ),
         child: CustomCachedNetworkImage(
-          imageUrl: "${AppLink.imagestItems}/${widget.itemsModel.itemsImage}",
-          width: 80.w,
-          height: 80.h,
+          imageUrl: "${AppLink.imagestItems}/${itemsModel.itemsImage}",
+          width: 100.w, //  جعل الصورة تأخذ عرض الحاوية
+          height: 100.h,
         ),
       ),
     );
   }
 
-  // Method to build price and currency row
-
   // Method to build product name
   Widget _buildProductName() {
-    return Row(
-      children: [
-        Expanded(
-          child: Text(
-            translateDatabase(
-              widget.itemsModel.itemsNameAr,
-              widget.itemsModel.itemsName,
-            ),
-            style: TextStyle(
-              color: AppColors.secondaryText,
-              fontSize: 14.sp,
-            ),
-          ),
-        ),
-      ],
+    return Text(
+      translateDatabase(
+        itemsModel.itemsNameAr,
+        itemsModel.itemsName,
+      ),
+      style: TextStyle(
+        color: AppColors.secondaryText,
+        fontSize: 14.sp,
+        overflow:
+            TextOverflow.ellipsis, //  إضافة  ellipsis  في حال كان النص طويلاً
+      ),
+      maxLines: 1, //  عرض سطر واحد فقط من النص
     );
   }
 
-  // Method to build price and count items
-  Widget _buildPriceAndCountItems() {
-    return PriceAndCountItems(
-      onAdd: () {
-        setState(() {
-          itemCount++;
-        });
-      },
-      onRemove: () {
-        setState(() {
-          if (itemCount > 0) itemCount--;
-        });
-      },
-      count: itemCount.toString(),
-    );
-  }
-}
-
-class PriceAndCountItems extends StatelessWidget {
-  final void Function()? onAdd;
-  final void Function()? onRemove;
-  final String count;
-
-  const PriceAndCountItems({
-    super.key,
-    required this.onAdd,
-    required this.onRemove,
-    required this.count,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(
-          onPressed: onAdd,
-          icon: const Icon(
-            Icons.add_box_rounded,
-            color: AppColors.primary,
-          ),
-        ),
-        Text(
-          count,
-          style: const TextStyle(
-            fontSize: 20,
-            height: 1.1,
-            color: AppColors.primary,
-          ),
-        ),
-        IconButton(
-          onPressed: onRemove,
-          icon: const Icon(
-            Icons.remove_circle,
-            color: AppColors.primary,
-          ),
-        ),
-      ],
+  Widget _buildAddItemButton() {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: CountItems2(
+        onAdd: () {
+          final controller =
+              Get.put(HomeControllerImp()); //  الحصول على  controller
+          controller.add(); //  استدعاء دالة  add  في ال controller
+        },
+      ),
     );
   }
 }

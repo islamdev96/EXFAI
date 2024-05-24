@@ -55,17 +55,25 @@ class ProductDetails extends StatelessWidget {
                 ),
           ),
           SizedBox(height: 15.h),
-          PriceAndCountItems(
-            onAdd: controller.add,
-            onRemove: controller.remove,
-            count: "${controller.countitems}",
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              PriceWithCurrency(
+                priceFontSize: 30,
+                price: "${controller.itemsModel.itemsPrice}",
+                color: AppColors.red,
+              ),
+              CountItems2(
+                onAdd: controller.add,
+              ),
+              CountItems(
+                onAdd: controller.add,
+                onRemove: controller.remove,
+                count: "${controller.countitems}",
+              ),
+            ],
           ),
-          PriceWithCurrency(
-            priceFontSize: 30,
-            price: "${controller.itemsModel.itemsPrice}",
-            color: AppColors.red,
-          ),
-          SizedBox(height: 35.h),
+          SizedBox(height: 20.h),
           Text(
             "${translateDatabase(controller.itemsModel.itemsDescAr, controller.itemsModel.itemsDesc)}",
             style: Theme.of(context).textTheme.displayLarge!.copyWith(

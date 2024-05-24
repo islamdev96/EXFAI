@@ -113,6 +113,7 @@ class SearchMixController extends GetxController {
     update();
   }
 
+////////////////////////////////////////////////////////////
   addItems(String itemsid) async {
     statusRequest = StatusRequest.loading;
     update();
@@ -184,6 +185,7 @@ class SearchMixController extends GetxController {
     }
   }
 
+////////////////////////////////////////////////////////////
   bool isSearch = false;
   TextEditingController? search;
   checkSearch(val) {
