@@ -2,6 +2,9 @@
 
 import '../../../../../all_export.dart';
 
+final homeControllerImp =
+    Get.put(HomeControllerImp()); //  الحصول على  controller
+
 class ItemsHome extends StatelessWidget {
   final ItemsModel itemsModel;
   @override
@@ -107,9 +110,8 @@ class ItemsHome extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: CountItems2(
         onAdd: () {
-          final controller =
-              Get.put(HomeControllerImp()); //  الحصول على  controller
-          controller.add(); //  استدعاء دالة  add  في ال controller
+          homeControllerImp
+              .add(itemsModel); // /  استدعاء دالة  add  في ال controller
         },
       ),
     );

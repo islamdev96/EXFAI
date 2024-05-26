@@ -1,5 +1,7 @@
 // ignore_for_file: overridden_fields
 
+import 'package:exfai/core/localization/lang_wael/language.dart';
+
 import '../../../all_export.dart';
 
 abstract class HomeController extends SearchMixController {
@@ -114,11 +116,11 @@ class SearchMixController extends GetxController {
   }
 
 ////////////////////////////////////////////////////////////
-  addItems(String itemsid) async {
+  addItems(String itemsId) async {
     statusRequest = StatusRequest.loading;
     update();
     var response = await cartData.addCart(
-        myServices.sharedPreferences.getString("id")!, itemsid);
+        myServices.sharedPreferences.getString("id")!, itemsId);
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
@@ -170,8 +172,8 @@ class SearchMixController extends GetxController {
 
   late ItemsModel itemsModel;
   int countitems = 0;
-
-  add() {
+  add(ItemsModel itemsModel) {
+    //  أضف itemsModel كمعامل
     addItems(itemsModel.itemsId!);
     countitems++;
     update();

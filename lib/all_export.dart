@@ -78,7 +78,7 @@ export 'package:exfai/core/functions/fcmconfig.dart';
 export 'package:exfai/core/functions/validinput.dart';
 export 'package:exfai/core/localization/lang/arabic_translation.dart';
 export 'package:exfai/core/localization/lang/english_translation.dart';
-export 'package:exfai/core/localization/lang_wael/language.dart';
+// export 'package:exfai/core/localization/lang_wael/language.dart';
 export 'package:exfai/data/datasource/remote/address_data.dart';
 export 'package:exfai/data/datasource/static/static.dart';
 export 'package:exfai/data/model/categoriesmodel.dart';

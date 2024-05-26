@@ -1,3 +1,4 @@
+import 'package:exfai/core/localization/lang_wael/language.dart';
 import 'package:exfai/view/Settings/settings_page.dart';
 
 import 'all_export.dart';
